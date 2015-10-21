@@ -1,9 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
-    modelDirectory="/hu.bme.mit.vmdistribution/src" modelPluginID="hu.bme.mit.vmdistribution"
-    modelName="Vmdistribution" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/hu.bme.mit.vmdistribution/src" modelPluginID="hu.bme.mit.vmdistribution"
+    modelName="vmdistribution" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
     operationReflection="true" importOrganizing="true">
   <foreignModel>vmdistribution.ecore</foreignModel>
-  <genPackages prefix="Vmdistribution" disposableProviderFactory="true" ecorePackage="vmdistribution.ecore#/"/>
+  <genPackages prefix="Vmdistribution" basePackage="hu.bme.mit.vmdistribution" disposableProviderFactory="true"
+      ecorePackage="vmdistribution.ecore#/">
+    <genDataTypes ecoreDataType="vmdistribution.ecore#//File"/>
+    <genDataTypes ecoreDataType="vmdistribution.ecore#//IPAddress"/>
+    <genClasses ecoreClass="vmdistribution.ecore#//VirtualMachine">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference vmdistribution.ecore#//VirtualMachine/computer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference vmdistribution.ecore#//VirtualMachine/software"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute vmdistribution.ecore#//VirtualMachine/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute vmdistribution.ecore#//VirtualMachine/baseImage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute vmdistribution.ecore#//VirtualMachine/useVagrant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute vmdistribution.ecore#//VirtualMachine/distributionImage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference vmdistribution.ecore#//VirtualMachine/vmproperty"/>
+      <genOperations ecoreOperation="vmdistribution.ecore#//VirtualMachine/prepare"/>
+      <genOperations ecoreOperation="vmdistribution.ecore#//VirtualMachine/isCompatible">
+        <genParameters ecoreParameter="vmdistribution.ecore#//VirtualMachine/isCompatible/computer"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="vmdistribution.ecore#//System">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference vmdistribution.ecore#//System/virtualmachine"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference vmdistribution.ecore#//System/computer"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference vmdistribution.ecore#//System/currentlab"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference vmdistribution.ecore#//System/labsetup"/>
+      <genOperations ecoreOperation="vmdistribution.ecore#//System/setupLab">
+        <genParameters ecoreParameter="vmdistribution.ecore#//System/setupLab/goal"/>
+      </genOperations>
+      <genOperations ecoreOperation="vmdistribution.ecore#//System/initVm">
+        <genParameters ecoreParameter="vmdistribution.ecore#//System/initVm/vm"/>
+      </genOperations>
+      <genOperations ecoreOperation="vmdistribution.ecore#//System/deleteVm">
+        <genParameters ecoreParameter="vmdistribution.ecore#//System/deleteVm/todelete"/>
+      </genOperations>
+      <genOperations ecoreOperation="vmdistribution.ecore#//System/distributeVm">
+        <genParameters ecoreParameter="vmdistribution.ecore#//System/distributeVm/todistribute"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="vmdistribution.ecore#//Computer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference vmdistribution.ecore#//Computer/virtualmachines"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute vmdistribution.ecore#//Computer/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute vmdistribution.ecore#//Computer/ipAddr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute vmdistribution.ecore#//Computer/AvailableSpace"/>
+    </genClasses>
+    <genClasses ecoreClass="vmdistribution.ecore#//Software">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute vmdistribution.ecore#//Software/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute vmdistribution.ecore#//Software/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute vmdistribution.ecore#//Software/installScript"/>
+      <genOperations ecoreOperation="vmdistribution.ecore#//Software/setInstallScriptFromFile">
+        <genParameters ecoreParameter="vmdistribution.ecore#//Software/setInstallScriptFromFile/scriptlocation"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="vmdistribution.ecore#//VMProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute vmdistribution.ecore#//VMProperty/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute vmdistribution.ecore#//VMProperty/vagrantCommand"/>
+    </genClasses>
+    <genClasses ecoreClass="vmdistribution.ecore#//Lab">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference vmdistribution.ecore#//Lab/computer"/>
+    </genClasses>
+    <genClasses ecoreClass="vmdistribution.ecore#//LabSetup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference vmdistribution.ecore#//LabSetup/lab"/>
+      <genOperations ecoreOperation="vmdistribution.ecore#//LabSetup/saveCurrentSetup">
+        <genParameters ecoreParameter="vmdistribution.ecore#//LabSetup/saveCurrentSetup/labname"/>
+      </genOperations>
+      <genOperations ecoreOperation="vmdistribution.ecore#//LabSetup/getDifference">
+        <genParameters ecoreParameter="vmdistribution.ecore#//LabSetup/getDifference/current"/>
+        <genParameters ecoreParameter="vmdistribution.ecore#//LabSetup/getDifference/new"/>
+      </genOperations>
+    </genClasses>
+  </genPackages>
 </genmodel:GenModel>
