@@ -1,6 +1,15 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: hu.bme.mit.vmdistribution
-Bundle-SymbolicName: hu.bme.mit.vmdistribution; singleton:=true
+Bundle-Name: %pluginName
+Bundle-SymbolicName: hu.bme.mit.vmdistribution;singleton:=true
 Bundle-Version: 0.1.0.qualifier
-Require-Bundle: org.eclipse.emf.ecore
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: hu.bme.mit.vmdistribution.vmdistribution,
+ hu.bme.mit.vmdistribution.vmdistribution.impl,
+ hu.bme.mit.vmdistribution.vmdistribution.util
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport
+Bundle-ActivationPolicy: lazy
