@@ -64,6 +64,8 @@ public class ComputerItemProvider
 			addNamePropertyDescriptor(object);
 			addIpAddrPropertyDescriptor(object);
 			addAvailableSpacePropertyDescriptor(object);
+			addInstalledRAMPropertyDescriptor(object);
+			addArchitecturePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -157,6 +159,50 @@ public class ComputerItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Installed RAM feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInstalledRAMPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Computer_installedRAM_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Computer_installedRAM_feature", "_UI_Computer_type"),
+				 VmdistributionPackage.Literals.COMPUTER__INSTALLED_RAM,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Architecture feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addArchitecturePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Computer_architecture_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Computer_architecture_feature", "_UI_Computer_type"),
+				 VmdistributionPackage.Literals.COMPUTER__ARCHITECTURE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Computer.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -197,6 +243,8 @@ public class ComputerItemProvider
 			case VmdistributionPackage.COMPUTER__NAME:
 			case VmdistributionPackage.COMPUTER__IP_ADDR:
 			case VmdistributionPackage.COMPUTER__AVAILABLE_SPACE:
+			case VmdistributionPackage.COMPUTER__INSTALLED_RAM:
+			case VmdistributionPackage.COMPUTER__ARCHITECTURE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -4,15 +4,7 @@ package hu.bme.mit.vmdistribution.vmdistribution.impl;
 
 import hu.bme.mit.vmdistribution.vmdistribution.Software;
 import hu.bme.mit.vmdistribution.vmdistribution.VmdistributionPackage;
-
-import java.io.File;
-
-import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -181,17 +173,6 @@ public class SoftwareImpl extends MinimalEObjectImpl.Container implements Softwa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInstallScriptFromFile(File scriptlocation) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -263,21 +244,6 @@ public class SoftwareImpl extends MinimalEObjectImpl.Container implements Softwa
 				return INSTALL_SCRIPT_EDEFAULT == null ? installScript != null : !INSTALL_SCRIPT_EDEFAULT.equals(installScript);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case VmdistributionPackage.SOFTWARE___SET_INSTALL_SCRIPT_FROM_FILE__FILE:
-				setInstallScriptFromFile((File)arguments.get(0));
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

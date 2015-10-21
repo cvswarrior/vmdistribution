@@ -3,10 +3,13 @@
 package hu.bme.mit.vmdistribution.vmdistribution.util;
 
 import hu.bme.mit.vmdistribution.vmdistribution.Computer;
+import hu.bme.mit.vmdistribution.vmdistribution.ComputerConfig;
+import hu.bme.mit.vmdistribution.vmdistribution.CustomVM;
 import hu.bme.mit.vmdistribution.vmdistribution.Lab;
-import hu.bme.mit.vmdistribution.vmdistribution.LabSetup;
+import hu.bme.mit.vmdistribution.vmdistribution.Requirements;
 import hu.bme.mit.vmdistribution.vmdistribution.Software;
 import hu.bme.mit.vmdistribution.vmdistribution.VMProperty;
+import hu.bme.mit.vmdistribution.vmdistribution.Vagrant_VM;
 import hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine;
 import hu.bme.mit.vmdistribution.vmdistribution.VmdistributionPackage;
 
@@ -98,8 +101,20 @@ public class VmdistributionAdapterFactory extends AdapterFactoryImpl {
 				return createLabAdapter();
 			}
 			@Override
-			public Adapter caseLabSetup(LabSetup object) {
-				return createLabSetupAdapter();
+			public Adapter caseVagrant_VM(Vagrant_VM object) {
+				return createVagrant_VMAdapter();
+			}
+			@Override
+			public Adapter caseCustomVM(CustomVM object) {
+				return createCustomVMAdapter();
+			}
+			@Override
+			public Adapter caseRequirements(Requirements object) {
+				return createRequirementsAdapter();
+			}
+			@Override
+			public Adapter caseComputerConfig(ComputerConfig object) {
+				return createComputerConfigAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -206,16 +221,58 @@ public class VmdistributionAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link hu.bme.mit.vmdistribution.vmdistribution.LabSetup <em>Lab Setup</em>}'.
+	 * Creates a new adapter for an object of class '{@link hu.bme.mit.vmdistribution.vmdistribution.Vagrant_VM <em>Vagrant VM</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see hu.bme.mit.vmdistribution.vmdistribution.LabSetup
+	 * @see hu.bme.mit.vmdistribution.vmdistribution.Vagrant_VM
 	 * @generated
 	 */
-	public Adapter createLabSetupAdapter() {
+	public Adapter createVagrant_VMAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link hu.bme.mit.vmdistribution.vmdistribution.CustomVM <em>Custom VM</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see hu.bme.mit.vmdistribution.vmdistribution.CustomVM
+	 * @generated
+	 */
+	public Adapter createCustomVMAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link hu.bme.mit.vmdistribution.vmdistribution.Requirements <em>Requirements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see hu.bme.mit.vmdistribution.vmdistribution.Requirements
+	 * @generated
+	 */
+	public Adapter createRequirementsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link hu.bme.mit.vmdistribution.vmdistribution.ComputerConfig <em>Computer Config</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see hu.bme.mit.vmdistribution.vmdistribution.ComputerConfig
+	 * @generated
+	 */
+	public Adapter createComputerConfigAdapter() {
 		return null;
 	}
 

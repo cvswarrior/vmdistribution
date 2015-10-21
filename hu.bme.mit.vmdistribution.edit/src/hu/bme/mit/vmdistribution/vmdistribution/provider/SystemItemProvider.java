@@ -61,26 +61,26 @@ public class SystemItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addCurrentlabPropertyDescriptor(object);
-			addLabsetupPropertyDescriptor(object);
+			addLabPropertyDescriptor(object);
+			addCurrentsetupPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Currentlab feature.
+	 * This adds a property descriptor for the Lab feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCurrentlabPropertyDescriptor(Object object) {
+	protected void addLabPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_System_currentlab_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_System_currentlab_feature", "_UI_System_type"),
-				 VmdistributionPackage.Literals.SYSTEM__CURRENTLAB,
+				 getString("_UI_System_lab_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_System_lab_feature", "_UI_System_type"),
+				 VmdistributionPackage.Literals.SYSTEM__LAB,
 				 true,
 				 false,
 				 true,
@@ -90,19 +90,19 @@ public class SystemItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Labsetup feature.
+	 * This adds a property descriptor for the Currentsetup feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addLabsetupPropertyDescriptor(Object object) {
+	protected void addCurrentsetupPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_System_labsetup_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_System_labsetup_feature", "_UI_System_type"),
-				 VmdistributionPackage.Literals.SYSTEM__LABSETUP,
+				 getString("_UI_System_currentsetup_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_System_currentsetup_feature", "_UI_System_type"),
+				 VmdistributionPackage.Literals.SYSTEM__CURRENTSETUP,
 				 true,
 				 false,
 				 true,
@@ -125,7 +125,7 @@ public class SystemItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(VmdistributionPackage.Literals.SYSTEM__VIRTUALMACHINE);
 			childrenFeatures.add(VmdistributionPackage.Literals.SYSTEM__COMPUTER);
-			childrenFeatures.add(VmdistributionPackage.Literals.SYSTEM__LABSETUP);
+			childrenFeatures.add(VmdistributionPackage.Literals.SYSTEM__LAB);
 		}
 		return childrenFeatures;
 	}
@@ -180,7 +180,7 @@ public class SystemItemProvider
 		switch (notification.getFeatureID(hu.bme.mit.vmdistribution.vmdistribution.System.class)) {
 			case VmdistributionPackage.SYSTEM__VIRTUALMACHINE:
 			case VmdistributionPackage.SYSTEM__COMPUTER:
-			case VmdistributionPackage.SYSTEM__LABSETUP:
+			case VmdistributionPackage.SYSTEM__LAB:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -201,7 +201,12 @@ public class SystemItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(VmdistributionPackage.Literals.SYSTEM__VIRTUALMACHINE,
-				 VmdistributionFactory.eINSTANCE.createVirtualMachine()));
+				 VmdistributionFactory.eINSTANCE.createVagrant_VM()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(VmdistributionPackage.Literals.SYSTEM__VIRTUALMACHINE,
+				 VmdistributionFactory.eINSTANCE.createCustomVM()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -210,8 +215,8 @@ public class SystemItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(VmdistributionPackage.Literals.SYSTEM__LABSETUP,
-				 VmdistributionFactory.eINSTANCE.createLabSetup()));
+				(VmdistributionPackage.Literals.SYSTEM__LAB,
+				 VmdistributionFactory.eINSTANCE.createLab()));
 	}
 
 	/**

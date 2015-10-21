@@ -2,8 +2,6 @@
  */
 package hu.bme.mit.vmdistribution.vmdistribution;
 
-import java.io.File;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -103,13 +101,5 @@ public interface Software extends EObject {
 	 * @generated
 	 */
 	void setInstallScript(String value);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model scriptlocationDataType="hu.bme.mit.vmdistribution.vmdistribution.File"
-	 * @generated
-	 */
-	void setInstallScriptFromFile(File scriptlocation);
 
 } // Software

@@ -72,29 +72,6 @@ public class VmdistributionItemProviderAdapterFactory extends VmdistributionAdap
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected VirtualMachineItemProvider virtualMachineItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createVirtualMachineAdapter() {
-		if (virtualMachineItemProvider == null) {
-			virtualMachineItemProvider = new VirtualMachineItemProvider(this);
-		}
-
-		return virtualMachineItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link hu.bme.mit.vmdistribution.vmdistribution.System} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -210,26 +187,95 @@ public class VmdistributionItemProviderAdapterFactory extends VmdistributionAdap
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link hu.bme.mit.vmdistribution.vmdistribution.LabSetup} instances.
+	 * This keeps track of the one adapter used for all {@link hu.bme.mit.vmdistribution.vmdistribution.Vagrant_VM} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LabSetupItemProvider labSetupItemProvider;
+	protected Vagrant_VMItemProvider vagrant_VMItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link hu.bme.mit.vmdistribution.vmdistribution.LabSetup}.
+	 * This creates an adapter for a {@link hu.bme.mit.vmdistribution.vmdistribution.Vagrant_VM}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createLabSetupAdapter() {
-		if (labSetupItemProvider == null) {
-			labSetupItemProvider = new LabSetupItemProvider(this);
+	public Adapter createVagrant_VMAdapter() {
+		if (vagrant_VMItemProvider == null) {
+			vagrant_VMItemProvider = new Vagrant_VMItemProvider(this);
 		}
 
-		return labSetupItemProvider;
+		return vagrant_VMItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link hu.bme.mit.vmdistribution.vmdistribution.CustomVM} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CustomVMItemProvider customVMItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link hu.bme.mit.vmdistribution.vmdistribution.CustomVM}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCustomVMAdapter() {
+		if (customVMItemProvider == null) {
+			customVMItemProvider = new CustomVMItemProvider(this);
+		}
+
+		return customVMItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link hu.bme.mit.vmdistribution.vmdistribution.Requirements} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RequirementsItemProvider requirementsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link hu.bme.mit.vmdistribution.vmdistribution.Requirements}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRequirementsAdapter() {
+		if (requirementsItemProvider == null) {
+			requirementsItemProvider = new RequirementsItemProvider(this);
+		}
+
+		return requirementsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link hu.bme.mit.vmdistribution.vmdistribution.ComputerConfig} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ComputerConfigItemProvider computerConfigItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link hu.bme.mit.vmdistribution.vmdistribution.ComputerConfig}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createComputerConfigAdapter() {
+		if (computerConfigItemProvider == null) {
+			computerConfigItemProvider = new ComputerConfigItemProvider(this);
+		}
+
+		return computerConfigItemProvider;
 	}
 
 	/**
@@ -331,13 +377,15 @@ public class VmdistributionItemProviderAdapterFactory extends VmdistributionAdap
 	 * @generated
 	 */
 	public void dispose() {
-		if (virtualMachineItemProvider != null) virtualMachineItemProvider.dispose();
 		if (systemItemProvider != null) systemItemProvider.dispose();
 		if (computerItemProvider != null) computerItemProvider.dispose();
 		if (softwareItemProvider != null) softwareItemProvider.dispose();
 		if (vmPropertyItemProvider != null) vmPropertyItemProvider.dispose();
 		if (labItemProvider != null) labItemProvider.dispose();
-		if (labSetupItemProvider != null) labSetupItemProvider.dispose();
+		if (vagrant_VMItemProvider != null) vagrant_VMItemProvider.dispose();
+		if (customVMItemProvider != null) customVMItemProvider.dispose();
+		if (requirementsItemProvider != null) requirementsItemProvider.dispose();
+		if (computerConfigItemProvider != null) computerConfigItemProvider.dispose();
 	}
 
 }

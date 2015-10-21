@@ -12,15 +12,6 @@ import junit.textui.TestRunner;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>System</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following operations are tested:
- * <ul>
- *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.System#setupLab(hu.bme.mit.vmdistribution.vmdistribution.Lab) <em>Setup Lab</em>}</li>
- *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.System#initVm(hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine) <em>Init Vm</em>}</li>
- *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.System#deleteVm(hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine) <em>Delete Vm</em>}</li>
- *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.System#distributeVm(hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine) <em>Distribute Vm</em>}</li>
- * </ul>
- * </p>
  * @generated
  */
 public class SystemTest extends TestCase {
@@ -92,58 +83,6 @@ public class SystemTest extends TestCase {
 	@Override
 	protected void tearDown() throws Exception {
 		setFixture(null);
-	}
-
-	/**
-	 * Tests the '{@link hu.bme.mit.vmdistribution.vmdistribution.System#setupLab(hu.bme.mit.vmdistribution.vmdistribution.Lab) <em>Setup Lab</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see hu.bme.mit.vmdistribution.vmdistribution.System#setupLab(hu.bme.mit.vmdistribution.vmdistribution.Lab)
-	 * @generated
-	 */
-	public void testSetupLab__Lab() {
-		// TODO: implement this operation test method
-		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
-	}
-
-	/**
-	 * Tests the '{@link hu.bme.mit.vmdistribution.vmdistribution.System#initVm(hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine) <em>Init Vm</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see hu.bme.mit.vmdistribution.vmdistribution.System#initVm(hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine)
-	 * @generated
-	 */
-	public void testInitVm__VirtualMachine() {
-		// TODO: implement this operation test method
-		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
-	}
-
-	/**
-	 * Tests the '{@link hu.bme.mit.vmdistribution.vmdistribution.System#deleteVm(hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine) <em>Delete Vm</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see hu.bme.mit.vmdistribution.vmdistribution.System#deleteVm(hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine)
-	 * @generated
-	 */
-	public void testDeleteVm__VirtualMachine() {
-		// TODO: implement this operation test method
-		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
-	}
-
-	/**
-	 * Tests the '{@link hu.bme.mit.vmdistribution.vmdistribution.System#distributeVm(hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine) <em>Distribute Vm</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see hu.bme.mit.vmdistribution.vmdistribution.System#distributeVm(hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine)
-	 * @generated
-	 */
-	public void testDistributeVm__VirtualMachine() {
-		// TODO: implement this operation test method
-		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
 	}
 
 } //SystemTest

@@ -65,9 +65,7 @@ public class VirtualMachineItemProvider
 
 			addComputerPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
-			addBaseImagePropertyDescriptor(object);
-			addUseVagrantPropertyDescriptor(object);
-			addDistributionImagePropertyDescriptor(object);
+			addRequirementsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -117,67 +115,23 @@ public class VirtualMachineItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Base Image feature.
+	 * This adds a property descriptor for the Requirements feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addBaseImagePropertyDescriptor(Object object) {
+	protected void addRequirementsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_VirtualMachine_baseImage_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_VirtualMachine_baseImage_feature", "_UI_VirtualMachine_type"),
-				 VmdistributionPackage.Literals.VIRTUAL_MACHINE__BASE_IMAGE,
+				 getString("_UI_VirtualMachine_requirements_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_VirtualMachine_requirements_feature", "_UI_VirtualMachine_type"),
+				 VmdistributionPackage.Literals.VIRTUAL_MACHINE__REQUIREMENTS,
 				 true,
 				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 true,
 				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Use Vagrant feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addUseVagrantPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_VirtualMachine_useVagrant_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_VirtualMachine_useVagrant_feature", "_UI_VirtualMachine_type"),
-				 VmdistributionPackage.Literals.VIRTUAL_MACHINE__USE_VAGRANT,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Distribution Image feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDistributionImagePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_VirtualMachine_distributionImage_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_VirtualMachine_distributionImage_feature", "_UI_VirtualMachine_type"),
-				 VmdistributionPackage.Literals.VIRTUAL_MACHINE__DISTRIBUTION_IMAGE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -194,8 +148,7 @@ public class VirtualMachineItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(VmdistributionPackage.Literals.VIRTUAL_MACHINE__SOFTWARE);
-			childrenFeatures.add(VmdistributionPackage.Literals.VIRTUAL_MACHINE__VMPROPERTY);
+			childrenFeatures.add(VmdistributionPackage.Literals.VIRTUAL_MACHINE__REQUIREMENTS);
 		}
 		return childrenFeatures;
 	}
@@ -252,13 +205,9 @@ public class VirtualMachineItemProvider
 
 		switch (notification.getFeatureID(VirtualMachine.class)) {
 			case VmdistributionPackage.VIRTUAL_MACHINE__NAME:
-			case VmdistributionPackage.VIRTUAL_MACHINE__BASE_IMAGE:
-			case VmdistributionPackage.VIRTUAL_MACHINE__USE_VAGRANT:
-			case VmdistributionPackage.VIRTUAL_MACHINE__DISTRIBUTION_IMAGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case VmdistributionPackage.VIRTUAL_MACHINE__SOFTWARE:
-			case VmdistributionPackage.VIRTUAL_MACHINE__VMPROPERTY:
+			case VmdistributionPackage.VIRTUAL_MACHINE__REQUIREMENTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -278,13 +227,8 @@ public class VirtualMachineItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(VmdistributionPackage.Literals.VIRTUAL_MACHINE__SOFTWARE,
-				 VmdistributionFactory.eINSTANCE.createSoftware()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(VmdistributionPackage.Literals.VIRTUAL_MACHINE__VMPROPERTY,
-				 VmdistributionFactory.eINSTANCE.createVMProperty()));
+				(VmdistributionPackage.Literals.VIRTUAL_MACHINE__REQUIREMENTS,
+				 VmdistributionFactory.eINSTANCE.createRequirements()));
 	}
 
 	/**

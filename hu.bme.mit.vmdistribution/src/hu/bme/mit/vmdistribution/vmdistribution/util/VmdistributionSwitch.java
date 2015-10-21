@@ -3,10 +3,13 @@
 package hu.bme.mit.vmdistribution.vmdistribution.util;
 
 import hu.bme.mit.vmdistribution.vmdistribution.Computer;
+import hu.bme.mit.vmdistribution.vmdistribution.ComputerConfig;
+import hu.bme.mit.vmdistribution.vmdistribution.CustomVM;
 import hu.bme.mit.vmdistribution.vmdistribution.Lab;
-import hu.bme.mit.vmdistribution.vmdistribution.LabSetup;
+import hu.bme.mit.vmdistribution.vmdistribution.Requirements;
 import hu.bme.mit.vmdistribution.vmdistribution.Software;
 import hu.bme.mit.vmdistribution.vmdistribution.VMProperty;
+import hu.bme.mit.vmdistribution.vmdistribution.Vagrant_VM;
 import hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine;
 import hu.bme.mit.vmdistribution.vmdistribution.VmdistributionPackage;
 
@@ -108,9 +111,29 @@ public class VmdistributionSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case VmdistributionPackage.LAB_SETUP: {
-				LabSetup labSetup = (LabSetup)theEObject;
-				T result = caseLabSetup(labSetup);
+			case VmdistributionPackage.VAGRANT_VM: {
+				Vagrant_VM vagrant_VM = (Vagrant_VM)theEObject;
+				T result = caseVagrant_VM(vagrant_VM);
+				if (result == null) result = caseVirtualMachine(vagrant_VM);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case VmdistributionPackage.CUSTOM_VM: {
+				CustomVM customVM = (CustomVM)theEObject;
+				T result = caseCustomVM(customVM);
+				if (result == null) result = caseVirtualMachine(customVM);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case VmdistributionPackage.REQUIREMENTS: {
+				Requirements requirements = (Requirements)theEObject;
+				T result = caseRequirements(requirements);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case VmdistributionPackage.COMPUTER_CONFIG: {
+				ComputerConfig computerConfig = (ComputerConfig)theEObject;
+				T result = caseComputerConfig(computerConfig);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -209,17 +232,62 @@ public class VmdistributionSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Lab Setup</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Vagrant VM</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Lab Setup</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Vagrant VM</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLabSetup(LabSetup object) {
+	public T caseVagrant_VM(Vagrant_VM object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Custom VM</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Custom VM</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCustomVM(CustomVM object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Requirements</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Requirements</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRequirements(Requirements object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Computer Config</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Computer Config</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseComputerConfig(ComputerConfig object) {
 		return null;
 	}
 

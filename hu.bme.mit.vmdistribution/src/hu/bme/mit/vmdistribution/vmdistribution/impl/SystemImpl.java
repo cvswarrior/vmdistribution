@@ -4,12 +4,8 @@ package hu.bme.mit.vmdistribution.vmdistribution.impl;
 
 import hu.bme.mit.vmdistribution.vmdistribution.Computer;
 import hu.bme.mit.vmdistribution.vmdistribution.Lab;
-import hu.bme.mit.vmdistribution.vmdistribution.LabSetup;
 import hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine;
 import hu.bme.mit.vmdistribution.vmdistribution.VmdistributionPackage;
-
-import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -36,8 +32,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.impl.SystemImpl#getVirtualmachine <em>Virtualmachine</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.impl.SystemImpl#getComputer <em>Computer</em>}</li>
- *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.impl.SystemImpl#getCurrentlab <em>Currentlab</em>}</li>
- *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.impl.SystemImpl#getLabsetup <em>Labsetup</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.impl.SystemImpl#getLab <em>Lab</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.impl.SystemImpl#getCurrentsetup <em>Currentsetup</em>}</li>
  * </ul>
  *
  * @generated
@@ -64,24 +60,24 @@ public class SystemImpl extends MinimalEObjectImpl.Container implements hu.bme.m
 	protected EList<Computer> computer;
 
 	/**
-	 * The cached value of the '{@link #getCurrentlab() <em>Currentlab</em>}' reference.
+	 * The cached value of the '{@link #getLab() <em>Lab</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCurrentlab()
+	 * @see #getLab()
 	 * @generated
 	 * @ordered
 	 */
-	protected Lab currentlab;
+	protected EList<Lab> lab;
 
 	/**
-	 * The cached value of the '{@link #getLabsetup() <em>Labsetup</em>}' containment reference.
+	 * The cached value of the '{@link #getCurrentsetup() <em>Currentsetup</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLabsetup()
+	 * @see #getCurrentsetup()
 	 * @generated
 	 * @ordered
 	 */
-	protected LabSetup labsetup;
+	protected Lab currentsetup;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -131,16 +127,28 @@ public class SystemImpl extends MinimalEObjectImpl.Container implements hu.bme.m
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Lab getCurrentlab() {
-		if (currentlab != null && currentlab.eIsProxy()) {
-			InternalEObject oldCurrentlab = (InternalEObject)currentlab;
-			currentlab = (Lab)eResolveProxy(oldCurrentlab);
-			if (currentlab != oldCurrentlab) {
+	public EList<Lab> getLab() {
+		if (lab == null) {
+			lab = new EObjectContainmentEList<Lab>(Lab.class, this, VmdistributionPackage.SYSTEM__LAB);
+		}
+		return lab;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Lab getCurrentsetup() {
+		if (currentsetup != null && currentsetup.eIsProxy()) {
+			InternalEObject oldCurrentsetup = (InternalEObject)currentsetup;
+			currentsetup = (Lab)eResolveProxy(oldCurrentsetup);
+			if (currentsetup != oldCurrentsetup) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, VmdistributionPackage.SYSTEM__CURRENTLAB, oldCurrentlab, currentlab));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, VmdistributionPackage.SYSTEM__CURRENTSETUP, oldCurrentsetup, currentsetup));
 			}
 		}
-		return currentlab;
+		return currentsetup;
 	}
 
 	/**
@@ -148,8 +156,8 @@ public class SystemImpl extends MinimalEObjectImpl.Container implements hu.bme.m
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Lab basicGetCurrentlab() {
-		return currentlab;
+	public Lab basicGetCurrentsetup() {
+		return currentsetup;
 	}
 
 	/**
@@ -157,98 +165,11 @@ public class SystemImpl extends MinimalEObjectImpl.Container implements hu.bme.m
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCurrentlab(Lab newCurrentlab) {
-		Lab oldCurrentlab = currentlab;
-		currentlab = newCurrentlab;
+	public void setCurrentsetup(Lab newCurrentsetup) {
+		Lab oldCurrentsetup = currentsetup;
+		currentsetup = newCurrentsetup;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, VmdistributionPackage.SYSTEM__CURRENTLAB, oldCurrentlab, currentlab));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public LabSetup getLabsetup() {
-		return labsetup;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetLabsetup(LabSetup newLabsetup, NotificationChain msgs) {
-		LabSetup oldLabsetup = labsetup;
-		labsetup = newLabsetup;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VmdistributionPackage.SYSTEM__LABSETUP, oldLabsetup, newLabsetup);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLabsetup(LabSetup newLabsetup) {
-		if (newLabsetup != labsetup) {
-			NotificationChain msgs = null;
-			if (labsetup != null)
-				msgs = ((InternalEObject)labsetup).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VmdistributionPackage.SYSTEM__LABSETUP, null, msgs);
-			if (newLabsetup != null)
-				msgs = ((InternalEObject)newLabsetup).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VmdistributionPackage.SYSTEM__LABSETUP, null, msgs);
-			msgs = basicSetLabsetup(newLabsetup, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, VmdistributionPackage.SYSTEM__LABSETUP, newLabsetup, newLabsetup));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setupLab(Lab goal) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void initVm(VirtualMachine vm) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void deleteVm(VirtualMachine todelete) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void distributeVm(VirtualMachine todistribute) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+			eNotify(new ENotificationImpl(this, Notification.SET, VmdistributionPackage.SYSTEM__CURRENTSETUP, oldCurrentsetup, currentsetup));
 	}
 
 	/**
@@ -263,8 +184,8 @@ public class SystemImpl extends MinimalEObjectImpl.Container implements hu.bme.m
 				return ((InternalEList<?>)getVirtualmachine()).basicRemove(otherEnd, msgs);
 			case VmdistributionPackage.SYSTEM__COMPUTER:
 				return ((InternalEList<?>)getComputer()).basicRemove(otherEnd, msgs);
-			case VmdistributionPackage.SYSTEM__LABSETUP:
-				return basicSetLabsetup(null, msgs);
+			case VmdistributionPackage.SYSTEM__LAB:
+				return ((InternalEList<?>)getLab()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -281,11 +202,11 @@ public class SystemImpl extends MinimalEObjectImpl.Container implements hu.bme.m
 				return getVirtualmachine();
 			case VmdistributionPackage.SYSTEM__COMPUTER:
 				return getComputer();
-			case VmdistributionPackage.SYSTEM__CURRENTLAB:
-				if (resolve) return getCurrentlab();
-				return basicGetCurrentlab();
-			case VmdistributionPackage.SYSTEM__LABSETUP:
-				return getLabsetup();
+			case VmdistributionPackage.SYSTEM__LAB:
+				return getLab();
+			case VmdistributionPackage.SYSTEM__CURRENTSETUP:
+				if (resolve) return getCurrentsetup();
+				return basicGetCurrentsetup();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -307,11 +228,12 @@ public class SystemImpl extends MinimalEObjectImpl.Container implements hu.bme.m
 				getComputer().clear();
 				getComputer().addAll((Collection<? extends Computer>)newValue);
 				return;
-			case VmdistributionPackage.SYSTEM__CURRENTLAB:
-				setCurrentlab((Lab)newValue);
+			case VmdistributionPackage.SYSTEM__LAB:
+				getLab().clear();
+				getLab().addAll((Collection<? extends Lab>)newValue);
 				return;
-			case VmdistributionPackage.SYSTEM__LABSETUP:
-				setLabsetup((LabSetup)newValue);
+			case VmdistributionPackage.SYSTEM__CURRENTSETUP:
+				setCurrentsetup((Lab)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -331,11 +253,11 @@ public class SystemImpl extends MinimalEObjectImpl.Container implements hu.bme.m
 			case VmdistributionPackage.SYSTEM__COMPUTER:
 				getComputer().clear();
 				return;
-			case VmdistributionPackage.SYSTEM__CURRENTLAB:
-				setCurrentlab((Lab)null);
+			case VmdistributionPackage.SYSTEM__LAB:
+				getLab().clear();
 				return;
-			case VmdistributionPackage.SYSTEM__LABSETUP:
-				setLabsetup((LabSetup)null);
+			case VmdistributionPackage.SYSTEM__CURRENTSETUP:
+				setCurrentsetup((Lab)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -353,36 +275,12 @@ public class SystemImpl extends MinimalEObjectImpl.Container implements hu.bme.m
 				return virtualmachine != null && !virtualmachine.isEmpty();
 			case VmdistributionPackage.SYSTEM__COMPUTER:
 				return computer != null && !computer.isEmpty();
-			case VmdistributionPackage.SYSTEM__CURRENTLAB:
-				return currentlab != null;
-			case VmdistributionPackage.SYSTEM__LABSETUP:
-				return labsetup != null;
+			case VmdistributionPackage.SYSTEM__LAB:
+				return lab != null && !lab.isEmpty();
+			case VmdistributionPackage.SYSTEM__CURRENTSETUP:
+				return currentsetup != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case VmdistributionPackage.SYSTEM___SETUP_LAB__LAB:
-				setupLab((Lab)arguments.get(0));
-				return null;
-			case VmdistributionPackage.SYSTEM___INIT_VM__VIRTUALMACHINE:
-				initVm((VirtualMachine)arguments.get(0));
-				return null;
-			case VmdistributionPackage.SYSTEM___DELETE_VM__VIRTUALMACHINE:
-				deleteVm((VirtualMachine)arguments.get(0));
-				return null;
-			case VmdistributionPackage.SYSTEM___DISTRIBUTE_VM__VIRTUALMACHINE:
-				distributeVm((VirtualMachine)arguments.get(0));
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 } //SystemImpl

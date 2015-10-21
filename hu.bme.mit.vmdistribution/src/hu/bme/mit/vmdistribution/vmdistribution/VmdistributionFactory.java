@@ -22,15 +22,6 @@ public interface VmdistributionFactory extends EFactory {
 	VmdistributionFactory eINSTANCE = hu.bme.mit.vmdistribution.vmdistribution.impl.VmdistributionFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Virtual Machine</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Virtual Machine</em>'.
-	 * @generated
-	 */
-	VirtualMachine createVirtualMachine();
-
-	/**
 	 * Returns a new object of class '<em>System</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -76,13 +67,40 @@ public interface VmdistributionFactory extends EFactory {
 	Lab createLab();
 
 	/**
-	 * Returns a new object of class '<em>Lab Setup</em>'.
+	 * Returns a new object of class '<em>Vagrant VM</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Lab Setup</em>'.
+	 * @return a new object of class '<em>Vagrant VM</em>'.
 	 * @generated
 	 */
-	LabSetup createLabSetup();
+	Vagrant_VM createVagrant_VM();
+
+	/**
+	 * Returns a new object of class '<em>Custom VM</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Custom VM</em>'.
+	 * @generated
+	 */
+	CustomVM createCustomVM();
+
+	/**
+	 * Returns a new object of class '<em>Requirements</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Requirements</em>'.
+	 * @generated
+	 */
+	Requirements createRequirements();
+
+	/**
+	 * Returns a new object of class '<em>Computer Config</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Computer Config</em>'.
+	 * @generated
+	 */
+	ComputerConfig createComputerConfig();
 
 	/**
 	 * Returns the package supported by this factory.

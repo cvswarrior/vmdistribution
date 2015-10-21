@@ -2,8 +2,6 @@
  */
 package hu.bme.mit.vmdistribution.vmdistribution;
 
-import java.io.File;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -18,16 +16,12 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine#getComputer <em>Computer</em>}</li>
- *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine#getSoftware <em>Software</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine#getName <em>Name</em>}</li>
- *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine#getBaseImage <em>Base Image</em>}</li>
- *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine#isUseVagrant <em>Use Vagrant</em>}</li>
- *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine#getDistributionImage <em>Distribution Image</em>}</li>
- *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine#getVmproperty <em>Vmproperty</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine#getRequirements <em>Requirements</em>}</li>
  * </ul>
  *
  * @see hu.bme.mit.vmdistribution.vmdistribution.VmdistributionPackage#getVirtualMachine()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface VirtualMachine extends EObject {
@@ -48,22 +42,6 @@ public interface VirtualMachine extends EObject {
 	 * @generated
 	 */
 	EList<Computer> getComputer();
-
-	/**
-	 * Returns the value of the '<em><b>Software</b></em>' containment reference list.
-	 * The list contents are of type {@link hu.bme.mit.vmdistribution.vmdistribution.Software}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Software</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Software</em>' containment reference list.
-	 * @see hu.bme.mit.vmdistribution.vmdistribution.VmdistributionPackage#getVirtualMachine_Software()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Software> getSoftware();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -92,114 +70,29 @@ public interface VirtualMachine extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Base Image</b></em>' attribute.
+	 * Returns the value of the '<em><b>Requirements</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Base Image</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Requirements</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Base Image</em>' attribute.
-	 * @see #setBaseImage(File)
-	 * @see hu.bme.mit.vmdistribution.vmdistribution.VmdistributionPackage#getVirtualMachine_BaseImage()
-	 * @model dataType="hu.bme.mit.vmdistribution.vmdistribution.File"
+	 * @return the value of the '<em>Requirements</em>' containment reference.
+	 * @see #setRequirements(Requirements)
+	 * @see hu.bme.mit.vmdistribution.vmdistribution.VmdistributionPackage#getVirtualMachine_Requirements()
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	File getBaseImage();
+	Requirements getRequirements();
 
 	/**
-	 * Sets the value of the '{@link hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine#getBaseImage <em>Base Image</em>}' attribute.
+	 * Sets the value of the '{@link hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine#getRequirements <em>Requirements</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Base Image</em>' attribute.
-	 * @see #getBaseImage()
+	 * @param value the new value of the '<em>Requirements</em>' containment reference.
+	 * @see #getRequirements()
 	 * @generated
 	 */
-	void setBaseImage(File value);
-
-	/**
-	 * Returns the value of the '<em><b>Use Vagrant</b></em>' attribute.
-	 * The default value is <code>"true"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Use Vagrant</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Use Vagrant</em>' attribute.
-	 * @see #setUseVagrant(boolean)
-	 * @see hu.bme.mit.vmdistribution.vmdistribution.VmdistributionPackage#getVirtualMachine_UseVagrant()
-	 * @model default="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
-	 * @generated
-	 */
-	boolean isUseVagrant();
-
-	/**
-	 * Sets the value of the '{@link hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine#isUseVagrant <em>Use Vagrant</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Use Vagrant</em>' attribute.
-	 * @see #isUseVagrant()
-	 * @generated
-	 */
-	void setUseVagrant(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Distribution Image</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Distribution Image</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Distribution Image</em>' attribute.
-	 * @see #setDistributionImage(File)
-	 * @see hu.bme.mit.vmdistribution.vmdistribution.VmdistributionPackage#getVirtualMachine_DistributionImage()
-	 * @model dataType="hu.bme.mit.vmdistribution.vmdistribution.File"
-	 * @generated
-	 */
-	File getDistributionImage();
-
-	/**
-	 * Sets the value of the '{@link hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine#getDistributionImage <em>Distribution Image</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Distribution Image</em>' attribute.
-	 * @see #getDistributionImage()
-	 * @generated
-	 */
-	void setDistributionImage(File value);
-
-	/**
-	 * Returns the value of the '<em><b>Vmproperty</b></em>' containment reference list.
-	 * The list contents are of type {@link hu.bme.mit.vmdistribution.vmdistribution.VMProperty}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Vmproperty</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Vmproperty</em>' containment reference list.
-	 * @see hu.bme.mit.vmdistribution.vmdistribution.VmdistributionPackage#getVirtualMachine_Vmproperty()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<VMProperty> getVmproperty();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void prepare();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.Boolean"
-	 * @generated
-	 */
-	boolean isCompatible(Computer computer);
+	void setRequirements(Requirements value);
 
 } // VirtualMachine

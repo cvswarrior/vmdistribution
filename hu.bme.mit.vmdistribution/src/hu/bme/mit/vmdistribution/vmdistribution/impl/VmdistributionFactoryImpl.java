@@ -3,18 +3,17 @@
 package hu.bme.mit.vmdistribution.vmdistribution.impl;
 
 import hu.bme.mit.vmdistribution.vmdistribution.Computer;
+import hu.bme.mit.vmdistribution.vmdistribution.ComputerConfig;
+import hu.bme.mit.vmdistribution.vmdistribution.CustomVM;
 import hu.bme.mit.vmdistribution.vmdistribution.Lab;
-import hu.bme.mit.vmdistribution.vmdistribution.LabSetup;
+import hu.bme.mit.vmdistribution.vmdistribution.Requirements;
 import hu.bme.mit.vmdistribution.vmdistribution.Software;
 import hu.bme.mit.vmdistribution.vmdistribution.VMProperty;
-import hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine;
+import hu.bme.mit.vmdistribution.vmdistribution.Vagrant_VM;
 import hu.bme.mit.vmdistribution.vmdistribution.VmdistributionFactory;
 import hu.bme.mit.vmdistribution.vmdistribution.VmdistributionPackage;
 
 import java.io.File;
-
-import java.net.InetAddress;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -68,13 +67,15 @@ public class VmdistributionFactoryImpl extends EFactoryImpl implements Vmdistrib
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case VmdistributionPackage.VIRTUAL_MACHINE: return createVirtualMachine();
 			case VmdistributionPackage.SYSTEM: return createSystem();
 			case VmdistributionPackage.COMPUTER: return createComputer();
 			case VmdistributionPackage.SOFTWARE: return createSoftware();
 			case VmdistributionPackage.VM_PROPERTY: return createVMProperty();
 			case VmdistributionPackage.LAB: return createLab();
-			case VmdistributionPackage.LAB_SETUP: return createLabSetup();
+			case VmdistributionPackage.VAGRANT_VM: return createVagrant_VM();
+			case VmdistributionPackage.CUSTOM_VM: return createCustomVM();
+			case VmdistributionPackage.REQUIREMENTS: return createRequirements();
+			case VmdistributionPackage.COMPUTER_CONFIG: return createComputerConfig();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -90,8 +91,6 @@ public class VmdistributionFactoryImpl extends EFactoryImpl implements Vmdistrib
 		switch (eDataType.getClassifierID()) {
 			case VmdistributionPackage.FILE:
 				return createFileFromString(eDataType, initialValue);
-			case VmdistributionPackage.IP_ADDRESS:
-				return createIPAddressFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -107,21 +106,9 @@ public class VmdistributionFactoryImpl extends EFactoryImpl implements Vmdistrib
 		switch (eDataType.getClassifierID()) {
 			case VmdistributionPackage.FILE:
 				return convertFileToString(eDataType, instanceValue);
-			case VmdistributionPackage.IP_ADDRESS:
-				return convertIPAddressToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VirtualMachine createVirtualMachine() {
-		VirtualMachineImpl virtualMachine = new VirtualMachineImpl();
-		return virtualMachine;
 	}
 
 	/**
@@ -179,9 +166,39 @@ public class VmdistributionFactoryImpl extends EFactoryImpl implements Vmdistrib
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LabSetup createLabSetup() {
-		LabSetupImpl labSetup = new LabSetupImpl();
-		return labSetup;
+	public Vagrant_VM createVagrant_VM() {
+		Vagrant_VMImpl vagrant_VM = new Vagrant_VMImpl();
+		return vagrant_VM;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CustomVM createCustomVM() {
+		CustomVMImpl customVM = new CustomVMImpl();
+		return customVM;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Requirements createRequirements() {
+		RequirementsImpl requirements = new RequirementsImpl();
+		return requirements;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ComputerConfig createComputerConfig() {
+		ComputerConfigImpl computerConfig = new ComputerConfigImpl();
+		return computerConfig;
 	}
 
 	/**
@@ -199,24 +216,6 @@ public class VmdistributionFactoryImpl extends EFactoryImpl implements Vmdistrib
 	 * @generated
 	 */
 	public String convertFileToString(EDataType eDataType, Object instanceValue) {
-		return super.convertToString(eDataType, instanceValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public InetAddress createIPAddressFromString(EDataType eDataType, String initialValue) {
-		return (InetAddress)super.createFromString(eDataType, initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertIPAddressToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 

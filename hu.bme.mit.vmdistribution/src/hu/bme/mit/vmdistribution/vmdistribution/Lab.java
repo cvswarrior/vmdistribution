@@ -2,6 +2,7 @@
  */
 package hu.bme.mit.vmdistribution.vmdistribution;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -13,7 +14,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.Lab#getComputer <em>Computer</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.Lab#getName <em>Name</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.Lab#getComputerconfig <em>Computerconfig</em>}</li>
  * </ul>
  *
  * @see hu.bme.mit.vmdistribution.vmdistribution.VmdistributionPackage#getLab()
@@ -22,29 +24,45 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Lab extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Computer</b></em>' reference.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Computer</em>' reference isn't clear,
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Computer</em>' reference.
-	 * @see #setComputer(Computer)
-	 * @see hu.bme.mit.vmdistribution.vmdistribution.VmdistributionPackage#getLab_Computer()
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see hu.bme.mit.vmdistribution.vmdistribution.VmdistributionPackage#getLab_Name()
 	 * @model
 	 * @generated
 	 */
-	Computer getComputer();
+	String getName();
 
 	/**
-	 * Sets the value of the '{@link hu.bme.mit.vmdistribution.vmdistribution.Lab#getComputer <em>Computer</em>}' reference.
+	 * Sets the value of the '{@link hu.bme.mit.vmdistribution.vmdistribution.Lab#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Computer</em>' reference.
-	 * @see #getComputer()
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
 	 * @generated
 	 */
-	void setComputer(Computer value);
+	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Computerconfig</b></em>' containment reference list.
+	 * The list contents are of type {@link hu.bme.mit.vmdistribution.vmdistribution.ComputerConfig}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Computerconfig</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Computerconfig</em>' containment reference list.
+	 * @see hu.bme.mit.vmdistribution.vmdistribution.VmdistributionPackage#getLab_Computerconfig()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	EList<ComputerConfig> getComputerconfig();
 
 } // Lab

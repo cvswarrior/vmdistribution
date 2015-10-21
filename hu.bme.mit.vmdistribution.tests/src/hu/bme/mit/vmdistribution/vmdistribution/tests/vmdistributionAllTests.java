@@ -31,7 +31,6 @@ public class vmdistributionAllTests extends TestSuite {
 	 */
 	public static Test suite() {
 		TestSuite suite = new vmdistributionAllTests("vmdistribution Tests");
-		suite.addTest(VmdistributionTests.suite());
 		return suite;
 	}
 

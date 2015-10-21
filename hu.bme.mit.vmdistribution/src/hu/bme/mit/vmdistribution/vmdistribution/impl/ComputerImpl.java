@@ -5,9 +5,6 @@ package hu.bme.mit.vmdistribution.vmdistribution.impl;
 import hu.bme.mit.vmdistribution.vmdistribution.Computer;
 import hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine;
 import hu.bme.mit.vmdistribution.vmdistribution.VmdistributionPackage;
-
-import java.net.InetAddress;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -36,6 +33,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.impl.ComputerImpl#getName <em>Name</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.impl.ComputerImpl#getIpAddr <em>Ip Addr</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.impl.ComputerImpl#getAvailableSpace <em>Available Space</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.impl.ComputerImpl#getInstalledRAM <em>Installed RAM</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.impl.ComputerImpl#getArchitecture <em>Architecture</em>}</li>
  * </ul>
  *
  * @generated
@@ -79,7 +78,7 @@ public class ComputerImpl extends MinimalEObjectImpl.Container implements Comput
 	 * @generated
 	 * @ordered
 	 */
-	protected static final InetAddress IP_ADDR_EDEFAULT = null;
+	protected static final String IP_ADDR_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getIpAddr() <em>Ip Addr</em>}' attribute.
@@ -89,7 +88,7 @@ public class ComputerImpl extends MinimalEObjectImpl.Container implements Comput
 	 * @generated
 	 * @ordered
 	 */
-	protected InetAddress ipAddr = IP_ADDR_EDEFAULT;
+	protected String ipAddr = IP_ADDR_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getAvailableSpace() <em>Available Space</em>}' attribute.
@@ -110,6 +109,46 @@ public class ComputerImpl extends MinimalEObjectImpl.Container implements Comput
 	 * @ordered
 	 */
 	protected double availableSpace = AVAILABLE_SPACE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getInstalledRAM() <em>Installed RAM</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInstalledRAM()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double INSTALLED_RAM_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getInstalledRAM() <em>Installed RAM</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInstalledRAM()
+	 * @generated
+	 * @ordered
+	 */
+	protected double installedRAM = INSTALLED_RAM_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getArchitecture() <em>Architecture</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getArchitecture()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ARCHITECTURE_EDEFAULT = "x86";
+
+	/**
+	 * The cached value of the '{@link #getArchitecture() <em>Architecture</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getArchitecture()
+	 * @generated
+	 * @ordered
+	 */
+	protected String architecture = ARCHITECTURE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -168,7 +207,7 @@ public class ComputerImpl extends MinimalEObjectImpl.Container implements Comput
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public InetAddress getIpAddr() {
+	public String getIpAddr() {
 		return ipAddr;
 	}
 
@@ -177,8 +216,8 @@ public class ComputerImpl extends MinimalEObjectImpl.Container implements Comput
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIpAddr(InetAddress newIpAddr) {
-		InetAddress oldIpAddr = ipAddr;
+	public void setIpAddr(String newIpAddr) {
+		String oldIpAddr = ipAddr;
 		ipAddr = newIpAddr;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, VmdistributionPackage.COMPUTER__IP_ADDR, oldIpAddr, ipAddr));
@@ -203,6 +242,48 @@ public class ComputerImpl extends MinimalEObjectImpl.Container implements Comput
 		availableSpace = newAvailableSpace;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, VmdistributionPackage.COMPUTER__AVAILABLE_SPACE, oldAvailableSpace, availableSpace));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public double getInstalledRAM() {
+		return installedRAM;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInstalledRAM(double newInstalledRAM) {
+		double oldInstalledRAM = installedRAM;
+		installedRAM = newInstalledRAM;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, VmdistributionPackage.COMPUTER__INSTALLED_RAM, oldInstalledRAM, installedRAM));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getArchitecture() {
+		return architecture;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setArchitecture(String newArchitecture) {
+		String oldArchitecture = architecture;
+		architecture = newArchitecture;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, VmdistributionPackage.COMPUTER__ARCHITECTURE, oldArchitecture, architecture));
 	}
 
 	/**
@@ -250,6 +331,10 @@ public class ComputerImpl extends MinimalEObjectImpl.Container implements Comput
 				return getIpAddr();
 			case VmdistributionPackage.COMPUTER__AVAILABLE_SPACE:
 				return getAvailableSpace();
+			case VmdistributionPackage.COMPUTER__INSTALLED_RAM:
+				return getInstalledRAM();
+			case VmdistributionPackage.COMPUTER__ARCHITECTURE:
+				return getArchitecture();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -271,10 +356,16 @@ public class ComputerImpl extends MinimalEObjectImpl.Container implements Comput
 				setName((String)newValue);
 				return;
 			case VmdistributionPackage.COMPUTER__IP_ADDR:
-				setIpAddr((InetAddress)newValue);
+				setIpAddr((String)newValue);
 				return;
 			case VmdistributionPackage.COMPUTER__AVAILABLE_SPACE:
 				setAvailableSpace((Double)newValue);
+				return;
+			case VmdistributionPackage.COMPUTER__INSTALLED_RAM:
+				setInstalledRAM((Double)newValue);
+				return;
+			case VmdistributionPackage.COMPUTER__ARCHITECTURE:
+				setArchitecture((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -300,6 +391,12 @@ public class ComputerImpl extends MinimalEObjectImpl.Container implements Comput
 			case VmdistributionPackage.COMPUTER__AVAILABLE_SPACE:
 				setAvailableSpace(AVAILABLE_SPACE_EDEFAULT);
 				return;
+			case VmdistributionPackage.COMPUTER__INSTALLED_RAM:
+				setInstalledRAM(INSTALLED_RAM_EDEFAULT);
+				return;
+			case VmdistributionPackage.COMPUTER__ARCHITECTURE:
+				setArchitecture(ARCHITECTURE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -320,6 +417,10 @@ public class ComputerImpl extends MinimalEObjectImpl.Container implements Comput
 				return IP_ADDR_EDEFAULT == null ? ipAddr != null : !IP_ADDR_EDEFAULT.equals(ipAddr);
 			case VmdistributionPackage.COMPUTER__AVAILABLE_SPACE:
 				return availableSpace != AVAILABLE_SPACE_EDEFAULT;
+			case VmdistributionPackage.COMPUTER__INSTALLED_RAM:
+				return installedRAM != INSTALLED_RAM_EDEFAULT;
+			case VmdistributionPackage.COMPUTER__ARCHITECTURE:
+				return ARCHITECTURE_EDEFAULT == null ? architecture != null : !ARCHITECTURE_EDEFAULT.equals(architecture);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -340,6 +441,10 @@ public class ComputerImpl extends MinimalEObjectImpl.Container implements Comput
 		result.append(ipAddr);
 		result.append(", AvailableSpace: ");
 		result.append(availableSpace);
+		result.append(", installedRAM: ");
+		result.append(installedRAM);
+		result.append(", architecture: ");
+		result.append(architecture);
 		result.append(')');
 		return result.toString();
 	}

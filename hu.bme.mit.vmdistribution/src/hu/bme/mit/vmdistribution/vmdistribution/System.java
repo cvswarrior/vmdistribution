@@ -17,8 +17,8 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.System#getVirtualmachine <em>Virtualmachine</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.System#getComputer <em>Computer</em>}</li>
- *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.System#getCurrentlab <em>Currentlab</em>}</li>
- *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.System#getLabsetup <em>Labsetup</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.System#getLab <em>Lab</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.System#getCurrentsetup <em>Currentsetup</em>}</li>
  * </ul>
  *
  * @see hu.bme.mit.vmdistribution.vmdistribution.VmdistributionPackage#getSystem()
@@ -59,87 +59,45 @@ public interface System extends EObject {
 	EList<Computer> getComputer();
 
 	/**
-	 * Returns the value of the '<em><b>Currentlab</b></em>' reference.
+	 * Returns the value of the '<em><b>Lab</b></em>' containment reference list.
+	 * The list contents are of type {@link hu.bme.mit.vmdistribution.vmdistribution.Lab}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Currentlab</em>' reference isn't clear,
+	 * If the meaning of the '<em>Lab</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Currentlab</em>' reference.
-	 * @see #setCurrentlab(Lab)
-	 * @see hu.bme.mit.vmdistribution.vmdistribution.VmdistributionPackage#getSystem_Currentlab()
-	 * @model required="true"
+	 * @return the value of the '<em>Lab</em>' containment reference list.
+	 * @see hu.bme.mit.vmdistribution.vmdistribution.VmdistributionPackage#getSystem_Lab()
+	 * @model containment="true"
 	 * @generated
 	 */
-	Lab getCurrentlab();
+	EList<Lab> getLab();
 
 	/**
-	 * Sets the value of the '{@link hu.bme.mit.vmdistribution.vmdistribution.System#getCurrentlab <em>Currentlab</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Currentlab</em>' reference.
-	 * @see #getCurrentlab()
-	 * @generated
-	 */
-	void setCurrentlab(Lab value);
-
-	/**
-	 * Returns the value of the '<em><b>Labsetup</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Currentsetup</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Labsetup</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Currentsetup</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Labsetup</em>' containment reference.
-	 * @see #setLabsetup(LabSetup)
-	 * @see hu.bme.mit.vmdistribution.vmdistribution.VmdistributionPackage#getSystem_Labsetup()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	LabSetup getLabsetup();
-
-	/**
-	 * Sets the value of the '{@link hu.bme.mit.vmdistribution.vmdistribution.System#getLabsetup <em>Labsetup</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Labsetup</em>' containment reference.
-	 * @see #getLabsetup()
-	 * @generated
-	 */
-	void setLabsetup(LabSetup value);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Currentsetup</em>' reference.
+	 * @see #setCurrentsetup(Lab)
+	 * @see hu.bme.mit.vmdistribution.vmdistribution.VmdistributionPackage#getSystem_Currentsetup()
 	 * @model
 	 * @generated
 	 */
-	void setupLab(Lab goal);
+	Lab getCurrentsetup();
 
 	/**
+	 * Sets the value of the '{@link hu.bme.mit.vmdistribution.vmdistribution.System#getCurrentsetup <em>Currentsetup</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @param value the new value of the '<em>Currentsetup</em>' reference.
+	 * @see #getCurrentsetup()
 	 * @generated
 	 */
-	void initVm(VirtualMachine vm);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void deleteVm(VirtualMachine todelete);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void distributeVm(VirtualMachine todistribute);
+	void setCurrentsetup(Lab value);
 
 } // System

@@ -2,7 +2,6 @@
  */
 package hu.bme.mit.vmdistribution.vmdistribution.tests;
 
-import hu.bme.mit.vmdistribution.vmdistribution.VirtualMachine;
 import hu.bme.mit.vmdistribution.vmdistribution.VmdistributionFactory;
 import hu.bme.mit.vmdistribution.vmdistribution.VmdistributionPackage;
 
@@ -60,7 +59,7 @@ public class VmdistributionExample {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.vmdistribution"));
-				VirtualMachine root = VmdistributionFactory.eINSTANCE.createVirtualMachine();
+				hu.bme.mit.vmdistribution.vmdistribution.System root = VmdistributionFactory.eINSTANCE.createSystem();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}

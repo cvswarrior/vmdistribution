@@ -2,8 +2,6 @@
  */
 package hu.bme.mit.vmdistribution.vmdistribution;
 
-import java.net.InetAddress;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -21,6 +19,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.Computer#getName <em>Name</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.Computer#getIpAddr <em>Ip Addr</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.Computer#getAvailableSpace <em>Available Space</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.Computer#getInstalledRAM <em>Installed RAM</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.vmdistribution.Computer#getArchitecture <em>Architecture</em>}</li>
  * </ul>
  *
  * @see hu.bme.mit.vmdistribution.vmdistribution.VmdistributionPackage#getComputer()
@@ -81,12 +81,12 @@ public interface Computer extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ip Addr</em>' attribute.
-	 * @see #setIpAddr(InetAddress)
+	 * @see #setIpAddr(String)
 	 * @see hu.bme.mit.vmdistribution.vmdistribution.VmdistributionPackage#getComputer_IpAddr()
-	 * @model dataType="hu.bme.mit.vmdistribution.vmdistribution.IPAddress"
+	 * @model
 	 * @generated
 	 */
-	InetAddress getIpAddr();
+	String getIpAddr();
 
 	/**
 	 * Sets the value of the '{@link hu.bme.mit.vmdistribution.vmdistribution.Computer#getIpAddr <em>Ip Addr</em>}' attribute.
@@ -96,7 +96,7 @@ public interface Computer extends EObject {
 	 * @see #getIpAddr()
 	 * @generated
 	 */
-	void setIpAddr(InetAddress value);
+	void setIpAddr(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Available Space</b></em>' attribute.
@@ -123,5 +123,58 @@ public interface Computer extends EObject {
 	 * @generated
 	 */
 	void setAvailableSpace(double value);
+
+	/**
+	 * Returns the value of the '<em><b>Installed RAM</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Installed RAM</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Installed RAM</em>' attribute.
+	 * @see #setInstalledRAM(double)
+	 * @see hu.bme.mit.vmdistribution.vmdistribution.VmdistributionPackage#getComputer_InstalledRAM()
+	 * @model
+	 * @generated
+	 */
+	double getInstalledRAM();
+
+	/**
+	 * Sets the value of the '{@link hu.bme.mit.vmdistribution.vmdistribution.Computer#getInstalledRAM <em>Installed RAM</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Installed RAM</em>' attribute.
+	 * @see #getInstalledRAM()
+	 * @generated
+	 */
+	void setInstalledRAM(double value);
+
+	/**
+	 * Returns the value of the '<em><b>Architecture</b></em>' attribute.
+	 * The default value is <code>"x86"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Architecture</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Architecture</em>' attribute.
+	 * @see #setArchitecture(String)
+	 * @see hu.bme.mit.vmdistribution.vmdistribution.VmdistributionPackage#getComputer_Architecture()
+	 * @model default="x86"
+	 * @generated
+	 */
+	String getArchitecture();
+
+	/**
+	 * Sets the value of the '{@link hu.bme.mit.vmdistribution.vmdistribution.Computer#getArchitecture <em>Architecture</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Architecture</em>' attribute.
+	 * @see #getArchitecture()
+	 * @generated
+	 */
+	void setArchitecture(String value);
 
 } // Computer
