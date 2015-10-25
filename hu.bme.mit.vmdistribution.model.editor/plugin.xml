@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated vmdistribution -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="hu.bme.mit.vmdistribution.model.presentation.VMDistributionModelWizardID"
+            name="%_UI_VMDistributionModelWizard_label"
+            class="hu.bme.mit.vmdistribution.model.presentation.VMDistributionModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/VMDistributionModelFile.gif">
+         <description>%_UI_VMDistributionModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated vmdistribution -->
+      <editor
+            id="hu.bme.mit.vmdistribution.model.presentation.VMDistributionEditorID"
+            name="%_UI_VMDistributionEditor_label"
+            icon="icons/full/obj16/VMDistributionModelFile.gif"
+            extensions="vmdistribution"
+            class="hu.bme.mit.vmdistribution.model.presentation.VMDistributionEditor"
+            contributorClass="hu.bme.mit.vmdistribution.model.presentation.VMDistributionActionBarContributor">
+      </editor>
+   </extension>
+</plugin>
