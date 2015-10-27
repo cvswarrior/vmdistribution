@@ -2,9 +2,7 @@ package hu.bme.mit.vmdistribution.app;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -42,17 +40,7 @@ public class UseModel {
 		}
 		
 		distribute(goal);
-		
-		// System.out.println(ModelValidator.validateModel(myLabSystem));
-		// File copy_test = new
-		// File("../hu.bme.mit.vmdistribution.model.tests/modeltest/My.vmdistribution");
-		// copyVM("lxvcmsd1.develop.raiffeisen.hu", "b1vincze", "123qwe",
-		// copy_test);
-		//tryExec("labpc101", "ifconfig");
-		//tryExec("seed", "ifconfig");
-		
-		
-		
+
 		logger.log(Level.INFO, "[Done.]");
 	}
 
@@ -69,7 +57,6 @@ public class UseModel {
 	public static void distribute(Lab goal) {
 
 		List<VirtualMachine> seenVMs = new ArrayList<>();
-		Map<String, String> torrentfilemap = new HashMap<>();
 
 		// prepare vagrant vms & copy single copy of vms to torrent seed
 		logger.log(Level.INFO, "[Copying required VMs to seed.]");
@@ -82,7 +69,7 @@ public class UseModel {
 
 				if ("CustomVM".equals(vm.eClass().getName())) {
 					CustomVM customvm = (CustomVM) vm;
-					//copyVM("seed", customvm.getVmZipArchive(), "/home/vagrant/Downloads");
+					copyVM("seed", customvm.getVmZipArchive(), "/home/vagrant/Downloads");
 				} else {
 					/*Vagrant_VM vagrantvm = (Vagrant_VM) vm;
 					prepareVagrantVM(vagrantvm);
@@ -97,7 +84,7 @@ public class UseModel {
 		List<Computer> targetpcs = new ArrayList<>();
 		targetpcs.add(goal.getComputerconfig().get(0).getComputer());
 		targetpcs.add(goal.getComputerconfig().get(1).getComputer());
-		targetpcs.add(goal.getComputerconfig().get(2).getComputer());
+		//targetpcs.add(goal.getComputerconfig().get(2).getComputer());
 		
 		logger.log(Level.INFO, "[Creating torrent file and starting seeding.]");
 		StringBuilder command = new StringBuilder("~/shared/begin_seed.sh ");
@@ -117,24 +104,11 @@ public class UseModel {
 			execShell("seed", command.toString());
 		}
 		
-
-		/*
-		for (VirtualMachine vm : seenVMs) {
-			// tryExec("seed", "createtorrentfiles");
-			torrentfilemap.put(vm.getName(), "");// necessary?
-		}
-
-		for (ComputerConfig cfgitem : goal.getComputerconfig()) {
-			Computer pc = cfgitem.getComputer();
-			pc.eClass();
-
-		}*/
-
 		// updatemodel
 	}
 
+	// TODO
 	public static void prepareVagrantVM(Vagrant_VM vm) {
-		// TODO
 		vm.setDistributionImage(null);
 		vm.setReadyToDistribute(true);
 	}
