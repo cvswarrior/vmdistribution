@@ -17,11 +17,12 @@
     <vmproperty name="NET_PORTFORWARD" vagrantCommand="config.vm.network &quot;forwarded_port&quot;, guest: 80, host: 80"/>
     <vmproperty name="VM_HOSTNAME" vagrantCommand="config.vm.hostname &quot;labqmgr.mit.bme.hu&quot;"/>
   </virtualmachine>
-  <computer virtualmachines="//@virtualmachine.0 //@virtualmachine.1" name="labpc100" ipAddr="192.168.0.100" AvailableSpace="80000.0" installedRAM="4000.0"/>
-  <computer virtualmachines="//@virtualmachine.2" name="labpc101" ipAddr="192.168.0.101" AvailableSpace="55000.0" installedRAM="6000.0"/>
-  <computer virtualmachines="//@virtualmachine.2" name="labpc102" ipAddr="192.168.0.102" AvailableSpace="140.0" installedRAM="4000.0"/>
-  <computer virtualmachines="//@virtualmachine.0 //@virtualmachine.2" name="labpc103" ipAddr="192.168.0.103" AvailableSpace="90000.0" installedRAM="2500.0" architecture="x2000"/>
-  <computer virtualmachines="//@virtualmachine.0 //@virtualmachine.1 //@virtualmachine.3" name="labpc104" ipAddr="192.168.0.104" AvailableSpace="12000.0" installedRAM="2000.0"/>
+  <virtualmachine xsi:type="hu.bme.mit.vmdistribution:CustomVM" name="testvm" vmZipArchive="e:\_TSYS\Vagrant\shared\testvm.zip"/>
+  <computer virtualmachines="//@virtualmachine.0 //@virtualmachine.1" name="labpc101" ipAddr="192.168.0.111" AvailableSpace="80000.0" installedRAM="4000.0"/>
+  <computer virtualmachines="//@virtualmachine.2" name="labpc102" ipAddr="192.168.0.112" AvailableSpace="55000.0" installedRAM="6000.0"/>
+  <computer virtualmachines="//@virtualmachine.2" name="labpc103" ipAddr="192.168.0.113" AvailableSpace="140.0" installedRAM="4000.0"/>
+  <computer virtualmachines="//@virtualmachine.0 //@virtualmachine.2" name="labpc104" ipAddr="192.168.0.114" AvailableSpace="90000.0" installedRAM="2500.0" architecture="x2000"/>
+  <computer virtualmachines="//@virtualmachine.0 //@virtualmachine.1 //@virtualmachine.3" name="labpc105" ipAddr="192.168.0.115" AvailableSpace="12000.0" installedRAM="2000.0"/>
   <lab name="itlab1">
     <computerconfig computer="//@computer.0" virtualmachine="//@virtualmachine.2" name="itlab1_pc01_conf"/>
     <computerconfig computer="//@computer.1" virtualmachine="//@virtualmachine.2" name="itlab1_pc02_conf"/>
@@ -32,7 +33,8 @@
     <computerconfig computer="//@computer.4" virtualmachine="//@virtualmachine.1" name="meres_oktatoi_pc01_conf"/>
   </lab>
   <lab name="vm_test">
-    <computerconfig computer="//@computer.0" virtualmachine="//@virtualmachine.1 //@virtualmachine.0" name="vm_test_pc01_conf"/>
-    <computerconfig computer="//@computer.1" virtualmachine="//@virtualmachine.3 //@virtualmachine.2" name="vm_test_pc02_conf"/>
+    <computerconfig computer="//@computer.0" virtualmachine="//@virtualmachine.4" name="vm_test_pc01_conf"/>
+    <computerconfig computer="//@computer.1" virtualmachine="//@virtualmachine.4" name="vm_test_pc02_conf"/>
+    <computerconfig computer="//@computer.2" virtualmachine="//@virtualmachine.4" name="vm_test_pc03_conf"/>
   </lab>
 </hu.bme.mit.vmdistribution:LabSystem>
