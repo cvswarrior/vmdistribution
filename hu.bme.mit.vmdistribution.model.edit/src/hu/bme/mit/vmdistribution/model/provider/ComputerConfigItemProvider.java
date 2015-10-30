@@ -61,7 +61,7 @@ public class ComputerConfigItemProvider
 			super.getPropertyDescriptors(object);
 
 			addComputerPropertyDescriptor(object);
-			addVirtualmachinePropertyDescriptor(object);
+			addVirtualmachinesPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -90,19 +90,19 @@ public class ComputerConfigItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Virtualmachine feature.
+	 * This adds a property descriptor for the Virtualmachines feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addVirtualmachinePropertyDescriptor(Object object) {
+	protected void addVirtualmachinesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ComputerConfig_virtualmachine_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ComputerConfig_virtualmachine_feature", "_UI_ComputerConfig_type"),
-				 VMDistributionPackage.Literals.COMPUTER_CONFIG__VIRTUALMACHINE,
+				 getString("_UI_ComputerConfig_virtualmachines_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ComputerConfig_virtualmachines_feature", "_UI_ComputerConfig_type"),
+				 VMDistributionPackage.Literals.COMPUTER_CONFIG__VIRTUALMACHINES,
 				 true,
 				 false,
 				 true,

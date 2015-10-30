@@ -32,8 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link hu.bme.mit.vmdistribution.model.impl.ComputerImpl#getVirtualmachines <em>Virtualmachines</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.impl.ComputerImpl#getName <em>Name</em>}</li>
- *   <li>{@link hu.bme.mit.vmdistribution.model.impl.ComputerImpl#getIpAddr <em>Ip Addr</em>}</li>
- *   <li>{@link hu.bme.mit.vmdistribution.model.impl.ComputerImpl#getAvailableSpace <em>Available Space</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.model.impl.ComputerImpl#getMaxSpaceForVMs <em>Max Space For VMs</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.impl.ComputerImpl#getInstalledRAM <em>Installed RAM</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.impl.ComputerImpl#getArchitecture <em>Architecture</em>}</li>
  * </ul>
@@ -72,44 +71,24 @@ public class ComputerImpl extends MinimalEObjectImpl.Container implements Comput
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getIpAddr() <em>Ip Addr</em>}' attribute.
+	 * The default value of the '{@link #getMaxSpaceForVMs() <em>Max Space For VMs</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIpAddr()
+	 * @see #getMaxSpaceForVMs()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String IP_ADDR_EDEFAULT = null;
+	protected static final double MAX_SPACE_FOR_VMS_EDEFAULT = 0.0;
 
 	/**
-	 * The cached value of the '{@link #getIpAddr() <em>Ip Addr</em>}' attribute.
+	 * The cached value of the '{@link #getMaxSpaceForVMs() <em>Max Space For VMs</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIpAddr()
+	 * @see #getMaxSpaceForVMs()
 	 * @generated
 	 * @ordered
 	 */
-	protected String ipAddr = IP_ADDR_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getAvailableSpace() <em>Available Space</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAvailableSpace()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final double AVAILABLE_SPACE_EDEFAULT = 0.0;
-
-	/**
-	 * The cached value of the '{@link #getAvailableSpace() <em>Available Space</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAvailableSpace()
-	 * @generated
-	 * @ordered
-	 */
-	protected double availableSpace = AVAILABLE_SPACE_EDEFAULT;
+	protected double maxSpaceForVMs = MAX_SPACE_FOR_VMS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getInstalledRAM() <em>Installed RAM</em>}' attribute.
@@ -177,7 +156,7 @@ public class ComputerImpl extends MinimalEObjectImpl.Container implements Comput
 	 */
 	public EList<VirtualMachine> getVirtualmachines() {
 		if (virtualmachines == null) {
-			virtualmachines = new EObjectWithInverseResolvingEList.ManyInverse<VirtualMachine>(VirtualMachine.class, this, VMDistributionPackage.COMPUTER__VIRTUALMACHINES, VMDistributionPackage.VIRTUAL_MACHINE__COMPUTER);
+			virtualmachines = new EObjectWithInverseResolvingEList.ManyInverse<VirtualMachine>(VirtualMachine.class, this, VMDistributionPackage.COMPUTER__VIRTUALMACHINES, VMDistributionPackage.VIRTUAL_MACHINE__COMPUTERS);
 		}
 		return virtualmachines;
 	}
@@ -208,8 +187,8 @@ public class ComputerImpl extends MinimalEObjectImpl.Container implements Comput
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getIpAddr() {
-		return ipAddr;
+	public double getMaxSpaceForVMs() {
+		return maxSpaceForVMs;
 	}
 
 	/**
@@ -217,32 +196,11 @@ public class ComputerImpl extends MinimalEObjectImpl.Container implements Comput
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIpAddr(String newIpAddr) {
-		String oldIpAddr = ipAddr;
-		ipAddr = newIpAddr;
+	public void setMaxSpaceForVMs(double newMaxSpaceForVMs) {
+		double oldMaxSpaceForVMs = maxSpaceForVMs;
+		maxSpaceForVMs = newMaxSpaceForVMs;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, VMDistributionPackage.COMPUTER__IP_ADDR, oldIpAddr, ipAddr));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public double getAvailableSpace() {
-		return availableSpace;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setAvailableSpace(double newAvailableSpace) {
-		double oldAvailableSpace = availableSpace;
-		availableSpace = newAvailableSpace;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, VMDistributionPackage.COMPUTER__AVAILABLE_SPACE, oldAvailableSpace, availableSpace));
+			eNotify(new ENotificationImpl(this, Notification.SET, VMDistributionPackage.COMPUTER__MAX_SPACE_FOR_VMS, oldMaxSpaceForVMs, maxSpaceForVMs));
 	}
 
 	/**
@@ -328,10 +286,8 @@ public class ComputerImpl extends MinimalEObjectImpl.Container implements Comput
 				return getVirtualmachines();
 			case VMDistributionPackage.COMPUTER__NAME:
 				return getName();
-			case VMDistributionPackage.COMPUTER__IP_ADDR:
-				return getIpAddr();
-			case VMDistributionPackage.COMPUTER__AVAILABLE_SPACE:
-				return getAvailableSpace();
+			case VMDistributionPackage.COMPUTER__MAX_SPACE_FOR_VMS:
+				return getMaxSpaceForVMs();
 			case VMDistributionPackage.COMPUTER__INSTALLED_RAM:
 				return getInstalledRAM();
 			case VMDistributionPackage.COMPUTER__ARCHITECTURE:
@@ -356,11 +312,8 @@ public class ComputerImpl extends MinimalEObjectImpl.Container implements Comput
 			case VMDistributionPackage.COMPUTER__NAME:
 				setName((String)newValue);
 				return;
-			case VMDistributionPackage.COMPUTER__IP_ADDR:
-				setIpAddr((String)newValue);
-				return;
-			case VMDistributionPackage.COMPUTER__AVAILABLE_SPACE:
-				setAvailableSpace((Double)newValue);
+			case VMDistributionPackage.COMPUTER__MAX_SPACE_FOR_VMS:
+				setMaxSpaceForVMs((Double)newValue);
 				return;
 			case VMDistributionPackage.COMPUTER__INSTALLED_RAM:
 				setInstalledRAM((Double)newValue);
@@ -386,11 +339,8 @@ public class ComputerImpl extends MinimalEObjectImpl.Container implements Comput
 			case VMDistributionPackage.COMPUTER__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case VMDistributionPackage.COMPUTER__IP_ADDR:
-				setIpAddr(IP_ADDR_EDEFAULT);
-				return;
-			case VMDistributionPackage.COMPUTER__AVAILABLE_SPACE:
-				setAvailableSpace(AVAILABLE_SPACE_EDEFAULT);
+			case VMDistributionPackage.COMPUTER__MAX_SPACE_FOR_VMS:
+				setMaxSpaceForVMs(MAX_SPACE_FOR_VMS_EDEFAULT);
 				return;
 			case VMDistributionPackage.COMPUTER__INSTALLED_RAM:
 				setInstalledRAM(INSTALLED_RAM_EDEFAULT);
@@ -414,10 +364,8 @@ public class ComputerImpl extends MinimalEObjectImpl.Container implements Comput
 				return virtualmachines != null && !virtualmachines.isEmpty();
 			case VMDistributionPackage.COMPUTER__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case VMDistributionPackage.COMPUTER__IP_ADDR:
-				return IP_ADDR_EDEFAULT == null ? ipAddr != null : !IP_ADDR_EDEFAULT.equals(ipAddr);
-			case VMDistributionPackage.COMPUTER__AVAILABLE_SPACE:
-				return availableSpace != AVAILABLE_SPACE_EDEFAULT;
+			case VMDistributionPackage.COMPUTER__MAX_SPACE_FOR_VMS:
+				return maxSpaceForVMs != MAX_SPACE_FOR_VMS_EDEFAULT;
 			case VMDistributionPackage.COMPUTER__INSTALLED_RAM:
 				return installedRAM != INSTALLED_RAM_EDEFAULT;
 			case VMDistributionPackage.COMPUTER__ARCHITECTURE:
@@ -438,10 +386,8 @@ public class ComputerImpl extends MinimalEObjectImpl.Container implements Comput
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", ipAddr: ");
-		result.append(ipAddr);
-		result.append(", AvailableSpace: ");
-		result.append(availableSpace);
+		result.append(", maxSpaceForVMs: ");
+		result.append(maxSpaceForVMs);
 		result.append(", installedRAM: ");
 		result.append(installedRAM);
 		result.append(", architecture: ");

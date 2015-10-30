@@ -38,4 +38,16 @@ Vagrant.configure(2) do |config|
 		leecher3.vm.provision "shell", privileged: false, path: "shared/install_leecher.sh"
 	end
 	
+	config.vm.define "leecher4", primary: false do |leecher4|
+		leecher4.vm.hostname = "leecher4"
+		leecher4.vm.network "private_network", ip: "192.168.100.114"
+		leecher4.vm.provision "shell", privileged: false, path: "shared/install_leecher.sh"
+	end
+	
+	config.vm.define "leecher5", primary: false do |leecher5|
+		leecher5.vm.hostname = "leecher5"
+		leecher5.vm.network "private_network", ip: "192.168.100.115"
+		leecher5.vm.provision "shell", privileged: false, path: "shared/install_leecher.sh"
+	end
+	
 end

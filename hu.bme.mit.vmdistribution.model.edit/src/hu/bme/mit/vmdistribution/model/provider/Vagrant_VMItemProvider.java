@@ -3,7 +3,6 @@
 package hu.bme.mit.vmdistribution.model.provider;
 
 
-import hu.bme.mit.vmdistribution.model.VMDistributionFactory;
 import hu.bme.mit.vmdistribution.model.VMDistributionPackage;
 import hu.bme.mit.vmdistribution.model.Vagrant_VM;
 
@@ -12,9 +11,6 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
@@ -49,8 +45,8 @@ public class Vagrant_VMItemProvider extends VirtualMachineItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addDistributionImagePropertyDescriptor(object);
-			addBaseImagePropertyDescriptor(object);
 			addReadyToDistributePropertyDescriptor(object);
+			addVagrantFilePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -69,28 +65,6 @@ public class Vagrant_VMItemProvider extends VirtualMachineItemProvider {
 				 getString("_UI_Vagrant_VM_distributionImage_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Vagrant_VM_distributionImage_feature", "_UI_Vagrant_VM_type"),
 				 VMDistributionPackage.Literals.VAGRANT_VM__DISTRIBUTION_IMAGE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Base Image feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addBaseImagePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Vagrant_VM_baseImage_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Vagrant_VM_baseImage_feature", "_UI_Vagrant_VM_type"),
-				 VMDistributionPackage.Literals.VAGRANT_VM__BASE_IMAGE,
 				 true,
 				 false,
 				 false,
@@ -122,34 +96,25 @@ public class Vagrant_VMItemProvider extends VirtualMachineItemProvider {
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * This adds a property descriptor for the Vagrant File feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(VMDistributionPackage.Literals.VAGRANT_VM__SOFTWARE);
-			childrenFeatures.add(VMDistributionPackage.Literals.VAGRANT_VM__VMPROPERTY);
-		}
-		return childrenFeatures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
+	protected void addVagrantFilePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Vagrant_VM_vagrantFile_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Vagrant_VM_vagrantFile_feature", "_UI_Vagrant_VM_type"),
+				 VMDistributionPackage.Literals.VAGRANT_VM__VAGRANT_FILE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -191,13 +156,9 @@ public class Vagrant_VMItemProvider extends VirtualMachineItemProvider {
 
 		switch (notification.getFeatureID(Vagrant_VM.class)) {
 			case VMDistributionPackage.VAGRANT_VM__DISTRIBUTION_IMAGE:
-			case VMDistributionPackage.VAGRANT_VM__BASE_IMAGE:
 			case VMDistributionPackage.VAGRANT_VM__READY_TO_DISTRIBUTE:
+			case VMDistributionPackage.VAGRANT_VM__VAGRANT_FILE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case VMDistributionPackage.VAGRANT_VM__SOFTWARE:
-			case VMDistributionPackage.VAGRANT_VM__VMPROPERTY:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -213,16 +174,6 @@ public class Vagrant_VMItemProvider extends VirtualMachineItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(VMDistributionPackage.Literals.VAGRANT_VM__SOFTWARE,
-				 VMDistributionFactory.eINSTANCE.createSoftware()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(VMDistributionPackage.Literals.VAGRANT_VM__VMPROPERTY,
-				 VMDistributionFactory.eINSTANCE.createVMProperty()));
 	}
 
 }

@@ -8,10 +8,8 @@ import hu.bme.mit.vmdistribution.model.CustomVM;
 import hu.bme.mit.vmdistribution.model.Lab;
 import hu.bme.mit.vmdistribution.model.LabSystem;
 import hu.bme.mit.vmdistribution.model.Requirements;
-import hu.bme.mit.vmdistribution.model.Software;
 import hu.bme.mit.vmdistribution.model.VMDistributionFactory;
 import hu.bme.mit.vmdistribution.model.VMDistributionPackage;
-import hu.bme.mit.vmdistribution.model.VMProperty;
 import hu.bme.mit.vmdistribution.model.Vagrant_VM;
 import hu.bme.mit.vmdistribution.model.VirtualMachine;
 
@@ -52,20 +50,6 @@ public class VMDistributionPackageImpl extends EPackageImpl implements VMDistrib
 	 * @generated
 	 */
 	private EClass computerEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass softwareEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass vmPropertyEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -184,7 +168,7 @@ public class VMDistributionPackageImpl extends EPackageImpl implements VMDistrib
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVirtualMachine_Computer() {
+	public EReference getVirtualMachine_Computers() {
 		return (EReference)virtualMachineEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -220,7 +204,7 @@ public class VMDistributionPackageImpl extends EPackageImpl implements VMDistrib
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLabSystem_Virtualmachine() {
+	public EReference getLabSystem_Virtualmachines() {
 		return (EReference)labSystemEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -229,7 +213,7 @@ public class VMDistributionPackageImpl extends EPackageImpl implements VMDistrib
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLabSystem_Computer() {
+	public EReference getLabSystem_Computers() {
 		return (EReference)labSystemEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -238,7 +222,7 @@ public class VMDistributionPackageImpl extends EPackageImpl implements VMDistrib
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLabSystem_Lab() {
+	public EReference getLabSystem_Labs() {
 		return (EReference)labSystemEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -283,7 +267,7 @@ public class VMDistributionPackageImpl extends EPackageImpl implements VMDistrib
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getComputer_IpAddr() {
+	public EAttribute getComputer_MaxSpaceForVMs() {
 		return (EAttribute)computerEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -292,7 +276,7 @@ public class VMDistributionPackageImpl extends EPackageImpl implements VMDistrib
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getComputer_AvailableSpace() {
+	public EAttribute getComputer_InstalledRAM() {
 		return (EAttribute)computerEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -301,80 +285,8 @@ public class VMDistributionPackageImpl extends EPackageImpl implements VMDistrib
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getComputer_InstalledRAM() {
-		return (EAttribute)computerEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getComputer_Architecture() {
-		return (EAttribute)computerEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSoftware() {
-		return softwareEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSoftware_Name() {
-		return (EAttribute)softwareEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSoftware_Version() {
-		return (EAttribute)softwareEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSoftware_InstallScript() {
-		return (EAttribute)softwareEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getVMProperty() {
-		return vmPropertyEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getVMProperty_Name() {
-		return (EAttribute)vmPropertyEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getVMProperty_VagrantCommand() {
-		return (EAttribute)vmPropertyEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)computerEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -400,7 +312,7 @@ public class VMDistributionPackageImpl extends EPackageImpl implements VMDistrib
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLab_Computerconfig() {
+	public EReference getLab_Computerconfigs() {
 		return (EReference)labEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -427,7 +339,7 @@ public class VMDistributionPackageImpl extends EPackageImpl implements VMDistrib
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVagrant_VM_BaseImage() {
+	public EAttribute getVagrant_VM_ReadyToDistribute() {
 		return (EAttribute)vagrant_VMEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -436,26 +348,8 @@ public class VMDistributionPackageImpl extends EPackageImpl implements VMDistrib
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVagrant_VM_Software() {
-		return (EReference)vagrant_VMEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVagrant_VM_Vmproperty() {
-		return (EReference)vagrant_VMEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getVagrant_VM_ReadyToDistribute() {
-		return (EAttribute)vagrant_VMEClass.getEStructuralFeatures().get(4);
+	public EAttribute getVagrant_VM_VagrantFile() {
+		return (EAttribute)vagrant_VMEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -535,7 +429,7 @@ public class VMDistributionPackageImpl extends EPackageImpl implements VMDistrib
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getComputerConfig_Virtualmachine() {
+	public EReference getComputerConfig_Virtualmachines() {
 		return (EReference)computerConfigEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -586,43 +480,31 @@ public class VMDistributionPackageImpl extends EPackageImpl implements VMDistrib
 
 		// Create classes and their features
 		virtualMachineEClass = createEClass(VIRTUAL_MACHINE);
-		createEReference(virtualMachineEClass, VIRTUAL_MACHINE__COMPUTER);
+		createEReference(virtualMachineEClass, VIRTUAL_MACHINE__COMPUTERS);
 		createEAttribute(virtualMachineEClass, VIRTUAL_MACHINE__NAME);
 		createEReference(virtualMachineEClass, VIRTUAL_MACHINE__REQUIREMENTS);
 
 		labSystemEClass = createEClass(LAB_SYSTEM);
-		createEReference(labSystemEClass, LAB_SYSTEM__VIRTUALMACHINE);
-		createEReference(labSystemEClass, LAB_SYSTEM__COMPUTER);
-		createEReference(labSystemEClass, LAB_SYSTEM__LAB);
+		createEReference(labSystemEClass, LAB_SYSTEM__VIRTUALMACHINES);
+		createEReference(labSystemEClass, LAB_SYSTEM__COMPUTERS);
+		createEReference(labSystemEClass, LAB_SYSTEM__LABS);
 		createEReference(labSystemEClass, LAB_SYSTEM__CURRENTSETUP);
 
 		computerEClass = createEClass(COMPUTER);
 		createEReference(computerEClass, COMPUTER__VIRTUALMACHINES);
 		createEAttribute(computerEClass, COMPUTER__NAME);
-		createEAttribute(computerEClass, COMPUTER__IP_ADDR);
-		createEAttribute(computerEClass, COMPUTER__AVAILABLE_SPACE);
+		createEAttribute(computerEClass, COMPUTER__MAX_SPACE_FOR_VMS);
 		createEAttribute(computerEClass, COMPUTER__INSTALLED_RAM);
 		createEAttribute(computerEClass, COMPUTER__ARCHITECTURE);
 
-		softwareEClass = createEClass(SOFTWARE);
-		createEAttribute(softwareEClass, SOFTWARE__NAME);
-		createEAttribute(softwareEClass, SOFTWARE__VERSION);
-		createEAttribute(softwareEClass, SOFTWARE__INSTALL_SCRIPT);
-
-		vmPropertyEClass = createEClass(VM_PROPERTY);
-		createEAttribute(vmPropertyEClass, VM_PROPERTY__NAME);
-		createEAttribute(vmPropertyEClass, VM_PROPERTY__VAGRANT_COMMAND);
-
 		labEClass = createEClass(LAB);
 		createEAttribute(labEClass, LAB__NAME);
-		createEReference(labEClass, LAB__COMPUTERCONFIG);
+		createEReference(labEClass, LAB__COMPUTERCONFIGS);
 
 		vagrant_VMEClass = createEClass(VAGRANT_VM);
 		createEAttribute(vagrant_VMEClass, VAGRANT_VM__DISTRIBUTION_IMAGE);
-		createEAttribute(vagrant_VMEClass, VAGRANT_VM__BASE_IMAGE);
-		createEReference(vagrant_VMEClass, VAGRANT_VM__SOFTWARE);
-		createEReference(vagrant_VMEClass, VAGRANT_VM__VMPROPERTY);
 		createEAttribute(vagrant_VMEClass, VAGRANT_VM__READY_TO_DISTRIBUTE);
+		createEAttribute(vagrant_VMEClass, VAGRANT_VM__VAGRANT_FILE);
 
 		customVMEClass = createEClass(CUSTOM_VM);
 		createEAttribute(customVMEClass, CUSTOM_VM__VM_ZIP_ARCHIVE);
@@ -634,7 +516,7 @@ public class VMDistributionPackageImpl extends EPackageImpl implements VMDistrib
 
 		computerConfigEClass = createEClass(COMPUTER_CONFIG);
 		createEReference(computerConfigEClass, COMPUTER_CONFIG__COMPUTER);
-		createEReference(computerConfigEClass, COMPUTER_CONFIG__VIRTUALMACHINE);
+		createEReference(computerConfigEClass, COMPUTER_CONFIG__VIRTUALMACHINES);
 		createEAttribute(computerConfigEClass, COMPUTER_CONFIG__NAME);
 
 		// Create data types
@@ -674,43 +556,31 @@ public class VMDistributionPackageImpl extends EPackageImpl implements VMDistrib
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(virtualMachineEClass, VirtualMachine.class, "VirtualMachine", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVirtualMachine_Computer(), this.getComputer(), this.getComputer_Virtualmachines(), "computer", null, 0, -1, VirtualMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVirtualMachine_Computers(), this.getComputer(), this.getComputer_Virtualmachines(), "computers", null, 0, -1, VirtualMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVirtualMachine_Name(), ecorePackage.getEString(), "name", null, 0, 1, VirtualMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVirtualMachine_Requirements(), this.getRequirements(), null, "requirements", null, 1, 1, VirtualMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(labSystemEClass, LabSystem.class, "LabSystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLabSystem_Virtualmachine(), this.getVirtualMachine(), null, "virtualmachine", null, 0, -1, LabSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLabSystem_Computer(), this.getComputer(), null, "computer", null, 0, -1, LabSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLabSystem_Lab(), this.getLab(), null, "lab", null, 0, -1, LabSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLabSystem_Virtualmachines(), this.getVirtualMachine(), null, "virtualmachines", null, 0, -1, LabSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLabSystem_Computers(), this.getComputer(), null, "computers", null, 0, -1, LabSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLabSystem_Labs(), this.getLab(), null, "labs", null, 0, -1, LabSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLabSystem_Currentsetup(), this.getLab(), null, "currentsetup", null, 0, 1, LabSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(computerEClass, Computer.class, "Computer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getComputer_Virtualmachines(), this.getVirtualMachine(), this.getVirtualMachine_Computer(), "virtualmachines", null, 0, -1, Computer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComputer_Virtualmachines(), this.getVirtualMachine(), this.getVirtualMachine_Computers(), "virtualmachines", null, 0, -1, Computer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getComputer_Name(), ecorePackage.getEString(), "name", null, 0, 1, Computer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getComputer_IpAddr(), ecorePackage.getEString(), "ipAddr", null, 0, 1, Computer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getComputer_AvailableSpace(), ecorePackage.getEDouble(), "AvailableSpace", null, 0, 1, Computer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getComputer_MaxSpaceForVMs(), ecorePackage.getEDouble(), "maxSpaceForVMs", null, 0, 1, Computer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getComputer_InstalledRAM(), ecorePackage.getEDouble(), "installedRAM", null, 0, 1, Computer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getComputer_Architecture(), ecorePackage.getEString(), "architecture", "x86", 0, 1, Computer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(softwareEClass, Software.class, "Software", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSoftware_Name(), ecorePackage.getEString(), "name", null, 0, 1, Software.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSoftware_Version(), ecorePackage.getEString(), "version", "1.0.0", 0, 1, Software.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSoftware_InstallScript(), ecorePackage.getEString(), "installScript", null, 0, 1, Software.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(vmPropertyEClass, VMProperty.class, "VMProperty", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVMProperty_Name(), ecorePackage.getEString(), "name", null, 0, 1, VMProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVMProperty_VagrantCommand(), ecorePackage.getEString(), "vagrantCommand", null, 0, 1, VMProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(labEClass, Lab.class, "Lab", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLab_Name(), ecorePackage.getEString(), "name", null, 0, 1, Lab.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLab_Computerconfig(), this.getComputerConfig(), null, "computerconfig", null, 1, -1, Lab.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLab_Computerconfigs(), this.getComputerConfig(), null, "computerconfigs", null, 1, -1, Lab.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vagrant_VMEClass, Vagrant_VM.class, "Vagrant_VM", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVagrant_VM_DistributionImage(), this.getFile(), "distributionImage", null, 0, 1, Vagrant_VM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVagrant_VM_BaseImage(), this.getFile(), "baseImage", null, 0, 1, Vagrant_VM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVagrant_VM_Software(), this.getSoftware(), null, "software", null, 0, -1, Vagrant_VM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVagrant_VM_Vmproperty(), this.getVMProperty(), null, "vmproperty", null, 0, -1, Vagrant_VM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVagrant_VM_ReadyToDistribute(), ecorePackage.getEBoolean(), "readyToDistribute", null, 0, 1, Vagrant_VM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVagrant_VM_VagrantFile(), this.getFile(), "vagrantFile", null, 0, 1, Vagrant_VM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(customVMEClass, CustomVM.class, "CustomVM", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCustomVM_VmZipArchive(), this.getFile(), "vmZipArchive", null, 0, 1, CustomVM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -722,7 +592,7 @@ public class VMDistributionPackageImpl extends EPackageImpl implements VMDistrib
 
 		initEClass(computerConfigEClass, ComputerConfig.class, "ComputerConfig", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getComputerConfig_Computer(), this.getComputer(), null, "computer", null, 1, 1, ComputerConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComputerConfig_Virtualmachine(), this.getVirtualMachine(), null, "virtualmachine", null, 0, -1, ComputerConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComputerConfig_Virtualmachines(), this.getVirtualMachine(), null, "virtualmachines", null, 0, -1, ComputerConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getComputerConfig_Name(), ecorePackage.getEString(), "name", null, 0, 1, ComputerConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize data types

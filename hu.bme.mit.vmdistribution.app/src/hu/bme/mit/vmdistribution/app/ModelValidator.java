@@ -15,7 +15,7 @@ public class ModelValidator {
 		StringBuilder validateresult = new StringBuilder();
 
 		// emf incquery
-		for (Computer c : myLabSystem.getComputer()) {
+		for (Computer c : myLabSystem.getComputers()) {
 			if (!(c.getArchitecture().equalsIgnoreCase("x86") || c.getArchitecture().equalsIgnoreCase("x64"))) {
 				validateresult.append("Computer " + c.getName() + " architecture invalid!(" + c.getArchitecture() + ")\n");
 			}

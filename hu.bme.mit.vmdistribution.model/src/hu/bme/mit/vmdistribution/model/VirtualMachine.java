@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link hu.bme.mit.vmdistribution.model.VirtualMachine#getComputer <em>Computer</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.model.VirtualMachine#getComputers <em>Computers</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.VirtualMachine#getName <em>Name</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.VirtualMachine#getRequirements <em>Requirements</em>}</li>
  * </ul>
@@ -26,22 +26,22 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface VirtualMachine extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Computer</b></em>' reference list.
+	 * Returns the value of the '<em><b>Computers</b></em>' reference list.
 	 * The list contents are of type {@link hu.bme.mit.vmdistribution.model.Computer}.
 	 * It is bidirectional and its opposite is '{@link hu.bme.mit.vmdistribution.model.Computer#getVirtualmachines <em>Virtualmachines</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Computer</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Computers</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Computer</em>' reference list.
-	 * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getVirtualMachine_Computer()
+	 * @return the value of the '<em>Computers</em>' reference list.
+	 * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getVirtualMachine_Computers()
 	 * @see hu.bme.mit.vmdistribution.model.Computer#getVirtualmachines
 	 * @model opposite="virtualmachines"
 	 * @generated
 	 */
-	EList<Computer> getComputer();
+	EList<Computer> getComputers();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

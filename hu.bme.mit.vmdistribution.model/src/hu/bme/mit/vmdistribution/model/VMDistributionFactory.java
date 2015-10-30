@@ -40,24 +40,6 @@ public interface VMDistributionFactory extends EFactory {
 	Computer createComputer();
 
 	/**
-	 * Returns a new object of class '<em>Software</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Software</em>'.
-	 * @generated
-	 */
-	Software createSoftware();
-
-	/**
-	 * Returns a new object of class '<em>VM Property</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VM Property</em>'.
-	 * @generated
-	 */
-	VMProperty createVMProperty();
-
-	/**
 	 * Returns a new object of class '<em>Lab</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

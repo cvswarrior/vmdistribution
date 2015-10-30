@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link hu.bme.mit.vmdistribution.model.Lab#getName <em>Name</em>}</li>
- *   <li>{@link hu.bme.mit.vmdistribution.model.Lab#getComputerconfig <em>Computerconfig</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.model.Lab#getComputerconfigs <em>Computerconfigs</em>}</li>
  * </ul>
  *
  * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getLab()
@@ -51,19 +51,19 @@ public interface Lab extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Computerconfig</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Computerconfigs</b></em>' containment reference list.
 	 * The list contents are of type {@link hu.bme.mit.vmdistribution.model.ComputerConfig}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Computerconfig</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Computerconfigs</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Computerconfig</em>' containment reference list.
-	 * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getLab_Computerconfig()
+	 * @return the value of the '<em>Computerconfigs</em>' containment reference list.
+	 * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getLab_Computerconfigs()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<ComputerConfig> getComputerconfig();
+	EList<ComputerConfig> getComputerconfigs();
 
 } // Lab

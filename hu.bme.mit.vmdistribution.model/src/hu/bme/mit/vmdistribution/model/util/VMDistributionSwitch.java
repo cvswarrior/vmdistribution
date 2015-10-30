@@ -84,18 +84,6 @@ public class VMDistributionSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case VMDistributionPackage.SOFTWARE: {
-				Software software = (Software)theEObject;
-				T result = caseSoftware(software);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case VMDistributionPackage.VM_PROPERTY: {
-				VMProperty vmProperty = (VMProperty)theEObject;
-				T result = caseVMProperty(vmProperty);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case VMDistributionPackage.LAB: {
 				Lab lab = (Lab)theEObject;
 				T result = caseLab(lab);
@@ -174,36 +162,6 @@ public class VMDistributionSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseComputer(Computer object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Software</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Software</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSoftware(Software object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VM Property</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VM Property</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseVMProperty(VMProperty object) {
 		return null;
 	}
 

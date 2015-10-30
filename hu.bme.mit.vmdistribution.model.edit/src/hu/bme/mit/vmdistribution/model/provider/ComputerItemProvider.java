@@ -62,8 +62,7 @@ public class ComputerItemProvider
 
 			addVirtualmachinesPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
-			addIpAddrPropertyDescriptor(object);
-			addAvailableSpacePropertyDescriptor(object);
+			addMaxSpaceForVMsPropertyDescriptor(object);
 			addInstalledRAMPropertyDescriptor(object);
 			addArchitecturePropertyDescriptor(object);
 		}
@@ -115,41 +114,19 @@ public class ComputerItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Ip Addr feature.
+	 * This adds a property descriptor for the Max Space For VMs feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIpAddrPropertyDescriptor(Object object) {
+	protected void addMaxSpaceForVMsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Computer_ipAddr_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Computer_ipAddr_feature", "_UI_Computer_type"),
-				 VMDistributionPackage.Literals.COMPUTER__IP_ADDR,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Available Space feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addAvailableSpacePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Computer_AvailableSpace_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Computer_AvailableSpace_feature", "_UI_Computer_type"),
-				 VMDistributionPackage.Literals.COMPUTER__AVAILABLE_SPACE,
+				 getString("_UI_Computer_maxSpaceForVMs_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Computer_maxSpaceForVMs_feature", "_UI_Computer_type"),
+				 VMDistributionPackage.Literals.COMPUTER__MAX_SPACE_FOR_VMS,
 				 true,
 				 false,
 				 false,
@@ -241,8 +218,7 @@ public class ComputerItemProvider
 
 		switch (notification.getFeatureID(Computer.class)) {
 			case VMDistributionPackage.COMPUTER__NAME:
-			case VMDistributionPackage.COMPUTER__IP_ADDR:
-			case VMDistributionPackage.COMPUTER__AVAILABLE_SPACE:
+			case VMDistributionPackage.COMPUTER__MAX_SPACE_FOR_VMS:
 			case VMDistributionPackage.COMPUTER__INSTALLED_RAM:
 			case VMDistributionPackage.COMPUTER__ARCHITECTURE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

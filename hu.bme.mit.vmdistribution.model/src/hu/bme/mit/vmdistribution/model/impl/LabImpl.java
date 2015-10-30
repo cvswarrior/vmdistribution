@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link hu.bme.mit.vmdistribution.model.impl.LabImpl#getName <em>Name</em>}</li>
- *   <li>{@link hu.bme.mit.vmdistribution.model.impl.LabImpl#getComputerconfig <em>Computerconfig</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.model.impl.LabImpl#getComputerconfigs <em>Computerconfigs</em>}</li>
  * </ul>
  *
  * @generated
@@ -58,14 +58,14 @@ public class LabImpl extends MinimalEObjectImpl.Container implements Lab {
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getComputerconfig() <em>Computerconfig</em>}' containment reference list.
+	 * The cached value of the '{@link #getComputerconfigs() <em>Computerconfigs</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getComputerconfig()
+	 * @see #getComputerconfigs()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ComputerConfig> computerconfig;
+	protected EList<ComputerConfig> computerconfigs;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,11 +112,11 @@ public class LabImpl extends MinimalEObjectImpl.Container implements Lab {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ComputerConfig> getComputerconfig() {
-		if (computerconfig == null) {
-			computerconfig = new EObjectContainmentEList<ComputerConfig>(ComputerConfig.class, this, VMDistributionPackage.LAB__COMPUTERCONFIG);
+	public EList<ComputerConfig> getComputerconfigs() {
+		if (computerconfigs == null) {
+			computerconfigs = new EObjectContainmentEList<ComputerConfig>(ComputerConfig.class, this, VMDistributionPackage.LAB__COMPUTERCONFIGS);
 		}
-		return computerconfig;
+		return computerconfigs;
 	}
 
 	/**
@@ -127,8 +127,8 @@ public class LabImpl extends MinimalEObjectImpl.Container implements Lab {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case VMDistributionPackage.LAB__COMPUTERCONFIG:
-				return ((InternalEList<?>)getComputerconfig()).basicRemove(otherEnd, msgs);
+			case VMDistributionPackage.LAB__COMPUTERCONFIGS:
+				return ((InternalEList<?>)getComputerconfigs()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -143,8 +143,8 @@ public class LabImpl extends MinimalEObjectImpl.Container implements Lab {
 		switch (featureID) {
 			case VMDistributionPackage.LAB__NAME:
 				return getName();
-			case VMDistributionPackage.LAB__COMPUTERCONFIG:
-				return getComputerconfig();
+			case VMDistributionPackage.LAB__COMPUTERCONFIGS:
+				return getComputerconfigs();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -161,9 +161,9 @@ public class LabImpl extends MinimalEObjectImpl.Container implements Lab {
 			case VMDistributionPackage.LAB__NAME:
 				setName((String)newValue);
 				return;
-			case VMDistributionPackage.LAB__COMPUTERCONFIG:
-				getComputerconfig().clear();
-				getComputerconfig().addAll((Collection<? extends ComputerConfig>)newValue);
+			case VMDistributionPackage.LAB__COMPUTERCONFIGS:
+				getComputerconfigs().clear();
+				getComputerconfigs().addAll((Collection<? extends ComputerConfig>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -180,8 +180,8 @@ public class LabImpl extends MinimalEObjectImpl.Container implements Lab {
 			case VMDistributionPackage.LAB__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case VMDistributionPackage.LAB__COMPUTERCONFIG:
-				getComputerconfig().clear();
+			case VMDistributionPackage.LAB__COMPUTERCONFIGS:
+				getComputerconfigs().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -197,8 +197,8 @@ public class LabImpl extends MinimalEObjectImpl.Container implements Lab {
 		switch (featureID) {
 			case VMDistributionPackage.LAB__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case VMDistributionPackage.LAB__COMPUTERCONFIG:
-				return computerconfig != null && !computerconfig.isEmpty();
+			case VMDistributionPackage.LAB__COMPUTERCONFIGS:
+				return computerconfigs != null && !computerconfigs.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

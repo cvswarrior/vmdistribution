@@ -33,7 +33,7 @@ public class UseModel {
 		EMFModelLoad loader = new EMFModelLoad();
 		LabSystem myLabSystem = loader.load();
 		Lab goal = null;
-		for (Lab lab : myLabSystem.getLab()){
+		for (Lab lab : myLabSystem.getLabs()){
 			if("vm_test".equals(lab.getName())){
 				goal = lab;
 			}
@@ -60,8 +60,8 @@ public class UseModel {
 
 		// prepare vagrant vms & copy single copy of vms to torrent seed
 		logger.log(Level.INFO, "[Copying required VMs to seed.]");
-		for (ComputerConfig cfgitem : goal.getComputerconfig()) {
-			for (VirtualMachine vm : cfgitem.getVirtualmachine()) {//TODO refactor model
+		for (ComputerConfig cfgitem : goal.getComputerconfigs()) {
+			for (VirtualMachine vm : cfgitem.getVirtualmachines()) {
 
 				if (seenVMs.contains(vm)) {
 					continue;
@@ -82,8 +82,8 @@ public class UseModel {
 		
 		//CHEAT:
 		List<Computer> targetpcs = new ArrayList<>();
-		targetpcs.add(goal.getComputerconfig().get(0).getComputer());
-		targetpcs.add(goal.getComputerconfig().get(1).getComputer());
+		targetpcs.add(goal.getComputerconfigs().get(0).getComputer());
+		targetpcs.add(goal.getComputerconfigs().get(1).getComputer());
 		//targetpcs.add(goal.getComputerconfig().get(2).getComputer());
 		
 		logger.log(Level.INFO, "[Creating torrent file and starting seeding.]");

@@ -68,13 +68,13 @@ public interface VMDistributionPackage extends EPackage {
 	int VIRTUAL_MACHINE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Computer</b></em>' reference list.
+	 * The feature id for the '<em><b>Computers</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIRTUAL_MACHINE__COMPUTER = 0;
+	int VIRTUAL_MACHINE__COMPUTERS = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -123,31 +123,31 @@ public interface VMDistributionPackage extends EPackage {
 	int LAB_SYSTEM = 1;
 
 	/**
-	 * The feature id for the '<em><b>Virtualmachine</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Virtualmachines</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LAB_SYSTEM__VIRTUALMACHINE = 0;
+	int LAB_SYSTEM__VIRTUALMACHINES = 0;
 
 	/**
-	 * The feature id for the '<em><b>Computer</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Computers</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LAB_SYSTEM__COMPUTER = 1;
+	int LAB_SYSTEM__COMPUTERS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Lab</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Labs</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LAB_SYSTEM__LAB = 2;
+	int LAB_SYSTEM__LABS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Currentsetup</b></em>' reference.
@@ -205,22 +205,13 @@ public interface VMDistributionPackage extends EPackage {
 	int COMPUTER__NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>Ip Addr</b></em>' attribute.
+	 * The feature id for the '<em><b>Max Space For VMs</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTER__IP_ADDR = 2;
-
-	/**
-	 * The feature id for the '<em><b>Available Space</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPUTER__AVAILABLE_SPACE = 3;
+	int COMPUTER__MAX_SPACE_FOR_VMS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Installed RAM</b></em>' attribute.
@@ -229,7 +220,7 @@ public interface VMDistributionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTER__INSTALLED_RAM = 4;
+	int COMPUTER__INSTALLED_RAM = 3;
 
 	/**
 	 * The feature id for the '<em><b>Architecture</b></em>' attribute.
@@ -238,7 +229,7 @@ public interface VMDistributionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTER__ARCHITECTURE = 5;
+	int COMPUTER__ARCHITECTURE = 4;
 
 	/**
 	 * The number of structural features of the '<em>Computer</em>' class.
@@ -247,7 +238,7 @@ public interface VMDistributionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTER_FEATURE_COUNT = 6;
+	int COMPUTER_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Computer</em>' class.
@@ -259,107 +250,6 @@ public interface VMDistributionPackage extends EPackage {
 	int COMPUTER_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link hu.bme.mit.vmdistribution.model.impl.SoftwareImpl <em>Software</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see hu.bme.mit.vmdistribution.model.impl.SoftwareImpl
-	 * @see hu.bme.mit.vmdistribution.model.impl.VMDistributionPackageImpl#getSoftware()
-	 * @generated
-	 */
-	int SOFTWARE = 3;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOFTWARE__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Version</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOFTWARE__VERSION = 1;
-
-	/**
-	 * The feature id for the '<em><b>Install Script</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOFTWARE__INSTALL_SCRIPT = 2;
-
-	/**
-	 * The number of structural features of the '<em>Software</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOFTWARE_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Software</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOFTWARE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link hu.bme.mit.vmdistribution.model.impl.VMPropertyImpl <em>VM Property</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see hu.bme.mit.vmdistribution.model.impl.VMPropertyImpl
-	 * @see hu.bme.mit.vmdistribution.model.impl.VMDistributionPackageImpl#getVMProperty()
-	 * @generated
-	 */
-	int VM_PROPERTY = 4;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VM_PROPERTY__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Vagrant Command</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VM_PROPERTY__VAGRANT_COMMAND = 1;
-
-	/**
-	 * The number of structural features of the '<em>VM Property</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VM_PROPERTY_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>VM Property</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VM_PROPERTY_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link hu.bme.mit.vmdistribution.model.impl.LabImpl <em>Lab</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -367,7 +257,7 @@ public interface VMDistributionPackage extends EPackage {
 	 * @see hu.bme.mit.vmdistribution.model.impl.VMDistributionPackageImpl#getLab()
 	 * @generated
 	 */
-	int LAB = 5;
+	int LAB = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -379,13 +269,13 @@ public interface VMDistributionPackage extends EPackage {
 	int LAB__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Computerconfig</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Computerconfigs</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LAB__COMPUTERCONFIG = 1;
+	int LAB__COMPUTERCONFIGS = 1;
 
 	/**
 	 * The number of structural features of the '<em>Lab</em>' class.
@@ -413,16 +303,16 @@ public interface VMDistributionPackage extends EPackage {
 	 * @see hu.bme.mit.vmdistribution.model.impl.VMDistributionPackageImpl#getVagrant_VM()
 	 * @generated
 	 */
-	int VAGRANT_VM = 6;
+	int VAGRANT_VM = 4;
 
 	/**
-	 * The feature id for the '<em><b>Computer</b></em>' reference list.
+	 * The feature id for the '<em><b>Computers</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VAGRANT_VM__COMPUTER = VIRTUAL_MACHINE__COMPUTER;
+	int VAGRANT_VM__COMPUTERS = VIRTUAL_MACHINE__COMPUTERS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -452,40 +342,22 @@ public interface VMDistributionPackage extends EPackage {
 	int VAGRANT_VM__DISTRIBUTION_IMAGE = VIRTUAL_MACHINE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Base Image</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VAGRANT_VM__BASE_IMAGE = VIRTUAL_MACHINE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Software</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VAGRANT_VM__SOFTWARE = VIRTUAL_MACHINE_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Vmproperty</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VAGRANT_VM__VMPROPERTY = VIRTUAL_MACHINE_FEATURE_COUNT + 3;
-
-	/**
 	 * The feature id for the '<em><b>Ready To Distribute</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VAGRANT_VM__READY_TO_DISTRIBUTE = VIRTUAL_MACHINE_FEATURE_COUNT + 4;
+	int VAGRANT_VM__READY_TO_DISTRIBUTE = VIRTUAL_MACHINE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Vagrant File</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VAGRANT_VM__VAGRANT_FILE = VIRTUAL_MACHINE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Vagrant VM</em>' class.
@@ -494,7 +366,7 @@ public interface VMDistributionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VAGRANT_VM_FEATURE_COUNT = VIRTUAL_MACHINE_FEATURE_COUNT + 5;
+	int VAGRANT_VM_FEATURE_COUNT = VIRTUAL_MACHINE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Vagrant VM</em>' class.
@@ -513,16 +385,16 @@ public interface VMDistributionPackage extends EPackage {
 	 * @see hu.bme.mit.vmdistribution.model.impl.VMDistributionPackageImpl#getCustomVM()
 	 * @generated
 	 */
-	int CUSTOM_VM = 7;
+	int CUSTOM_VM = 5;
 
 	/**
-	 * The feature id for the '<em><b>Computer</b></em>' reference list.
+	 * The feature id for the '<em><b>Computers</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOM_VM__COMPUTER = VIRTUAL_MACHINE__COMPUTER;
+	int CUSTOM_VM__COMPUTERS = VIRTUAL_MACHINE__COMPUTERS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -577,7 +449,7 @@ public interface VMDistributionPackage extends EPackage {
 	 * @see hu.bme.mit.vmdistribution.model.impl.VMDistributionPackageImpl#getRequirements()
 	 * @generated
 	 */
-	int REQUIREMENTS = 8;
+	int REQUIREMENTS = 6;
 
 	/**
 	 * The feature id for the '<em><b>Req Archi</b></em>' attribute.
@@ -632,7 +504,7 @@ public interface VMDistributionPackage extends EPackage {
 	 * @see hu.bme.mit.vmdistribution.model.impl.VMDistributionPackageImpl#getComputerConfig()
 	 * @generated
 	 */
-	int COMPUTER_CONFIG = 9;
+	int COMPUTER_CONFIG = 7;
 
 	/**
 	 * The feature id for the '<em><b>Computer</b></em>' reference.
@@ -644,13 +516,13 @@ public interface VMDistributionPackage extends EPackage {
 	int COMPUTER_CONFIG__COMPUTER = 0;
 
 	/**
-	 * The feature id for the '<em><b>Virtualmachine</b></em>' reference list.
+	 * The feature id for the '<em><b>Virtualmachines</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTER_CONFIG__VIRTUALMACHINE = 1;
+	int COMPUTER_CONFIG__VIRTUALMACHINES = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -687,7 +559,7 @@ public interface VMDistributionPackage extends EPackage {
 	 * @see hu.bme.mit.vmdistribution.model.impl.VMDistributionPackageImpl#getFile()
 	 * @generated
 	 */
-	int FILE = 10;
+	int FILE = 8;
 
 
 	/**
@@ -701,15 +573,15 @@ public interface VMDistributionPackage extends EPackage {
 	EClass getVirtualMachine();
 
 	/**
-	 * Returns the meta object for the reference list '{@link hu.bme.mit.vmdistribution.model.VirtualMachine#getComputer <em>Computer</em>}'.
+	 * Returns the meta object for the reference list '{@link hu.bme.mit.vmdistribution.model.VirtualMachine#getComputers <em>Computers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Computer</em>'.
-	 * @see hu.bme.mit.vmdistribution.model.VirtualMachine#getComputer()
+	 * @return the meta object for the reference list '<em>Computers</em>'.
+	 * @see hu.bme.mit.vmdistribution.model.VirtualMachine#getComputers()
 	 * @see #getVirtualMachine()
 	 * @generated
 	 */
-	EReference getVirtualMachine_Computer();
+	EReference getVirtualMachine_Computers();
 
 	/**
 	 * Returns the meta object for the attribute '{@link hu.bme.mit.vmdistribution.model.VirtualMachine#getName <em>Name</em>}'.
@@ -744,37 +616,37 @@ public interface VMDistributionPackage extends EPackage {
 	EClass getLabSystem();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link hu.bme.mit.vmdistribution.model.LabSystem#getVirtualmachine <em>Virtualmachine</em>}'.
+	 * Returns the meta object for the containment reference list '{@link hu.bme.mit.vmdistribution.model.LabSystem#getVirtualmachines <em>Virtualmachines</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Virtualmachine</em>'.
-	 * @see hu.bme.mit.vmdistribution.model.LabSystem#getVirtualmachine()
+	 * @return the meta object for the containment reference list '<em>Virtualmachines</em>'.
+	 * @see hu.bme.mit.vmdistribution.model.LabSystem#getVirtualmachines()
 	 * @see #getLabSystem()
 	 * @generated
 	 */
-	EReference getLabSystem_Virtualmachine();
+	EReference getLabSystem_Virtualmachines();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link hu.bme.mit.vmdistribution.model.LabSystem#getComputer <em>Computer</em>}'.
+	 * Returns the meta object for the containment reference list '{@link hu.bme.mit.vmdistribution.model.LabSystem#getComputers <em>Computers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Computer</em>'.
-	 * @see hu.bme.mit.vmdistribution.model.LabSystem#getComputer()
+	 * @return the meta object for the containment reference list '<em>Computers</em>'.
+	 * @see hu.bme.mit.vmdistribution.model.LabSystem#getComputers()
 	 * @see #getLabSystem()
 	 * @generated
 	 */
-	EReference getLabSystem_Computer();
+	EReference getLabSystem_Computers();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link hu.bme.mit.vmdistribution.model.LabSystem#getLab <em>Lab</em>}'.
+	 * Returns the meta object for the containment reference list '{@link hu.bme.mit.vmdistribution.model.LabSystem#getLabs <em>Labs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Lab</em>'.
-	 * @see hu.bme.mit.vmdistribution.model.LabSystem#getLab()
+	 * @return the meta object for the containment reference list '<em>Labs</em>'.
+	 * @see hu.bme.mit.vmdistribution.model.LabSystem#getLabs()
 	 * @see #getLabSystem()
 	 * @generated
 	 */
-	EReference getLabSystem_Lab();
+	EReference getLabSystem_Labs();
 
 	/**
 	 * Returns the meta object for the reference '{@link hu.bme.mit.vmdistribution.model.LabSystem#getCurrentsetup <em>Currentsetup</em>}'.
@@ -820,26 +692,15 @@ public interface VMDistributionPackage extends EPackage {
 	EAttribute getComputer_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link hu.bme.mit.vmdistribution.model.Computer#getIpAddr <em>Ip Addr</em>}'.
+	 * Returns the meta object for the attribute '{@link hu.bme.mit.vmdistribution.model.Computer#getMaxSpaceForVMs <em>Max Space For VMs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Ip Addr</em>'.
-	 * @see hu.bme.mit.vmdistribution.model.Computer#getIpAddr()
+	 * @return the meta object for the attribute '<em>Max Space For VMs</em>'.
+	 * @see hu.bme.mit.vmdistribution.model.Computer#getMaxSpaceForVMs()
 	 * @see #getComputer()
 	 * @generated
 	 */
-	EAttribute getComputer_IpAddr();
-
-	/**
-	 * Returns the meta object for the attribute '{@link hu.bme.mit.vmdistribution.model.Computer#getAvailableSpace <em>Available Space</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Available Space</em>'.
-	 * @see hu.bme.mit.vmdistribution.model.Computer#getAvailableSpace()
-	 * @see #getComputer()
-	 * @generated
-	 */
-	EAttribute getComputer_AvailableSpace();
+	EAttribute getComputer_MaxSpaceForVMs();
 
 	/**
 	 * Returns the meta object for the attribute '{@link hu.bme.mit.vmdistribution.model.Computer#getInstalledRAM <em>Installed RAM</em>}'.
@@ -864,81 +725,6 @@ public interface VMDistributionPackage extends EPackage {
 	EAttribute getComputer_Architecture();
 
 	/**
-	 * Returns the meta object for class '{@link hu.bme.mit.vmdistribution.model.Software <em>Software</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Software</em>'.
-	 * @see hu.bme.mit.vmdistribution.model.Software
-	 * @generated
-	 */
-	EClass getSoftware();
-
-	/**
-	 * Returns the meta object for the attribute '{@link hu.bme.mit.vmdistribution.model.Software#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see hu.bme.mit.vmdistribution.model.Software#getName()
-	 * @see #getSoftware()
-	 * @generated
-	 */
-	EAttribute getSoftware_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link hu.bme.mit.vmdistribution.model.Software#getVersion <em>Version</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Version</em>'.
-	 * @see hu.bme.mit.vmdistribution.model.Software#getVersion()
-	 * @see #getSoftware()
-	 * @generated
-	 */
-	EAttribute getSoftware_Version();
-
-	/**
-	 * Returns the meta object for the attribute '{@link hu.bme.mit.vmdistribution.model.Software#getInstallScript <em>Install Script</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Install Script</em>'.
-	 * @see hu.bme.mit.vmdistribution.model.Software#getInstallScript()
-	 * @see #getSoftware()
-	 * @generated
-	 */
-	EAttribute getSoftware_InstallScript();
-
-	/**
-	 * Returns the meta object for class '{@link hu.bme.mit.vmdistribution.model.VMProperty <em>VM Property</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>VM Property</em>'.
-	 * @see hu.bme.mit.vmdistribution.model.VMProperty
-	 * @generated
-	 */
-	EClass getVMProperty();
-
-	/**
-	 * Returns the meta object for the attribute '{@link hu.bme.mit.vmdistribution.model.VMProperty#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see hu.bme.mit.vmdistribution.model.VMProperty#getName()
-	 * @see #getVMProperty()
-	 * @generated
-	 */
-	EAttribute getVMProperty_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link hu.bme.mit.vmdistribution.model.VMProperty#getVagrantCommand <em>Vagrant Command</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Vagrant Command</em>'.
-	 * @see hu.bme.mit.vmdistribution.model.VMProperty#getVagrantCommand()
-	 * @see #getVMProperty()
-	 * @generated
-	 */
-	EAttribute getVMProperty_VagrantCommand();
-
-	/**
 	 * Returns the meta object for class '{@link hu.bme.mit.vmdistribution.model.Lab <em>Lab</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -960,15 +746,15 @@ public interface VMDistributionPackage extends EPackage {
 	EAttribute getLab_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link hu.bme.mit.vmdistribution.model.Lab#getComputerconfig <em>Computerconfig</em>}'.
+	 * Returns the meta object for the containment reference list '{@link hu.bme.mit.vmdistribution.model.Lab#getComputerconfigs <em>Computerconfigs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Computerconfig</em>'.
-	 * @see hu.bme.mit.vmdistribution.model.Lab#getComputerconfig()
+	 * @return the meta object for the containment reference list '<em>Computerconfigs</em>'.
+	 * @see hu.bme.mit.vmdistribution.model.Lab#getComputerconfigs()
 	 * @see #getLab()
 	 * @generated
 	 */
-	EReference getLab_Computerconfig();
+	EReference getLab_Computerconfigs();
 
 	/**
 	 * Returns the meta object for class '{@link hu.bme.mit.vmdistribution.model.Vagrant_VM <em>Vagrant VM</em>}'.
@@ -992,39 +778,6 @@ public interface VMDistributionPackage extends EPackage {
 	EAttribute getVagrant_VM_DistributionImage();
 
 	/**
-	 * Returns the meta object for the attribute '{@link hu.bme.mit.vmdistribution.model.Vagrant_VM#getBaseImage <em>Base Image</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Base Image</em>'.
-	 * @see hu.bme.mit.vmdistribution.model.Vagrant_VM#getBaseImage()
-	 * @see #getVagrant_VM()
-	 * @generated
-	 */
-	EAttribute getVagrant_VM_BaseImage();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link hu.bme.mit.vmdistribution.model.Vagrant_VM#getSoftware <em>Software</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Software</em>'.
-	 * @see hu.bme.mit.vmdistribution.model.Vagrant_VM#getSoftware()
-	 * @see #getVagrant_VM()
-	 * @generated
-	 */
-	EReference getVagrant_VM_Software();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link hu.bme.mit.vmdistribution.model.Vagrant_VM#getVmproperty <em>Vmproperty</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Vmproperty</em>'.
-	 * @see hu.bme.mit.vmdistribution.model.Vagrant_VM#getVmproperty()
-	 * @see #getVagrant_VM()
-	 * @generated
-	 */
-	EReference getVagrant_VM_Vmproperty();
-
-	/**
 	 * Returns the meta object for the attribute '{@link hu.bme.mit.vmdistribution.model.Vagrant_VM#isReadyToDistribute <em>Ready To Distribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1034,6 +787,17 @@ public interface VMDistributionPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getVagrant_VM_ReadyToDistribute();
+
+	/**
+	 * Returns the meta object for the attribute '{@link hu.bme.mit.vmdistribution.model.Vagrant_VM#getVagrantFile <em>Vagrant File</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Vagrant File</em>'.
+	 * @see hu.bme.mit.vmdistribution.model.Vagrant_VM#getVagrantFile()
+	 * @see #getVagrant_VM()
+	 * @generated
+	 */
+	EAttribute getVagrant_VM_VagrantFile();
 
 	/**
 	 * Returns the meta object for class '{@link hu.bme.mit.vmdistribution.model.CustomVM <em>Custom VM</em>}'.
@@ -1121,15 +885,15 @@ public interface VMDistributionPackage extends EPackage {
 	EReference getComputerConfig_Computer();
 
 	/**
-	 * Returns the meta object for the reference list '{@link hu.bme.mit.vmdistribution.model.ComputerConfig#getVirtualmachine <em>Virtualmachine</em>}'.
+	 * Returns the meta object for the reference list '{@link hu.bme.mit.vmdistribution.model.ComputerConfig#getVirtualmachines <em>Virtualmachines</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Virtualmachine</em>'.
-	 * @see hu.bme.mit.vmdistribution.model.ComputerConfig#getVirtualmachine()
+	 * @return the meta object for the reference list '<em>Virtualmachines</em>'.
+	 * @see hu.bme.mit.vmdistribution.model.ComputerConfig#getVirtualmachines()
 	 * @see #getComputerConfig()
 	 * @generated
 	 */
-	EReference getComputerConfig_Virtualmachine();
+	EReference getComputerConfig_Virtualmachines();
 
 	/**
 	 * Returns the meta object for the attribute '{@link hu.bme.mit.vmdistribution.model.ComputerConfig#getName <em>Name</em>}'.
@@ -1187,12 +951,12 @@ public interface VMDistributionPackage extends EPackage {
 		EClass VIRTUAL_MACHINE = eINSTANCE.getVirtualMachine();
 
 		/**
-		 * The meta object literal for the '<em><b>Computer</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Computers</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VIRTUAL_MACHINE__COMPUTER = eINSTANCE.getVirtualMachine_Computer();
+		EReference VIRTUAL_MACHINE__COMPUTERS = eINSTANCE.getVirtualMachine_Computers();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -1221,28 +985,28 @@ public interface VMDistributionPackage extends EPackage {
 		EClass LAB_SYSTEM = eINSTANCE.getLabSystem();
 
 		/**
-		 * The meta object literal for the '<em><b>Virtualmachine</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Virtualmachines</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LAB_SYSTEM__VIRTUALMACHINE = eINSTANCE.getLabSystem_Virtualmachine();
+		EReference LAB_SYSTEM__VIRTUALMACHINES = eINSTANCE.getLabSystem_Virtualmachines();
 
 		/**
-		 * The meta object literal for the '<em><b>Computer</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Computers</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LAB_SYSTEM__COMPUTER = eINSTANCE.getLabSystem_Computer();
+		EReference LAB_SYSTEM__COMPUTERS = eINSTANCE.getLabSystem_Computers();
 
 		/**
-		 * The meta object literal for the '<em><b>Lab</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Labs</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LAB_SYSTEM__LAB = eINSTANCE.getLabSystem_Lab();
+		EReference LAB_SYSTEM__LABS = eINSTANCE.getLabSystem_Labs();
 
 		/**
 		 * The meta object literal for the '<em><b>Currentsetup</b></em>' reference feature.
@@ -1279,20 +1043,12 @@ public interface VMDistributionPackage extends EPackage {
 		EAttribute COMPUTER__NAME = eINSTANCE.getComputer_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Ip Addr</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Max Space For VMs</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute COMPUTER__IP_ADDR = eINSTANCE.getComputer_IpAddr();
-
-		/**
-		 * The meta object literal for the '<em><b>Available Space</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COMPUTER__AVAILABLE_SPACE = eINSTANCE.getComputer_AvailableSpace();
+		EAttribute COMPUTER__MAX_SPACE_FOR_VMS = eINSTANCE.getComputer_MaxSpaceForVMs();
 
 		/**
 		 * The meta object literal for the '<em><b>Installed RAM</b></em>' attribute feature.
@@ -1309,66 +1065,6 @@ public interface VMDistributionPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COMPUTER__ARCHITECTURE = eINSTANCE.getComputer_Architecture();
-
-		/**
-		 * The meta object literal for the '{@link hu.bme.mit.vmdistribution.model.impl.SoftwareImpl <em>Software</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see hu.bme.mit.vmdistribution.model.impl.SoftwareImpl
-		 * @see hu.bme.mit.vmdistribution.model.impl.VMDistributionPackageImpl#getSoftware()
-		 * @generated
-		 */
-		EClass SOFTWARE = eINSTANCE.getSoftware();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SOFTWARE__NAME = eINSTANCE.getSoftware_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Version</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SOFTWARE__VERSION = eINSTANCE.getSoftware_Version();
-
-		/**
-		 * The meta object literal for the '<em><b>Install Script</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SOFTWARE__INSTALL_SCRIPT = eINSTANCE.getSoftware_InstallScript();
-
-		/**
-		 * The meta object literal for the '{@link hu.bme.mit.vmdistribution.model.impl.VMPropertyImpl <em>VM Property</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see hu.bme.mit.vmdistribution.model.impl.VMPropertyImpl
-		 * @see hu.bme.mit.vmdistribution.model.impl.VMDistributionPackageImpl#getVMProperty()
-		 * @generated
-		 */
-		EClass VM_PROPERTY = eINSTANCE.getVMProperty();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VM_PROPERTY__NAME = eINSTANCE.getVMProperty_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Vagrant Command</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VM_PROPERTY__VAGRANT_COMMAND = eINSTANCE.getVMProperty_VagrantCommand();
 
 		/**
 		 * The meta object literal for the '{@link hu.bme.mit.vmdistribution.model.impl.LabImpl <em>Lab</em>}' class.
@@ -1389,12 +1085,12 @@ public interface VMDistributionPackage extends EPackage {
 		EAttribute LAB__NAME = eINSTANCE.getLab_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Computerconfig</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Computerconfigs</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LAB__COMPUTERCONFIG = eINSTANCE.getLab_Computerconfig();
+		EReference LAB__COMPUTERCONFIGS = eINSTANCE.getLab_Computerconfigs();
 
 		/**
 		 * The meta object literal for the '{@link hu.bme.mit.vmdistribution.model.impl.Vagrant_VMImpl <em>Vagrant VM</em>}' class.
@@ -1415,36 +1111,20 @@ public interface VMDistributionPackage extends EPackage {
 		EAttribute VAGRANT_VM__DISTRIBUTION_IMAGE = eINSTANCE.getVagrant_VM_DistributionImage();
 
 		/**
-		 * The meta object literal for the '<em><b>Base Image</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VAGRANT_VM__BASE_IMAGE = eINSTANCE.getVagrant_VM_BaseImage();
-
-		/**
-		 * The meta object literal for the '<em><b>Software</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VAGRANT_VM__SOFTWARE = eINSTANCE.getVagrant_VM_Software();
-
-		/**
-		 * The meta object literal for the '<em><b>Vmproperty</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VAGRANT_VM__VMPROPERTY = eINSTANCE.getVagrant_VM_Vmproperty();
-
-		/**
 		 * The meta object literal for the '<em><b>Ready To Distribute</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute VAGRANT_VM__READY_TO_DISTRIBUTE = eINSTANCE.getVagrant_VM_ReadyToDistribute();
+
+		/**
+		 * The meta object literal for the '<em><b>Vagrant File</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VAGRANT_VM__VAGRANT_FILE = eINSTANCE.getVagrant_VM_VagrantFile();
 
 		/**
 		 * The meta object literal for the '{@link hu.bme.mit.vmdistribution.model.impl.CustomVMImpl <em>Custom VM</em>}' class.
@@ -1517,12 +1197,12 @@ public interface VMDistributionPackage extends EPackage {
 		EReference COMPUTER_CONFIG__COMPUTER = eINSTANCE.getComputerConfig_Computer();
 
 		/**
-		 * The meta object literal for the '<em><b>Virtualmachine</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Virtualmachines</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference COMPUTER_CONFIG__VIRTUALMACHINE = eINSTANCE.getComputerConfig_Virtualmachine();
+		EReference COMPUTER_CONFIG__VIRTUALMACHINES = eINSTANCE.getComputerConfig_Virtualmachines();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.

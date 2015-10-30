@@ -80,14 +80,6 @@ public class VMDistributionAdapterFactory extends AdapterFactoryImpl {
 				return createComputerAdapter();
 			}
 			@Override
-			public Adapter caseSoftware(Software object) {
-				return createSoftwareAdapter();
-			}
-			@Override
-			public Adapter caseVMProperty(VMProperty object) {
-				return createVMPropertyAdapter();
-			}
-			@Override
 			public Adapter caseLab(Lab object) {
 				return createLabAdapter();
 			}
@@ -166,34 +158,6 @@ public class VMDistributionAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createComputerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link hu.bme.mit.vmdistribution.model.Software <em>Software</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see hu.bme.mit.vmdistribution.model.Software
-	 * @generated
-	 */
-	public Adapter createSoftwareAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link hu.bme.mit.vmdistribution.model.VMProperty <em>VM Property</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see hu.bme.mit.vmdistribution.model.VMProperty
-	 * @generated
-	 */
-	public Adapter createVMPropertyAdapter() {
 		return null;
 	}
 

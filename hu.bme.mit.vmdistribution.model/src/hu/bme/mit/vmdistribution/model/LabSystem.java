@@ -15,9 +15,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link hu.bme.mit.vmdistribution.model.LabSystem#getVirtualmachine <em>Virtualmachine</em>}</li>
- *   <li>{@link hu.bme.mit.vmdistribution.model.LabSystem#getComputer <em>Computer</em>}</li>
- *   <li>{@link hu.bme.mit.vmdistribution.model.LabSystem#getLab <em>Lab</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.model.LabSystem#getVirtualmachines <em>Virtualmachines</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.model.LabSystem#getComputers <em>Computers</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.model.LabSystem#getLabs <em>Labs</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.LabSystem#getCurrentsetup <em>Currentsetup</em>}</li>
  * </ul>
  *
@@ -27,52 +27,52 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface LabSystem extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Virtualmachine</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Virtualmachines</b></em>' containment reference list.
 	 * The list contents are of type {@link hu.bme.mit.vmdistribution.model.VirtualMachine}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Virtualmachine</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Virtualmachines</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Virtualmachine</em>' containment reference list.
-	 * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getLabSystem_Virtualmachine()
+	 * @return the value of the '<em>Virtualmachines</em>' containment reference list.
+	 * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getLabSystem_Virtualmachines()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<VirtualMachine> getVirtualmachine();
+	EList<VirtualMachine> getVirtualmachines();
 
 	/**
-	 * Returns the value of the '<em><b>Computer</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Computers</b></em>' containment reference list.
 	 * The list contents are of type {@link hu.bme.mit.vmdistribution.model.Computer}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Computer</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Computers</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Computer</em>' containment reference list.
-	 * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getLabSystem_Computer()
+	 * @return the value of the '<em>Computers</em>' containment reference list.
+	 * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getLabSystem_Computers()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Computer> getComputer();
+	EList<Computer> getComputers();
 
 	/**
-	 * Returns the value of the '<em><b>Lab</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Labs</b></em>' containment reference list.
 	 * The list contents are of type {@link hu.bme.mit.vmdistribution.model.Lab}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Lab</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Labs</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Lab</em>' containment reference list.
-	 * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getLabSystem_Lab()
+	 * @return the value of the '<em>Labs</em>' containment reference list.
+	 * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getLabSystem_Labs()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Lab> getLab();
+	EList<Lab> getLabs();
 
 	/**
 	 * Returns the value of the '<em><b>Currentsetup</b></em>' reference.

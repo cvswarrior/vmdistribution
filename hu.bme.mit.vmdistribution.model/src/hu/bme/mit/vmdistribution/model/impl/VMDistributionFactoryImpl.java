@@ -61,8 +61,6 @@ public class VMDistributionFactoryImpl extends EFactoryImpl implements VMDistrib
 		switch (eClass.getClassifierID()) {
 			case VMDistributionPackage.LAB_SYSTEM: return createLabSystem();
 			case VMDistributionPackage.COMPUTER: return createComputer();
-			case VMDistributionPackage.SOFTWARE: return createSoftware();
-			case VMDistributionPackage.VM_PROPERTY: return createVMProperty();
 			case VMDistributionPackage.LAB: return createLab();
 			case VMDistributionPackage.VAGRANT_VM: return createVagrant_VM();
 			case VMDistributionPackage.CUSTOM_VM: return createCustomVM();
@@ -121,26 +119,6 @@ public class VMDistributionFactoryImpl extends EFactoryImpl implements VMDistrib
 	public Computer createComputer() {
 		ComputerImpl computer = new ComputerImpl();
 		return computer;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Software createSoftware() {
-		SoftwareImpl software = new SoftwareImpl();
-		return software;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VMProperty createVMProperty() {
-		VMPropertyImpl vmProperty = new VMPropertyImpl();
-		return vmProperty;
 	}
 
 	/**

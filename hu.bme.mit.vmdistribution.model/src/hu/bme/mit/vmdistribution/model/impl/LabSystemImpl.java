@@ -32,9 +32,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link hu.bme.mit.vmdistribution.model.impl.LabSystemImpl#getVirtualmachine <em>Virtualmachine</em>}</li>
- *   <li>{@link hu.bme.mit.vmdistribution.model.impl.LabSystemImpl#getComputer <em>Computer</em>}</li>
- *   <li>{@link hu.bme.mit.vmdistribution.model.impl.LabSystemImpl#getLab <em>Lab</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.model.impl.LabSystemImpl#getVirtualmachines <em>Virtualmachines</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.model.impl.LabSystemImpl#getComputers <em>Computers</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.model.impl.LabSystemImpl#getLabs <em>Labs</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.impl.LabSystemImpl#getCurrentsetup <em>Currentsetup</em>}</li>
  * </ul>
  *
@@ -42,34 +42,34 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class LabSystemImpl extends MinimalEObjectImpl.Container implements LabSystem {
 	/**
-	 * The cached value of the '{@link #getVirtualmachine() <em>Virtualmachine</em>}' containment reference list.
+	 * The cached value of the '{@link #getVirtualmachines() <em>Virtualmachines</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVirtualmachine()
+	 * @see #getVirtualmachines()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VirtualMachine> virtualmachine;
+	protected EList<VirtualMachine> virtualmachines;
 
 	/**
-	 * The cached value of the '{@link #getComputer() <em>Computer</em>}' containment reference list.
+	 * The cached value of the '{@link #getComputers() <em>Computers</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getComputer()
+	 * @see #getComputers()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Computer> computer;
+	protected EList<Computer> computers;
 
 	/**
-	 * The cached value of the '{@link #getLab() <em>Lab</em>}' containment reference list.
+	 * The cached value of the '{@link #getLabs() <em>Labs</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLab()
+	 * @see #getLabs()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Lab> lab;
+	protected EList<Lab> labs;
 
 	/**
 	 * The cached value of the '{@link #getCurrentsetup() <em>Currentsetup</em>}' reference.
@@ -105,11 +105,11 @@ public class LabSystemImpl extends MinimalEObjectImpl.Container implements LabSy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VirtualMachine> getVirtualmachine() {
-		if (virtualmachine == null) {
-			virtualmachine = new EObjectContainmentEList<VirtualMachine>(VirtualMachine.class, this, VMDistributionPackage.LAB_SYSTEM__VIRTUALMACHINE);
+	public EList<VirtualMachine> getVirtualmachines() {
+		if (virtualmachines == null) {
+			virtualmachines = new EObjectContainmentEList<VirtualMachine>(VirtualMachine.class, this, VMDistributionPackage.LAB_SYSTEM__VIRTUALMACHINES);
 		}
-		return virtualmachine;
+		return virtualmachines;
 	}
 
 	/**
@@ -117,11 +117,11 @@ public class LabSystemImpl extends MinimalEObjectImpl.Container implements LabSy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Computer> getComputer() {
-		if (computer == null) {
-			computer = new EObjectContainmentEList<Computer>(Computer.class, this, VMDistributionPackage.LAB_SYSTEM__COMPUTER);
+	public EList<Computer> getComputers() {
+		if (computers == null) {
+			computers = new EObjectContainmentEList<Computer>(Computer.class, this, VMDistributionPackage.LAB_SYSTEM__COMPUTERS);
 		}
-		return computer;
+		return computers;
 	}
 
 	/**
@@ -129,11 +129,11 @@ public class LabSystemImpl extends MinimalEObjectImpl.Container implements LabSy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Lab> getLab() {
-		if (lab == null) {
-			lab = new EObjectContainmentEList<Lab>(Lab.class, this, VMDistributionPackage.LAB_SYSTEM__LAB);
+	public EList<Lab> getLabs() {
+		if (labs == null) {
+			labs = new EObjectContainmentEList<Lab>(Lab.class, this, VMDistributionPackage.LAB_SYSTEM__LABS);
 		}
-		return lab;
+		return labs;
 	}
 
 	/**
@@ -182,12 +182,12 @@ public class LabSystemImpl extends MinimalEObjectImpl.Container implements LabSy
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case VMDistributionPackage.LAB_SYSTEM__VIRTUALMACHINE:
-				return ((InternalEList<?>)getVirtualmachine()).basicRemove(otherEnd, msgs);
-			case VMDistributionPackage.LAB_SYSTEM__COMPUTER:
-				return ((InternalEList<?>)getComputer()).basicRemove(otherEnd, msgs);
-			case VMDistributionPackage.LAB_SYSTEM__LAB:
-				return ((InternalEList<?>)getLab()).basicRemove(otherEnd, msgs);
+			case VMDistributionPackage.LAB_SYSTEM__VIRTUALMACHINES:
+				return ((InternalEList<?>)getVirtualmachines()).basicRemove(otherEnd, msgs);
+			case VMDistributionPackage.LAB_SYSTEM__COMPUTERS:
+				return ((InternalEList<?>)getComputers()).basicRemove(otherEnd, msgs);
+			case VMDistributionPackage.LAB_SYSTEM__LABS:
+				return ((InternalEList<?>)getLabs()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -200,12 +200,12 @@ public class LabSystemImpl extends MinimalEObjectImpl.Container implements LabSy
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case VMDistributionPackage.LAB_SYSTEM__VIRTUALMACHINE:
-				return getVirtualmachine();
-			case VMDistributionPackage.LAB_SYSTEM__COMPUTER:
-				return getComputer();
-			case VMDistributionPackage.LAB_SYSTEM__LAB:
-				return getLab();
+			case VMDistributionPackage.LAB_SYSTEM__VIRTUALMACHINES:
+				return getVirtualmachines();
+			case VMDistributionPackage.LAB_SYSTEM__COMPUTERS:
+				return getComputers();
+			case VMDistributionPackage.LAB_SYSTEM__LABS:
+				return getLabs();
 			case VMDistributionPackage.LAB_SYSTEM__CURRENTSETUP:
 				if (resolve) return getCurrentsetup();
 				return basicGetCurrentsetup();
@@ -222,17 +222,17 @@ public class LabSystemImpl extends MinimalEObjectImpl.Container implements LabSy
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case VMDistributionPackage.LAB_SYSTEM__VIRTUALMACHINE:
-				getVirtualmachine().clear();
-				getVirtualmachine().addAll((Collection<? extends VirtualMachine>)newValue);
+			case VMDistributionPackage.LAB_SYSTEM__VIRTUALMACHINES:
+				getVirtualmachines().clear();
+				getVirtualmachines().addAll((Collection<? extends VirtualMachine>)newValue);
 				return;
-			case VMDistributionPackage.LAB_SYSTEM__COMPUTER:
-				getComputer().clear();
-				getComputer().addAll((Collection<? extends Computer>)newValue);
+			case VMDistributionPackage.LAB_SYSTEM__COMPUTERS:
+				getComputers().clear();
+				getComputers().addAll((Collection<? extends Computer>)newValue);
 				return;
-			case VMDistributionPackage.LAB_SYSTEM__LAB:
-				getLab().clear();
-				getLab().addAll((Collection<? extends Lab>)newValue);
+			case VMDistributionPackage.LAB_SYSTEM__LABS:
+				getLabs().clear();
+				getLabs().addAll((Collection<? extends Lab>)newValue);
 				return;
 			case VMDistributionPackage.LAB_SYSTEM__CURRENTSETUP:
 				setCurrentsetup((Lab)newValue);
@@ -249,14 +249,14 @@ public class LabSystemImpl extends MinimalEObjectImpl.Container implements LabSy
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case VMDistributionPackage.LAB_SYSTEM__VIRTUALMACHINE:
-				getVirtualmachine().clear();
+			case VMDistributionPackage.LAB_SYSTEM__VIRTUALMACHINES:
+				getVirtualmachines().clear();
 				return;
-			case VMDistributionPackage.LAB_SYSTEM__COMPUTER:
-				getComputer().clear();
+			case VMDistributionPackage.LAB_SYSTEM__COMPUTERS:
+				getComputers().clear();
 				return;
-			case VMDistributionPackage.LAB_SYSTEM__LAB:
-				getLab().clear();
+			case VMDistributionPackage.LAB_SYSTEM__LABS:
+				getLabs().clear();
 				return;
 			case VMDistributionPackage.LAB_SYSTEM__CURRENTSETUP:
 				setCurrentsetup((Lab)null);
@@ -273,12 +273,12 @@ public class LabSystemImpl extends MinimalEObjectImpl.Container implements LabSy
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case VMDistributionPackage.LAB_SYSTEM__VIRTUALMACHINE:
-				return virtualmachine != null && !virtualmachine.isEmpty();
-			case VMDistributionPackage.LAB_SYSTEM__COMPUTER:
-				return computer != null && !computer.isEmpty();
-			case VMDistributionPackage.LAB_SYSTEM__LAB:
-				return lab != null && !lab.isEmpty();
+			case VMDistributionPackage.LAB_SYSTEM__VIRTUALMACHINES:
+				return virtualmachines != null && !virtualmachines.isEmpty();
+			case VMDistributionPackage.LAB_SYSTEM__COMPUTERS:
+				return computers != null && !computers.isEmpty();
+			case VMDistributionPackage.LAB_SYSTEM__LABS:
+				return labs != null && !labs.isEmpty();
 			case VMDistributionPackage.LAB_SYSTEM__CURRENTSETUP:
 				return currentsetup != null;
 		}

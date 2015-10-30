@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link hu.bme.mit.vmdistribution.model.impl.VirtualMachineImpl#getComputer <em>Computer</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.model.impl.VirtualMachineImpl#getComputers <em>Computers</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.impl.VirtualMachineImpl#getName <em>Name</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.impl.VirtualMachineImpl#getRequirements <em>Requirements</em>}</li>
  * </ul>
@@ -40,14 +40,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public abstract class VirtualMachineImpl extends MinimalEObjectImpl.Container implements VirtualMachine {
 	/**
-	 * The cached value of the '{@link #getComputer() <em>Computer</em>}' reference list.
+	 * The cached value of the '{@link #getComputers() <em>Computers</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getComputer()
+	 * @see #getComputers()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Computer> computer;
+	protected EList<Computer> computers;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -103,11 +103,11 @@ public abstract class VirtualMachineImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Computer> getComputer() {
-		if (computer == null) {
-			computer = new EObjectWithInverseResolvingEList.ManyInverse<Computer>(Computer.class, this, VMDistributionPackage.VIRTUAL_MACHINE__COMPUTER, VMDistributionPackage.COMPUTER__VIRTUALMACHINES);
+	public EList<Computer> getComputers() {
+		if (computers == null) {
+			computers = new EObjectWithInverseResolvingEList.ManyInverse<Computer>(Computer.class, this, VMDistributionPackage.VIRTUAL_MACHINE__COMPUTERS, VMDistributionPackage.COMPUTER__VIRTUALMACHINES);
 		}
-		return computer;
+		return computers;
 	}
 
 	/**
@@ -183,8 +183,8 @@ public abstract class VirtualMachineImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case VMDistributionPackage.VIRTUAL_MACHINE__COMPUTER:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getComputer()).basicAdd(otherEnd, msgs);
+			case VMDistributionPackage.VIRTUAL_MACHINE__COMPUTERS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getComputers()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -197,8 +197,8 @@ public abstract class VirtualMachineImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case VMDistributionPackage.VIRTUAL_MACHINE__COMPUTER:
-				return ((InternalEList<?>)getComputer()).basicRemove(otherEnd, msgs);
+			case VMDistributionPackage.VIRTUAL_MACHINE__COMPUTERS:
+				return ((InternalEList<?>)getComputers()).basicRemove(otherEnd, msgs);
 			case VMDistributionPackage.VIRTUAL_MACHINE__REQUIREMENTS:
 				return basicSetRequirements(null, msgs);
 		}
@@ -213,8 +213,8 @@ public abstract class VirtualMachineImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case VMDistributionPackage.VIRTUAL_MACHINE__COMPUTER:
-				return getComputer();
+			case VMDistributionPackage.VIRTUAL_MACHINE__COMPUTERS:
+				return getComputers();
 			case VMDistributionPackage.VIRTUAL_MACHINE__NAME:
 				return getName();
 			case VMDistributionPackage.VIRTUAL_MACHINE__REQUIREMENTS:
@@ -232,9 +232,9 @@ public abstract class VirtualMachineImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case VMDistributionPackage.VIRTUAL_MACHINE__COMPUTER:
-				getComputer().clear();
-				getComputer().addAll((Collection<? extends Computer>)newValue);
+			case VMDistributionPackage.VIRTUAL_MACHINE__COMPUTERS:
+				getComputers().clear();
+				getComputers().addAll((Collection<? extends Computer>)newValue);
 				return;
 			case VMDistributionPackage.VIRTUAL_MACHINE__NAME:
 				setName((String)newValue);
@@ -254,8 +254,8 @@ public abstract class VirtualMachineImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case VMDistributionPackage.VIRTUAL_MACHINE__COMPUTER:
-				getComputer().clear();
+			case VMDistributionPackage.VIRTUAL_MACHINE__COMPUTERS:
+				getComputers().clear();
 				return;
 			case VMDistributionPackage.VIRTUAL_MACHINE__NAME:
 				setName(NAME_EDEFAULT);
@@ -275,8 +275,8 @@ public abstract class VirtualMachineImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case VMDistributionPackage.VIRTUAL_MACHINE__COMPUTER:
-				return computer != null && !computer.isEmpty();
+			case VMDistributionPackage.VIRTUAL_MACHINE__COMPUTERS:
+				return computers != null && !computers.isEmpty();
 			case VMDistributionPackage.VIRTUAL_MACHINE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case VMDistributionPackage.VIRTUAL_MACHINE__REQUIREMENTS:

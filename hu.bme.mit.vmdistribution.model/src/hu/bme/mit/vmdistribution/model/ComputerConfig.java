@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link hu.bme.mit.vmdistribution.model.ComputerConfig#getComputer <em>Computer</em>}</li>
- *   <li>{@link hu.bme.mit.vmdistribution.model.ComputerConfig#getVirtualmachine <em>Virtualmachine</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.model.ComputerConfig#getVirtualmachines <em>Virtualmachines</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.ComputerConfig#getName <em>Name</em>}</li>
  * </ul>
  *
@@ -52,20 +52,20 @@ public interface ComputerConfig extends EObject {
 	void setComputer(Computer value);
 
 	/**
-	 * Returns the value of the '<em><b>Virtualmachine</b></em>' reference list.
+	 * Returns the value of the '<em><b>Virtualmachines</b></em>' reference list.
 	 * The list contents are of type {@link hu.bme.mit.vmdistribution.model.VirtualMachine}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Virtualmachine</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Virtualmachines</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Virtualmachine</em>' reference list.
-	 * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getComputerConfig_Virtualmachine()
+	 * @return the value of the '<em>Virtualmachines</em>' reference list.
+	 * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getComputerConfig_Virtualmachines()
 	 * @model
 	 * @generated
 	 */
-	EList<VirtualMachine> getVirtualmachine();
+	EList<VirtualMachine> getVirtualmachines();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

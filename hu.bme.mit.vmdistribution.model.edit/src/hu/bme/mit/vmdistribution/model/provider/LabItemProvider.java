@@ -102,7 +102,7 @@ public class LabItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(VMDistributionPackage.Literals.LAB__COMPUTERCONFIG);
+			childrenFeatures.add(VMDistributionPackage.Literals.LAB__COMPUTERCONFIGS);
 		}
 		return childrenFeatures;
 	}
@@ -161,7 +161,7 @@ public class LabItemProvider
 			case VMDistributionPackage.LAB__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case VMDistributionPackage.LAB__COMPUTERCONFIG:
+			case VMDistributionPackage.LAB__COMPUTERCONFIGS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -181,7 +181,7 @@ public class LabItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(VMDistributionPackage.Literals.LAB__COMPUTERCONFIG,
+				(VMDistributionPackage.Literals.LAB__COMPUTERCONFIGS,
 				 VMDistributionFactory.eINSTANCE.createComputerConfig()));
 	}
 

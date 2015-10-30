@@ -101,9 +101,9 @@ public class LabSystemItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(VMDistributionPackage.Literals.LAB_SYSTEM__VIRTUALMACHINE);
-			childrenFeatures.add(VMDistributionPackage.Literals.LAB_SYSTEM__COMPUTER);
-			childrenFeatures.add(VMDistributionPackage.Literals.LAB_SYSTEM__LAB);
+			childrenFeatures.add(VMDistributionPackage.Literals.LAB_SYSTEM__VIRTUALMACHINES);
+			childrenFeatures.add(VMDistributionPackage.Literals.LAB_SYSTEM__COMPUTERS);
+			childrenFeatures.add(VMDistributionPackage.Literals.LAB_SYSTEM__LABS);
 		}
 		return childrenFeatures;
 	}
@@ -156,9 +156,9 @@ public class LabSystemItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(LabSystem.class)) {
-			case VMDistributionPackage.LAB_SYSTEM__VIRTUALMACHINE:
-			case VMDistributionPackage.LAB_SYSTEM__COMPUTER:
-			case VMDistributionPackage.LAB_SYSTEM__LAB:
+			case VMDistributionPackage.LAB_SYSTEM__VIRTUALMACHINES:
+			case VMDistributionPackage.LAB_SYSTEM__COMPUTERS:
+			case VMDistributionPackage.LAB_SYSTEM__LABS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -178,22 +178,22 @@ public class LabSystemItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(VMDistributionPackage.Literals.LAB_SYSTEM__VIRTUALMACHINE,
+				(VMDistributionPackage.Literals.LAB_SYSTEM__VIRTUALMACHINES,
 				 VMDistributionFactory.eINSTANCE.createVagrant_VM()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(VMDistributionPackage.Literals.LAB_SYSTEM__VIRTUALMACHINE,
+				(VMDistributionPackage.Literals.LAB_SYSTEM__VIRTUALMACHINES,
 				 VMDistributionFactory.eINSTANCE.createCustomVM()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(VMDistributionPackage.Literals.LAB_SYSTEM__COMPUTER,
+				(VMDistributionPackage.Literals.LAB_SYSTEM__COMPUTERS,
 				 VMDistributionFactory.eINSTANCE.createComputer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(VMDistributionPackage.Literals.LAB_SYSTEM__LAB,
+				(VMDistributionPackage.Literals.LAB_SYSTEM__LABS,
 				 VMDistributionFactory.eINSTANCE.createLab()));
 	}
 

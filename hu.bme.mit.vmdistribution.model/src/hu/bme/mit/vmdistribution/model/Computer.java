@@ -17,8 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link hu.bme.mit.vmdistribution.model.Computer#getVirtualmachines <em>Virtualmachines</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.Computer#getName <em>Name</em>}</li>
- *   <li>{@link hu.bme.mit.vmdistribution.model.Computer#getIpAddr <em>Ip Addr</em>}</li>
- *   <li>{@link hu.bme.mit.vmdistribution.model.Computer#getAvailableSpace <em>Available Space</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.model.Computer#getMaxSpaceForVMs <em>Max Space For VMs</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.Computer#getInstalledRAM <em>Installed RAM</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.Computer#getArchitecture <em>Architecture</em>}</li>
  * </ul>
@@ -31,7 +30,7 @@ public interface Computer extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Virtualmachines</b></em>' reference list.
 	 * The list contents are of type {@link hu.bme.mit.vmdistribution.model.VirtualMachine}.
-	 * It is bidirectional and its opposite is '{@link hu.bme.mit.vmdistribution.model.VirtualMachine#getComputer <em>Computer</em>}'.
+	 * It is bidirectional and its opposite is '{@link hu.bme.mit.vmdistribution.model.VirtualMachine#getComputers <em>Computers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Virtualmachines</em>' reference list isn't clear,
@@ -40,8 +39,8 @@ public interface Computer extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Virtualmachines</em>' reference list.
 	 * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getComputer_Virtualmachines()
-	 * @see hu.bme.mit.vmdistribution.model.VirtualMachine#getComputer
-	 * @model opposite="computer"
+	 * @see hu.bme.mit.vmdistribution.model.VirtualMachine#getComputers
+	 * @model opposite="computers"
 	 * @generated
 	 */
 	EList<VirtualMachine> getVirtualmachines();
@@ -73,56 +72,30 @@ public interface Computer extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Ip Addr</b></em>' attribute.
+	 * Returns the value of the '<em><b>Max Space For VMs</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Ip Addr</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Max Space For VMs</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ip Addr</em>' attribute.
-	 * @see #setIpAddr(String)
-	 * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getComputer_IpAddr()
+	 * @return the value of the '<em>Max Space For VMs</em>' attribute.
+	 * @see #setMaxSpaceForVMs(double)
+	 * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getComputer_MaxSpaceForVMs()
 	 * @model
 	 * @generated
 	 */
-	String getIpAddr();
+	double getMaxSpaceForVMs();
 
 	/**
-	 * Sets the value of the '{@link hu.bme.mit.vmdistribution.model.Computer#getIpAddr <em>Ip Addr</em>}' attribute.
+	 * Sets the value of the '{@link hu.bme.mit.vmdistribution.model.Computer#getMaxSpaceForVMs <em>Max Space For VMs</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ip Addr</em>' attribute.
-	 * @see #getIpAddr()
+	 * @param value the new value of the '<em>Max Space For VMs</em>' attribute.
+	 * @see #getMaxSpaceForVMs()
 	 * @generated
 	 */
-	void setIpAddr(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Available Space</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Available Space</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Available Space</em>' attribute.
-	 * @see #setAvailableSpace(double)
-	 * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getComputer_AvailableSpace()
-	 * @model
-	 * @generated
-	 */
-	double getAvailableSpace();
-
-	/**
-	 * Sets the value of the '{@link hu.bme.mit.vmdistribution.model.Computer#getAvailableSpace <em>Available Space</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Available Space</em>' attribute.
-	 * @see #getAvailableSpace()
-	 * @generated
-	 */
-	void setAvailableSpace(double value);
+	void setMaxSpaceForVMs(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Installed RAM</b></em>' attribute.

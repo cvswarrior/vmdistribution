@@ -118,52 +118,6 @@ public class VMDistributionItemProviderAdapterFactory extends VMDistributionAdap
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link hu.bme.mit.vmdistribution.model.Software} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SoftwareItemProvider softwareItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link hu.bme.mit.vmdistribution.model.Software}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSoftwareAdapter() {
-		if (softwareItemProvider == null) {
-			softwareItemProvider = new SoftwareItemProvider(this);
-		}
-
-		return softwareItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link hu.bme.mit.vmdistribution.model.VMProperty} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected VMPropertyItemProvider vmPropertyItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link hu.bme.mit.vmdistribution.model.VMProperty}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createVMPropertyAdapter() {
-		if (vmPropertyItemProvider == null) {
-			vmPropertyItemProvider = new VMPropertyItemProvider(this);
-		}
-
-		return vmPropertyItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link hu.bme.mit.vmdistribution.model.Lab} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -379,8 +333,6 @@ public class VMDistributionItemProviderAdapterFactory extends VMDistributionAdap
 	public void dispose() {
 		if (labSystemItemProvider != null) labSystemItemProvider.dispose();
 		if (computerItemProvider != null) computerItemProvider.dispose();
-		if (softwareItemProvider != null) softwareItemProvider.dispose();
-		if (vmPropertyItemProvider != null) vmPropertyItemProvider.dispose();
 		if (labItemProvider != null) labItemProvider.dispose();
 		if (vagrant_VMItemProvider != null) vagrant_VMItemProvider.dispose();
 		if (customVMItemProvider != null) customVMItemProvider.dispose();
