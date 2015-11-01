@@ -45,7 +45,7 @@
       maxSpaceForVMs="60000.0"
       installedRAM="8000.0"
       architecture="x64"/>
-  <labs name="vagranttest_lab">
+  <labs name="vagrant_test">
     <computerconfigs
         computer="//@computers.0"
         virtualmachines="//@virtualmachines.0"
@@ -67,7 +67,7 @@
         virtualmachines="//@virtualmachines.0"
         name="labpc105_conf"/>
   </labs>
-  <labs name="customvmtest_lab">
+  <labs name="customvm_test">
     <computerconfigs
         computer="//@computers.0"
         virtualmachines="//@virtualmachines.1"
@@ -88,5 +88,15 @@
         computer="//@computers.4"
         virtualmachines="//@virtualmachines.1"
         name="labpc105_conf"/>
+  </labs>
+  <labs name="mixed_test">
+    <computerconfigs
+        computer="//@computers.0"
+        virtualmachines="//@virtualmachines.0"
+        name="labpc101_conf"/>
+    <computerconfigs
+        computer="//@computers.1"
+        virtualmachines="//@virtualmachines.1"
+        name="labpc102_conf"/>
   </labs>
 </hu.bme.mit.vmdistribution:LabSystem>

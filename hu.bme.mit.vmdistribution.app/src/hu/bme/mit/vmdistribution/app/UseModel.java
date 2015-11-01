@@ -9,6 +9,7 @@ import java.util.logging.Logger;
 import hu.bme.mit.vmdistribution.app.resources.Properties;
 import hu.bme.mit.vmdistribution.app.ssh.Host;
 import hu.bme.mit.vmdistribution.app.ssh.SSHUtil;
+import hu.bme.mit.vmdistribution.app.vagrantutil.VagrantUtil;
 import hu.bme.mit.vmdistribution.model.Computer;
 import hu.bme.mit.vmdistribution.model.ComputerConfig;
 import hu.bme.mit.vmdistribution.model.CustomVM;
@@ -34,7 +35,7 @@ public class UseModel {
 		LabSystem myLabSystem = loader.load();
 		Lab goal = null;
 		for (Lab lab : myLabSystem.getLabs()){
-			if("vm_test".equals(lab.getName())){
+			if("mixed_test".equals(lab.getName())){
 				goal = lab;
 			}
 		}
@@ -71,15 +72,15 @@ public class UseModel {
 					CustomVM customvm = (CustomVM) vm;
 					copyVM("seed", customvm.getVmZipArchive(), "/home/vagrant/Downloads");
 				} else {
-					/*Vagrant_VM vagrantvm = (Vagrant_VM) vm;
+					Vagrant_VM vagrantvm = (Vagrant_VM) vm;
 					prepareVagrantVM(vagrantvm);
-					copyVM("seed", vagrantvm.getDistributionImage());*/
+					copyVM("seed", vagrantvm.getDistributionImage(), "/home/vagrant/Downloads");
 				}
 				seenVMs.add(vm);
 			}
 		}
 		
-		
+		/*
 		//CHEAT:
 		List<Computer> targetpcs = new ArrayList<>();
 		targetpcs.add(goal.getComputerconfigs().get(0).getComputer());
@@ -92,7 +93,7 @@ public class UseModel {
 		command.append(host.getHostname()+" ");
 		command.append("testvm.zip ");
 		command.append("testvm.torrent");
-		execShell("seed", command.toString());
+		remoteExec("seed", command.toString());
 		
 		logger.log(Level.INFO, "[Distribute torrent and start rtorrent on clients.]");
 		for (Computer pc : targetpcs){
@@ -101,23 +102,31 @@ public class UseModel {
 			command.append(host.getHostname()+" ");
 			command.append(String.valueOf(host.getPassword())+" ");
 			command.append("testvm.torrent");
-			execShell("seed", command.toString());
-		}
+			remoteExec("seed", command.toString());
+		}*/
 		
 		// updatemodel
 	}
 
-	// TODO
 	public static void prepareVagrantVM(Vagrant_VM vm) {
-		vm.setDistributionImage(null);
+		logger.log(Level.INFO, "Creating and provisioning vagrant VM: "+vm.getName()+"]");
+		VagrantUtil.runVagrantCommand("vagrant up", vm.getVagrantFile());
+		logger.log(Level.INFO, "Shutting down VM to prepare for distribution.]");
+		VagrantUtil.runVagrantCommand("vagrant halt", vm.getVagrantFile());
+		logger.log(Level.INFO, "Creating .zip archive...]");
+		File outputzip =  new File("E:\\"+vm.getName()+".zip");
+		File foldertozip = new File(Properties.getPath("created_vagrant_vms").getAbsolutePath() + "\\vagrant_test");
+		VagrantUtil.createZip(foldertozip, outputzip);
+		vm.setDistributionImage(outputzip);
 		vm.setReadyToDistribute(true);
 	}
 
-	public static void execShell(String pcname, String command) {
+	public static void remoteExec(String pcname, String command) {
 		SSHUtil sshutil = new SSHUtil(Properties.getHostData(pcname));
 		sshutil.connect();
 		sshutil.executeCommand(command);
 		sshutil.disconnect();
 	}
-
+	
+	
 }
