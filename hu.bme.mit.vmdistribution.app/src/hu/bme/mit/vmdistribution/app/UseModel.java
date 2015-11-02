@@ -31,13 +31,18 @@ public class UseModel {
 	public static void main(String[] args) {
 		init();
 		logger.log(Level.INFO, "[Starting tasks.]");
-		EMFModelLoad loader = new EMFModelLoad();
-		LabSystem myLabSystem = loader.load();
+		EMFModelUtil emfutil = new EMFModelUtil();
+		LabSystem myLabSystem = emfutil.loadModelInstance();
 		Lab goal = null;
 		for (Lab lab : myLabSystem.getLabs()){
 			if("mixed_test".equals(lab.getName())){
 				goal = lab;
 			}
+		}
+		
+		List<Computer> pcs = emfutil.query_GetAllComputers();
+		for (Computer computer : pcs) {
+			System.out.println(computer.getName());
 		}
 		
 		distribute(goal);
