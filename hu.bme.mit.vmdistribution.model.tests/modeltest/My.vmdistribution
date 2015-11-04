@@ -12,15 +12,15 @@
     <requirements
         reqArchi="x86"
         reqRAM="1000.0"
-        reqSpace="2000.0"/>
+        reqSpace="50000.0"/>
   </virtualmachines>
   <virtualmachines
       xsi:type="hu.bme.mit.vmdistribution:CustomVM"
       name="customvm_test"
       vmZipArchive="e:\_TSYS\Vagrant\shared\testvm.zip">
     <requirements
-        reqArchi="x86"
-        reqRAM="1000.0"
+        reqArchi="x64"
+        reqRAM="4000.0"
         reqSpace="2000.0"/>
   </virtualmachines>
   <computers
@@ -43,7 +43,7 @@
   <computers
       name="labpc105"
       maxSpaceForVMs="60000.0"
-      installedRAM="8000.0"
+      installedRAM="2500.0"
       architecture="x64"/>
   <labs name="vagrant_test">
     <computerconfigs
