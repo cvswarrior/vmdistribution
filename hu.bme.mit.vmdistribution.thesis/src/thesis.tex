@@ -6,59 +6,35 @@
 %--------------------------------------------------------------------------------------
 % Main variables
 
-%TODO edit names and captions
 %--------------------------------------------------------------------------------------
-\newcommand{\vikszerzoVezeteknev}{Bódis-Szomorú}
-\newcommand{\vikszerzoKeresztnev}{András}
-\newcommand{\vikkonzulensA}{dr.~Konzulens Elemér} % Első konzulens neve
-\newcommand{\vikkonzulensB}{Második Konzulens} % Második konzulens neve; hagyd üresen, ha egy konzulensed van.
-\newcommand{\vikcim}{Elektronikus terelők} % Cím
+\newcommand{\vikszerzoVezeteknev}{Vincze}
+\newcommand{\vikszerzoKeresztnev}{Balázs}
+\newcommand{\vikkonzulensA}{Semeráth Oszkár} % Első konzulens neve
+\newcommand{\vikkonzulensB}{} % Második konzulens neve; hagyd üresen, ha egy konzulensed van.
+\newcommand{\vikcim}{Peer-to-peer alapú számítógépes infrastruktúra kialakítása oktatási környezetben} % Cím
 \newcommand{\viktanszek}{\bmemit} % Tanszék
-\newcommand{\vikdoktipus}{\msc} % Dokumentum típusa (\bsc, \msc)
+\newcommand{\vikdoktipus}{\bsc} % Dokumentum típusa (\bsc, \msc)
 
 \input{include/tdk-variables.tex}
 \newcommand{\szerzoMeta}{\vikszerzoVezeteknev{} \vikszerzoKeresztnev} % egy szerző esetén
-%\newcommand{\szerzoMeta}{\vikszerzoVezeteknev{} \vikszerzoKeresztnev, \tdkszerzoB} % két szerző esetén
 
-%--------------------------------------------------------------------------------------
-%TODO Language configuration -- choose one
-%--------------------------------------------------------------------------------------
 \input{include/thesis-hu}  % Beállítások magyar nyelvű dolgozathoz
-%\input{include/thesis-en} % Settings for English documents
-
 
 \input{include/preamble.tex}
-
 
 %--------------------------------------------------------------------------------------
 % Table of contents and the main text
 %--------------------------------------------------------------------------------------
 \begin{document}
 
-
-%TODO These define guidelines -- remove these
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\include{include/guideline}
-\include{include/project}
-
-
-%TODO Titlepage -- choose one from below
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	\include{include/titlepage}		   % Szakdolgozat/Diplomaterv címlap
-	%\include{include/titlepage-tdk}	% TDK címlap
-	%\include{include/titlepage-otdk}   % OTDK címlap
- 
 
 % Table of Contents
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	\tableofcontents\vfill
 
-
 % Declaration and Abstract
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	\include{include/declaration} %TODO Hallgatói nyilatkozat -- TDK és OTDK esetén törlendő!
-	\include{content/abstract}	  %TODO Összefoglaló -- TDK és OTDK esetén nem kötelező
-
+	\include{include/declaration}
+	\include{content/abstract}
 
 % The main part of the thesis
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -70,27 +46,23 @@
 	\include{content/thesis-format}
 	\include{content/template-usage}
 
-
 % Acknowledgements
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	\include{content/acknowledgement}
-
+%\include{content/acknowledgement}
 
 % List of Figures, Tables
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	\listoffigures\addcontentsline{toc}{chapter}{\abrakjegyzeke}
 	\listoftables\addcontentsline{toc}{chapter}{\tablazatokjegyzeke}
 
-
 % Bibliography
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	\bibliography{bib/mybib}
 	\addcontentsline{toc}{chapter}{\irodalomjegyzek}
 
-
 % Appendix
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	\include{content/appendices}
+%	\include{content/appendices}
 
 %\label{page:last}
 \end{document}

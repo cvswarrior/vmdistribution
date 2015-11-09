@@ -38,5 +38,12 @@ public class Host {
 	public char[] getPassword() {
 		return password;
 	}
+	
+	public void remoteExec(String command) {
+		SSHUtil sshutil = new SSHUtil(this);
+		sshutil.connect();
+		sshutil.executeCommand(command);
+		sshutil.disconnect();
+	}
 
 }
