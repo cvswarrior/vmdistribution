@@ -12,38 +12,37 @@ public class TorrentUtil {
 	
 	public static void copyTorrentFile(Host targetpc, String torrentfilename) {
 		logger.log(Level.INFO, "[Copying torrent file +"+torrentfilename+" to "+targetpc.getHostname()+".]");
-		StringBuilder command = new StringBuilder(Properties.getPath("script_copy_torrent")+" ");
+		Host host_seed = Properties.getHostData("seed");
+		StringBuilder command = new StringBuilder(Properties.getPath("script_copy_torrent").getAbsolutePath()+" ");
 		command.append(targetpc.getHostname()+" ");
 		command.append(String.valueOf(targetpc.getPassword())+" ");
 		command.append(torrentfilename);
-		Properties.getHostData("seed").remoteExec(command.toString());
+		host_seed.remoteExec(command.toString());
 	}
 	
 	public static void createTorrentFile(String vmzipname, String vmtorrentname){
-		logger.log(Level.INFO, "[Createing torrent file for "+vmzipname+".]");
-		StringBuilder command = new StringBuilder(Properties.getPath("script_create_torrrent")+" ");
-		Host host = Properties.getHostData("seed");
-		command.append(host.getHostname()+" ");
+		logger.log(Level.INFO, "[Creating torrent file for "+vmzipname+".]");
+		StringBuilder command = new StringBuilder(Properties.getPath("script_create_torrrent").getAbsolutePath()+" ");
+		Host host_seed = Properties.getHostData("seed");
+		command.append(host_seed.getHostname()+" ");
 		command.append(vmzipname+" ");
 		command.append(vmtorrentname);
-		Properties.getHostData("seed").remoteExec(command.toString());
+		host_seed.remoteExec(command.toString());
 	}
 	
 	public static void startSeeding(){
 		logger.log(Level.INFO, "[Seeding started.]");
-		StringBuilder command = new StringBuilder(Properties.getPath("script_start_seeding")+" ");
-		Host host = Properties.getHostData("seed");
-		command.append(host.getHostname()+" ");
-		command.append(String.valueOf(host.getPassword()));
-		Properties.getHostData("seed").remoteExec(command.toString());
+		StringBuilder command = new StringBuilder(Properties.getPath("script_start_seeding").getAbsolutePath());
+		Host host_seed = Properties.getHostData("seed");
+		host_seed.remoteExec(command.toString());
 	}
 	
 	public static void startLeeching(Host targetpc){
 		logger.log(Level.INFO, "[Torrent client started on "+targetpc.getHostname()+".]");
-		StringBuilder command = new StringBuilder(Properties.getPath("script_start_leeching")+" ");
+		StringBuilder command = new StringBuilder(Properties.getPath("script_start_leeching").getAbsolutePath()+" ");
 		command.append(targetpc.getHostname()+" ");
 		command.append(String.valueOf(targetpc.getPassword()));
-		Properties.getHostData("seed").remoteExec(command.toString());
+		targetpc.remoteExec(command.toString());
 	}
 	
 

@@ -40,8 +40,7 @@ public class VagrantUtil {
 					}
 			}
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.log(Level.SEVERE, "", e);
 		}
 	}	
 
@@ -76,8 +75,7 @@ public class VagrantUtil {
 					}
 			}
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.log(Level.SEVERE, "", e);
 		}
 		
 	}

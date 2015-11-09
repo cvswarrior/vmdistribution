@@ -51,21 +51,20 @@ public class VMUtil {
 					CustomVM customvm = (CustomVM) vm;
 					vmzipfile =  customvm.getVmZipArchive();
 					vmtorrentname = customvm.getVmZipArchive().getName().replaceFirst("\u002ezip$", ".torrent"); 
-					copyVM("seed", customvm.getVmZipArchive(), Properties.getPath("vm_distr_target_location")+" ");
+					copyVM("seed", customvm.getVmZipArchive(), Properties.getPath("vm_distr_target_location").getAbsolutePath()+" ");
 					
 				} else {
 					Vagrant_VM vagrantvm = (Vagrant_VM) vm;
 					vmzipfile =  vagrantvm.getDistributionImage();
 					vmtorrentname = vagrantvm.getDistributionImage().getName().replaceFirst("\u002ezip$", ".torrent");
 					prepareVagrantVM(vagrantvm);
-					copyVM("seed", vagrantvm.getDistributionImage(), Properties.getPath("vm_distr_target_location")+" ");
+					copyVM("seed", vagrantvm.getDistributionImage(), Properties.getPath("vm_distr_target_location").getAbsolutePath()+" ");
 					
 				}
 				TorrentUtil.createTorrentFile(vmzipfile.getName(), vmtorrentname);
 				vm_torrentfilename_map.put(vm, vmtorrentname);
 			}
 		}
-		
 		return vm_torrentfilename_map;
 	}
 	
@@ -75,7 +74,7 @@ public class VMUtil {
 		logger.log(Level.INFO, "Shutting down VM to prepare for distribution.]");
 		VagrantUtil.runVagrantCommand("vagrant halt", vm.getVagrantFile());
 		logger.log(Level.INFO, "Creating .zip archive...]");
-		File outputzip =  new File(Properties.getPath("created_vagrant_vms_zip")+vm.getName()+".zip");
+		File outputzip =  new File(Properties.getPath("created_vagrant_vm_archives").getAbsolutePath() + vm.getName() + ".zip");
 		File foldertozip = new File(Properties.getPath("created_vagrant_vms").getAbsolutePath() + "\\"+ vm.getName());
 		VagrantUtil.createZip(foldertozip, outputzip);
 		vm.setDistributionImage(outputzip);
