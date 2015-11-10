@@ -46,11 +46,6 @@
   			<artifactId>jsch</artifactId>
   			<version>0.1.53</version>
   	  </dependency>
-  	  <dependency>
-  			<groupId>org.eclipse.emf</groupId>
-  			<artifactId>org.eclipse.emf.ecore</artifactId>
-  			<version>${emf.version}</version>
-	    </dependency>
   	</dependencies>
 	</dependencyManagement>
 
@@ -65,19 +60,4 @@
   	</repository>
   </repositories>
   	
-	<build>
-		<plugins>
-			<!-- Tell maven to compile using Java 8 -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>${compiler.version}</version>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
-
 </project>
