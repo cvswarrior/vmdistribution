@@ -5,7 +5,6 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import hu.bme.mit.vmdistribution.app.resources.Properties;
 import hu.bme.mit.vmdistribution.model.Computer;
 import hu.bme.mit.vmdistribution.model.Lab;
 import hu.bme.mit.vmdistribution.model.LabSystem;
@@ -35,7 +34,7 @@ public class UseModel {
 			}
 		}
 		
-		distribute(goal);
+		//distribute(goal);
 
 		logger.log(Level.INFO, "[Done.]");
 	}

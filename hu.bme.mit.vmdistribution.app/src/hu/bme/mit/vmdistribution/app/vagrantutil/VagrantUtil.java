@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import hu.bme.mit.vmdistribution.app.resources.Properties;
+import hu.bme.mit.vmdistribution.app.Properties;
 
 public class VagrantUtil {
 	

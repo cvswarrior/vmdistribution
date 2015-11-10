@@ -1,6 +1,6 @@
 package hu.bme.mit.vmdistribution.app.ssh;
 
-import hu.bme.mit.vmdistribution.app.resources.Properties;
+import hu.bme.mit.vmdistribution.app.Properties;
 
 public class Host {
 

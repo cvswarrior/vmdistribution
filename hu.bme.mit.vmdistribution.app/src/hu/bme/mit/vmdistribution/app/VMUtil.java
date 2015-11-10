@@ -8,7 +8,6 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import hu.bme.mit.vmdistribution.app.resources.Properties;
 import hu.bme.mit.vmdistribution.app.ssh.Host;
 import hu.bme.mit.vmdistribution.app.ssh.SSHUtil;
 import hu.bme.mit.vmdistribution.app.vagrantutil.VagrantUtil;

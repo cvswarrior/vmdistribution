@@ -3,7 +3,6 @@ package hu.bme.mit.vmdistribution.app;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import hu.bme.mit.vmdistribution.app.resources.Properties;
 import hu.bme.mit.vmdistribution.app.ssh.Host;
 
 public class TorrentUtil {

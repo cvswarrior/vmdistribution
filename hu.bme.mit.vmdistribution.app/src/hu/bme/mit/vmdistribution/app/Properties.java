@@ -1,4 +1,4 @@
-package hu.bme.mit.vmdistribution.app.resources;
+package hu.bme.mit.vmdistribution.app;
 
 import java.io.File;
 import java.util.MissingResourceException;
