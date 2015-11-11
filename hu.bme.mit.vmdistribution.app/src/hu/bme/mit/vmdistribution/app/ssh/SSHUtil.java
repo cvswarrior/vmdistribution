@@ -41,11 +41,11 @@ public class SSHUtil {
 			channel = (ChannelSftp) session.openChannel("sftp");
 			channel.connect();
 			logger.log(Level.FINE, "[SFTP Channel open.]");
-			channel.cd(destfolder);
+			channel.cd(destfolder);//TODO relative path
 			logger.log(Level.INFO, "[Changed working directory to: " + channel.lpwd() + "]");
 			for (File file : files) {
 				logger.log(Level.INFO, "[Copying " + file.getName() + " to remote host...]");
-				channel.put(new FileInputStream(file), file.getName());
+				channel.put(new FileInputStream(file), file.getName(), new ProgressMonitor());
 				logger.log(Level.INFO, "[" + file.getName() + " copied to remote host.]");
 			}
 			channel.disconnect();

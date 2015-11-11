@@ -49,4 +49,14 @@ public class Properties {
 
 	}
 	
+	public static String getPathString(String name) {
+		try {
+			return FILELOCATIONS_BUNDLE.getString(name);
+		} catch (MissingResourceException e) {
+			logger.log(Level.SEVERE, "Can't find entries in property file for " + name + ".* !", e);
+			return null;
+		}
+
+	}
+	
 }

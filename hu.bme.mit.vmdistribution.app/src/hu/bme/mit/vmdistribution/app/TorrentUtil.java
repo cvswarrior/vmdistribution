@@ -12,7 +12,7 @@ public class TorrentUtil {
 	public static void copyTorrentFile(Host targetpc, String torrentfilename) {
 		logger.log(Level.INFO, "[Copying torrent file +"+torrentfilename+" to "+targetpc.getHostname()+".]");
 		Host host_seed = Properties.getHostData("seed");
-		StringBuilder command = new StringBuilder(Properties.getPath("script_copy_torrent").getAbsolutePath()+" ");
+		StringBuilder command = new StringBuilder(Properties.getPathString("script_copy_torrent")+" ");
 		command.append(targetpc.getHostname()+" ");
 		command.append(String.valueOf(targetpc.getPassword())+" ");
 		command.append(torrentfilename);
@@ -21,7 +21,7 @@ public class TorrentUtil {
 	
 	public static void createTorrentFile(String vmzipname, String vmtorrentname){
 		logger.log(Level.INFO, "[Creating torrent file for "+vmzipname+".]");
-		StringBuilder command = new StringBuilder(Properties.getPath("script_create_torrrent").getAbsolutePath()+" ");
+		StringBuilder command = new StringBuilder(Properties.getPathString("script_create_torrrent")+" ");
 		Host host_seed = Properties.getHostData("seed");
 		command.append(host_seed.getHostname()+" ");
 		command.append(vmzipname+" ");
@@ -31,14 +31,14 @@ public class TorrentUtil {
 	
 	public static void startSeeding(){
 		logger.log(Level.INFO, "[Seeding started.]");
-		StringBuilder command = new StringBuilder(Properties.getPath("script_start_seeding").getAbsolutePath());
+		StringBuilder command = new StringBuilder(Properties.getPathString("script_start_seeding"));
 		Host host_seed = Properties.getHostData("seed");
 		host_seed.remoteExec(command.toString());
 	}
 	
 	public static void startLeeching(Host targetpc){
 		logger.log(Level.INFO, "[Torrent client started on "+targetpc.getHostname()+".]");
-		StringBuilder command = new StringBuilder(Properties.getPath("script_start_leeching").getAbsolutePath()+" ");
+		StringBuilder command = new StringBuilder(Properties.getPathString("script_start_leeching")+" ");
 		command.append(targetpc.getHostname()+" ");
 		command.append(String.valueOf(targetpc.getPassword()));
 		targetpc.remoteExec(command.toString());

@@ -47,7 +47,7 @@ public class VagrantUtil {
 	public static void createZip(File sourcefolder, File output){
 		
 		
-		StringBuilder command = new StringBuilder( Properties.getPath("7zip_cli_exe").getAbsolutePath());
+		StringBuilder command = new StringBuilder(Properties.getPath("7zip_cli_exe").getAbsolutePath());
 		command.append(" u ");
 		command.append(output.getAbsolutePath()+" ");
 		command.append(sourcefolder.getAbsolutePath());

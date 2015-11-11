@@ -6,16 +6,18 @@
     xmlns:hu.bme.mit.vmdistribution="hu.bme.mit.vmdistribution">
   <virtualmachines
       xsi:type="hu.bme.mit.vmdistribution:Vagrant_VM"
+      computers="//@computers.4"
       name="vagrantvm_test"
       distributionImage=""
       vagrantFile="e:\_TSYS\_workspace\vagrant_test\Vagrantfile">
     <requirements
         reqArchi="x86"
         reqRAM="1000.0"
-        reqSpace="50000.0"/>
+        reqSpace="12000.0"/>
   </virtualmachines>
   <virtualmachines
       xsi:type="hu.bme.mit.vmdistribution:CustomVM"
+      computers="//@computers.3"
       name="customvm_test"
       vmZipArchive="e:\_TSYS\Vagrant\shared\testvm.zip">
     <requirements
@@ -36,11 +38,13 @@
       maxSpaceForVMs="10000.0"
       installedRAM="2000.0"/>
   <computers
+      virtualmachines="//@virtualmachines.1"
       name="labpc104"
       maxSpaceForVMs="35000.0"
       installedRAM="6000.0"
       architecture="x64"/>
   <computers
+      virtualmachines="//@virtualmachines.0"
       name="labpc105"
       maxSpaceForVMs="60000.0"
       installedRAM="2500.0"
@@ -92,11 +96,23 @@
   <labs name="mixed_test">
     <computerconfigs
         computer="//@computers.0"
-        virtualmachines="//@virtualmachines.0"
+        virtualmachines="//@virtualmachines.0 //@virtualmachines.1"
         name="labpc101_conf"/>
     <computerconfigs
         computer="//@computers.1"
-        virtualmachines="//@virtualmachines.1"
+        virtualmachines="//@virtualmachines.1 //@virtualmachines.0"
         name="labpc102_conf"/>
+    <computerconfigs
+        computer="//@computers.2"
+        virtualmachines="//@virtualmachines.0 //@virtualmachines.1"
+        name="labpc103_conf"/>
+    <computerconfigs
+        computer="//@computers.3"
+        virtualmachines="//@virtualmachines.0 //@virtualmachines.1"
+        name="labpc104_conf"/>
+    <computerconfigs
+        computer="//@computers.4"
+        virtualmachines="//@virtualmachines.0 //@virtualmachines.1"
+        name="labpc105_conf"/>
   </labs>
 </hu.bme.mit.vmdistribution:LabSystem>

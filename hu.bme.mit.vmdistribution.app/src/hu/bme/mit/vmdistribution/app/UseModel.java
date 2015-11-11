@@ -28,13 +28,14 @@ public class UseModel {
 		EMFModelUtil emfutil = new EMFModelUtil();
 		myLabSystem = emfutil.loadModelInstance();
 		Lab goal = null;
+		//TODO replace with command line arguments
 		for (Lab lab : myLabSystem.getLabs()){
 			if("mixed_test".equals(lab.getName())){
 				goal = lab;
 			}
 		}
 		
-		//distribute(goal);
+		distribute(goal);
 
 		logger.log(Level.INFO, "[Done.]");
 	}

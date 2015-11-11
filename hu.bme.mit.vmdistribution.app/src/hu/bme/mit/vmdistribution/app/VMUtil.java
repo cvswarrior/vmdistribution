@@ -50,14 +50,14 @@ public class VMUtil {
 					CustomVM customvm = (CustomVM) vm;
 					vmzipfile =  customvm.getVmZipArchive();
 					vmtorrentname = customvm.getVmZipArchive().getName().replaceFirst("\u002ezip$", ".torrent"); 
-					copyVM("seed", customvm.getVmZipArchive(), Properties.getPath("vm_distr_target_location").getAbsolutePath()+" ");
+					copyVM("seed", customvm.getVmZipArchive(), Properties.getPathString("vm_distr_target_location"));
 					
 				} else {
 					Vagrant_VM vagrantvm = (Vagrant_VM) vm;
+					prepareVagrantVM(vagrantvm);
 					vmzipfile =  vagrantvm.getDistributionImage();
 					vmtorrentname = vagrantvm.getDistributionImage().getName().replaceFirst("\u002ezip$", ".torrent");
-					prepareVagrantVM(vagrantvm);
-					copyVM("seed", vagrantvm.getDistributionImage(), Properties.getPath("vm_distr_target_location").getAbsolutePath()+" ");
+					copyVM("seed", vagrantvm.getDistributionImage(), Properties.getPathString("vm_distr_target_location"));
 					
 				}
 				TorrentUtil.createTorrentFile(vmzipfile.getName(), vmtorrentname);
@@ -69,13 +69,13 @@ public class VMUtil {
 	
 	public static void prepareVagrantVM(Vagrant_VM vm) {
 		logger.log(Level.INFO, "Creating and provisioning vagrant VM: "+vm.getName()+"]");
-		VagrantUtil.runVagrantCommand("vagrant up", vm.getVagrantFile());
+		//VagrantUtil.runVagrantCommand("vagrant up", vm.getVagrantFile());
 		logger.log(Level.INFO, "Shutting down VM to prepare for distribution.]");
-		VagrantUtil.runVagrantCommand("vagrant halt", vm.getVagrantFile());
+		//VagrantUtil.runVagrantCommand("vagrant halt", vm.getVagrantFile());
 		logger.log(Level.INFO, "Creating .zip archive...]");
 		File outputzip =  new File(Properties.getPath("created_vagrant_vm_archives").getAbsolutePath() + vm.getName() + ".zip");
 		File foldertozip = new File(Properties.getPath("created_vagrant_vms").getAbsolutePath() + "\\"+ vm.getName());
-		VagrantUtil.createZip(foldertozip, outputzip);
+		//VagrantUtil.createZip(foldertozip, outputzip);//TODO
 		vm.setDistributionImage(outputzip);
 		vm.setReadyToDistribute(true);
 	}

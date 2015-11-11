@@ -1,5 +1,5 @@
 #!/bin/bash
 
-rm ~/Torrents/*
-rm ~/Downloads/*
-rm ~/session/*
+rm -f ~/Torrents/*
+rm -f ~/Downloads/*
+rm -f ~/session/*
