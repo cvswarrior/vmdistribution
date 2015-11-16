@@ -1,0 +1,53 @@
+sudo apt-get update
+
+sudo apt-get install apache2
+sudo apt-get install libapache2-mod-scgi
+
+sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt
+
+mkdir ~/tmp
+cd ~/tmp
+sudo apt-get install gcc g++ libncurses?-dev libsigc++-2.0-dev libssl-dev subversion make libcurl4-nss-dev
+svn checkout http://svn.code.sf.net/p/xmlrpc-c/code/advanced xmlrpc-c
+cd x*
+./configure
+make
+sudo make install
+#rm
+
+/etc/apache2/mods-enabled/dir.conf
+/etc/apache2/apache2.conf
+/var/www/rutorrent/conf/config.php
+
+
+sudo service apache2 restart
+
+cd /var/www
+sudo wget http://rutorrent.googlecode.com/files/rutorrent-3.3.tar.gz
+sudo tar -xvzf rutorrent-*
+sudo rm rutorrent*.gz
+sudo chmod -R 777 rutorrent
+
+cd ~/tmp
+wget http://rtorrent.net/downloads/libtorrent-0.13.6.tar.gz
+wget http://rtorrent.net/downloads/rtorrent-0.9.6.tar.gz
+tar -xvzf lib*
+cd lib*
+./configure
+make
+sudo make install
+#rm
+cd ..
+
+tar -xvzf rtorrent-*
+cd rtorrent-*
+./configure --with-xmlrpc-c=/usr/local/bin/xmlrpc-c-config
+make
+sudo make install
+
+edit /etc/ld.so.conf
+sudo ldconfig
+get rtorrent.rc with + scgi_port = 127.0.0.1:5000
+
+
+

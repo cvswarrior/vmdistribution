@@ -1,9 +1,15 @@
 package hu.bme.mit.vmdistribution.app;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import org.apache.xmlrpc.XmlRpcException;
+import org.apache.xmlrpc.client.XmlRpcClient;
+import org.apache.xmlrpc.client.XmlRpcClientConfigImpl;
 
 import hu.bme.mit.vmdistribution.app.vagrantutil.Archiver;
 import hu.bme.mit.vmdistribution.model.Computer;
@@ -36,8 +42,34 @@ public class UseModel {
 			}
 		}
 
-		Archiver.createZipArchive("E:\\_TSYS\\VirtualBox\\_VMs\\vagrantvm_test","E:\\vagrantvm_test.zip");
+		//Archiver.createZipArchive("E:\\_TSYS\\VirtualBox\\_VMs\\vagrantvm_test","E:\\vagrantvm_test.zip");
 		//distribute(goal);
+		
+		 XmlRpcClientConfigImpl config = new XmlRpcClientConfigImpl();
+		    try {
+				config.setServerURL(new URL("http://192.168.100.250/RPC2"));
+			} catch (MalformedURLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		    XmlRpcClient client = new XmlRpcClient();
+		    client.setConfig(config);
+		    Object[] params = new Object[]{};
+		    try {
+		    	Object[] result = (Object[]) client.execute("system.listMethods", params);
+		    	for (Object object : result) {
+		    		System.out.println(object);
+				}
+		   
+		    //params = new Object[]{"system.hostname"};
+		    //String  result2 = (String) client.execute("system.methodHelp", params);
+		    //System.out.println(result2);
+		    
+				
+			} catch (XmlRpcException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 
 		
 		//save changes to model
