@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import hu.bme.mit.vmdistribution.app.vagrantutil.Archiver;
 import hu.bme.mit.vmdistribution.model.Computer;
 import hu.bme.mit.vmdistribution.model.Lab;
 import hu.bme.mit.vmdistribution.model.LabSystem;
@@ -18,7 +19,7 @@ public class UseModel {
 
 	public static void init() {
 		System.setProperty("java.util.logging.SimpleFormatter.format", "%1$tY-%1$tm-%1$td %1$tH:%1$tM:%1$tS %4$s %2$s %5$s%6$s%n");
-		logger_parent.setLevel(Level.INFO);
+		logger_parent.setLevel(Level.FINER);
 	}
 
 	public static void main(String[] args) {
@@ -34,20 +35,27 @@ public class UseModel {
 				goal = lab;
 			}
 		}
-		
-		distribute(goal);
 
+		Archiver.createZipArchive("E:\\_TSYS\\VirtualBox\\_VMs\\vagrantvm_test","E:\\vagrantvm_test.zip");
+		//distribute(goal);
+
+		
+		//save changes to model
+		emfutil.saveModelInstance();
+		logger.log(Level.INFO, "[Instance model updated.]");
 		logger.log(Level.INFO, "[Done.]");
 	}
 
 	public static void distribute(Lab goal) {
 		
+		
+		//TODO skip if nothing to copy
 		//copy vms to seed
 		Map<VirtualMachine, String> vm_torrentfilename_map = VMUtil.copyVmsToSeed(goal);
 		
 		//start seeding
 		TorrentUtil.startSeeding();
-		
+
 		//get compat vms to install
 		Map<Computer, List<VirtualMachine>> currentsetup = EMFModelUtil.buildComputerToVMsMapFromLabSystem(myLabSystem);
 		Map<Computer, List<VirtualMachine>> goalsetup = EMFModelUtil.buildComputerToVMsMapFromLab(goal);
@@ -60,14 +68,15 @@ public class UseModel {
 			for(VirtualMachine vm : vmstodistr){
 				TorrentUtil.copyTorrentFile(Properties.getHostData(pc.getName()), vm_torrentfilename_map.get(vm));
 			}
-			TorrentUtil.startLeeching(Properties.getHostData(pc.getName()));
+			if(vmstodistr.size() > 0){
+				TorrentUtil.startLeeching(Properties.getHostData(pc.getName()));
+			}
 			
 			//update model
 			for(VirtualMachine vm : vmstodistr){
 				vm.getComputers().add(pc);
 			}
 			pc.getVirtualmachines().addAll(vmstodistr);
-			
 		}
 		
 	}

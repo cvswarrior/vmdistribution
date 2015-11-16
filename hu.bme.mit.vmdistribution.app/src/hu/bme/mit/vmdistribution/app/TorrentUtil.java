@@ -39,9 +39,10 @@ public class TorrentUtil {
 	public static void startLeeching(Host targetpc){
 		logger.log(Level.INFO, "[Torrent client started on "+targetpc.getHostname()+".]");
 		StringBuilder command = new StringBuilder(Properties.getPathString("script_start_leeching")+" ");
+		Host host_seed = Properties.getHostData("seed");
 		command.append(targetpc.getHostname()+" ");
 		command.append(String.valueOf(targetpc.getPassword()));
-		targetpc.remoteExec(command.toString());
+		host_seed.remoteExec(command.toString());
 	}
 	
 

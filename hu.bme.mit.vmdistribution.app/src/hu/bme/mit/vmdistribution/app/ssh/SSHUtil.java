@@ -65,15 +65,19 @@ public class SSHUtil {
 		try {
 			ChannelExec channel = (ChannelExec) session.openChannel("exec");
 			BufferedReader in = new BufferedReader(new InputStreamReader(channel.getInputStream()));
+			BufferedReader err = new BufferedReader(new InputStreamReader(channel.getErrStream()));
 			channel.setCommand(command);
 			channel.connect();
 			logger.log(Level.FINE, "[SSH Channel open.]");
 			String commandprefix = session.getUserName() + "@" + session.getHost() + ": ";
 			logger.log(Level.INFO, "[Command sent: " + commandprefix + command + "]");
 			String msg = null;
-
 			while ((msg = in.readLine()) != null) {
 				logger.log(Level.INFO, msg);
+			}
+			String errmsg = null;
+			while ((errmsg = err.readLine()) != null) {
+				logger.log(Level.SEVERE, errmsg);
 			}
 			channel.disconnect();
 			logger.log(Level.FINE, "[SSH Channel closed.]");

@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 import hu.bme.mit.vmdistribution.app.ssh.Host;
 import hu.bme.mit.vmdistribution.app.ssh.SSHUtil;
-import hu.bme.mit.vmdistribution.app.vagrantutil.VagrantUtil;
+import hu.bme.mit.vmdistribution.app.vagrantutil.Archiver;
 import hu.bme.mit.vmdistribution.model.ComputerConfig;
 import hu.bme.mit.vmdistribution.model.CustomVM;
 import hu.bme.mit.vmdistribution.model.Lab;
@@ -75,7 +75,7 @@ public class VMUtil {
 		logger.log(Level.INFO, "Creating .zip archive...]");
 		File outputzip =  new File(Properties.getPath("created_vagrant_vm_archives").getAbsolutePath() + vm.getName() + ".zip");
 		File foldertozip = new File(Properties.getPath("created_vagrant_vms").getAbsolutePath() + "\\"+ vm.getName());
-		//VagrantUtil.createZip(foldertozip, outputzip);//TODO
+		Archiver.createZipArchive(foldertozip.getAbsolutePath(), outputzip.getAbsolutePath());
 		vm.setDistributionImage(outputzip);
 		vm.setReadyToDistribute(true);
 	}

@@ -1,6 +1,7 @@
 package hu.bme.mit.vmdistribution.app;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,6 +28,7 @@ public class EMFModelUtil {
 	//private IncQueryEngine engine;
 	
 	//private ComputersMatcher computersmatcher;
+	private Resource resource;
 
 	public LabSystem loadModelInstance() {
 		VMDistributionPackage.eINSTANCE.eClass();
@@ -36,8 +38,7 @@ public class EMFModelUtil {
 
 		ResourceSet resSet = new ResourceSetImpl();
 		File myModel = new File("../hu.bme.mit.vmdistribution.model.tests/modeltest/My.vmdistribution");
-		Resource resource = resSet.getResource(URI.createURI(myModel.toURI().toString()), true);
-		
+		this.resource = resSet.getResource(URI.createURI(myModel.toURI().toString()), true);
 		/*
 		try {
 			engine = IncQueryEngine.on(resource);
@@ -46,9 +47,18 @@ public class EMFModelUtil {
 			logger.log(Level.SEVERE, "ERROR ", e);
 		}*/
 		
-		LabSystem myLabSystem = (LabSystem) resource.getContents().get(0);
+		LabSystem myLabSystem = (LabSystem) this.resource.getContents().get(0);
 		logger.log(Level.INFO, "[Model data loaded from " + myModel.getAbsolutePath() + "]");
 		return myLabSystem;
+	}
+	
+	public void saveModelInstance(){
+		try {
+			resource.save(null);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public static Map<Computer, List<VirtualMachine>> buildComputerToVMsMapFromLabSystem(LabSystem labsystem){

@@ -19,8 +19,8 @@ public class ProgressMonitor implements SftpProgressMonitor {
     public boolean count(long bytes)
     {
     	this.currentbyte += bytes;
-    	if(currentbyte > 100000000 * hundredmbcounter){
-    		logger.info("Copied "+String.valueOf(currentbyte/1000000L)+"MB of ?");
+    	if(currentbyte > 10000000 * hundredmbcounter){
+    		logger.info("Copied "+String.valueOf(currentbyte/1000000.0)+"MB of ?");
     		hundredmbcounter++;
     	}
     	
