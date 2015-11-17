@@ -2,6 +2,7 @@ package hu.bme.mit.vmdistribution.app;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
@@ -30,6 +31,8 @@ public class UseModel {
 
 	public static void main(String[] args) {
 		
+		testXMLRPC();
+		
 		init();
 		logger.log(Level.INFO, "[Starting tasks.]");
 		EMFModelUtil emfutil = new EMFModelUtil();
@@ -45,31 +48,7 @@ public class UseModel {
 		//Archiver.createZipArchive("E:\\_TSYS\\VirtualBox\\_VMs\\vagrantvm_test","E:\\vagrantvm_test.zip");
 		//distribute(goal);
 		
-		 XmlRpcClientConfigImpl config = new XmlRpcClientConfigImpl();
-		    try {
-				config.setServerURL(new URL("http://192.168.100.250/RPC2"));
-			} catch (MalformedURLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		    XmlRpcClient client = new XmlRpcClient();
-		    client.setConfig(config);
-		    Object[] params = new Object[]{};
-		    try {
-		    	Object[] result = (Object[]) client.execute("system.listMethods", params);
-		    	for (Object object : result) {
-		    		System.out.println(object);
-				}
-		   
-		    //params = new Object[]{"system.hostname"};
-		    //String  result2 = (String) client.execute("system.methodHelp", params);
-		    //System.out.println(result2);
-		    
-				
-			} catch (XmlRpcException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+		 
 
 		
 		//save changes to model
@@ -92,7 +71,7 @@ public class UseModel {
 		Map<Computer, List<VirtualMachine>> currentsetup = EMFModelUtil.buildComputerToVMsMapFromLabSystem(myLabSystem);
 		Map<Computer, List<VirtualMachine>> goalsetup = EMFModelUtil.buildComputerToVMsMapFromLab(goal);
 
-		Map<Computer, List<VirtualMachine>> vms_toinstall_notalreadyinstalled = getConfWithoutAlreadyInstalledVMs(currentsetup, goalsetup);
+		Map<Computer, List<VirtualMachine>> vms_toinstall_notalreadyinstalled = EMFModelUtil.getConfWithoutAlreadyInstalledVMs(currentsetup, goalsetup);
 		Map<Computer, List<VirtualMachine>> vms_toinstall_alsocompatible = EMFModelUtil.getConfWithoutIncompatibleVMs(vms_toinstall_notalreadyinstalled);
 		
 		for(Computer pc : vms_toinstall_alsocompatible.keySet()){
@@ -113,15 +92,51 @@ public class UseModel {
 		
 	}
 
-	public static Map<Computer, List<VirtualMachine>> getConfWithoutAlreadyInstalledVMs(Map<Computer, List<VirtualMachine>> current_setup, Map<Computer, List<VirtualMachine>> goal_setup){
-		Map<Computer, List<VirtualMachine>> withoutalreadyinstalledvms = goal_setup;
-
-		for (Computer pc : current_setup.keySet()) {
-			if(withoutalreadyinstalledvms.containsKey(pc)){
-				withoutalreadyinstalledvms.get(pc).removeAll(pc.getVirtualmachines());
-			}
+	public static void testXMLRPC(){
+		
+		XmlRpcClientConfigImpl config = new XmlRpcClientConfigImpl();
+	    try {
+			config.setServerURL(new URL("http://192.168.100.250/RPC2"));
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		return withoutalreadyinstalledvms;
+	    XmlRpcClient client = new XmlRpcClient();
+	    client.setConfig(config);
+	   /* Object[] params = new Object[1];
+	    
+	    String param1 = "d.multicall";
+	    Object oparam1 = param1.v;
+	    
+	    params[0]=oparam1;
+	    String[] asd = Arrays.t*/
+	    String[] params = new String[]{"main", "d.get_base_filename=", "d.get_hash=" , "cat=\\$d.get_peers_complete="};
+	    try {
+	    	Object[] result = (Object[]) client.execute("d.multicall", params);
+	    	//System.out.println(result);
+	    	for (Object object : result) {
+	    		System.out.println(object);
+			}
+	   
+	    //params = new Object[]{"system.hostname"};
+	    //String  result2 = (String) client.execute("system.methodHelp", params);
+	    //System.out.println(result2);
+	    
+			
+		} catch (XmlRpcException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	    //download_list -> összes filename + infohash
+	    //vm -> infohash
+	    //while(true) foreach vm: getdata(vm.infohash)
+	    
+	    //TODO set up test torrent with working tracker to test get_peers stuff
+	    
+		
+		System.exit(0);
 	}
+	
 
 }

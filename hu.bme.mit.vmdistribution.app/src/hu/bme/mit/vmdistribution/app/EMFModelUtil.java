@@ -77,6 +77,17 @@ public class EMFModelUtil {
 		return map;
 	}
 	
+	public static Map<Computer, List<VirtualMachine>> getConfWithoutAlreadyInstalledVMs(Map<Computer, List<VirtualMachine>> current_setup, Map<Computer, List<VirtualMachine>> goal_setup){
+		Map<Computer, List<VirtualMachine>> withoutalreadyinstalledvms = goal_setup;
+
+		for (Computer pc : current_setup.keySet()) {
+			if(withoutalreadyinstalledvms.containsKey(pc)){
+				withoutalreadyinstalledvms.get(pc).removeAll(pc.getVirtualmachines());
+			}
+		}
+		return withoutalreadyinstalledvms;
+	}
+	
 	public static Map<Computer, List<VirtualMachine>> getConfWithoutIncompatibleVMs(Map<Computer, List<VirtualMachine>> goal_setup){
 		Map<Computer, List<VirtualMachine>> goodsetup = new HashMap<>();
 
