@@ -21,8 +21,7 @@ public class VMUtil {
 	
 	private static final Logger logger = Logger.getLogger(VMUtil.class.getName());
 	
-	
-	public static void copyVM(String pcname, File vm, String destfolder) {
+	public static void copyVM(final String pcname, final File vm, final String destfolder) {
 		Host host = Properties.getHostData(pcname);
 		SSHUtil sshutil = new SSHUtil(host);
 		sshutil.connect();
@@ -32,7 +31,7 @@ public class VMUtil {
 		sshutil.disconnect();
 	}
 	
-	public static Map<VirtualMachine, String> copyVmsToSeed(Lab goal){
+	public static Map<VirtualMachine, String> copyVmsToSeed(final Lab goal){
 		Map<VirtualMachine, String> vm_torrentfilename_map = new HashMap<>();
 		// prepare vagrant vms & copy single copy of vms to seed
 		logger.log(Level.INFO, "[Copying required VMs to seed.]");
@@ -67,7 +66,7 @@ public class VMUtil {
 		return vm_torrentfilename_map;
 	}
 	
-	public static void prepareVagrantVM(Vagrant_VM vm) {
+	public static void prepareVagrantVM(final Vagrant_VM vm) {
 		logger.log(Level.INFO, "Creating and provisioning vagrant VM: "+vm.getName()+"]");
 		//VagrantUtil.runVagrantCommand("vagrant up", vm.getVagrantFile());
 		logger.log(Level.INFO, "Shutting down VM to prepare for distribution.]");

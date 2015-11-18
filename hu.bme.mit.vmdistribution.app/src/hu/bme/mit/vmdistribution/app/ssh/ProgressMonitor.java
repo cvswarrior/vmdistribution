@@ -10,13 +10,15 @@ public class ProgressMonitor implements SftpProgressMonitor {
 	private long currentbyte = 0;
 	private double hundredmbcounter = 1;
 
-    public ProgressMonitor() {;}
+    public ProgressMonitor() {
+    	
+    }
    
-    public void init(int op, String src, String dest, long max) 
+    public void init(final int op, final String src, final String dest, final long max) 
     {
     }
 
-    public boolean count(long bytes)
+    public boolean count(final long bytes)
     {
     	this.currentbyte += bytes;
     	if(currentbyte > 10000000 * hundredmbcounter){

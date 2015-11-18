@@ -9,7 +9,7 @@ public class TorrentUtil {
 	
 	private static final Logger logger = Logger.getLogger(TorrentUtil.class.getName());
 	
-	public static void copyTorrentFile(Host targetpc, String torrentfilename) {
+	public static void copyTorrentFile(final Host targetpc, final String torrentfilename) {
 		logger.log(Level.INFO, "[Copying torrent file +"+torrentfilename+" to "+targetpc.getHostname()+".]");
 		Host host_seed = Properties.getHostData("seed");
 		StringBuilder command = new StringBuilder(Properties.getPathString("script_copy_torrent")+" ");
@@ -19,7 +19,7 @@ public class TorrentUtil {
 		host_seed.remoteExec(command.toString());
 	}
 	
-	public static void createTorrentFile(String vmzipname, String vmtorrentname){
+	public static void createTorrentFile(final String vmzipname, final String vmtorrentname){
 		logger.log(Level.INFO, "[Creating torrent file for "+vmzipname+".]");
 		StringBuilder command = new StringBuilder(Properties.getPathString("script_create_torrrent")+" ");
 		Host host_seed = Properties.getHostData("seed");

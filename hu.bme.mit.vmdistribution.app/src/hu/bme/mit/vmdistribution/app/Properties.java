@@ -21,7 +21,7 @@ public class Properties {
 	private Properties() {
 	}
 
-	public static Host getHostData(String name) {
+	public static Host getHostData(final String name) {
 
 		try {
 			String hostname = HOSTS_RESOURCE_BUNDLE.getString(name + ".host");
@@ -37,7 +37,7 @@ public class Properties {
 
 	}
 	
-	public static File getPath(String name) {
+	public static File getPath(final String name) {
 
 		try {
 			String path = FILELOCATIONS_BUNDLE.getString(name);
@@ -49,7 +49,7 @@ public class Properties {
 
 	}
 	
-	public static String getPathString(String name) {
+	public static String getPathString(final String name) {
 		try {
 			return FILELOCATIONS_BUNDLE.getString(name);
 		} catch (MissingResourceException e) {

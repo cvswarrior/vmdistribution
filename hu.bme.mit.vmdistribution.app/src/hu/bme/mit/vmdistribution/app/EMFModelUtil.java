@@ -25,9 +25,6 @@ import hu.bme.mit.vmdistribution.model.VirtualMachine;
 public class EMFModelUtil {
 
 	private static final Logger logger = Logger.getLogger(EMFModelUtil.class.getName());
-	//private IncQueryEngine engine;
-	
-	//private ComputersMatcher computersmatcher;
 	private Resource resource;
 
 	public LabSystem loadModelInstance() {
@@ -39,14 +36,6 @@ public class EMFModelUtil {
 		ResourceSet resSet = new ResourceSetImpl();
 		File myModel = new File("../hu.bme.mit.vmdistribution.model.tests/modeltest/My.vmdistribution");
 		this.resource = resSet.getResource(URI.createURI(myModel.toURI().toString()), true);
-		/*
-		try {
-			engine = IncQueryEngine.on(resource);
-			computersmatcher = ComputersMatcher.on(engine);
-		} catch (IncQueryException e) {
-			logger.log(Level.SEVERE, "ERROR ", e);
-		}*/
-		
 		LabSystem myLabSystem = (LabSystem) this.resource.getContents().get(0);
 		logger.log(Level.INFO, "[Model data loaded from " + myModel.getAbsolutePath() + "]");
 		return myLabSystem;
@@ -56,12 +45,11 @@ public class EMFModelUtil {
 		try {
 			resource.save(null);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.log(Level.SEVERE, "[ERROR saving model instance.]", e);
 		}
 	}
 	
-	public static Map<Computer, List<VirtualMachine>> buildComputerToVMsMapFromLabSystem(LabSystem labsystem){
+	public static Map<Computer, List<VirtualMachine>> buildComputerToVMsMapFromLabSystem(final LabSystem labsystem){
 		Map<Computer, List<VirtualMachine>> map = new HashMap<>();
 		for(Computer c : labsystem.getComputers()){
 			map.put(c, c.getVirtualmachines());
@@ -69,7 +57,7 @@ public class EMFModelUtil {
 		return map;
 	}
 	
-	public static Map<Computer, List<VirtualMachine>> buildComputerToVMsMapFromLab(Lab lab){
+	public static Map<Computer, List<VirtualMachine>> buildComputerToVMsMapFromLab(final Lab lab){
 		Map<Computer, List<VirtualMachine>> map = new HashMap<>();
 		for(ComputerConfig cfg : lab.getComputerconfigs()){
 			map.put(cfg.getComputer(), cfg.getVirtualmachines());
@@ -77,7 +65,7 @@ public class EMFModelUtil {
 		return map;
 	}
 	
-	public static Map<Computer, List<VirtualMachine>> getConfWithoutAlreadyInstalledVMs(Map<Computer, List<VirtualMachine>> current_setup, Map<Computer, List<VirtualMachine>> goal_setup){
+	public static Map<Computer, List<VirtualMachine>> getConfWithoutAlreadyInstalledVMs(final Map<Computer, List<VirtualMachine>> current_setup, final Map<Computer, List<VirtualMachine>> goal_setup){
 		Map<Computer, List<VirtualMachine>> withoutalreadyinstalledvms = goal_setup;
 
 		for (Computer pc : current_setup.keySet()) {
@@ -88,7 +76,7 @@ public class EMFModelUtil {
 		return withoutalreadyinstalledvms;
 	}
 	
-	public static Map<Computer, List<VirtualMachine>> getConfWithoutIncompatibleVMs(Map<Computer, List<VirtualMachine>> goal_setup){
+	public static Map<Computer, List<VirtualMachine>> getConfWithoutIncompatibleVMs(final Map<Computer, List<VirtualMachine>> goal_setup){
 		Map<Computer, List<VirtualMachine>> goodsetup = new HashMap<>();
 
 		for(Computer pc: goal_setup.keySet()){
@@ -104,7 +92,7 @@ public class EMFModelUtil {
 		return goodsetup;
 	}
 	
-	public static double getUsedSpace(List<VirtualMachine> vms){
+	public static double getUsedSpace(final List<VirtualMachine> vms){
 		double space = 0;
 		for( VirtualMachine vm : vms){
 			space = space + vm.getRequirements().getReqSpace();
@@ -112,7 +100,7 @@ public class EMFModelUtil {
 		return space;
 	}
 	
-	public static boolean isCompatible(Computer pc, VirtualMachine vm){
+	public static boolean isCompatible(final Computer pc, final VirtualMachine vm){
 		boolean result = true;
 		if(!"x64".equals(pc.getArchitecture()) && !pc.getArchitecture().equals(vm.getRequirements().getReqArchi())){
 			result = false;
@@ -125,7 +113,7 @@ public class EMFModelUtil {
 		return result;
 	}
 	
-	public static boolean hasEnoughSpace(Computer pc, List<VirtualMachine> vms){
+	public static boolean hasEnoughSpace(final Computer pc, final List<VirtualMachine> vms){
 		boolean result;
 		
 		double pc_free_space = pc.getMaxSpaceForVMs() - getUsedSpace(pc.getVirtualmachines());
@@ -140,16 +128,5 @@ public class EMFModelUtil {
 		
 		return result;
 	}
-	
-	
-	/*
-	public List<Computer> query_GetAllComputers(){
-		List<Computer> result = new ArrayList<Computer>();
-		Collection<ComputersMatch> matches = computersmatcher.getAllMatches();
-		for(ComputersMatch cm : matches){
-			result.add(cm.getC());
-		}
-		return result;
-	}*/
 
 }

@@ -12,7 +12,7 @@ public class VagrantUtil {
 	
 	private static final Logger logger = Logger.getLogger(VagrantUtil.class.getName());
 	
-	public static void runVagrantCommand(String command, File vagrantfile){
+	public static void runVagrantCommand(final String command, final File vagrantfile){
 		
 		Process process;
 		try {

@@ -16,10 +16,9 @@ public class Archiver {
 	final static int BUFFER = 2048;
 	private static final Logger logger = Logger.getLogger(UseModel.class.getName());
 
-	public static boolean createZipArchive(String srcFolder, String destFile) {
+	public static boolean createZipArchive(final String srcFolder, final String destFile) {
 
 		try {
-			
 			logger.log(Level.INFO, "Creating Archive: "+destFile);
 			BufferedInputStream origin = null;
 

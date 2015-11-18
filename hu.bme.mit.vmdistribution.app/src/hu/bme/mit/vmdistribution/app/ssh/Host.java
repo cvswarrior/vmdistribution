@@ -12,14 +12,14 @@ public class Host {
 	public Host() {
 	}
 
-	public Host(String hostname, int port, String username, char[] password) {
+	public Host(final String hostname, final int port, final String username, final char[] password) {
 		this.hostname = hostname;
 		this.port = port;
 		this.username = username;
 		this.password = password;
 	}
 
-	public Host getHostData(String hostname) {
+	public Host getHostData(final String hostname) {
 		return Properties.getHostData(hostname);
 	}
 
@@ -39,7 +39,7 @@ public class Host {
 		return password;
 	}
 	
-	public void remoteExec(String command) {
+	public void remoteExec(final String command) {
 		SSHUtil sshutil = new SSHUtil(this);
 		sshutil.connect();
 		sshutil.executeCommand(command);

@@ -23,7 +23,7 @@ public class SSHUtil {
 	private Session session;
 	private static final Logger logger = Logger.getLogger(SSHUtil.class.getName());
 
-	public SSHUtil(Host host) {
+	public SSHUtil(final Host host) {
 		this.jsch = new JSch();
 		this.session = null;
 		try {
@@ -35,7 +35,7 @@ public class SSHUtil {
 		session.setConfig("StrictHostKeyChecking", "no");
 	}
 
-	public void copyFiles(List<File> files, String destfolder) {
+	public void copyFiles(final List<File> files, final String destfolder) {
 		try {
 			ChannelSftp channel = null;
 			channel = (ChannelSftp) session.openChannel("sftp");
@@ -60,7 +60,7 @@ public class SSHUtil {
 
 	}
 
-	public void executeCommand(String command) {
+	public void executeCommand(final String command) {
 
 		try {
 			ChannelExec channel = (ChannelExec) session.openChannel("exec");

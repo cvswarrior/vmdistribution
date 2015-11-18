@@ -1,8 +1,9 @@
 package hu.bme.mit.vmdistribution.app;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
@@ -12,7 +13,7 @@ import org.apache.xmlrpc.XmlRpcException;
 import org.apache.xmlrpc.client.XmlRpcClient;
 import org.apache.xmlrpc.client.XmlRpcClientConfigImpl;
 
-import hu.bme.mit.vmdistribution.app.vagrantutil.Archiver;
+import hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater;
 import hu.bme.mit.vmdistribution.model.Computer;
 import hu.bme.mit.vmdistribution.model.Lab;
 import hu.bme.mit.vmdistribution.model.LabSystem;
@@ -29,8 +30,12 @@ public class UseModel {
 		logger_parent.setLevel(Level.FINER);
 	}
 
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		
+		
+		distrLoopTest();
+		System.out.println("why are we here?");
+		System.exit(-1);
 		testXMLRPC();
 		
 		init();
@@ -57,7 +62,7 @@ public class UseModel {
 		logger.log(Level.INFO, "[Done.]");
 	}
 
-	public static void distribute(Lab goal) {
+	public static void distribute(final Lab goal) {
 		
 		
 		//TODO skip if nothing to copy
@@ -83,12 +88,15 @@ public class UseModel {
 				TorrentUtil.startLeeching(Properties.getHostData(pc.getName()));
 			}
 			
-			//update model
-			for(VirtualMachine vm : vmstodistr){
+			//update model TODO: only for pcs that actually got the vm
+			/*for(VirtualMachine vm : vmstodistr){
 				vm.getComputers().add(pc);
 			}
-			pc.getVirtualmachines().addAll(vmstodistr);
+			pc.getVirtualmachines().addAll(vmstodistr);*/
 		}
+		
+		//distr progress loop
+		
 		
 	}
 
@@ -110,9 +118,11 @@ public class UseModel {
 	    
 	    params[0]=oparam1;
 	    String[] asd = Arrays.t*/
-	    String[] params = new String[]{"main", "d.get_base_filename=", "d.get_hash=" , "cat=\\$d.get_peers_complete="};
+	    //String[] params = new String[]{"main", "d.get_base_filename=", "d.get_hash="};
+	    String[] params = new String[]{"72AB41F3EA30BE5CCA44B9098BC7FDC7CB9E2BE2", "main", "cat=\\$p.get_address=", "cat=\\$p.get_completed_percent="};
 	    try {
-	    	Object[] result = (Object[]) client.execute("d.multicall", params);
+	    	//Object[] result = (Object[]) client.execute("d.multicall", params);
+	    	Object[] result = (Object[]) client.execute("p.multicall", params);
 	    	//System.out.println(result);
 	    	for (Object object : result) {
 	    		System.out.println(object);
@@ -121,7 +131,8 @@ public class UseModel {
 	    //params = new Object[]{"system.hostname"};
 	    //String  result2 = (String) client.execute("system.methodHelp", params);
 	    //System.out.println(result2);
-	    
+	    String[] params1 = new String[]{"main", "d.get_base_filename=", "d.get_hash="};
+	    Object[] result1 = (Object[]) client.execute("d.multicall", params1);
 			
 		} catch (XmlRpcException e) {
 			// TODO Auto-generated catch block
@@ -136,6 +147,28 @@ public class UseModel {
 	    
 		
 		System.exit(0);
+	}
+	
+	public static void distrLoopTest(){
+		Thread statusthread = new Thread(new DistributionStatusUpdater());
+		statusthread.setDaemon(true);
+		//Thread controlthread = new Thread(new DistributionStatusController());
+		statusthread.start();
+		//controlthread.start();
+		String msg = null;
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		while(true){
+			try{
+			msg=in.readLine();
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+			if("QUIT".equalsIgnoreCase(msg)){
+				System.out.println("quit due to user command");
+				System.exit(0);
+			}
+		}
+		
 	}
 	
 
