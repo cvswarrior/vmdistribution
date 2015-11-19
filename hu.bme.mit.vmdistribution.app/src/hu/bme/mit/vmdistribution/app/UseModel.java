@@ -14,6 +14,7 @@ import org.apache.xmlrpc.client.XmlRpcClient;
 import org.apache.xmlrpc.client.XmlRpcClientConfigImpl;
 
 import hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater;
+import hu.bme.mit.vmdistribution.app.distrstatus.RTorrentXmlRpcClient;
 import hu.bme.mit.vmdistribution.model.Computer;
 import hu.bme.mit.vmdistribution.model.Lab;
 import hu.bme.mit.vmdistribution.model.LabSystem;
@@ -24,19 +25,22 @@ public class UseModel {
 	private static final Logger logger_parent = Logger.getLogger("");
 	private static final Logger logger = Logger.getLogger(UseModel.class.getName());
 	private static LabSystem myLabSystem;
+	private static RTorrentXmlRpcClient xmlRPCClient;
 
 	public static void init() {
 		System.setProperty("java.util.logging.SimpleFormatter.format", "%1$tY-%1$tm-%1$td %1$tH:%1$tM:%1$tS %4$s %2$s %5$s%6$s%n");
 		logger_parent.setLevel(Level.FINER);
+		xmlRPCClient = new RTorrentXmlRpcClient();
 	}
 
 	public static void main(final String[] args) {
 		
 		
-		distrLoopTest();
+		//distrLoopTest();
+		
+		testXMLRPC();
 		System.out.println("why are we here?");
 		System.exit(-1);
-		testXMLRPC();
 		
 		init();
 		logger.log(Level.INFO, "[Starting tasks.]");
@@ -104,7 +108,7 @@ public class UseModel {
 		
 		XmlRpcClientConfigImpl config = new XmlRpcClientConfigImpl();
 	    try {
-			config.setServerURL(new URL("http://192.168.100.250/RPC2"));
+			config.setServerURL(new URL("http://192.168.100.101/RPC2"));
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -118,11 +122,11 @@ public class UseModel {
 	    
 	    params[0]=oparam1;
 	    String[] asd = Arrays.t*/
-	    //String[] params = new String[]{"main", "d.get_base_filename=", "d.get_hash="};
-	    String[] params = new String[]{"72AB41F3EA30BE5CCA44B9098BC7FDC7CB9E2BE2", "main", "cat=\\$p.get_address=", "cat=\\$p.get_completed_percent="};
+	    String[] params = new String[]{"main", "d.get_base_filename=", "d.get_hash="};
+	    //String[] params = new String[]{"72AB41F3EA30BE5CCA44B9098BC7FDC7CB9E2BE2", "main", "cat=\\$p.get_address=", "cat=\\$p.get_completed_percent="};
 	    try {
-	    	//Object[] result = (Object[]) client.execute("d.multicall", params);
-	    	Object[] result = (Object[]) client.execute("p.multicall", params);
+	    	Object[] result = (Object[]) client.execute("d.multicall", params);
+	    	//Object[] result = (Object[]) client.execute("p.multicall", params);
 	    	//System.out.println(result);
 	    	for (Object object : result) {
 	    		System.out.println(object);
@@ -150,7 +154,7 @@ public class UseModel {
 	}
 	
 	public static void distrLoopTest(){
-		Thread statusthread = new Thread(new DistributionStatusUpdater());
+		Thread statusthread = new Thread(new DistributionStatusUpdater(null, null));
 		statusthread.setDaemon(true);
 		//Thread controlthread = new Thread(new DistributionStatusController());
 		statusthread.start();
@@ -169,6 +173,10 @@ public class UseModel {
 			}
 		}
 		
+	}
+	
+	public static RTorrentXmlRpcClient getXmlRpcClient(){
+		return xmlRPCClient;
 	}
 	
 

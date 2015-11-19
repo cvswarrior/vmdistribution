@@ -4,13 +4,13 @@ import java.util.logging.Logger;
 
 import com.jcraft.jsch.SftpProgressMonitor;
 
-public class ProgressMonitor implements SftpProgressMonitor {
+public class CopyProgressMonitor implements SftpProgressMonitor {
 	
-	private static final Logger logger = Logger.getLogger(ProgressMonitor.class.getName());
+	private static final Logger logger = Logger.getLogger(CopyProgressMonitor.class.getName());
 	private long currentbyte = 0;
 	private double hundredmbcounter = 1;
 
-    public ProgressMonitor() {
+    public CopyProgressMonitor() {
     	
     }
    

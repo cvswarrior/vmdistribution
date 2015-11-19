@@ -45,7 +45,7 @@ public class SSHUtil {
 			logger.log(Level.INFO, "[Changed working directory to: " + channel.lpwd() + "]");
 			for (File file : files) {
 				logger.log(Level.INFO, "[Copying " + file.getName() + " to remote host...]");
-				channel.put(new FileInputStream(file), file.getName(), new ProgressMonitor());
+				channel.put(new FileInputStream(file), file.getName(), new CopyProgressMonitor());
 				logger.log(Level.INFO, "[" + file.getName() + " copied to remote host.]");
 			}
 			channel.disconnect();

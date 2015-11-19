@@ -10,11 +10,9 @@ import java.util.logging.Logger;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
-import hu.bme.mit.vmdistribution.app.UseModel;
-
 public class Archiver {
 	final static int BUFFER = 2048;
-	private static final Logger logger = Logger.getLogger(UseModel.class.getName());
+	private static final Logger logger = Logger.getLogger(Archiver.class.getName());
 
 	public static boolean createZipArchive(final String srcFolder, final String destFile) {
 
