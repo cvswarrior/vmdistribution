@@ -15,4 +15,9 @@ refine logging levels
 
 not important:
 ----------
+revert to jre7
 create javadoc
+
+toask:
+------------:
+forrásmegjelölések hova?
