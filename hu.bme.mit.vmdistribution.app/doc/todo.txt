@@ -21,3 +21,8 @@ create javadoc
 toask:
 ------------:
 forrásmegjelölések hova?
+
+
+---
+/tmp mappa azért menjen fel
+szakdoga dátum fix utolsó napra
