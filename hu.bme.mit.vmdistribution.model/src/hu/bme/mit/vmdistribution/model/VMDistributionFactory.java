@@ -22,6 +22,15 @@ public interface VMDistributionFactory extends EFactory {
 	VMDistributionFactory eINSTANCE = hu.bme.mit.vmdistribution.model.impl.VMDistributionFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>Virtual Machine</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Virtual Machine</em>'.
+	 * @generated
+	 */
+	VirtualMachine createVirtualMachine();
+
+	/**
 	 * Returns a new object of class '<em>Lab System</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

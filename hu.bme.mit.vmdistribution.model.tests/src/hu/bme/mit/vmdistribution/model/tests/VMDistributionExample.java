@@ -2,10 +2,10 @@
  */
 package hu.bme.mit.vmdistribution.model.tests;
 
-import hu.bme.mit.vmdistribution.model.LabSystem;
 import hu.bme.mit.vmdistribution.model.VMDistributionFactory;
 import hu.bme.mit.vmdistribution.model.VMDistributionPackage;
 
+import hu.bme.mit.vmdistribution.model.VirtualMachine;
 import java.io.File;
 import java.io.IOException;
 
@@ -60,7 +60,7 @@ public class VMDistributionExample {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.vmdistribution"));
-				LabSystem root = VMDistributionFactory.eINSTANCE.createLabSystem();
+				VirtualMachine root = VMDistributionFactory.eINSTANCE.createVirtualMachine();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}

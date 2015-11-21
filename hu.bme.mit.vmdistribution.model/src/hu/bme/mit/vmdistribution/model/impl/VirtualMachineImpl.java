@@ -40,7 +40,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public abstract class VirtualMachineImpl extends MinimalEObjectImpl.Container implements VirtualMachine {
+public class VirtualMachineImpl extends MinimalEObjectImpl.Container implements VirtualMachine {
 	/**
 	 * The cached value of the '{@link #getComputers() <em>Computers</em>}' reference list.
 	 * <!-- begin-user-doc -->

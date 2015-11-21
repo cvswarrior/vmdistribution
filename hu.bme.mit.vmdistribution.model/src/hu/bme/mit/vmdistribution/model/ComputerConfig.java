@@ -62,7 +62,7 @@ public interface ComputerConfig extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Virtualmachines</em>' reference list.
 	 * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getComputerConfig_Virtualmachines()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	EList<VirtualMachine> getVirtualmachines();

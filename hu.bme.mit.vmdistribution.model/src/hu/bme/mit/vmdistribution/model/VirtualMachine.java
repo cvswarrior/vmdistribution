@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getVirtualMachine()
- * @model abstract="true"
+ * @model
  * @generated
  */
 public interface VirtualMachine extends EObject {

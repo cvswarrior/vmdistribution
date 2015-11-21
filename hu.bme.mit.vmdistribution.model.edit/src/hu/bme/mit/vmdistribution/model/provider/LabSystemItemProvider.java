@@ -202,6 +202,11 @@ public class LabSystemItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(VMDistributionPackage.Literals.LAB_SYSTEM__VIRTUALMACHINES,
+				 VMDistributionFactory.eINSTANCE.createVirtualMachine()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(VMDistributionPackage.Literals.LAB_SYSTEM__VIRTUALMACHINES,
 				 VMDistributionFactory.eINSTANCE.createVagrantVM()));
 
 		newChildDescriptors.add

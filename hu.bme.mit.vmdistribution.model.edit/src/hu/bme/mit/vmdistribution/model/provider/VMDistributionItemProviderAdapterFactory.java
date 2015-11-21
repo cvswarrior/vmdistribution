@@ -72,6 +72,29 @@ public class VMDistributionItemProviderAdapterFactory extends VMDistributionAdap
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link hu.bme.mit.vmdistribution.model.VirtualMachine} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VirtualMachineItemProvider virtualMachineItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link hu.bme.mit.vmdistribution.model.VirtualMachine}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVirtualMachineAdapter() {
+		if (virtualMachineItemProvider == null) {
+			virtualMachineItemProvider = new VirtualMachineItemProvider(this);
+		}
+
+		return virtualMachineItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link hu.bme.mit.vmdistribution.model.LabSystem} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -331,6 +354,7 @@ public class VMDistributionItemProviderAdapterFactory extends VMDistributionAdap
 	 * @generated
 	 */
 	public void dispose() {
+		if (virtualMachineItemProvider != null) virtualMachineItemProvider.dispose();
 		if (labSystemItemProvider != null) labSystemItemProvider.dispose();
 		if (computerItemProvider != null) computerItemProvider.dispose();
 		if (labItemProvider != null) labItemProvider.dispose();

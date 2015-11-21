@@ -604,7 +604,7 @@ public class VMDistributionPackageImpl extends EPackageImpl implements VMDistrib
 		vagrantVMEClass.getESuperTypes().add(this.getVirtualMachine());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(virtualMachineEClass, VirtualMachine.class, "VirtualMachine", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(virtualMachineEClass, VirtualMachine.class, "VirtualMachine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVirtualMachine_Computers(), this.getComputer(), this.getComputer_Virtualmachines(), "computers", null, 0, -1, VirtualMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVirtualMachine_Name(), ecorePackage.getEString(), "name", null, 0, 1, VirtualMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVirtualMachine_Requirements(), this.getRequirements(), null, "requirements", null, 1, 1, VirtualMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -640,7 +640,7 @@ public class VMDistributionPackageImpl extends EPackageImpl implements VMDistrib
 
 		initEClass(computerConfigEClass, ComputerConfig.class, "ComputerConfig", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getComputerConfig_Computer(), this.getComputer(), null, "computer", null, 1, 1, ComputerConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComputerConfig_Virtualmachines(), this.getVirtualMachine(), null, "virtualmachines", null, 1, -1, ComputerConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComputerConfig_Virtualmachines(), this.getVirtualMachine(), null, "virtualmachines", null, 0, -1, ComputerConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getComputerConfig_Name(), ecorePackage.getEString(), "name", null, 0, 1, ComputerConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(connectionInfoEClass, ConnectionInfo.class, "ConnectionInfo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

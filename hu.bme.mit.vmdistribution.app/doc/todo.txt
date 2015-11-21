@@ -11,6 +11,7 @@ almost important:
 
 env independent zippping + scripts
 refine logging levels
+seed=labpc problem?
 
 
 not important:

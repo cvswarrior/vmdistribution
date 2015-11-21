@@ -59,6 +59,7 @@ public class VMDistributionFactoryImpl extends EFactoryImpl implements VMDistrib
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case VMDistributionPackage.VIRTUAL_MACHINE: return createVirtualMachine();
 			case VMDistributionPackage.LAB_SYSTEM: return createLabSystem();
 			case VMDistributionPackage.COMPUTER: return createComputer();
 			case VMDistributionPackage.LAB: return createLab();
@@ -99,6 +100,16 @@ public class VMDistributionFactoryImpl extends EFactoryImpl implements VMDistrib
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VirtualMachine createVirtualMachine() {
+		VirtualMachineImpl virtualMachine = new VirtualMachineImpl();
+		return virtualMachine;
 	}
 
 	/**
