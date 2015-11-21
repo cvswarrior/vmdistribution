@@ -65,6 +65,7 @@ public class VirtualMachineItemProvider
 
 			addComputersPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
+			addVmZipArchivePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -105,6 +106,28 @@ public class VirtualMachineItemProvider
 				 getString("_UI_VirtualMachine_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VirtualMachine_name_feature", "_UI_VirtualMachine_type"),
 				 VMDistributionPackage.Literals.VIRTUAL_MACHINE__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Vm Zip Archive feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addVmZipArchivePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_VirtualMachine_vmZipArchive_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_VirtualMachine_vmZipArchive_feature", "_UI_VirtualMachine_type"),
+				 VMDistributionPackage.Literals.VIRTUAL_MACHINE__VM_ZIP_ARCHIVE,
 				 true,
 				 false,
 				 false,
@@ -171,6 +194,7 @@ public class VirtualMachineItemProvider
 
 		switch (notification.getFeatureID(VirtualMachine.class)) {
 			case VMDistributionPackage.VIRTUAL_MACHINE__NAME:
+			case VMDistributionPackage.VIRTUAL_MACHINE__VM_ZIP_ARCHIVE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case VMDistributionPackage.VIRTUAL_MACHINE__REQUIREMENTS:

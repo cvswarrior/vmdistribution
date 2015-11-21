@@ -3,6 +3,7 @@
 package hu.bme.mit.vmdistribution.model.impl;
 
 import hu.bme.mit.vmdistribution.model.Computer;
+import hu.bme.mit.vmdistribution.model.ConnectionInfo;
 import hu.bme.mit.vmdistribution.model.VMDistributionPackage;
 import hu.bme.mit.vmdistribution.model.VirtualMachine;
 
@@ -35,6 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link hu.bme.mit.vmdistribution.model.impl.ComputerImpl#getMaxSpaceForVMs <em>Max Space For VMs</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.impl.ComputerImpl#getInstalledRAM <em>Installed RAM</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.impl.ComputerImpl#getArchitecture <em>Architecture</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.model.impl.ComputerImpl#getConnectioninfo <em>Connectioninfo</em>}</li>
  * </ul>
  *
  * @generated
@@ -129,6 +131,16 @@ public class ComputerImpl extends MinimalEObjectImpl.Container implements Comput
 	 * @ordered
 	 */
 	protected String architecture = ARCHITECTURE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getConnectioninfo() <em>Connectioninfo</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConnectioninfo()
+	 * @generated
+	 * @ordered
+	 */
+	protected ConnectionInfo connectioninfo;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -250,6 +262,49 @@ public class ComputerImpl extends MinimalEObjectImpl.Container implements Comput
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ConnectionInfo getConnectioninfo() {
+		return connectioninfo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetConnectioninfo(ConnectionInfo newConnectioninfo, NotificationChain msgs) {
+		ConnectionInfo oldConnectioninfo = connectioninfo;
+		connectioninfo = newConnectioninfo;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VMDistributionPackage.COMPUTER__CONNECTIONINFO, oldConnectioninfo, newConnectioninfo);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setConnectioninfo(ConnectionInfo newConnectioninfo) {
+		if (newConnectioninfo != connectioninfo) {
+			NotificationChain msgs = null;
+			if (connectioninfo != null)
+				msgs = ((InternalEObject)connectioninfo).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VMDistributionPackage.COMPUTER__CONNECTIONINFO, null, msgs);
+			if (newConnectioninfo != null)
+				msgs = ((InternalEObject)newConnectioninfo).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VMDistributionPackage.COMPUTER__CONNECTIONINFO, null, msgs);
+			msgs = basicSetConnectioninfo(newConnectioninfo, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, VMDistributionPackage.COMPUTER__CONNECTIONINFO, newConnectioninfo, newConnectioninfo));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -270,6 +325,8 @@ public class ComputerImpl extends MinimalEObjectImpl.Container implements Comput
 		switch (featureID) {
 			case VMDistributionPackage.COMPUTER__VIRTUALMACHINES:
 				return ((InternalEList<?>)getVirtualmachines()).basicRemove(otherEnd, msgs);
+			case VMDistributionPackage.COMPUTER__CONNECTIONINFO:
+				return basicSetConnectioninfo(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -292,6 +349,8 @@ public class ComputerImpl extends MinimalEObjectImpl.Container implements Comput
 				return getInstalledRAM();
 			case VMDistributionPackage.COMPUTER__ARCHITECTURE:
 				return getArchitecture();
+			case VMDistributionPackage.COMPUTER__CONNECTIONINFO:
+				return getConnectioninfo();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -321,6 +380,9 @@ public class ComputerImpl extends MinimalEObjectImpl.Container implements Comput
 			case VMDistributionPackage.COMPUTER__ARCHITECTURE:
 				setArchitecture((String)newValue);
 				return;
+			case VMDistributionPackage.COMPUTER__CONNECTIONINFO:
+				setConnectioninfo((ConnectionInfo)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -348,6 +410,9 @@ public class ComputerImpl extends MinimalEObjectImpl.Container implements Comput
 			case VMDistributionPackage.COMPUTER__ARCHITECTURE:
 				setArchitecture(ARCHITECTURE_EDEFAULT);
 				return;
+			case VMDistributionPackage.COMPUTER__CONNECTIONINFO:
+				setConnectioninfo((ConnectionInfo)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -370,6 +435,8 @@ public class ComputerImpl extends MinimalEObjectImpl.Container implements Comput
 				return installedRAM != INSTALLED_RAM_EDEFAULT;
 			case VMDistributionPackage.COMPUTER__ARCHITECTURE:
 				return ARCHITECTURE_EDEFAULT == null ? architecture != null : !ARCHITECTURE_EDEFAULT.equals(architecture);
+			case VMDistributionPackage.COMPUTER__CONNECTIONINFO:
+				return connectioninfo != null;
 		}
 		return super.eIsSet(featureID);
 	}

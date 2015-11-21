@@ -95,13 +95,22 @@ public interface VMDistributionPackage extends EPackage {
 	int VIRTUAL_MACHINE__REQUIREMENTS = 2;
 
 	/**
+	 * The feature id for the '<em><b>Vm Zip Archive</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MACHINE__VM_ZIP_ARCHIVE = 3;
+
+	/**
 	 * The number of structural features of the '<em>Virtual Machine</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIRTUAL_MACHINE_FEATURE_COUNT = 3;
+	int VIRTUAL_MACHINE_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Virtual Machine</em>' class.
@@ -159,13 +168,22 @@ public interface VMDistributionPackage extends EPackage {
 	int LAB_SYSTEM__CURRENTSETUP = 3;
 
 	/**
+	 * The feature id for the '<em><b>Torrent Seed</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAB_SYSTEM__TORRENT_SEED = 4;
+
+	/**
 	 * The number of structural features of the '<em>Lab System</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LAB_SYSTEM_FEATURE_COUNT = 4;
+	int LAB_SYSTEM_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Lab System</em>' class.
@@ -232,13 +250,22 @@ public interface VMDistributionPackage extends EPackage {
 	int COMPUTER__ARCHITECTURE = 4;
 
 	/**
+	 * The feature id for the '<em><b>Connectioninfo</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTER__CONNECTIONINFO = 5;
+
+	/**
 	 * The number of structural features of the '<em>Computer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTER_FEATURE_COUNT = 5;
+	int COMPUTER_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Computer</em>' class.
@@ -296,11 +323,11 @@ public interface VMDistributionPackage extends EPackage {
 	int LAB_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link hu.bme.mit.vmdistribution.model.impl.Vagrant_VMImpl <em>Vagrant VM</em>}' class.
+	 * The meta object id for the '{@link hu.bme.mit.vmdistribution.model.impl.VagrantVMImpl <em>Vagrant VM</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see hu.bme.mit.vmdistribution.model.impl.Vagrant_VMImpl
-	 * @see hu.bme.mit.vmdistribution.model.impl.VMDistributionPackageImpl#getVagrant_VM()
+	 * @see hu.bme.mit.vmdistribution.model.impl.VagrantVMImpl
+	 * @see hu.bme.mit.vmdistribution.model.impl.VMDistributionPackageImpl#getVagrantVM()
 	 * @generated
 	 */
 	int VAGRANT_VM = 4;
@@ -333,13 +360,13 @@ public interface VMDistributionPackage extends EPackage {
 	int VAGRANT_VM__REQUIREMENTS = VIRTUAL_MACHINE__REQUIREMENTS;
 
 	/**
-	 * The feature id for the '<em><b>Distribution Image</b></em>' attribute.
+	 * The feature id for the '<em><b>Vm Zip Archive</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VAGRANT_VM__DISTRIBUTION_IMAGE = VIRTUAL_MACHINE_FEATURE_COUNT + 0;
+	int VAGRANT_VM__VM_ZIP_ARCHIVE = VIRTUAL_MACHINE__VM_ZIP_ARCHIVE;
 
 	/**
 	 * The feature id for the '<em><b>Ready To Distribute</b></em>' attribute.
@@ -348,7 +375,7 @@ public interface VMDistributionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VAGRANT_VM__READY_TO_DISTRIBUTE = VIRTUAL_MACHINE_FEATURE_COUNT + 1;
+	int VAGRANT_VM__READY_TO_DISTRIBUTE = VIRTUAL_MACHINE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Vagrant File</b></em>' attribute.
@@ -357,7 +384,7 @@ public interface VMDistributionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VAGRANT_VM__VAGRANT_FILE = VIRTUAL_MACHINE_FEATURE_COUNT + 2;
+	int VAGRANT_VM__VAGRANT_FILE = VIRTUAL_MACHINE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Vagrant VM</em>' class.
@@ -366,7 +393,7 @@ public interface VMDistributionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VAGRANT_VM_FEATURE_COUNT = VIRTUAL_MACHINE_FEATURE_COUNT + 3;
+	int VAGRANT_VM_FEATURE_COUNT = VIRTUAL_MACHINE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Vagrant VM</em>' class.
@@ -378,70 +405,6 @@ public interface VMDistributionPackage extends EPackage {
 	int VAGRANT_VM_OPERATION_COUNT = VIRTUAL_MACHINE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link hu.bme.mit.vmdistribution.model.impl.CustomVMImpl <em>Custom VM</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see hu.bme.mit.vmdistribution.model.impl.CustomVMImpl
-	 * @see hu.bme.mit.vmdistribution.model.impl.VMDistributionPackageImpl#getCustomVM()
-	 * @generated
-	 */
-	int CUSTOM_VM = 5;
-
-	/**
-	 * The feature id for the '<em><b>Computers</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_VM__COMPUTERS = VIRTUAL_MACHINE__COMPUTERS;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_VM__NAME = VIRTUAL_MACHINE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Requirements</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_VM__REQUIREMENTS = VIRTUAL_MACHINE__REQUIREMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Vm Zip Archive</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_VM__VM_ZIP_ARCHIVE = VIRTUAL_MACHINE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Custom VM</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_VM_FEATURE_COUNT = VIRTUAL_MACHINE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Custom VM</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CUSTOM_VM_OPERATION_COUNT = VIRTUAL_MACHINE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link hu.bme.mit.vmdistribution.model.impl.RequirementsImpl <em>Requirements</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -449,7 +412,7 @@ public interface VMDistributionPackage extends EPackage {
 	 * @see hu.bme.mit.vmdistribution.model.impl.VMDistributionPackageImpl#getRequirements()
 	 * @generated
 	 */
-	int REQUIREMENTS = 6;
+	int REQUIREMENTS = 5;
 
 	/**
 	 * The feature id for the '<em><b>Req Archi</b></em>' attribute.
@@ -504,7 +467,7 @@ public interface VMDistributionPackage extends EPackage {
 	 * @see hu.bme.mit.vmdistribution.model.impl.VMDistributionPackageImpl#getComputerConfig()
 	 * @generated
 	 */
-	int COMPUTER_CONFIG = 7;
+	int COMPUTER_CONFIG = 6;
 
 	/**
 	 * The feature id for the '<em><b>Computer</b></em>' reference.
@@ -550,6 +513,70 @@ public interface VMDistributionPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPUTER_CONFIG_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link hu.bme.mit.vmdistribution.model.impl.ConnectionInfoImpl <em>Connection Info</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see hu.bme.mit.vmdistribution.model.impl.ConnectionInfoImpl
+	 * @see hu.bme.mit.vmdistribution.model.impl.VMDistributionPackageImpl#getConnectionInfo()
+	 * @generated
+	 */
+	int CONNECTION_INFO = 7;
+
+	/**
+	 * The feature id for the '<em><b>Host Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION_INFO__HOST_NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Ssh Port</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION_INFO__SSH_PORT = 1;
+
+	/**
+	 * The feature id for the '<em><b>Ssh User</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION_INFO__SSH_USER = 2;
+
+	/**
+	 * The feature id for the '<em><b>Ssh Pass</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION_INFO__SSH_PASS = 3;
+
+	/**
+	 * The number of structural features of the '<em>Connection Info</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION_INFO_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Connection Info</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION_INFO_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '<em>File</em>' data type.
@@ -606,6 +633,17 @@ public interface VMDistributionPackage extends EPackage {
 	EReference getVirtualMachine_Requirements();
 
 	/**
+	 * Returns the meta object for the attribute '{@link hu.bme.mit.vmdistribution.model.VirtualMachine#getVmZipArchive <em>Vm Zip Archive</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Vm Zip Archive</em>'.
+	 * @see hu.bme.mit.vmdistribution.model.VirtualMachine#getVmZipArchive()
+	 * @see #getVirtualMachine()
+	 * @generated
+	 */
+	EAttribute getVirtualMachine_VmZipArchive();
+
+	/**
 	 * Returns the meta object for class '{@link hu.bme.mit.vmdistribution.model.LabSystem <em>Lab System</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -658,6 +696,17 @@ public interface VMDistributionPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLabSystem_Currentsetup();
+
+	/**
+	 * Returns the meta object for the reference '{@link hu.bme.mit.vmdistribution.model.LabSystem#getTorrentSeed <em>Torrent Seed</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Torrent Seed</em>'.
+	 * @see hu.bme.mit.vmdistribution.model.LabSystem#getTorrentSeed()
+	 * @see #getLabSystem()
+	 * @generated
+	 */
+	EReference getLabSystem_TorrentSeed();
 
 	/**
 	 * Returns the meta object for class '{@link hu.bme.mit.vmdistribution.model.Computer <em>Computer</em>}'.
@@ -725,6 +774,17 @@ public interface VMDistributionPackage extends EPackage {
 	EAttribute getComputer_Architecture();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link hu.bme.mit.vmdistribution.model.Computer#getConnectioninfo <em>Connectioninfo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Connectioninfo</em>'.
+	 * @see hu.bme.mit.vmdistribution.model.Computer#getConnectioninfo()
+	 * @see #getComputer()
+	 * @generated
+	 */
+	EReference getComputer_Connectioninfo();
+
+	/**
 	 * Returns the meta object for class '{@link hu.bme.mit.vmdistribution.model.Lab <em>Lab</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -757,68 +817,36 @@ public interface VMDistributionPackage extends EPackage {
 	EReference getLab_Computerconfigs();
 
 	/**
-	 * Returns the meta object for class '{@link hu.bme.mit.vmdistribution.model.Vagrant_VM <em>Vagrant VM</em>}'.
+	 * Returns the meta object for class '{@link hu.bme.mit.vmdistribution.model.VagrantVM <em>Vagrant VM</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Vagrant VM</em>'.
-	 * @see hu.bme.mit.vmdistribution.model.Vagrant_VM
+	 * @see hu.bme.mit.vmdistribution.model.VagrantVM
 	 * @generated
 	 */
-	EClass getVagrant_VM();
+	EClass getVagrantVM();
 
 	/**
-	 * Returns the meta object for the attribute '{@link hu.bme.mit.vmdistribution.model.Vagrant_VM#getDistributionImage <em>Distribution Image</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Distribution Image</em>'.
-	 * @see hu.bme.mit.vmdistribution.model.Vagrant_VM#getDistributionImage()
-	 * @see #getVagrant_VM()
-	 * @generated
-	 */
-	EAttribute getVagrant_VM_DistributionImage();
-
-	/**
-	 * Returns the meta object for the attribute '{@link hu.bme.mit.vmdistribution.model.Vagrant_VM#isReadyToDistribute <em>Ready To Distribute</em>}'.
+	 * Returns the meta object for the attribute '{@link hu.bme.mit.vmdistribution.model.VagrantVM#isReadyToDistribute <em>Ready To Distribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Ready To Distribute</em>'.
-	 * @see hu.bme.mit.vmdistribution.model.Vagrant_VM#isReadyToDistribute()
-	 * @see #getVagrant_VM()
+	 * @see hu.bme.mit.vmdistribution.model.VagrantVM#isReadyToDistribute()
+	 * @see #getVagrantVM()
 	 * @generated
 	 */
-	EAttribute getVagrant_VM_ReadyToDistribute();
+	EAttribute getVagrantVM_ReadyToDistribute();
 
 	/**
-	 * Returns the meta object for the attribute '{@link hu.bme.mit.vmdistribution.model.Vagrant_VM#getVagrantFile <em>Vagrant File</em>}'.
+	 * Returns the meta object for the attribute '{@link hu.bme.mit.vmdistribution.model.VagrantVM#getVagrantFile <em>Vagrant File</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Vagrant File</em>'.
-	 * @see hu.bme.mit.vmdistribution.model.Vagrant_VM#getVagrantFile()
-	 * @see #getVagrant_VM()
+	 * @see hu.bme.mit.vmdistribution.model.VagrantVM#getVagrantFile()
+	 * @see #getVagrantVM()
 	 * @generated
 	 */
-	EAttribute getVagrant_VM_VagrantFile();
-
-	/**
-	 * Returns the meta object for class '{@link hu.bme.mit.vmdistribution.model.CustomVM <em>Custom VM</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Custom VM</em>'.
-	 * @see hu.bme.mit.vmdistribution.model.CustomVM
-	 * @generated
-	 */
-	EClass getCustomVM();
-
-	/**
-	 * Returns the meta object for the attribute '{@link hu.bme.mit.vmdistribution.model.CustomVM#getVmZipArchive <em>Vm Zip Archive</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Vm Zip Archive</em>'.
-	 * @see hu.bme.mit.vmdistribution.model.CustomVM#getVmZipArchive()
-	 * @see #getCustomVM()
-	 * @generated
-	 */
-	EAttribute getCustomVM_VmZipArchive();
+	EAttribute getVagrantVM_VagrantFile();
 
 	/**
 	 * Returns the meta object for class '{@link hu.bme.mit.vmdistribution.model.Requirements <em>Requirements</em>}'.
@@ -907,6 +935,60 @@ public interface VMDistributionPackage extends EPackage {
 	EAttribute getComputerConfig_Name();
 
 	/**
+	 * Returns the meta object for class '{@link hu.bme.mit.vmdistribution.model.ConnectionInfo <em>Connection Info</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Connection Info</em>'.
+	 * @see hu.bme.mit.vmdistribution.model.ConnectionInfo
+	 * @generated
+	 */
+	EClass getConnectionInfo();
+
+	/**
+	 * Returns the meta object for the attribute '{@link hu.bme.mit.vmdistribution.model.ConnectionInfo#getHostName <em>Host Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Host Name</em>'.
+	 * @see hu.bme.mit.vmdistribution.model.ConnectionInfo#getHostName()
+	 * @see #getConnectionInfo()
+	 * @generated
+	 */
+	EAttribute getConnectionInfo_HostName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link hu.bme.mit.vmdistribution.model.ConnectionInfo#getSshPort <em>Ssh Port</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ssh Port</em>'.
+	 * @see hu.bme.mit.vmdistribution.model.ConnectionInfo#getSshPort()
+	 * @see #getConnectionInfo()
+	 * @generated
+	 */
+	EAttribute getConnectionInfo_SshPort();
+
+	/**
+	 * Returns the meta object for the attribute '{@link hu.bme.mit.vmdistribution.model.ConnectionInfo#getSshUser <em>Ssh User</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ssh User</em>'.
+	 * @see hu.bme.mit.vmdistribution.model.ConnectionInfo#getSshUser()
+	 * @see #getConnectionInfo()
+	 * @generated
+	 */
+	EAttribute getConnectionInfo_SshUser();
+
+	/**
+	 * Returns the meta object for the attribute '{@link hu.bme.mit.vmdistribution.model.ConnectionInfo#getSshPass <em>Ssh Pass</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ssh Pass</em>'.
+	 * @see hu.bme.mit.vmdistribution.model.ConnectionInfo#getSshPass()
+	 * @see #getConnectionInfo()
+	 * @generated
+	 */
+	EAttribute getConnectionInfo_SshPass();
+
+	/**
 	 * Returns the meta object for data type '{@link java.io.File <em>File</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -975,6 +1057,14 @@ public interface VMDistributionPackage extends EPackage {
 		EReference VIRTUAL_MACHINE__REQUIREMENTS = eINSTANCE.getVirtualMachine_Requirements();
 
 		/**
+		 * The meta object literal for the '<em><b>Vm Zip Archive</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VIRTUAL_MACHINE__VM_ZIP_ARCHIVE = eINSTANCE.getVirtualMachine_VmZipArchive();
+
+		/**
 		 * The meta object literal for the '{@link hu.bme.mit.vmdistribution.model.impl.LabSystemImpl <em>Lab System</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1015,6 +1105,14 @@ public interface VMDistributionPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LAB_SYSTEM__CURRENTSETUP = eINSTANCE.getLabSystem_Currentsetup();
+
+		/**
+		 * The meta object literal for the '<em><b>Torrent Seed</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LAB_SYSTEM__TORRENT_SEED = eINSTANCE.getLabSystem_TorrentSeed();
 
 		/**
 		 * The meta object literal for the '{@link hu.bme.mit.vmdistribution.model.impl.ComputerImpl <em>Computer</em>}' class.
@@ -1067,6 +1165,14 @@ public interface VMDistributionPackage extends EPackage {
 		EAttribute COMPUTER__ARCHITECTURE = eINSTANCE.getComputer_Architecture();
 
 		/**
+		 * The meta object literal for the '<em><b>Connectioninfo</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPUTER__CONNECTIONINFO = eINSTANCE.getComputer_Connectioninfo();
+
+		/**
 		 * The meta object literal for the '{@link hu.bme.mit.vmdistribution.model.impl.LabImpl <em>Lab</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1093,22 +1199,14 @@ public interface VMDistributionPackage extends EPackage {
 		EReference LAB__COMPUTERCONFIGS = eINSTANCE.getLab_Computerconfigs();
 
 		/**
-		 * The meta object literal for the '{@link hu.bme.mit.vmdistribution.model.impl.Vagrant_VMImpl <em>Vagrant VM</em>}' class.
+		 * The meta object literal for the '{@link hu.bme.mit.vmdistribution.model.impl.VagrantVMImpl <em>Vagrant VM</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see hu.bme.mit.vmdistribution.model.impl.Vagrant_VMImpl
-		 * @see hu.bme.mit.vmdistribution.model.impl.VMDistributionPackageImpl#getVagrant_VM()
+		 * @see hu.bme.mit.vmdistribution.model.impl.VagrantVMImpl
+		 * @see hu.bme.mit.vmdistribution.model.impl.VMDistributionPackageImpl#getVagrantVM()
 		 * @generated
 		 */
-		EClass VAGRANT_VM = eINSTANCE.getVagrant_VM();
-
-		/**
-		 * The meta object literal for the '<em><b>Distribution Image</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VAGRANT_VM__DISTRIBUTION_IMAGE = eINSTANCE.getVagrant_VM_DistributionImage();
+		EClass VAGRANT_VM = eINSTANCE.getVagrantVM();
 
 		/**
 		 * The meta object literal for the '<em><b>Ready To Distribute</b></em>' attribute feature.
@@ -1116,7 +1214,7 @@ public interface VMDistributionPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VAGRANT_VM__READY_TO_DISTRIBUTE = eINSTANCE.getVagrant_VM_ReadyToDistribute();
+		EAttribute VAGRANT_VM__READY_TO_DISTRIBUTE = eINSTANCE.getVagrantVM_ReadyToDistribute();
 
 		/**
 		 * The meta object literal for the '<em><b>Vagrant File</b></em>' attribute feature.
@@ -1124,25 +1222,7 @@ public interface VMDistributionPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VAGRANT_VM__VAGRANT_FILE = eINSTANCE.getVagrant_VM_VagrantFile();
-
-		/**
-		 * The meta object literal for the '{@link hu.bme.mit.vmdistribution.model.impl.CustomVMImpl <em>Custom VM</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see hu.bme.mit.vmdistribution.model.impl.CustomVMImpl
-		 * @see hu.bme.mit.vmdistribution.model.impl.VMDistributionPackageImpl#getCustomVM()
-		 * @generated
-		 */
-		EClass CUSTOM_VM = eINSTANCE.getCustomVM();
-
-		/**
-		 * The meta object literal for the '<em><b>Vm Zip Archive</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CUSTOM_VM__VM_ZIP_ARCHIVE = eINSTANCE.getCustomVM_VmZipArchive();
+		EAttribute VAGRANT_VM__VAGRANT_FILE = eINSTANCE.getVagrantVM_VagrantFile();
 
 		/**
 		 * The meta object literal for the '{@link hu.bme.mit.vmdistribution.model.impl.RequirementsImpl <em>Requirements</em>}' class.
@@ -1211,6 +1291,48 @@ public interface VMDistributionPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COMPUTER_CONFIG__NAME = eINSTANCE.getComputerConfig_Name();
+
+		/**
+		 * The meta object literal for the '{@link hu.bme.mit.vmdistribution.model.impl.ConnectionInfoImpl <em>Connection Info</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see hu.bme.mit.vmdistribution.model.impl.ConnectionInfoImpl
+		 * @see hu.bme.mit.vmdistribution.model.impl.VMDistributionPackageImpl#getConnectionInfo()
+		 * @generated
+		 */
+		EClass CONNECTION_INFO = eINSTANCE.getConnectionInfo();
+
+		/**
+		 * The meta object literal for the '<em><b>Host Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONNECTION_INFO__HOST_NAME = eINSTANCE.getConnectionInfo_HostName();
+
+		/**
+		 * The meta object literal for the '<em><b>Ssh Port</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONNECTION_INFO__SSH_PORT = eINSTANCE.getConnectionInfo_SshPort();
+
+		/**
+		 * The meta object literal for the '<em><b>Ssh User</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONNECTION_INFO__SSH_USER = eINSTANCE.getConnectionInfo_SshUser();
+
+		/**
+		 * The meta object literal for the '<em><b>Ssh Pass</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONNECTION_INFO__SSH_PASS = eINSTANCE.getConnectionInfo_SshPass();
 
 		/**
 		 * The meta object literal for the '<em>File</em>' data type.

@@ -36,6 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link hu.bme.mit.vmdistribution.model.impl.LabSystemImpl#getComputers <em>Computers</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.impl.LabSystemImpl#getLabs <em>Labs</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.impl.LabSystemImpl#getCurrentsetup <em>Currentsetup</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.model.impl.LabSystemImpl#getTorrentSeed <em>Torrent Seed</em>}</li>
  * </ul>
  *
  * @generated
@@ -80,6 +81,16 @@ public class LabSystemImpl extends MinimalEObjectImpl.Container implements LabSy
 	 * @ordered
 	 */
 	protected Lab currentsetup;
+
+	/**
+	 * The cached value of the '{@link #getTorrentSeed() <em>Torrent Seed</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTorrentSeed()
+	 * @generated
+	 * @ordered
+	 */
+	protected Computer torrentSeed;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -179,6 +190,44 @@ public class LabSystemImpl extends MinimalEObjectImpl.Container implements LabSy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Computer getTorrentSeed() {
+		if (torrentSeed != null && torrentSeed.eIsProxy()) {
+			InternalEObject oldTorrentSeed = (InternalEObject)torrentSeed;
+			torrentSeed = (Computer)eResolveProxy(oldTorrentSeed);
+			if (torrentSeed != oldTorrentSeed) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, VMDistributionPackage.LAB_SYSTEM__TORRENT_SEED, oldTorrentSeed, torrentSeed));
+			}
+		}
+		return torrentSeed;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Computer basicGetTorrentSeed() {
+		return torrentSeed;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTorrentSeed(Computer newTorrentSeed) {
+		Computer oldTorrentSeed = torrentSeed;
+		torrentSeed = newTorrentSeed;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, VMDistributionPackage.LAB_SYSTEM__TORRENT_SEED, oldTorrentSeed, torrentSeed));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -209,6 +258,9 @@ public class LabSystemImpl extends MinimalEObjectImpl.Container implements LabSy
 			case VMDistributionPackage.LAB_SYSTEM__CURRENTSETUP:
 				if (resolve) return getCurrentsetup();
 				return basicGetCurrentsetup();
+			case VMDistributionPackage.LAB_SYSTEM__TORRENT_SEED:
+				if (resolve) return getTorrentSeed();
+				return basicGetTorrentSeed();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -237,6 +289,9 @@ public class LabSystemImpl extends MinimalEObjectImpl.Container implements LabSy
 			case VMDistributionPackage.LAB_SYSTEM__CURRENTSETUP:
 				setCurrentsetup((Lab)newValue);
 				return;
+			case VMDistributionPackage.LAB_SYSTEM__TORRENT_SEED:
+				setTorrentSeed((Computer)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -261,6 +316,9 @@ public class LabSystemImpl extends MinimalEObjectImpl.Container implements LabSy
 			case VMDistributionPackage.LAB_SYSTEM__CURRENTSETUP:
 				setCurrentsetup((Lab)null);
 				return;
+			case VMDistributionPackage.LAB_SYSTEM__TORRENT_SEED:
+				setTorrentSeed((Computer)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -281,6 +339,8 @@ public class LabSystemImpl extends MinimalEObjectImpl.Container implements LabSy
 				return labs != null && !labs.isEmpty();
 			case VMDistributionPackage.LAB_SYSTEM__CURRENTSETUP:
 				return currentsetup != null;
+			case VMDistributionPackage.LAB_SYSTEM__TORRENT_SEED:
+				return torrentSeed != null;
 		}
 		return super.eIsSet(featureID);
 	}

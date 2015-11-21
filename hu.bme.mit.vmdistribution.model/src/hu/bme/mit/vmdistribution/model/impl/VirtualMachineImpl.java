@@ -7,6 +7,7 @@ import hu.bme.mit.vmdistribution.model.Requirements;
 import hu.bme.mit.vmdistribution.model.VMDistributionPackage;
 import hu.bme.mit.vmdistribution.model.VirtualMachine;
 
+import java.io.File;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -34,6 +35,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link hu.bme.mit.vmdistribution.model.impl.VirtualMachineImpl#getComputers <em>Computers</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.impl.VirtualMachineImpl#getName <em>Name</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.impl.VirtualMachineImpl#getRequirements <em>Requirements</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.model.impl.VirtualMachineImpl#getVmZipArchive <em>Vm Zip Archive</em>}</li>
  * </ul>
  *
  * @generated
@@ -78,6 +80,26 @@ public abstract class VirtualMachineImpl extends MinimalEObjectImpl.Container im
 	 * @ordered
 	 */
 	protected Requirements requirements;
+
+	/**
+	 * The default value of the '{@link #getVmZipArchive() <em>Vm Zip Archive</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVmZipArchive()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final File VM_ZIP_ARCHIVE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getVmZipArchive() <em>Vm Zip Archive</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVmZipArchive()
+	 * @generated
+	 * @ordered
+	 */
+	protected File vmZipArchive = VM_ZIP_ARCHIVE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -179,6 +201,27 @@ public abstract class VirtualMachineImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public File getVmZipArchive() {
+		return vmZipArchive;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setVmZipArchive(File newVmZipArchive) {
+		File oldVmZipArchive = vmZipArchive;
+		vmZipArchive = newVmZipArchive;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, VMDistributionPackage.VIRTUAL_MACHINE__VM_ZIP_ARCHIVE, oldVmZipArchive, vmZipArchive));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -219,6 +262,8 @@ public abstract class VirtualMachineImpl extends MinimalEObjectImpl.Container im
 				return getName();
 			case VMDistributionPackage.VIRTUAL_MACHINE__REQUIREMENTS:
 				return getRequirements();
+			case VMDistributionPackage.VIRTUAL_MACHINE__VM_ZIP_ARCHIVE:
+				return getVmZipArchive();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -242,6 +287,9 @@ public abstract class VirtualMachineImpl extends MinimalEObjectImpl.Container im
 			case VMDistributionPackage.VIRTUAL_MACHINE__REQUIREMENTS:
 				setRequirements((Requirements)newValue);
 				return;
+			case VMDistributionPackage.VIRTUAL_MACHINE__VM_ZIP_ARCHIVE:
+				setVmZipArchive((File)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -263,6 +311,9 @@ public abstract class VirtualMachineImpl extends MinimalEObjectImpl.Container im
 			case VMDistributionPackage.VIRTUAL_MACHINE__REQUIREMENTS:
 				setRequirements((Requirements)null);
 				return;
+			case VMDistributionPackage.VIRTUAL_MACHINE__VM_ZIP_ARCHIVE:
+				setVmZipArchive(VM_ZIP_ARCHIVE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -281,6 +332,8 @@ public abstract class VirtualMachineImpl extends MinimalEObjectImpl.Container im
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case VMDistributionPackage.VIRTUAL_MACHINE__REQUIREMENTS:
 				return requirements != null;
+			case VMDistributionPackage.VIRTUAL_MACHINE__VM_ZIP_ARCHIVE:
+				return VM_ZIP_ARCHIVE_EDEFAULT == null ? vmZipArchive != null : !VM_ZIP_ARCHIVE_EDEFAULT.equals(vmZipArchive);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -297,6 +350,8 @@ public abstract class VirtualMachineImpl extends MinimalEObjectImpl.Container im
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", vmZipArchive: ");
+		result.append(vmZipArchive);
 		result.append(')');
 		return result.toString();
 	}

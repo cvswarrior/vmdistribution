@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link hu.bme.mit.vmdistribution.model.Computer#getMaxSpaceForVMs <em>Max Space For VMs</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.Computer#getInstalledRAM <em>Installed RAM</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.Computer#getArchitecture <em>Architecture</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.model.Computer#getConnectioninfo <em>Connectioninfo</em>}</li>
  * </ul>
  *
  * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getComputer()
@@ -149,5 +150,31 @@ public interface Computer extends EObject {
 	 * @generated
 	 */
 	void setArchitecture(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Connectioninfo</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Connectioninfo</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Connectioninfo</em>' containment reference.
+	 * @see #setConnectioninfo(ConnectionInfo)
+	 * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getComputer_Connectioninfo()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	ConnectionInfo getConnectioninfo();
+
+	/**
+	 * Sets the value of the '{@link hu.bme.mit.vmdistribution.model.Computer#getConnectioninfo <em>Connectioninfo</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Connectioninfo</em>' containment reference.
+	 * @see #getConnectioninfo()
+	 * @generated
+	 */
+	void setConnectioninfo(ConnectionInfo value);
 
 } // Computer

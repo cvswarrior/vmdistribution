@@ -2,6 +2,7 @@
  */
 package hu.bme.mit.vmdistribution.model;
 
+import java.io.File;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -18,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link hu.bme.mit.vmdistribution.model.VirtualMachine#getComputers <em>Computers</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.VirtualMachine#getName <em>Name</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.VirtualMachine#getRequirements <em>Requirements</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.model.VirtualMachine#getVmZipArchive <em>Vm Zip Archive</em>}</li>
  * </ul>
  *
  * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getVirtualMachine()
@@ -94,5 +96,31 @@ public interface VirtualMachine extends EObject {
 	 * @generated
 	 */
 	void setRequirements(Requirements value);
+
+	/**
+	 * Returns the value of the '<em><b>Vm Zip Archive</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Vm Zip Archive</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Vm Zip Archive</em>' attribute.
+	 * @see #setVmZipArchive(File)
+	 * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getVirtualMachine_VmZipArchive()
+	 * @model dataType="hu.bme.mit.vmdistribution.model.File"
+	 * @generated
+	 */
+	File getVmZipArchive();
+
+	/**
+	 * Sets the value of the '{@link hu.bme.mit.vmdistribution.model.VirtualMachine#getVmZipArchive <em>Vm Zip Archive</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Vm Zip Archive</em>' attribute.
+	 * @see #getVmZipArchive()
+	 * @generated
+	 */
+	void setVmZipArchive(File value);
 
 } // VirtualMachine

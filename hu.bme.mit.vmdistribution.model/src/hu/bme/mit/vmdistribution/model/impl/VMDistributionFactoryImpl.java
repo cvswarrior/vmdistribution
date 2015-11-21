@@ -62,10 +62,10 @@ public class VMDistributionFactoryImpl extends EFactoryImpl implements VMDistrib
 			case VMDistributionPackage.LAB_SYSTEM: return createLabSystem();
 			case VMDistributionPackage.COMPUTER: return createComputer();
 			case VMDistributionPackage.LAB: return createLab();
-			case VMDistributionPackage.VAGRANT_VM: return createVagrant_VM();
-			case VMDistributionPackage.CUSTOM_VM: return createCustomVM();
+			case VMDistributionPackage.VAGRANT_VM: return createVagrantVM();
 			case VMDistributionPackage.REQUIREMENTS: return createRequirements();
 			case VMDistributionPackage.COMPUTER_CONFIG: return createComputerConfig();
+			case VMDistributionPackage.CONNECTION_INFO: return createConnectionInfo();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -136,19 +136,9 @@ public class VMDistributionFactoryImpl extends EFactoryImpl implements VMDistrib
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Vagrant_VM createVagrant_VM() {
-		Vagrant_VMImpl vagrant_VM = new Vagrant_VMImpl();
-		return vagrant_VM;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CustomVM createCustomVM() {
-		CustomVMImpl customVM = new CustomVMImpl();
-		return customVM;
+	public VagrantVM createVagrantVM() {
+		VagrantVMImpl vagrantVM = new VagrantVMImpl();
+		return vagrantVM;
 	}
 
 	/**
@@ -169,6 +159,16 @@ public class VMDistributionFactoryImpl extends EFactoryImpl implements VMDistrib
 	public ComputerConfig createComputerConfig() {
 		ComputerConfigImpl computerConfig = new ComputerConfigImpl();
 		return computerConfig;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ConnectionInfo createConnectionInfo() {
+		ConnectionInfoImpl connectionInfo = new ConnectionInfoImpl();
+		return connectionInfo;
 	}
 
 	/**

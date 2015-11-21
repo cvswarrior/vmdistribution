@@ -63,6 +63,7 @@ public class LabSystemItemProvider
 			super.getPropertyDescriptors(object);
 
 			addCurrentsetupPropertyDescriptor(object);
+			addTorrentSeedPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -81,6 +82,28 @@ public class LabSystemItemProvider
 				 getString("_UI_LabSystem_currentsetup_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LabSystem_currentsetup_feature", "_UI_LabSystem_type"),
 				 VMDistributionPackage.Literals.LAB_SYSTEM__CURRENTSETUP,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Torrent Seed feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTorrentSeedPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_LabSystem_torrentSeed_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LabSystem_torrentSeed_feature", "_UI_LabSystem_type"),
+				 VMDistributionPackage.Literals.LAB_SYSTEM__TORRENT_SEED,
 				 true,
 				 false,
 				 true,
@@ -179,12 +202,7 @@ public class LabSystemItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(VMDistributionPackage.Literals.LAB_SYSTEM__VIRTUALMACHINES,
-				 VMDistributionFactory.eINSTANCE.createVagrant_VM()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(VMDistributionPackage.Literals.LAB_SYSTEM__VIRTUALMACHINES,
-				 VMDistributionFactory.eINSTANCE.createCustomVM()));
+				 VMDistributionFactory.eINSTANCE.createVagrantVM()));
 
 		newChildDescriptors.add
 			(createChildParameter

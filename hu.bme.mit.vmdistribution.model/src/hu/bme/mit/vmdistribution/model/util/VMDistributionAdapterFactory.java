@@ -84,12 +84,8 @@ public class VMDistributionAdapterFactory extends AdapterFactoryImpl {
 				return createLabAdapter();
 			}
 			@Override
-			public Adapter caseVagrant_VM(Vagrant_VM object) {
-				return createVagrant_VMAdapter();
-			}
-			@Override
-			public Adapter caseCustomVM(CustomVM object) {
-				return createCustomVMAdapter();
+			public Adapter caseVagrantVM(VagrantVM object) {
+				return createVagrantVMAdapter();
 			}
 			@Override
 			public Adapter caseRequirements(Requirements object) {
@@ -98,6 +94,10 @@ public class VMDistributionAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseComputerConfig(ComputerConfig object) {
 				return createComputerConfigAdapter();
+			}
+			@Override
+			public Adapter caseConnectionInfo(ConnectionInfo object) {
+				return createConnectionInfoAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -176,30 +176,16 @@ public class VMDistributionAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link hu.bme.mit.vmdistribution.model.Vagrant_VM <em>Vagrant VM</em>}'.
+	 * Creates a new adapter for an object of class '{@link hu.bme.mit.vmdistribution.model.VagrantVM <em>Vagrant VM</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see hu.bme.mit.vmdistribution.model.Vagrant_VM
+	 * @see hu.bme.mit.vmdistribution.model.VagrantVM
 	 * @generated
 	 */
-	public Adapter createVagrant_VMAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link hu.bme.mit.vmdistribution.model.CustomVM <em>Custom VM</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see hu.bme.mit.vmdistribution.model.CustomVM
-	 * @generated
-	 */
-	public Adapter createCustomVMAdapter() {
+	public Adapter createVagrantVMAdapter() {
 		return null;
 	}
 
@@ -228,6 +214,20 @@ public class VMDistributionAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createComputerConfigAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link hu.bme.mit.vmdistribution.model.ConnectionInfo <em>Connection Info</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see hu.bme.mit.vmdistribution.model.ConnectionInfo
+	 * @generated
+	 */
+	public Adapter createConnectionInfoAdapter() {
 		return null;
 	}
 

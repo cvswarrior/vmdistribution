@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link hu.bme.mit.vmdistribution.model.LabSystem#getComputers <em>Computers</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.LabSystem#getLabs <em>Labs</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.LabSystem#getCurrentsetup <em>Currentsetup</em>}</li>
+ *   <li>{@link hu.bme.mit.vmdistribution.model.LabSystem#getTorrentSeed <em>Torrent Seed</em>}</li>
  * </ul>
  *
  * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getLabSystem()
@@ -37,7 +38,7 @@ public interface LabSystem extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Virtualmachines</em>' containment reference list.
 	 * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getLabSystem_Virtualmachines()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<VirtualMachine> getVirtualmachines();
@@ -53,7 +54,7 @@ public interface LabSystem extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Computers</em>' containment reference list.
 	 * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getLabSystem_Computers()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<Computer> getComputers();
@@ -69,7 +70,7 @@ public interface LabSystem extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Labs</em>' containment reference list.
 	 * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getLabSystem_Labs()
-	 * @model containment="true"
+	 * @model containment="true" lower="2"
 	 * @generated
 	 */
 	EList<Lab> getLabs();
@@ -85,7 +86,7 @@ public interface LabSystem extends EObject {
 	 * @return the value of the '<em>Currentsetup</em>' reference.
 	 * @see #setCurrentsetup(Lab)
 	 * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getLabSystem_Currentsetup()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	Lab getCurrentsetup();
@@ -99,5 +100,31 @@ public interface LabSystem extends EObject {
 	 * @generated
 	 */
 	void setCurrentsetup(Lab value);
+
+	/**
+	 * Returns the value of the '<em><b>Torrent Seed</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Torrent Seed</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Torrent Seed</em>' reference.
+	 * @see #setTorrentSeed(Computer)
+	 * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getLabSystem_TorrentSeed()
+	 * @model required="true"
+	 * @generated
+	 */
+	Computer getTorrentSeed();
+
+	/**
+	 * Sets the value of the '{@link hu.bme.mit.vmdistribution.model.LabSystem#getTorrentSeed <em>Torrent Seed</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Torrent Seed</em>' reference.
+	 * @see #getTorrentSeed()
+	 * @generated
+	 */
+	void setTorrentSeed(Computer value);
 
 } // LabSystem

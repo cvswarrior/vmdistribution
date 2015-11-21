@@ -55,16 +55,7 @@ public interface VMDistributionFactory extends EFactory {
 	 * @return a new object of class '<em>Vagrant VM</em>'.
 	 * @generated
 	 */
-	Vagrant_VM createVagrant_VM();
-
-	/**
-	 * Returns a new object of class '<em>Custom VM</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Custom VM</em>'.
-	 * @generated
-	 */
-	CustomVM createCustomVM();
+	VagrantVM createVagrantVM();
 
 	/**
 	 * Returns a new object of class '<em>Requirements</em>'.
@@ -83,6 +74,15 @@ public interface VMDistributionFactory extends EFactory {
 	 * @generated
 	 */
 	ComputerConfig createComputerConfig();
+
+	/**
+	 * Returns a new object of class '<em>Connection Info</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Connection Info</em>'.
+	 * @generated
+	 */
+	ConnectionInfo createConnectionInfo();
 
 	/**
 	 * Returns the package supported by this factory.

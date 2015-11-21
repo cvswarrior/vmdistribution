@@ -7,15 +7,19 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="requirements" lowerBound="1"
         eType="#//Requirements" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vmZipArchive" eType="#//File"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LabSystem">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="virtualmachines" upperBound="-1"
-        eType="#//VirtualMachine" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="computers" upperBound="-1"
-        eType="#//Computer" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="labs" upperBound="-1" eType="#//Lab"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="currentsetup" eType="#//Lab"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="virtualmachines" lowerBound="1"
+        upperBound="-1" eType="#//VirtualMachine" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="computers" lowerBound="1"
+        upperBound="-1" eType="#//Computer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="labs" lowerBound="2" upperBound="-1"
+        eType="#//Lab" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="currentsetup" lowerBound="1"
+        eType="#//Lab"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="torrentSeed" lowerBound="1"
+        eType="#//Computer"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Computer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="virtualmachines" upperBound="-1"
@@ -25,6 +29,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="installedRAM" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="architecture" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="x86"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connectioninfo" lowerBound="1"
+        eType="#//ConnectionInfo" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="File" instanceClassName="java.io.File"/>
   <eClassifiers xsi:type="ecore:EClass" name="Lab">
@@ -32,13 +38,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="computerconfigs" lowerBound="1"
         upperBound="-1" eType="#//ComputerConfig" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Vagrant_VM" eSuperTypes="#//VirtualMachine">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distributionImage" eType="#//File"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VagrantVM" eSuperTypes="#//VirtualMachine">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="readyToDistribute" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="vagrantFile" eType="#//File"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CustomVM" eSuperTypes="#//VirtualMachine">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vmZipArchive" eType="#//File"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Requirements">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="reqArchi" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -48,8 +50,17 @@
   <eClassifiers xsi:type="ecore:EClass" name="ComputerConfig">
     <eStructuralFeatures xsi:type="ecore:EReference" name="computer" lowerBound="1"
         eType="#//Computer"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="virtualmachines" upperBound="-1"
-        eType="#//VirtualMachine"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="virtualmachines" lowerBound="1"
+        upperBound="-1" eType="#//VirtualMachine"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConnectionInfo">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hostName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sshPort" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="22"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sshUser" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="vagrant"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sshPass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="vagrant"/>
   </eClassifiers>
 </ecore:EPackage>

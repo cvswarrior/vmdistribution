@@ -91,16 +91,9 @@ public class VMDistributionSwitch<T> extends Switch<T> {
 				return result;
 			}
 			case VMDistributionPackage.VAGRANT_VM: {
-				Vagrant_VM vagrant_VM = (Vagrant_VM)theEObject;
-				T result = caseVagrant_VM(vagrant_VM);
-				if (result == null) result = caseVirtualMachine(vagrant_VM);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case VMDistributionPackage.CUSTOM_VM: {
-				CustomVM customVM = (CustomVM)theEObject;
-				T result = caseCustomVM(customVM);
-				if (result == null) result = caseVirtualMachine(customVM);
+				VagrantVM vagrantVM = (VagrantVM)theEObject;
+				T result = caseVagrantVM(vagrantVM);
+				if (result == null) result = caseVirtualMachine(vagrantVM);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -113,6 +106,12 @@ public class VMDistributionSwitch<T> extends Switch<T> {
 			case VMDistributionPackage.COMPUTER_CONFIG: {
 				ComputerConfig computerConfig = (ComputerConfig)theEObject;
 				T result = caseComputerConfig(computerConfig);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case VMDistributionPackage.CONNECTION_INFO: {
+				ConnectionInfo connectionInfo = (ConnectionInfo)theEObject;
+				T result = caseConnectionInfo(connectionInfo);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -191,22 +190,7 @@ public class VMDistributionSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVagrant_VM(Vagrant_VM object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Custom VM</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Custom VM</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCustomVM(CustomVM object) {
+	public T caseVagrantVM(VagrantVM object) {
 		return null;
 	}
 
@@ -237,6 +221,21 @@ public class VMDistributionSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseComputerConfig(ComputerConfig object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Connection Info</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Connection Info</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConnectionInfo(ConnectionInfo object) {
 		return null;
 	}
 

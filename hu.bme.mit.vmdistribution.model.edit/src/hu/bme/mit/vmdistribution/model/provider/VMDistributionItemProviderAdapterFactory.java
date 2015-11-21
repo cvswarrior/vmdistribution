@@ -141,49 +141,26 @@ public class VMDistributionItemProviderAdapterFactory extends VMDistributionAdap
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link hu.bme.mit.vmdistribution.model.Vagrant_VM} instances.
+	 * This keeps track of the one adapter used for all {@link hu.bme.mit.vmdistribution.model.VagrantVM} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Vagrant_VMItemProvider vagrant_VMItemProvider;
+	protected VagrantVMItemProvider vagrantVMItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link hu.bme.mit.vmdistribution.model.Vagrant_VM}.
+	 * This creates an adapter for a {@link hu.bme.mit.vmdistribution.model.VagrantVM}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createVagrant_VMAdapter() {
-		if (vagrant_VMItemProvider == null) {
-			vagrant_VMItemProvider = new Vagrant_VMItemProvider(this);
+	public Adapter createVagrantVMAdapter() {
+		if (vagrantVMItemProvider == null) {
+			vagrantVMItemProvider = new VagrantVMItemProvider(this);
 		}
 
-		return vagrant_VMItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link hu.bme.mit.vmdistribution.model.CustomVM} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CustomVMItemProvider customVMItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link hu.bme.mit.vmdistribution.model.CustomVM}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCustomVMAdapter() {
-		if (customVMItemProvider == null) {
-			customVMItemProvider = new CustomVMItemProvider(this);
-		}
-
-		return customVMItemProvider;
+		return vagrantVMItemProvider;
 	}
 
 	/**
@@ -230,6 +207,29 @@ public class VMDistributionItemProviderAdapterFactory extends VMDistributionAdap
 		}
 
 		return computerConfigItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link hu.bme.mit.vmdistribution.model.ConnectionInfo} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ConnectionInfoItemProvider connectionInfoItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link hu.bme.mit.vmdistribution.model.ConnectionInfo}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createConnectionInfoAdapter() {
+		if (connectionInfoItemProvider == null) {
+			connectionInfoItemProvider = new ConnectionInfoItemProvider(this);
+		}
+
+		return connectionInfoItemProvider;
 	}
 
 	/**
@@ -334,10 +334,10 @@ public class VMDistributionItemProviderAdapterFactory extends VMDistributionAdap
 		if (labSystemItemProvider != null) labSystemItemProvider.dispose();
 		if (computerItemProvider != null) computerItemProvider.dispose();
 		if (labItemProvider != null) labItemProvider.dispose();
-		if (vagrant_VMItemProvider != null) vagrant_VMItemProvider.dispose();
-		if (customVMItemProvider != null) customVMItemProvider.dispose();
+		if (vagrantVMItemProvider != null) vagrantVMItemProvider.dispose();
 		if (requirementsItemProvider != null) requirementsItemProvider.dispose();
 		if (computerConfigItemProvider != null) computerConfigItemProvider.dispose();
+		if (connectionInfoItemProvider != null) connectionInfoItemProvider.dispose();
 	}
 
 }
