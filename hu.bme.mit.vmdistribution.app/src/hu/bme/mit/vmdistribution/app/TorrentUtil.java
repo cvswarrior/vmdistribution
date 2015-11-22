@@ -12,7 +12,7 @@ public class TorrentUtil {
 	
 	public static void copyTorrentFile(final Computer seed, final Computer target, final String torrentfilename) {
 		SSHUtil sshutil = new SSHUtil(seed.getConnectioninfo());
-		logger.log(Level.INFO, "[Copying torrent file +"+torrentfilename+" to "+target.getName()+".]");
+		logger.log(Level.INFO, "[Copying torrent file "+torrentfilename+" to "+target.getName()+".]");
 		StringBuilder command = new StringBuilder(Properties.getPathString("script_copy_torrent")+" ");
 		command.append(target.getConnectioninfo().getHostName()+" ");
 		command.append(String.valueOf(target.getConnectioninfo().getSshPass())+" ");

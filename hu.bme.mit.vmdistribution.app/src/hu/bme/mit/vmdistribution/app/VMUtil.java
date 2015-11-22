@@ -70,7 +70,7 @@ public class VMUtil {
 		logger.log(Level.INFO, "Creating .zip archive...]");
 		File outputzip =  new File(Properties.getPath("created_vagrant_vm_archives").getAbsolutePath() + vm.getName() + ".zip");
 		File foldertozip = new File(Properties.getPath("created_vagrant_vms").getAbsolutePath() + "\\"+ vm.getName());
-		Archiver.createZipArchive(foldertozip.getAbsolutePath(), outputzip.getAbsolutePath());
+		//Archiver.createZipArchive(foldertozip.getAbsolutePath(), outputzip.getAbsolutePath()); TODO
 		vm.setVmZipArchive(outputzip);
 		vm.setReadyToDistribute(true);
 	}

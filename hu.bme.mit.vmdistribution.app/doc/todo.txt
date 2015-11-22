@@ -4,7 +4,8 @@ important:
 perf analysis in real lab
 metamodel - fájl másolás köztes állapot metamodellbe?
 get distr progress from rtorrent
-
+input model object -> args
+sftp speedup
 
 almost important:
 ----------

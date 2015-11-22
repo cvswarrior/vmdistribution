@@ -41,9 +41,9 @@ public class UseModel {
 		}
 		//distrLoopTest();
 		
-		//testXMLRPC();
+		testXMLRPC();
 		//System.out.println("why are we here?");
-		//System.exit(-1);
+		System.exit(-1);
 		
 		initLogger();
 		logger.log(Level.INFO, "[Starting tasks.]");
@@ -61,10 +61,8 @@ public class UseModel {
 			logger.log(Level.SEVERE, "The goal lab doesn't exist, check command line arguments!");
 			System.exit(1);
 		}
-
-		System.out.println(Properties.getPathString("created_vagrant_vms"));
 		
-		//distribute(myLabSystem.getTorrentSeed(), goal);
+		distribute(myLabSystem.getTorrentSeed(), goal);
 		
 		//save changes to model
 		//emfutil.saveModelInstance();TODO
@@ -82,7 +80,7 @@ public class UseModel {
 		
 		Map<VirtualMachine, String> vm_torrentfilename_map = new HashMap<>();
 		
-		if(vms_toinstall_alsocompatible.keySet().size() == 0){
+		if(vms_toinstall_alsocompatible.values().size() == 0){
 			logger.log(Level.WARNING, "No Virtual Machines can be distributed, see log above for reasons.");
 			System.exit(1);
 		}
@@ -133,21 +131,27 @@ public class UseModel {
 	    
 	    params[0]=oparam1;
 	    String[] asd = Arrays.t*/
-	    String[] params = new String[]{"main", "d.get_base_filename=", "d.get_hash="};
-	    //String[] params = new String[]{"72AB41F3EA30BE5CCA44B9098BC7FDC7CB9E2BE2", "main", "cat=\\$p.get_address=", "cat=\\$p.get_completed_percent="};
+	    // String[] params = new String[]{"main", "d.get_base_filename=", "cat=\\$d.get_peers_complete="};
+	    String[] params = new String[]{"62294300D5DC2EE804FAAE38ADC38A7289631FA7", "main", "cat=\\$t.get_scrape_complete=", "cat=\\$t.get_scrape_downloaded=", "cat=\\$t.get_scrape_incomplete="};
+	    //String[] params = new String[]{"62294300D5DC2EE804FAAE38ADC38A7289631FA7", "main", "cat=\\$p.get_address=", "cat=\\$p.get_completed_percent="};
 	    try {
-	    	Object[] result = (Object[]) client.execute("d.multicall", params);
+	    	//Object[] result = (Object[]) client.execute("d.multicall", params);
+	    	Object[] result = (Object[]) client.execute("t.multicall", params);
 	    	//Object[] result = (Object[]) client.execute("p.multicall", params);
 	    	//System.out.println(result);
-	    	for (Object object : result) {
-	    		System.out.println(object);
+	    	for (Object o : result) {
+	    		Object[] oarr = (Object[]) o;
+	    		System.out.print(oarr[0]+" ");
+	    		System.out.print(oarr[1]+" ");
+	    		System.out.print(oarr[2]+" ");
+	    		System.out.println();
 			}
 	   
 	    //params = new Object[]{"system.hostname"};
 	    //String  result2 = (String) client.execute("system.methodHelp", params);
 	    //System.out.println(result2);
-	    String[] params1 = new String[]{"main", "d.get_base_filename=", "d.get_hash="};
-	    Object[] result1 = (Object[]) client.execute("d.multicall", params1);
+	    //String[] params1 = new String[]{"main", "d.get_base_filename=", "d.get_hash="};
+	   // Object[] result1 = (Object[]) client.execute("d.multicall", params1);
 			
 		} catch (XmlRpcException e) {
 			// TODO Auto-generated catch block

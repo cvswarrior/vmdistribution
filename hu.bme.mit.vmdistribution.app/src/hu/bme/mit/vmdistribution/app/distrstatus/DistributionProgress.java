@@ -23,7 +23,7 @@ public class DistributionProgress {
 			e1.printStackTrace();
 		}
 	    
-	    Object[][] infoHashes = (Object[][]) UseModel.getXmlRpcClient().getTorrentInfoHashes();
+	    Object[][] infoHashes = null;//(Object[][]) UseModel.getXmlRpcClient().getTorrentInfoHashes();
 	    for (Object[] infoHash : infoHashes){
 	    	
 	    	//transfers.add(new Transfer())

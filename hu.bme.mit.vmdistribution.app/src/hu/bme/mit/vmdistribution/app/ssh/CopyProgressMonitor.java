@@ -16,13 +16,14 @@ public class CopyProgressMonitor implements SftpProgressMonitor {
    
     public void init(final int op, final String src, final String dest, final long max) 
     {
+    	System.out.println("STARTED: "+System.currentTimeMillis());
     }
 
     public boolean count(final long bytes)
     {
     	this.currentbyte += bytes;
     	if(currentbyte > 100000000 * hundredmegs){
-    		logger.info("Copied "+String.valueOf(currentbyte/1000000)+"MBytes of ?");
+    		logger.info("Copied "+String.valueOf(currentbyte/1000000)+"MBytes of ?");//TODO ?
     		hundredmegs++;
     	}
     	
@@ -31,6 +32,7 @@ public class CopyProgressMonitor implements SftpProgressMonitor {
 
     public void end()
     {
+    	System.out.println("DONE: "+System.currentTimeMillis());
     	logger.info("\nFINISHED!");
     }
 

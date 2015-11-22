@@ -2,6 +2,8 @@ package hu.bme.mit.vmdistribution.app.distrstatus;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Logger;
 
 import org.apache.xmlrpc.XmlRpcException;
@@ -25,29 +27,39 @@ public class RTorrentXmlRpcClient extends XmlRpcClient{
 		}
 	}
 	
-	public Object[] getPeerStatus(String infoHash){
+	public Map<String, Integer> getPeerStatus(String infoHash){
 		String[] params = new String[]{infoHash, "main", "cat=\\$p.get_address=", "cat=\\$p.get_completed_percent="};
 		Object[] result = null;
+		Map<String, Integer> percentagesmap = new HashMap<>();
 	  
 	    try {
 			result = (Object[]) this.execute("p.multicall", params);
+			for (Object o : result) {
+	    		Object[] oarr = (Object[]) o;
+	    		percentagesmap.put(String.valueOf(oarr[0]), (Integer)oarr[1]);
+			}
 		} catch (XmlRpcException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	    return result;
+	    return percentagesmap;
 	}
 	
-	public Object[] getTorrentInfoHashes(){
+	public Map<String, String> getTorrentInfoHashes(){
 	    String[] params = new String[]{"main", "d.get_base_filename=", "d.get_hash="};
 	    Object[] result = null;
+	    Map<String, String> infohashesmap = new HashMap<>();
 	    try {
 	    	result = (Object[]) this.execute("d.multicall", params);
+	    	for (Object o : result) {
+	    		Object[] oarr = (Object[]) o;
+	    		infohashesmap.put(String.valueOf(oarr[0]), String.valueOf(oarr[1]));
+			}
 		} catch (XmlRpcException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	    return result;
+	    return infohashesmap;
 	}
 	  
 }

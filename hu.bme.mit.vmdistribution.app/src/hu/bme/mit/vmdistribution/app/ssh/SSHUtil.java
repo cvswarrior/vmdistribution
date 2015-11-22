@@ -33,8 +33,9 @@ public class SSHUtil {
 		} catch (JSchException e) {
 			logger.log(Level.SEVERE, "ERROR connecting to host: " + host.getHostName(), e);
 		}
-		session.setPassword(String.valueOf(host.getSshPort()));
+		session.setPassword(String.valueOf(host.getSshPass()));
 		session.setConfig("StrictHostKeyChecking", "no");
+		session.setConfig("compression.s2c", "zlib@openssh.com, zlib, none");
 	}
 
 	public void copyFiles(final List<File> files, final String destfolder) {

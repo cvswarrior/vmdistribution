@@ -83,7 +83,7 @@ public class EMFModelUtil {
 			if(hasEnoughSpace(pc, goal_setup.get(pc))){
 				goodsetup.put(pc, new ArrayList<VirtualMachine>());
 				for (VirtualMachine vm :  goal_setup.get(pc)){
-					if(!isCompatible(pc, vm)){
+					if(isCompatible(pc, vm)){
 						goodsetup.get(pc).add(vm);
 					}
 				}
@@ -107,6 +107,7 @@ public class EMFModelUtil {
 			logger.log(Level.WARNING, "WARNING:_Computer:"+pc.getName()+" is not compatible with Virtual Machine:"+vm.getName()+", Architecture mismatch!");
 		}
 		if(pc.getInstalledRAM() < vm.getRequirements().getReqRAM()){
+			result = false;
 			logger.log(Level.WARNING, "WARNING:_Computer:"+pc.getName()+" is not compatible with Virtual Machine:"+vm.getName()+", Not enough RAM!");
 		}
 		
