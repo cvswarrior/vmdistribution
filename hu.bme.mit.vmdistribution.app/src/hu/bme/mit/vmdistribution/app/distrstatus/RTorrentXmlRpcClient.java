@@ -2,24 +2,23 @@ package hu.bme.mit.vmdistribution.app.distrstatus;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.apache.xmlrpc.XmlRpcException;
 import org.apache.xmlrpc.client.XmlRpcClient;
 import org.apache.xmlrpc.client.XmlRpcClientConfigImpl;
 
-import hu.bme.mit.vmdistribution.app.Properties;
+import hu.bme.mit.vmdistribution.model.Computer;
 
 public class RTorrentXmlRpcClient extends XmlRpcClient{
 
 	private XmlRpcClientConfigImpl config;
 	private static final Logger logger = Logger.getLogger(RTorrentXmlRpcClient.class.getName());
 	
-	public RTorrentXmlRpcClient(){
+	public RTorrentXmlRpcClient(Computer seed){
 		config = new XmlRpcClientConfigImpl();
 		try {
-			config.setServerURL(new URL("http://"+Properties.getHostData("seed").getHostname()+"/RPC2"));
+			config.setServerURL(new URL("http://"+seed.getConnectioninfo().getHostName()+"/RPC2"));
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

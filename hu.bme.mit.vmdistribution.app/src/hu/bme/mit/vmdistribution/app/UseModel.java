@@ -1,9 +1,11 @@
 package hu.bme.mit.vmdistribution.app;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
@@ -27,55 +29,50 @@ public class UseModel {
 	private static LabSystem myLabSystem;
 	private static RTorrentXmlRpcClient xmlRPCClient;
 
-	public static void init() {
+	public static void initLogger() {
 		System.setProperty("java.util.logging.SimpleFormatter.format", "%1$tY-%1$tm-%1$td %1$tH:%1$tM:%1$tS %4$s %2$s %5$s%6$s%n");
 		logger_parent.setLevel(Level.FINER);
-		xmlRPCClient = new RTorrentXmlRpcClient();
 	}
 
 	public static void main(final String[] args) {
-		
-		
+		String goallabname = "";
+		if(args.length > 0){
+			goallabname = args[0];
+		}
 		//distrLoopTest();
 		
-		testXMLRPC();
-		System.out.println("why are we here?");
-		System.exit(-1);
+		//testXMLRPC();
+		//System.out.println("why are we here?");
+		//System.exit(-1);
 		
-		init();
+		initLogger();
 		logger.log(Level.INFO, "[Starting tasks.]");
 		EMFModelUtil emfutil = new EMFModelUtil();
 		myLabSystem = emfutil.loadModelInstance();
+		xmlRPCClient = new RTorrentXmlRpcClient(myLabSystem.getTorrentSeed());
 		Lab goal = null;
-		//TODO replace with command line arguments
 		for (Lab lab : myLabSystem.getLabs()){
-			if("mixed_test".equals(lab.getName())){
+			if(goallabname.equals(lab.getName())){
 				goal = lab;
 			}
 		}
-
-		//Archiver.createZipArchive("E:\\_TSYS\\VirtualBox\\_VMs\\vagrantvm_test","E:\\vagrantvm_test.zip");
-		//distribute(goal);
 		
-		 
+		if(goal == null){
+			logger.log(Level.SEVERE, "The goal lab doesn't exist, check command line arguments!");
+			System.exit(1);
+		}
 
+		System.out.println(Properties.getPathString("created_vagrant_vms"));
+		
+		//distribute(myLabSystem.getTorrentSeed(), goal);
 		
 		//save changes to model
-		emfutil.saveModelInstance();
+		//emfutil.saveModelInstance();TODO
 		logger.log(Level.INFO, "[Instance model updated.]");
 		logger.log(Level.INFO, "[Done.]");
 	}
 
-	public static void distribute(final Lab goal) {
-		
-		
-		//TODO skip if nothing to copy
-		//copy vms to seed
-		Map<VirtualMachine, String> vm_torrentfilename_map = VMUtil.copyVmsToSeed(goal);
-		
-		//start seeding
-		TorrentUtil.startSeeding();
-
+	public static void distribute(final Computer seed, final Lab goal) {
 		//get compat vms to install
 		Map<Computer, List<VirtualMachine>> currentsetup = EMFModelUtil.buildComputerToVMsMapFromLabSystem(myLabSystem);
 		Map<Computer, List<VirtualMachine>> goalsetup = EMFModelUtil.buildComputerToVMsMapFromLab(goal);
@@ -83,13 +80,27 @@ public class UseModel {
 		Map<Computer, List<VirtualMachine>> vms_toinstall_notalreadyinstalled = EMFModelUtil.getConfWithoutAlreadyInstalledVMs(currentsetup, goalsetup);
 		Map<Computer, List<VirtualMachine>> vms_toinstall_alsocompatible = EMFModelUtil.getConfWithoutIncompatibleVMs(vms_toinstall_notalreadyinstalled);
 		
+		Map<VirtualMachine, String> vm_torrentfilename_map = new HashMap<>();
+		
+		if(vms_toinstall_alsocompatible.keySet().size() == 0){
+			logger.log(Level.WARNING, "No Virtual Machines can be distributed, see log above for reasons.");
+			System.exit(1);
+		}
+		
+		//copy vms to seed
+		vm_torrentfilename_map = VMUtil.copyVmsToSeed(seed, goal);
+
+		//start seeding
+		TorrentUtil.startSeeding(seed);
+
+		
 		for(Computer pc : vms_toinstall_alsocompatible.keySet()){
 			List<VirtualMachine> vmstodistr = vms_toinstall_alsocompatible.get(pc);
 			for(VirtualMachine vm : vmstodistr){
-				TorrentUtil.copyTorrentFile(Properties.getHostData(pc.getName()), vm_torrentfilename_map.get(vm));
+				TorrentUtil.copyTorrentFile(seed, pc, vm_torrentfilename_map.get(vm));
 			}
 			if(vmstodistr.size() > 0){
-				TorrentUtil.startLeeching(Properties.getHostData(pc.getName()));
+				TorrentUtil.startLeeching(seed, pc);
 			}
 			
 			//update model TODO: only for pcs that actually got the vm

@@ -17,21 +17,23 @@ import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
 import com.jcraft.jsch.SftpException;
 
+import hu.bme.mit.vmdistribution.model.ConnectionInfo;
+
 public class SSHUtil {
 
 	private JSch jsch;
 	private Session session;
 	private static final Logger logger = Logger.getLogger(SSHUtil.class.getName());
 
-	public SSHUtil(final Host host) {
+	public SSHUtil(final ConnectionInfo host) {
 		this.jsch = new JSch();
 		this.session = null;
 		try {
-			session = jsch.getSession(host.getUsername(), host.getHostname(), host.getPort());
+			session = jsch.getSession(host.getSshUser(), host.getHostName(), host.getSshPort());
 		} catch (JSchException e) {
-			logger.log(Level.SEVERE, "ERROR connecting to host: " + host.getHostname(), e);
+			logger.log(Level.SEVERE, "ERROR connecting to host: " + host.getHostName(), e);
 		}
-		session.setPassword(String.valueOf(host.getPassword()));
+		session.setPassword(String.valueOf(host.getSshPort()));
 		session.setConfig("StrictHostKeyChecking", "no");
 	}
 
@@ -87,6 +89,12 @@ public class SSHUtil {
 			logger.log(Level.SEVERE, "ERROR: Could not open input stream on remote host.", e);
 		}
 
+	}
+	
+	public void remoteExec(String command) {
+		this.connect();
+		this.executeCommand(command);
+		this.disconnect();
 	}
 
 	public void connect() {

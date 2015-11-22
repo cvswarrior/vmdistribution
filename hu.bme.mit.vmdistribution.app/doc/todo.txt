@@ -2,28 +2,22 @@ important:
 ----------
 
 perf analysis in real lab
-vm versioning?
 metamodel - fájl másolás köztes állapot metamodellbe?
 get distr progress from rtorrent
+
 
 almost important:
 ----------
 
-env independent zippping + scripts
+env independent scripts
 refine logging levels
 seed=labpc problem?
 
 
 not important:
 ----------
-revert to jre7
 create javadoc
 
+
 toask:
-------------:
-forrásmegjelölések hova?
-
-
----
-/tmp mappa azért menjen fel
-szakdoga dátum fix utolsó napra
+------------

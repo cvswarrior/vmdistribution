@@ -14,10 +14,10 @@ Vagrant.configure(2) do |config|
 		s.inline = "sudo sed -i '/tty/!s/mesg n/tty -s \\&\\& mesg n/' /root/.profile"
 	end
 	
-	config.vm.define "seeder", primary: true do |seeder|
-		seeder.vm.hostname = "seeder"
-		seeder.vm.network "private_network", ip: "192.168.100.101"
-		seeder.vm.provision "shell", privileged: false, path: "shared/install_seeder.sh"
+	config.vm.define "seed", primary: true do |seed|
+		seed.vm.hostname = "seed"
+		seed.vm.network "private_network", ip: "192.168.100.101"
+		seed.vm.provision "shell", privileged: false, path: "shared/install_seed.sh"
 	end
 	
 	config.vm.define "leecher1", primary: false do |leecher1|

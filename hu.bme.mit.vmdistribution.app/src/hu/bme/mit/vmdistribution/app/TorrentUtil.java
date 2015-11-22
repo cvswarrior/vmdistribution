@@ -3,48 +3,47 @@ package hu.bme.mit.vmdistribution.app;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import hu.bme.mit.vmdistribution.app.ssh.Host;
+import hu.bme.mit.vmdistribution.app.ssh.SSHUtil;
+import hu.bme.mit.vmdistribution.model.Computer;
 
 public class TorrentUtil {
 	
 	private static final Logger logger = Logger.getLogger(TorrentUtil.class.getName());
 	
-	public static void copyTorrentFile(final Host targetpc, final String torrentfilename) {
-		logger.log(Level.INFO, "[Copying torrent file +"+torrentfilename+" to "+targetpc.getHostname()+".]");
-		Host host_seed = Properties.getHostData("seed");
+	public static void copyTorrentFile(final Computer seed, final Computer target, final String torrentfilename) {
+		SSHUtil sshutil = new SSHUtil(seed.getConnectioninfo());
+		logger.log(Level.INFO, "[Copying torrent file +"+torrentfilename+" to "+target.getName()+".]");
 		StringBuilder command = new StringBuilder(Properties.getPathString("script_copy_torrent")+" ");
-		command.append(targetpc.getHostname()+" ");
-		command.append(String.valueOf(targetpc.getPassword())+" ");
+		command.append(target.getConnectioninfo().getHostName()+" ");
+		command.append(String.valueOf(target.getConnectioninfo().getSshPass())+" ");
 		command.append(torrentfilename);
-		host_seed.remoteExec(command.toString());
+		sshutil.remoteExec(command.toString());
 	}
 	
-	public static void createTorrentFile(final String vmzipname, final String vmtorrentname){
+	public static void createTorrentFile(final Computer seed, final String vmzipname, final String vmtorrentname){
+		SSHUtil sshutil = new SSHUtil(seed.getConnectioninfo());
 		logger.log(Level.INFO, "[Creating torrent file for "+vmzipname+".]");
 		StringBuilder command = new StringBuilder(Properties.getPathString("script_create_torrrent")+" ");
-		Host host_seed = Properties.getHostData("seed");
-		command.append(host_seed.getHostname()+" ");
+		command.append(seed.getConnectioninfo().getHostName()+" ");
 		command.append(vmzipname+" ");
 		command.append(vmtorrentname);
-		host_seed.remoteExec(command.toString());
+		sshutil.remoteExec(command.toString());
 	}
 	
-	public static void startSeeding(){
-		logger.log(Level.INFO, "[Seeding started.]");
+	public static void startSeeding(final Computer seed){
+		SSHUtil sshutil = new SSHUtil(seed.getConnectioninfo());
 		StringBuilder command = new StringBuilder(Properties.getPathString("script_start_seeding"));
-		Host host_seed = Properties.getHostData("seed");
-		host_seed.remoteExec(command.toString());
+		sshutil.remoteExec(command.toString());
+		logger.log(Level.INFO, "[Seeding started.]");
 	}
 	
-	public static void startLeeching(Host targetpc){
-		logger.log(Level.INFO, "[Torrent client started on "+targetpc.getHostname()+".]");
+	public static void startLeeching(final Computer seed, final Computer target){
+		SSHUtil sshutil = new SSHUtil(seed.getConnectioninfo());
 		StringBuilder command = new StringBuilder(Properties.getPathString("script_start_leeching")+" ");
-		Host host_seed = Properties.getHostData("seed");
-		command.append(targetpc.getHostname()+" ");
-		command.append(String.valueOf(targetpc.getPassword()));
-		host_seed.remoteExec(command.toString());
+		command.append(target.getConnectioninfo().getHostName()+" ");
+		command.append(String.valueOf(target.getConnectioninfo().getSshPass()));
+		sshutil.remoteExec(command.toString());
+		logger.log(Level.INFO, "[Torrent client started on "+target.getName()+".]");
 	}
-	
 
-	
 }

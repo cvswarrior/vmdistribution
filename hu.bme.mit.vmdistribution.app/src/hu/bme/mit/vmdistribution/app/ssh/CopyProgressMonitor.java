@@ -8,7 +8,7 @@ public class CopyProgressMonitor implements SftpProgressMonitor {
 	
 	private static final Logger logger = Logger.getLogger(CopyProgressMonitor.class.getName());
 	private long currentbyte = 0;
-	private double hundredmbcounter = 1;
+	private int hundredmegs = 1;
 
     public CopyProgressMonitor() {
     	
@@ -21,9 +21,9 @@ public class CopyProgressMonitor implements SftpProgressMonitor {
     public boolean count(final long bytes)
     {
     	this.currentbyte += bytes;
-    	if(currentbyte > 10000000 * hundredmbcounter){
-    		logger.info("Copied "+String.valueOf(currentbyte/1000000.0)+"MB of ?");
-    		hundredmbcounter++;
+    	if(currentbyte > 100000000 * hundredmegs){
+    		logger.info("Copied "+String.valueOf(currentbyte/1000000)+"MBytes of ?");
+    		hundredmegs++;
     	}
     	
         return(true);

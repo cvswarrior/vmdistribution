@@ -1,42 +1,36 @@
 package hu.bme.mit.vmdistribution.app;
 
 import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLClassLoader;
+import java.util.Locale;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import hu.bme.mit.vmdistribution.app.ssh.Host;
-
 public class Properties {
 
-	private static final String HOSTS_BUNDLE_NAME = "hu.bme.mit.vmdistribution.app.resources.hosts";
-	private static final String FILELOCATIONS_BUNDLE_NAME = "hu.bme.mit.vmdistribution.app.resources.filelocations";
-	
-	private static final ResourceBundle HOSTS_RESOURCE_BUNDLE = ResourceBundle.getBundle(HOSTS_BUNDLE_NAME);
-	private static final ResourceBundle FILELOCATIONS_BUNDLE = ResourceBundle.getBundle(FILELOCATIONS_BUNDLE_NAME);
-	
+	private static final String FILELOCATIONS_BUNDLE_NAME = "filelocations";
+	private static ResourceBundle FILELOCATIONS_BUNDLE;
 	private static final Logger logger = Logger.getLogger(Properties.class.getName());
+	
+	static{
+		try{
+			File executionPath=new File(UseModel.class.getProtectionDomain().getCodeSource().getLocation().getPath());
+			String propertiesPath=executionPath.getParentFile().getAbsolutePath();
+			File file = new File(propertiesPath);
+			URL[] urls = {file.toURI().toURL()};
+			ClassLoader loader = new URLClassLoader(urls);
+			FILELOCATIONS_BUNDLE = ResourceBundle.getBundle(FILELOCATIONS_BUNDLE_NAME, Locale.getDefault(), loader);
+		}catch (MalformedURLException e){// TODO Auto-generated catch block
+			e.printStackTrace();}
+	}
 
 	private Properties() {
 	}
 
-	public static Host getHostData(final String name) {
-
-		try {
-			String hostname = HOSTS_RESOURCE_BUNDLE.getString(name + ".host");
-			int port = Integer.parseInt(HOSTS_RESOURCE_BUNDLE.getString(name + ".port"));
-			String username = HOSTS_RESOURCE_BUNDLE.getString(name + ".username");
-			char[] password = HOSTS_RESOURCE_BUNDLE.getString(name + ".password").toCharArray();
-
-			return new Host(hostname, port, username, password);
-		} catch (MissingResourceException e) {
-			logger.log(Level.SEVERE, "Can't find entries in property file for " + name + ".* !", e);
-			return null;
-		}
-
-	}
-	
 	public static File getPath(final String name) {
 
 		try {
