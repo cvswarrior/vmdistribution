@@ -1,46 +1,73 @@
 package hu.bme.mit.vmdistribution.app.distrstatus;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import hu.bme.mit.vmdistribution.app.Properties;
-import hu.bme.mit.vmdistribution.app.UseModel;
+import hu.bme.mit.vmdistribution.model.Computer;
 
 public class DistributionStatusUpdater implements Runnable {
 
-	private List<String> infoHashes;
 	private List<Transfer> transfers;
+	private Map<Computer, RTorrentXmlRpcClient> xmlRpcClientsMap;
 	private static final int UPDATE_TIMEOUT_MILIS = 10000;
 	private static final Logger logger = Logger.getLogger(DistributionStatusUpdater.class.getName());
 	
-	public DistributionStatusUpdater(final List<String> infoHashes, final List<Transfer> transfers){
-		this.infoHashes = infoHashes;
+	public DistributionStatusUpdater(final List<Transfer> transfers){
 		this.transfers = transfers;
+		this.xmlRpcClientsMap = new HashMap<>();
+		for(Transfer t : this.transfers){
+			if(!xmlRpcClientsMap.containsKey(t.getTargetPC())){
+				xmlRpcClientsMap.put(t.getTargetPC(), new RTorrentXmlRpcClient(t.getTargetPC()));
+			}
+		}
 	}
 	
 	@Override
-	public void run() {
-		// TODO Auto-generated method stub
-		while(true){/*
+	public void run() {		
+		while(true){
 			try {
-				for(String infoHash : infoHashes){//TODO store hostnames in model!
-					Object[] peers = ((Object[][][]) UseModel.getXmlRpcClient().getPeerStatus(infoHash))[0][0];
-					for(Transfer transfer : transfers){
-						if(Properties.getHostData(transfer.getTargetPC().getName()).getHostname().equals(anObject)))
+				logger.info("[Current status of transfers:");
+				boolean allfinished = true;
+				for(Computer targetpc : xmlRpcClientsMap.keySet()){
+					logger.info("\t"+targetpc.getName()+":");
+					for(Transfer t : transfers){
+						if(targetpc == t.getTargetPC()){	
+							xmlRpcClientsMap.get(targetpc).updateTransferStatus(t);
+							logger.info("\t\t"+t.getStatusString());
+							if(t.getTransferStatus() != TransferStatus.COMPLETED){
+								allfinished = false;
+							}else if (t.getTransferStatus() == TransferStatus.COMPLETED){
+								targetpc.getVirtualmachines().add(t.getTransferItem());//TODO it should update the other list right?
+							}
+						}
 					}
-					
-					
+				}
+				if(allfinished){
+					logger.info("[All transfers are finished, distribution is complete]");
+					break;
 				}
 				
-				
-				
+				logger.log(Level.FINE, "Waiting "+UPDATE_TIMEOUT_MILIS/1000+" seconds before next refresh.");
 				Thread.sleep(UPDATE_TIMEOUT_MILIS);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}*/
-			//TODO break on finish
+			}
 		}
+	}
+	
+	public List<String> getIncompleteTransfers(){
+		List<String> incompletetransfers = new ArrayList<>();
+		for (Transfer t : transfers){
+			if(t.getTransferStatus() != TransferStatus.COMPLETED){
+				incompletetransfers.add(t.getTransferItem().getName()+"->"+t.getTargetPC().getName());
+			}
+		}
+		return incompletetransfers;
 	}
 
 }

@@ -1,11 +1,13 @@
 important:
 ----------
 
+currentlab wtf!
 perf analysis in real lab
 metamodel - fájl másolás köztes állapot metamodellbe?
 get distr progress from rtorrent
 input model object -> args
 sftp speedup
+
 
 almost important:
 ----------
@@ -13,11 +15,13 @@ almost important:
 env independent scripts
 refine logging levels
 seed=labpc problem?
+shutdown hook -  log failed transfers?
 
 
 not important:
 ----------
 create javadoc
+loggin refactor (.info(), .log())
 
 
 toask:

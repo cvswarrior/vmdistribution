@@ -3,6 +3,7 @@ package hu.bme.mit.vmdistribution.app;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -90,6 +91,17 @@ public class EMFModelUtil {
 			}
 		}
 		return goodsetup;
+	}
+	
+	public static VirtualMachine getVmByFilename(final String vmZipName, final Collection<VirtualMachine> vms){
+		VirtualMachine result = null;
+		for(VirtualMachine vm : vms){
+			if(vm.getVmZipArchive().getName().equals(vmZipName)){
+				result = vm;
+				break;
+			}
+		}
+		return result;
 	}
 	
 	public static double getUsedSpace(final List<VirtualMachine> vms){

@@ -16,6 +16,7 @@ import hu.bme.mit.vmdistribution.model.Lab;
 import hu.bme.mit.vmdistribution.model.VagrantVM;
 import hu.bme.mit.vmdistribution.model.VirtualMachine;
 
+@SuppressWarnings("unused")
 public class VMUtil {
 	
 	private static final Logger logger = Logger.getLogger(VMUtil.class.getName());
@@ -35,7 +36,6 @@ public class VMUtil {
 		logger.log(Level.INFO, "[Copying required VMs to seed.]");
 		for (ComputerConfig cfgitem : goal.getComputerconfigs()) {
 			for (VirtualMachine vm : cfgitem.getVirtualmachines()) {
-
 				if (vm_torrentfilename_map.containsKey(vm)) {
 					continue;
 				}
