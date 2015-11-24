@@ -1,11 +1,14 @@
 package hu.bme.mit.vmdistribution.app;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.ConsoleHandler;
+import java.util.logging.Handler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -22,24 +25,56 @@ public class UseModel {
 	private static final Logger logger_parent = Logger.getLogger("");
 	private static final Logger logger = Logger.getLogger(UseModel.class.getName());
 	private static LabSystem myLabSystem;
-	//private static RTorrentXmlRpcClient xmlRPCClient;
 
-	public static void initLogger() {
+	public static void initLogger(Level level) {
 		System.setProperty("java.util.logging.SimpleFormatter.format", "%1$tY-%1$tm-%1$td %1$tH:%1$tM:%1$tS %4$s %2$s %5$s%6$s%n");
-		logger_parent.setLevel(Level.FINER);
+		Handler consoleHandler = new ConsoleHandler();
+		consoleHandler.setLevel(Level.FINER);
+		logger_parent.removeHandler(logger_parent.getHandlers()[0]);
+		logger_parent.addHandler(consoleHandler);
+		logger_parent.setLevel(level);
+		logger.log(Level.CONFIG, "Logging set to: "+level.getName());
 	}
 
 	public static void main(final String[] args) {
+		File modelfile;
 		String goallabname = "";
-		if(args.length > 0){
-			goallabname = args[0];
+		String logginglevelstring = "";
+		Level logginglevel;
+		
+		if(args.length < 2){
+			System.out.println("Not enough command line arguments!");
+			System.out.println("Usage: java -jar hu.bme.mit.vmdistribution.app.*.jar [path to model instance] [name of goal lab] [logging level]");
+			System.exit(1);
 		}
 		
-		initLogger();
+		modelfile = new File(args[0]);
+		goallabname = args[1];
+		
+		if(args.length > 2){
+			logginglevelstring = args[2];
+		}
+		
+		switch(logginglevelstring){
+		case "WARNING":
+			logginglevel = Level.WARNING;
+			break;
+		case "INFO":
+			logginglevel = Level.INFO;
+			break;
+		case "FINE":
+			logginglevel = Level.FINE;
+			break;
+		default:
+			logginglevel = Level.INFO;
+		}
+
+		initLogger(logginglevel);
 		logger.log(Level.INFO, "[Starting tasks.]");
+
 		EMFModelUtil emfutil = new EMFModelUtil();
-		myLabSystem = emfutil.loadModelInstance();
-		//xmlRPCClient = new RTorrentXmlRpcClient(myLabSystem.getTorrentSeed());
+		myLabSystem = emfutil.loadModelInstance(modelfile);
+		
 		Lab goal = null;
 		for (Lab lab : myLabSystem.getLabs()){
 			if(goallabname.equals(lab.getName())){
@@ -66,9 +101,9 @@ public class UseModel {
 		Map<Computer, List<VirtualMachine>> goalsetup = EMFModelUtil.buildComputerToVMsMapFromLab(goal);
 
 		Map<Computer, List<VirtualMachine>> vms_toinstall_notalreadyinstalled = EMFModelUtil.getConfWithoutAlreadyInstalledVMs(currentsetup, goalsetup);
-		Map<Computer, List<VirtualMachine>> vms_toinstall_alsocompatible = EMFModelUtil.getConfWithoutIncompatibleVMs(vms_toinstall_notalreadyinstalled);
-		//TODO remove seed
-		
+		//remove seed
+		vms_toinstall_notalreadyinstalled.remove(seed);
+		Map<Computer, List<VirtualMachine>> vms_toinstall_alsocompatible = EMFModelUtil.getConfWithoutIncompatibleVMs(vms_toinstall_notalreadyinstalled);		
 		Map<VirtualMachine, String> vm_torrentfilename_map = new HashMap<>();
 		
 		if(vms_toinstall_alsocompatible.values().size() == 0){
@@ -136,8 +171,12 @@ public class UseModel {
 			}catch(Exception e){
 				e.printStackTrace();//TODO
 			}
+			if("".equals(msg) && !statusthread.isAlive()){
+				break;
+			}
 			if("QUIT".equalsIgnoreCase(msg) || "EXIT".equalsIgnoreCase(msg)){
-				logger.info("Quit due to user command");
+				logger.log(Level.INFO, "Quit due to user command");
+				logger.log(Level.INFO, "asd");
 				List<String> incompletetransfers = distrstatusupdater.getIncompleteTransfers();
 				if(incompletetransfers.size() > 0){
 					logger.warning("[There were unfinished transfers:]");
@@ -145,7 +184,7 @@ public class UseModel {
 				for(String s : incompletetransfers){
 					logger.warning(s);
 				}
-				System.exit(0);
+				break;
 			}
 		}
 		

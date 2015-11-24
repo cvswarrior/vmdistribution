@@ -1,5 +1,6 @@
 package hu.bme.mit.vmdistribution.app.ssh;
 
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.jcraft.jsch.SftpProgressMonitor;
@@ -23,7 +24,7 @@ public class CopyProgressMonitor implements SftpProgressMonitor {
     {
     	this.currentbyte += bytes;
     	if(currentbyte > 100000000 * hundredmegs){
-    		logger.info("Copied "+String.valueOf(currentbyte/1000000)+"MBytes of ?");//TODO ?
+    		logger.log(Level.INFO, "Copied "+String.valueOf(currentbyte/1000000)+"MBytes of ?");//TODO ?
     		hundredmegs++;
     	}
     	
@@ -33,7 +34,7 @@ public class CopyProgressMonitor implements SftpProgressMonitor {
     public void end()
     {
     	System.out.println("DONE: "+System.currentTimeMillis());
-    	logger.info("\nFINISHED!");
+    	logger.log(Level.INFO, "\nFINISHED!");
     }
 
 }

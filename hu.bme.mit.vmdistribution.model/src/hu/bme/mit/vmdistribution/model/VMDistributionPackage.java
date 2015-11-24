@@ -159,22 +159,13 @@ public interface VMDistributionPackage extends EPackage {
 	int LAB_SYSTEM__LABS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Currentsetup</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAB_SYSTEM__CURRENTSETUP = 3;
-
-	/**
 	 * The feature id for the '<em><b>Torrent Seed</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LAB_SYSTEM__TORRENT_SEED = 4;
+	int LAB_SYSTEM__TORRENT_SEED = 3;
 
 	/**
 	 * The number of structural features of the '<em>Lab System</em>' class.
@@ -183,7 +174,7 @@ public interface VMDistributionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAB_SYSTEM_FEATURE_COUNT = 5;
+	int LAB_SYSTEM_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Lab System</em>' class.
@@ -687,17 +678,6 @@ public interface VMDistributionPackage extends EPackage {
 	EReference getLabSystem_Labs();
 
 	/**
-	 * Returns the meta object for the reference '{@link hu.bme.mit.vmdistribution.model.LabSystem#getCurrentsetup <em>Currentsetup</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Currentsetup</em>'.
-	 * @see hu.bme.mit.vmdistribution.model.LabSystem#getCurrentsetup()
-	 * @see #getLabSystem()
-	 * @generated
-	 */
-	EReference getLabSystem_Currentsetup();
-
-	/**
 	 * Returns the meta object for the reference '{@link hu.bme.mit.vmdistribution.model.LabSystem#getTorrentSeed <em>Torrent Seed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1097,14 +1077,6 @@ public interface VMDistributionPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LAB_SYSTEM__LABS = eINSTANCE.getLabSystem_Labs();
-
-		/**
-		 * The meta object literal for the '<em><b>Currentsetup</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LAB_SYSTEM__CURRENTSETUP = eINSTANCE.getLabSystem_Currentsetup();
 
 		/**
 		 * The meta object literal for the '<em><b>Torrent Seed</b></em>' reference feature.

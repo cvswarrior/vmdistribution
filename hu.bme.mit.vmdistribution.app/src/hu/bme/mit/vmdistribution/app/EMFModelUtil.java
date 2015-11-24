@@ -28,17 +28,17 @@ public class EMFModelUtil {
 	private static final Logger logger = Logger.getLogger(EMFModelUtil.class.getName());
 	private Resource resource;
 
-	public LabSystem loadModelInstance() {
+	public LabSystem loadModelInstance(File modelfile) {
 		VMDistributionPackage.eINSTANCE.eClass();
 		Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
 		Map<String, Object> m = reg.getExtensionToFactoryMap();
 		m.put("vmdistribution", new XMIResourceFactoryImpl());
 
 		ResourceSet resSet = new ResourceSetImpl();
-		File myModel = new File("../hu.bme.mit.vmdistribution.model.tests/modeltest/My.vmdistribution");
-		this.resource = resSet.getResource(URI.createURI(myModel.toURI().toString()), true);
+		//File myModel = new File("../hu.bme.mit.vmdistribution.model.tests/modeltest/My.vmdistribution");
+		this.resource = resSet.getResource(URI.createURI(modelfile.toURI().toString()), true);
 		LabSystem myLabSystem = (LabSystem) this.resource.getContents().get(0);
-		logger.log(Level.INFO, "[Model data loaded from " + myModel.getAbsolutePath() + "]");
+		logger.log(Level.INFO, "[Model data loaded from " + modelfile.getAbsolutePath() + "]");
 		return myLabSystem;
 	}
 	

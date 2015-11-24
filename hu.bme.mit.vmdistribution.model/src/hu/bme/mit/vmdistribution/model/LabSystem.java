@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link hu.bme.mit.vmdistribution.model.LabSystem#getVirtualmachines <em>Virtualmachines</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.LabSystem#getComputers <em>Computers</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.LabSystem#getLabs <em>Labs</em>}</li>
- *   <li>{@link hu.bme.mit.vmdistribution.model.LabSystem#getCurrentsetup <em>Currentsetup</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.LabSystem#getTorrentSeed <em>Torrent Seed</em>}</li>
  * </ul>
  *
@@ -70,36 +69,10 @@ public interface LabSystem extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Labs</em>' containment reference list.
 	 * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getLabSystem_Labs()
-	 * @model containment="true" lower="2"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<Lab> getLabs();
-
-	/**
-	 * Returns the value of the '<em><b>Currentsetup</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Currentsetup</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Currentsetup</em>' reference.
-	 * @see #setCurrentsetup(Lab)
-	 * @see hu.bme.mit.vmdistribution.model.VMDistributionPackage#getLabSystem_Currentsetup()
-	 * @model required="true"
-	 * @generated
-	 */
-	Lab getCurrentsetup();
-
-	/**
-	 * Sets the value of the '{@link hu.bme.mit.vmdistribution.model.LabSystem#getCurrentsetup <em>Currentsetup</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Currentsetup</em>' reference.
-	 * @see #getCurrentsetup()
-	 * @generated
-	 */
-	void setCurrentsetup(Lab value);
 
 	/**
 	 * Returns the value of the '<em><b>Torrent Seed</b></em>' reference.

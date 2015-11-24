@@ -35,7 +35,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link hu.bme.mit.vmdistribution.model.impl.LabSystemImpl#getVirtualmachines <em>Virtualmachines</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.impl.LabSystemImpl#getComputers <em>Computers</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.impl.LabSystemImpl#getLabs <em>Labs</em>}</li>
- *   <li>{@link hu.bme.mit.vmdistribution.model.impl.LabSystemImpl#getCurrentsetup <em>Currentsetup</em>}</li>
  *   <li>{@link hu.bme.mit.vmdistribution.model.impl.LabSystemImpl#getTorrentSeed <em>Torrent Seed</em>}</li>
  * </ul>
  *
@@ -71,16 +70,6 @@ public class LabSystemImpl extends MinimalEObjectImpl.Container implements LabSy
 	 * @ordered
 	 */
 	protected EList<Lab> labs;
-
-	/**
-	 * The cached value of the '{@link #getCurrentsetup() <em>Currentsetup</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCurrentsetup()
-	 * @generated
-	 * @ordered
-	 */
-	protected Lab currentsetup;
 
 	/**
 	 * The cached value of the '{@link #getTorrentSeed() <em>Torrent Seed</em>}' reference.
@@ -145,44 +134,6 @@ public class LabSystemImpl extends MinimalEObjectImpl.Container implements LabSy
 			labs = new EObjectContainmentEList<Lab>(Lab.class, this, VMDistributionPackage.LAB_SYSTEM__LABS);
 		}
 		return labs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Lab getCurrentsetup() {
-		if (currentsetup != null && currentsetup.eIsProxy()) {
-			InternalEObject oldCurrentsetup = (InternalEObject)currentsetup;
-			currentsetup = (Lab)eResolveProxy(oldCurrentsetup);
-			if (currentsetup != oldCurrentsetup) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, VMDistributionPackage.LAB_SYSTEM__CURRENTSETUP, oldCurrentsetup, currentsetup));
-			}
-		}
-		return currentsetup;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Lab basicGetCurrentsetup() {
-		return currentsetup;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCurrentsetup(Lab newCurrentsetup) {
-		Lab oldCurrentsetup = currentsetup;
-		currentsetup = newCurrentsetup;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, VMDistributionPackage.LAB_SYSTEM__CURRENTSETUP, oldCurrentsetup, currentsetup));
 	}
 
 	/**
@@ -255,9 +206,6 @@ public class LabSystemImpl extends MinimalEObjectImpl.Container implements LabSy
 				return getComputers();
 			case VMDistributionPackage.LAB_SYSTEM__LABS:
 				return getLabs();
-			case VMDistributionPackage.LAB_SYSTEM__CURRENTSETUP:
-				if (resolve) return getCurrentsetup();
-				return basicGetCurrentsetup();
 			case VMDistributionPackage.LAB_SYSTEM__TORRENT_SEED:
 				if (resolve) return getTorrentSeed();
 				return basicGetTorrentSeed();
@@ -286,9 +234,6 @@ public class LabSystemImpl extends MinimalEObjectImpl.Container implements LabSy
 				getLabs().clear();
 				getLabs().addAll((Collection<? extends Lab>)newValue);
 				return;
-			case VMDistributionPackage.LAB_SYSTEM__CURRENTSETUP:
-				setCurrentsetup((Lab)newValue);
-				return;
 			case VMDistributionPackage.LAB_SYSTEM__TORRENT_SEED:
 				setTorrentSeed((Computer)newValue);
 				return;
@@ -313,9 +258,6 @@ public class LabSystemImpl extends MinimalEObjectImpl.Container implements LabSy
 			case VMDistributionPackage.LAB_SYSTEM__LABS:
 				getLabs().clear();
 				return;
-			case VMDistributionPackage.LAB_SYSTEM__CURRENTSETUP:
-				setCurrentsetup((Lab)null);
-				return;
 			case VMDistributionPackage.LAB_SYSTEM__TORRENT_SEED:
 				setTorrentSeed((Computer)null);
 				return;
@@ -337,8 +279,6 @@ public class LabSystemImpl extends MinimalEObjectImpl.Container implements LabSy
 				return computers != null && !computers.isEmpty();
 			case VMDistributionPackage.LAB_SYSTEM__LABS:
 				return labs != null && !labs.isEmpty();
-			case VMDistributionPackage.LAB_SYSTEM__CURRENTSETUP:
-				return currentsetup != null;
 			case VMDistributionPackage.LAB_SYSTEM__TORRENT_SEED:
 				return torrentSeed != null;
 		}

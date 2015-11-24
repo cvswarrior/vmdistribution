@@ -240,17 +240,8 @@ public class VMDistributionPackageImpl extends EPackageImpl implements VMDistrib
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLabSystem_Currentsetup() {
-		return (EReference)labSystemEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getLabSystem_TorrentSeed() {
-		return (EReference)labSystemEClass.getEStructuralFeatures().get(4);
+		return (EReference)labSystemEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -534,7 +525,6 @@ public class VMDistributionPackageImpl extends EPackageImpl implements VMDistrib
 		createEReference(labSystemEClass, LAB_SYSTEM__VIRTUALMACHINES);
 		createEReference(labSystemEClass, LAB_SYSTEM__COMPUTERS);
 		createEReference(labSystemEClass, LAB_SYSTEM__LABS);
-		createEReference(labSystemEClass, LAB_SYSTEM__CURRENTSETUP);
 		createEReference(labSystemEClass, LAB_SYSTEM__TORRENT_SEED);
 
 		computerEClass = createEClass(COMPUTER);
@@ -613,8 +603,7 @@ public class VMDistributionPackageImpl extends EPackageImpl implements VMDistrib
 		initEClass(labSystemEClass, LabSystem.class, "LabSystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLabSystem_Virtualmachines(), this.getVirtualMachine(), null, "virtualmachines", null, 1, -1, LabSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLabSystem_Computers(), this.getComputer(), null, "computers", null, 1, -1, LabSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLabSystem_Labs(), this.getLab(), null, "labs", null, 2, -1, LabSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLabSystem_Currentsetup(), this.getLab(), null, "currentsetup", null, 1, 1, LabSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLabSystem_Labs(), this.getLab(), null, "labs", null, 1, -1, LabSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLabSystem_TorrentSeed(), this.getComputer(), null, "torrentSeed", null, 1, 1, LabSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(computerEClass, Computer.class, "Computer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

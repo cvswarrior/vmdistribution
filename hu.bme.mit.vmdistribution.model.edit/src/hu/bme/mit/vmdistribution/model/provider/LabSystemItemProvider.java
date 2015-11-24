@@ -62,32 +62,9 @@ public class LabSystemItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addCurrentsetupPropertyDescriptor(object);
 			addTorrentSeedPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Currentsetup feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addCurrentsetupPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_LabSystem_currentsetup_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_LabSystem_currentsetup_feature", "_UI_LabSystem_type"),
-				 VMDistributionPackage.Literals.LAB_SYSTEM__CURRENTSETUP,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**

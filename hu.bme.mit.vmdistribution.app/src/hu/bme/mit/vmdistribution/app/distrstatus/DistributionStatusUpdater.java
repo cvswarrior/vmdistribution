@@ -30,14 +30,14 @@ public class DistributionStatusUpdater implements Runnable {
 	public void run() {		
 		while(true){
 			try {
-				logger.info("[Current status of transfers:");
+				logger.log(Level.INFO, "[Current status of transfers:");
 				boolean allfinished = true;
 				for(Computer targetpc : xmlRpcClientsMap.keySet()){
-					logger.info("\t"+targetpc.getName()+":");
+					logger.log(Level.INFO, "\t"+targetpc.getName()+":");
 					for(Transfer t : transfers){
 						if(targetpc == t.getTargetPC()){	
 							xmlRpcClientsMap.get(targetpc).updateTransferStatus(t);
-							logger.info("\t\t"+t.getStatusString());
+							logger.log(Level.INFO, "\t\t"+t.getStatusString());
 							if(t.getTransferStatus() != TransferStatus.COMPLETED){
 								allfinished = false;
 							}else if (t.getTransferStatus() == TransferStatus.COMPLETED){
@@ -47,7 +47,7 @@ public class DistributionStatusUpdater implements Runnable {
 					}
 				}
 				if(allfinished){
-					logger.info("[All transfers are finished, distribution is complete]");
+					logger.log(Level.INFO, "[All transfers are finished, distribution is complete]");
 					break;
 				}
 				

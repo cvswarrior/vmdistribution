@@ -24,7 +24,7 @@ public class Transfer {
 	}
 	
 	public String getTransferredPercentage(){
-		int tranferPercentage = ((int)(transferredBytes/transferItemSize)) * 100;
+		int tranferPercentage = (int)((transferredBytes/(double)transferItemSize) * 100);
 		return String.valueOf(tranferPercentage)+"%";
 	}
 	
@@ -35,7 +35,20 @@ public class Transfer {
 	}
 	
 	public String getTransferSpeedString(){
-		return String.valueOf(Math.round(this.getTransferSpeed()/Math.pow(10, 6) * 100) / 100)+" MB/s.";
+		long speed = this.transferSpeed;
+		int speeddigits = String.valueOf(speed).length();
+		String result;
+		//B/s
+		if(speeddigits < 3){
+			result = String.valueOf(speed)+" B/s.";
+		//KB/s
+		}else if (speeddigits > 2 && speeddigits < 6){
+			result = String.valueOf(Math.round(speed/Math.pow(10, 3) * 10) / 10)+" KB/s.";
+		//MB/s
+		}else{
+			result = String.valueOf(Math.round(speed/Math.pow(10, 6) * 100.0) / 100.0)+" MB/s.";
+		}
+		return result;
 	}
 	
 	public Computer getTargetPC(){
@@ -74,9 +87,9 @@ public class Transfer {
 		return status.toString();
 	}
 
-	public long getTransferSpeed() {
+	/*public long getTransferSpeed() {
 		return transferSpeed;
-	}
+	}*/
 
 	public void setTransferSpeed(long transferSpeed) {
 		this.transferSpeed = transferSpeed;

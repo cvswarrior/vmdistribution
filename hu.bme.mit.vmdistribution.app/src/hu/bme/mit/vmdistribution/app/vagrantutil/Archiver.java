@@ -81,7 +81,7 @@ public class Archiver {
 			out.close();
 			logger.log(Level.INFO, "Archive Created.");
 		} catch (Exception e) {
-			logger.info("createZipArchive threw exception: " + e.getMessage());
+			logger.log(Level.INFO, "createZipArchive threw exception: " + e.getMessage());
 			return false;
 
 		}

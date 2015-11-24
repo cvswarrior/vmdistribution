@@ -4,11 +4,10 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:hu.bme.mit.vmdistribution="hu.bme.mit.vmdistribution"
-    currentsetup="//@labs.3"
     torrentSeed="//@computers.5">
   <virtualmachines
       xsi:type="hu.bme.mit.vmdistribution:VagrantVM"
-      computers="//@computers.4"
+      computers="//@computers.4 //@computers.3 //@computers.2"
       name="vagrantvm_test"
       vmZipArchive="E:\vagrantvm_test.zip"
       readyToDistribute="true"
@@ -19,7 +18,7 @@
         reqSpace="12000.0"/>
   </virtualmachines>
   <virtualmachines
-      computers="//@computers.3 //@computers.0 //@computers.1"
+      computers="//@computers.3 //@computers.4 //@computers.2"
       name="customvm_test"
       vmZipArchive="e:\_TSYS\Vagrant\shared\testvm.zip">
     <requirements
@@ -28,7 +27,6 @@
         reqSpace="2000.0"/>
   </virtualmachines>
   <computers
-      virtualmachines="//@virtualmachines.1"
       name="labpc101"
       maxSpaceForVMs="20000.0"
       installedRAM="4000.0">
@@ -36,14 +34,15 @@
         hostName="192.168.100.111"/>
   </computers>
   <computers
-      virtualmachines="//@virtualmachines.1"
       name="labpc102"
       maxSpaceForVMs="15000.0"
-      installedRAM="4000.0">
+      installedRAM="4000.0"
+      architecture="x64">
     <connectioninfo
         hostName="192.168.100.112"/>
   </computers>
   <computers
+      virtualmachines="//@virtualmachines.0 //@virtualmachines.1"
       name="labpc103"
       maxSpaceForVMs="10000.0"
       installedRAM="2000.0">
@@ -51,7 +50,7 @@
         hostName="192.168.100.113"/>
   </computers>
   <computers
-      virtualmachines="//@virtualmachines.1"
+      virtualmachines="//@virtualmachines.1 //@virtualmachines.0"
       name="labpc104"
       maxSpaceForVMs="35000.0"
       installedRAM="6000.0"
@@ -60,7 +59,7 @@
         hostName="192.168.100.114"/>
   </computers>
   <computers
-      virtualmachines="//@virtualmachines.0"
+      virtualmachines="//@virtualmachines.0 //@virtualmachines.1"
       name="labpc105"
       maxSpaceForVMs="60000.0"
       installedRAM="2500.0"
@@ -127,7 +126,7 @@
         name="labpc101_conf"/>
     <computerconfigs
         computer="//@computers.1"
-        virtualmachines="//@virtualmachines.0"
+        virtualmachines="//@virtualmachines.1"
         name="labpc102_conf"/>
     <computerconfigs
         computer="//@computers.2"
@@ -135,11 +134,11 @@
         name="labpc103_conf"/>
     <computerconfigs
         computer="//@computers.3"
-        virtualmachines="//@virtualmachines.0"
+        virtualmachines="//@virtualmachines.0 //@virtualmachines.1"
         name="labpc104_conf"/>
     <computerconfigs
         computer="//@computers.4"
-        virtualmachines="//@virtualmachines.1"
+        virtualmachines="//@virtualmachines.1 //@virtualmachines.0"
         name="labpc105_conf"/>
   </labs>
   <labs name="cleanlab">
