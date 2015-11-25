@@ -2,22 +2,25 @@ package hu.bme.mit.vmdistribution.app.ssh;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.security.PublicKey;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.jcraft.jsch.ChannelExec;
-import com.jcraft.jsch.ChannelSftp;
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
-import com.jcraft.jsch.SftpException;
 
 import hu.bme.mit.vmdistribution.model.ConnectionInfo;
+import net.schmizz.sshj.SSHClient;
+import net.schmizz.sshj.transport.TransportException;
+import net.schmizz.sshj.transport.verification.HostKeyVerifier;
+import net.schmizz.sshj.userauth.UserAuthException;
+import net.schmizz.sshj.xfer.FileSystemFile;
+import net.schmizz.sshj.xfer.scp.SCPFileTransfer;
 
 public class SSHUtil {
 
@@ -38,30 +41,57 @@ public class SSHUtil {
 		session.setConfig("compression.s2c", "zlib@openssh.com, zlib, none");
 	}
 
-	public void copyFiles(final List<File> files, final String destfolder) {
-		try {
-			ChannelSftp channel = null;
-			channel = (ChannelSftp) session.openChannel("sftp");
-			channel.connect();
-			logger.log(Level.FINE, "[SFTP Channel open.]");
-			channel.cd(destfolder);//TODO relative path
-			logger.log(Level.INFO, "[Changed working directory to: " + channel.lpwd() + "]");
-			for (File file : files) {
-				logger.log(Level.INFO, "[Copying " + file.getName() + " to remote host...]");
-				channel.put(new FileInputStream(file), file.getName(), new CopyProgressMonitor());
-				logger.log(Level.INFO, "[" + file.getName() + " copied to remote host.]");
-			}
-			channel.disconnect();
-			logger.log(Level.FINE, "[SFTP Channel closed.]");
-		} catch (JSchException e) {
-			logger.log(Level.SEVERE, "ERROR: Could not open SFTP channel to host.", e);
-		} catch (SftpException e) {
-			logger.log(Level.SEVERE, "SFTP ERROR.", e);
-		} catch (FileNotFoundException e) {
-			logger.log(Level.SEVERE, "SFTP ERROR.", e);
+	public void copyFiles(final List<File> files, final String destfolder){
+		final SSHClient ssh = new SSHClient();
+        try {
+        	ssh.addHostKeyVerifier(new HostKeyVerifier() {
+				@Override
+				public boolean verify(String arg0, int arg1, PublicKey arg2) {
+					return true;
+				}
+			});
+			ssh.loadKnownHosts();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-
-	}
+        try {
+			ssh.connect("192.168.100.101");
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        try {
+        	ssh.authPassword("vagrant", "vagrant");
+        	 ssh.useCompression();
+        	
+        	 for(File filetocopy : files){
+        		 SCPFileTransfer scpupload = ssh.newSCPFileTransfer();
+            	 scpupload.setTransferListener(new CopyProgressMonitor());
+            	 scpupload.upload(new FileSystemFile((filetocopy.getAbsoluteFile())), destfolder);
+        	 }
+        	
+        } catch (UserAuthException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (TransportException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+            try {
+				ssh.disconnect();
+				ssh.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+        }
+    }
+	
 
 	public void executeCommand(final String command) {
 
@@ -91,7 +121,7 @@ public class SSHUtil {
 		}
 
 	}
-	
+
 	public void remoteExec(String command) {
 		this.connect();
 		this.executeCommand(command);

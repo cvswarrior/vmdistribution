@@ -112,8 +112,9 @@ public class UseModel {
 		}
 		
 		//copy vms to seed
-		//vm_torrentfilename_map = VMUtil.copyVmsToSeed(seed, goal);
+		vm_torrentfilename_map = VMUtil.copyVmsToSeed(seed, goal);
 
+		System.exit(0);
 		//start seeding
 		//TorrentUtil.startSeeding(seed);
 		
@@ -191,3 +192,27 @@ public class UseModel {
 	}
 
 }
+
+/* TODO list
+ * 
+ * important:
+----------
+perf analysis in real lab
+fail distr - cleanup
+jsch remove
+
+almost important:
+----------
+shutdown hook -  log failed transfers?
+
+not important:
+----------
+create javadoc
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * */
