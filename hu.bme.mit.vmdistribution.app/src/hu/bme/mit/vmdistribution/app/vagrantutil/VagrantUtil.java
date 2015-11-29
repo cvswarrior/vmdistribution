@@ -40,14 +40,13 @@ public class VagrantUtil {
 				}
 			}
 		} catch (IOException e) {
-			logger.log(Level.SEVERE, "", e);
+			logger.log(Level.SEVERE, "Got I/O exception while executing Vagrant command:", e);
 		} finally {
 			try {
 				br.close();
 				ebr.close();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				logger.log(Level.SEVERE, "ERROR closing input streams!", e);
 			}
 		}
 	}

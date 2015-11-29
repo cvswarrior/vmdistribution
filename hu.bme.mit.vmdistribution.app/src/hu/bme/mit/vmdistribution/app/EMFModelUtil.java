@@ -36,8 +36,6 @@ public class EMFModelUtil {
 		m.put("vmdistribution", new XMIResourceFactoryImpl());
 
 		ResourceSet resSet = new ResourceSetImpl();
-		// File myModel = new
-		// File("../hu.bme.mit.vmdistribution.model.tests/modeltest/My.vmdistribution");
 		this.resource = resSet.getResource(URI.createURI(modelfile.toURI().toString()), true);
 		LabSystem myLabSystem = (LabSystem) this.resource.getContents().get(0);
 		logger.log(Level.INFO, "[Model data loaded from " + modelfile.getAbsolutePath() + "]");
@@ -149,7 +147,6 @@ public class EMFModelUtil {
 							+ " does not have enough free space for the new VMs! Available: " + pc_free_space
 							+ " MB, Required: " + vms_toinstall_disk_usage + " MB");
 		}
-
 		return result;
 	}
 }

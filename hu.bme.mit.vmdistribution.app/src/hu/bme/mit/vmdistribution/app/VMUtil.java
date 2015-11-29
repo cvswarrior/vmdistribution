@@ -23,11 +23,9 @@ public class VMUtil {
 
 	public static void copyVM(final Computer target, final File vm, final String destfolder) {
 		SSHUtil sshutil = new SSHUtil(target.getConnectioninfo());
-		sshutil.connect();
 		List<File> files = new ArrayList<>();
 		files.add(vm);
 		sshutil.copyFiles(files, destfolder);
-		sshutil.disconnect();
 	}
 
 	public static Map<VirtualMachine, String> copyVmsToSeed(final Computer seed, final Lab goal) {
@@ -45,7 +43,7 @@ public class VMUtil {
 
 				if ("VagrantVM".equals(vm.eClass().getName())) {
 					VagrantVM vagrantvm = (VagrantVM) vm;
-					prepareVagrantVM(vagrantvm);
+					//prepareVagrantVM(vagrantvm);TODO
 					vmzipfile = vagrantvm.getVmZipArchive();
 					vmtorrentname = vagrantvm.getVmZipArchive().getName().replaceFirst("\u002ezip$", ".torrent");
 					copyVM(seed, vagrantvm.getVmZipArchive(), Properties.getPathString("vm_distr_target_location"));
@@ -71,7 +69,7 @@ public class VMUtil {
 		File outputzip = new File(
 				Properties.getPath("created_vagrant_vm_archives").getAbsolutePath() + vm.getName() + ".zip");
 		File foldertozip = new File(Properties.getPath("created_vagrant_vms").getAbsolutePath() + "\\" + vm.getName());
-		Archiver.createZipArchive(foldertozip.getAbsolutePath(), outputzip.getAbsolutePath());
+		//Archiver.createZipArchive(foldertozip.getAbsolutePath(), outputzip.getAbsolutePath());TODO
 		vm.setVmZipArchive(outputzip);
 		vm.setReadyToDistribute(true);
 	}

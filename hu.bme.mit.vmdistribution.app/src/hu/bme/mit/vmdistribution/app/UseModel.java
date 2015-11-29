@@ -33,10 +33,10 @@ public class UseModel {
 		System.setProperty("java.util.logging.SimpleFormatter.format",
 				"%1$tY-%1$tm-%1$td %1$tH:%1$tM:%1$tS %4$s %2$s %5$s%6$s%n");
 		Handler consoleHandler = new ConsoleHandler();
-		consoleHandler.setLevel(Level.FINER);
+		consoleHandler.setLevel(Level.FINER); //enable logging of FINER messages
 		logger_parent.removeHandler(logger_parent.getHandlers()[0]);
 		logger_parent.addHandler(consoleHandler);
-		logger_parent.setLevel(level);
+		logger_parent.setLevel(level); //set logging level
 		logger.log(Level.CONFIG, "Logging set to: " + level.getName());
 	}
 
@@ -124,6 +124,9 @@ public class UseModel {
 		// start seeding
 		TorrentUtil.startSeeding(seed);
 
+		System.out.println("stop right there!");
+		System.exit(0);//TODO
+		
 		for (Entry<Computer, List<VirtualMachine>> pc_vmlist : vms_toinstall_alsocompatible.entrySet()) {
 			List<VirtualMachine> vmstodistr = vms_toinstall_alsocompatible.get(pc_vmlist.getKey());
 			for (VirtualMachine vm : vmstodistr) {
@@ -194,17 +197,14 @@ public class UseModel {
 				}
 			}
 		} catch (UnsupportedEncodingException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			logger.log(Level.SEVERE, "UTF-8 encoding not supported, this should not happen.", e1);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.log(Level.SEVERE, "Could not read user input.", e);
 		} finally {
 			try {
 				in.close();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				logger.log(Level.SEVERE, "Could not close input stream!", e);
 			}
 		}
 	}
@@ -213,17 +213,13 @@ public class UseModel {
 /*
  * TODO list
  * 
- * important: ---------- perf analysis in real lab fail distr - cleanup jsch
- * remove
+ * important: perf analysis in real lab,  fail distr - cleanup 
  * 
- * almost important: ---------- shutdown hook - log failed transfers?
+ * almost important: shutdown hook - log failed transfers?
  * 
- * not important: ---------- create javadoc
+ * not important: create javadoc
  * 
- * 
- * 
- * 
- * 
+
  * 
  * 
  */
