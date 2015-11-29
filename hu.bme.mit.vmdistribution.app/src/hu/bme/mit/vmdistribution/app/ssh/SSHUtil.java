@@ -24,8 +24,9 @@ import net.schmizz.sshj.xfer.scp.SCPFileTransfer;
 
 public class SSHUtil {
 
-	private JSch jsch;
-	private Session session;
+	private JSch jsch;// TODO remove
+	private Session session;// TODO remove
+	private SSHClient sshclient;
 	private static final Logger logger = Logger.getLogger(SSHUtil.class.getName());
 
 	public SSHUtil(final ConnectionInfo host) {
@@ -39,40 +40,53 @@ public class SSHUtil {
 		session.setPassword(String.valueOf(host.getSshPass()));
 		session.setConfig("StrictHostKeyChecking", "no");
 		session.setConfig("compression.s2c", "zlib@openssh.com, zlib, none");
-	}
 
-	public void copyFiles(final List<File> files, final String destfolder){
-		final SSHClient ssh = new SSHClient();
-        try {
-        	ssh.addHostKeyVerifier(new HostKeyVerifier() {
+		this.sshclient = new SSHClient();
+		try {
+			sshclient.addHostKeyVerifier(new HostKeyVerifier() {
 				@Override
 				public boolean verify(String arg0, int arg1, PublicKey arg2) {
 					return true;
 				}
 			});
-			ssh.loadKnownHosts();
+			sshclient.loadKnownHosts();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-        try {
-			ssh.connect("192.168.100.101");
-			
+		try {
+			sshclient.connect(host.getHostName());
+
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-        try {
-        	ssh.authPassword("vagrant", "vagrant");
-        	 ssh.useCompression();
-        	
-        	 for(File filetocopy : files){
-        		 SCPFileTransfer scpupload = ssh.newSCPFileTransfer();
-            	 scpupload.setTransferListener(new CopyProgressMonitor());
-            	 scpupload.upload(new FileSystemFile((filetocopy.getAbsoluteFile())), destfolder);
-        	 }
-        	
-        } catch (UserAuthException e) {
+
+		try {
+			sshclient.authPassword(host.getSshUser(), host.getSshPass());
+		} catch (UserAuthException | TransportException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			sshclient.useCompression();
+		} catch (TransportException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public void copyFiles(final List<File> files, final String destfolder) {
+
+		try {
+
+			for (File filetocopy : files) {
+				SCPFileTransfer scpupload = sshclient.newSCPFileTransfer();
+				scpupload.setTransferListener(new CopyProgressMonitor());
+				scpupload.upload(new FileSystemFile(filetocopy.getAbsoluteFile()), destfolder);
+			}
+
+		} catch (UserAuthException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (TransportException e) {
@@ -82,23 +96,18 @@ public class SSHUtil {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
-            try {
-				ssh.disconnect();
-				ssh.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-        }
-    }
-	
+			disconnect();
+		}
+	}
 
 	public void executeCommand(final String command) {
 
+		BufferedReader in = null;
+		BufferedReader err = null;
 		try {
 			ChannelExec channel = (ChannelExec) session.openChannel("exec");
-			BufferedReader in = new BufferedReader(new InputStreamReader(channel.getInputStream()));
-			BufferedReader err = new BufferedReader(new InputStreamReader(channel.getErrStream()));
+			in = new BufferedReader(new InputStreamReader(channel.getInputStream(), "UTF-8"));
+			err = new BufferedReader(new InputStreamReader(channel.getErrStream(), "UTF-8"));
 			channel.setCommand(command);
 			channel.connect();
 			logger.log(Level.FINE, "[SSH Channel open.]");
@@ -118,8 +127,15 @@ public class SSHUtil {
 			logger.log(Level.SEVERE, "ERROR: Could not open SSH channel to host.", e);
 		} catch (IOException e) {
 			logger.log(Level.SEVERE, "ERROR: Could not open input stream on remote host.", e);
+		} finally {
+			try {
+				in.close();
+				err.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
-
 	}
 
 	public void remoteExec(String command) {
@@ -139,6 +155,18 @@ public class SSHUtil {
 
 	public void disconnect() {
 		session.disconnect();
+		try {
+			sshclient.disconnect();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		try {
+			sshclient.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		logger.log(Level.INFO, "SSH: Disconnected from " + session.getHost());
 	}
 }

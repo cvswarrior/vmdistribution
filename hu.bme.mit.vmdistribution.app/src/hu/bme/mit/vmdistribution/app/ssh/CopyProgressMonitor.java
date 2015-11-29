@@ -34,7 +34,7 @@ public class CopyProgressMonitor implements TransferListener {
 		return new StreamCopier.Listener() {
 			@Override
 			public void reportProgress(long transferred) throws IOException {
-				if (transferred > 100000000 * hundredmegs) {
+				if (transferred > 100000000L * hundredmegs) {
 					logger.log(Level.INFO, ">> Transferred " + (int) (transferred / 1000000.0) + "MB("
 							+ ((transferred * 100) / size) + "%) of " + path + "");
 					hundredmegs++;

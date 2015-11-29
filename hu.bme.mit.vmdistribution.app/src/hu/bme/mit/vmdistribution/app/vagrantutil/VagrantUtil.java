@@ -9,37 +9,46 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class VagrantUtil {
-	
+
 	private static final Logger logger = Logger.getLogger(VagrantUtil.class.getName());
-	
-	public static void runVagrantCommand(final String command, final File vagrantfile){
-		
+
+	public static void runVagrantCommand(final String command, final File vagrantfile) {
+
 		Process process;
+		BufferedReader br = null;
+		BufferedReader ebr = null;
 		try {
 			process = Runtime.getRuntime().exec(command, null, vagrantfile.getParentFile());
 			InputStream is = process.getInputStream();
 			InputStream eis = process.getErrorStream();
-			InputStreamReader isr = new InputStreamReader(is);
-			InputStreamReader eisr = new InputStreamReader(eis);
-			BufferedReader br = new BufferedReader(isr);
-			BufferedReader ebr = new BufferedReader(eisr);
+			InputStreamReader isr = new InputStreamReader(is, "UTF-8");
+			InputStreamReader eisr = new InputStreamReader(eis, "UTF-8");
+			br = new BufferedReader(isr);
+			ebr = new BufferedReader(eisr);
 			String line;
 			String eline;
-			
+
 			while ((line = br.readLine()) != null) {
 				logger.log(Level.INFO, line);
 			}
-			
-			if((eline = ebr.readLine()) != null){
+
+			if ((eline = ebr.readLine()) != null) {
 				logger.log(Level.SEVERE, "VAGRANT ERROR:");
 				logger.log(Level.SEVERE, eline);
 				while ((eline = ebr.readLine()) != null) {
-						logger.log(Level.SEVERE, eline);
-					}
+					logger.log(Level.SEVERE, eline);
+				}
 			}
 		} catch (IOException e) {
 			logger.log(Level.SEVERE, "", e);
+		} finally {
+			try {
+				br.close();
+				ebr.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
-	}	
-
+	}
 }
