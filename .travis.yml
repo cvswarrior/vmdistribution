@@ -3,23 +3,4 @@ jdk:
   - oraclejdk7
 notifications:
   email: false
-env:
-  global:
-   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
-   #   via the "travis encrypt" command using the project repo's public key
-   - secure: "Shs3NHPZyNfTBsOiTwiPSJoESHbqJgAfydxuliCAw4FBLkFp4x4yst0qvQZRM1l85fWD3oHxhb7dB6CA6y4clakbnL95LFprZC4hbcE5Jmqko
-5QQ487JM9VUC7ZInEtDR6Gf5YVBveZMbUQ7aTe1hntTSP0dEOj5gy780cG7DcIQVPep+9df/83pr3mRMemkJYYIptD3IoUZ4MbL2psffeWEj8EhtdIQjfzSU
-mxEyc5YyUnsV0zezikqDVKjy1QHKvFkk/Vs2Utyfh19MkM1VXe+elCEDBtGmPIOM5t5o5Ui4VZpB2JNxK5YKSGfB1JZW0ABM4mMq5NdmfVM9oBtADajzQc/b
-xCEr2XdI1YY/EySyKOX6B+4cdINkE1RJ8ysRiW5X9sIxfnNB+/sHdficwhBU/VSLpNLQDDXRWuWP/h4F83fkT5F1pzLen/3FRtRPsIihREKphg3mP+Z5V3du
-1/+JzTMppIbOpIRJnxNjaQTyGgFRGwBn83gRy7TGmUoz8SItGayNFrmmNdjgQQNXW0GkecB+mjxOUI6a0tN+8kJ9RjXDJrydOR9iyy+e47LaBu1wmHjZY4a/
-O1Ci/pcrb+6wYcenp78ZaMG082pUDvEzwhq2mCgK6qU2OUqUd71/4SjcRzbh+8pdvr9JK3hGKlrQ5yv+eLRcrTBPxxXwyc="
 
-addons:
-  coverity_scan:
-    project:
-      name: "cvswarrior/vmdistribution"
-      description: "Build submitted via Travis CI"
-    notification_email: propump@utmail.net
-    build_command_prepend: "mvn clean"
-    build_command:   "mvn -DskipTests=true compile install"
-    branch_pattern: coverity_scan
