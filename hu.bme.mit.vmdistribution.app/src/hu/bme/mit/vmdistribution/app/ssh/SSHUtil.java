@@ -16,19 +16,42 @@ import net.schmizz.sshj.transport.verification.HostKeyVerifier;
 import net.schmizz.sshj.xfer.FileSystemFile;
 import net.schmizz.sshj.xfer.scp.SCPFileTransfer;
 
+/**
+ * This class is responsible for estabilishing SSH connections to remote
+ * machines and executing commands over ssh and sending files via SCP.
+ * 
+ * @author BVincze
+ */
 public class SSHUtil {
 
+	/**
+	 * Represents the connection to the remote host.
+	 */
 	private SSHClient sshClient;
+	/**
+	 * Contains every information needed to establilish an SSH connection:
+	 * hostname, user and password.
+	 */
 	private ConnectionInfo remoteHost;
-	private static final Logger logger = Logger.getLogger(SSHUtil.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(SSHUtil.class.getName());
 
+	/**
+	 * Creates an SSH session to the remote host using the provided credentials.
+	 * Host key verification is disabled to allow ease of use.
+	 * 
+	 * @param host
+	 *            The {@link ConnectionInfo} which contains every information
+	 *            needed to establilish an SSH connection, field of
+	 *            {@link Computer} objects.
+	 */
 	public SSHUtil(final ConnectionInfo host) {
 		this.remoteHost = host;
 		this.sshClient = new SSHClient();
 
+		// disable host key verification - return true for any combination
 		sshClient.addHostKeyVerifier(new HostKeyVerifier() {
 			@Override
-			public boolean verify(String arg0, int arg1, PublicKey arg2) {
+			public boolean verify(final String arg0, final int arg1, final PublicKey arg2) {
 				return true;
 			}
 		});
@@ -37,13 +60,22 @@ public class SSHUtil {
 			sshClient.connect(host.getHostName());
 			sshClient.authPassword(host.getSshUser(), host.getSshPass());
 			sshClient.useCompression();
-			logger.log(Level.INFO, "SSH: Connected to " + sshClient.getRemoteHostname());
+			LOGGER.log(Level.INFO, "SSH: Connected to " + sshClient.getRemoteHostname());
 		} catch (IOException e) {
-			logger.log(Level.SEVERE, "ERROR connecting to host: " + sshClient.getRemoteHostname(), e);
+			LOGGER.log(Level.SEVERE, "ERROR connecting to host: " + sshClient.getRemoteHostname(), e);
 		}
 	}
 
-	public void copyFiles(final List<File> files, final String destfolder) {
+	/**
+	 * Copies files via SCP to the host this instance is connected to. Uses
+	 * {@link CopyProgressMonitor} to monitor upload progress.
+	 * 
+	 * @param files
+	 *            A {@link List} of {@link File}s to copy
+	 * @param destfolder
+	 *            The destination folder on the remote host.
+	 */
+	public final void copyFiles(final List<File> files, final String destfolder) {
 		try {
 			for (File filetocopy : files) {
 				SCPFileTransfer scpupload = sshClient.newSCPFileTransfer();
@@ -51,42 +83,46 @@ public class SSHUtil {
 				scpupload.upload(new FileSystemFile(filetocopy.getAbsoluteFile()), destfolder);
 			}
 		} catch (IOException e) {
-			logger.log(Level.SEVERE, "ERROR, SCP upload failed: ", e);
+			LOGGER.log(Level.SEVERE, "ERROR, SCP upload failed: ", e);
 		} finally {
 			try {
 				sshClient.disconnect();
 			} catch (IOException e) {
-				logger.log(Level.SEVERE, "ERROR disconnecting ssh session.", e);
+				LOGGER.log(Level.SEVERE, "ERROR disconnecting ssh session.", e);
 			}
 		}
 	}
 
-	public void remoteExec(final String command) {
-
+	/**
+	 * Executes a command on the remote host.
+	 * 
+	 * @param command
+	 *            The command to be executed.
+	 */
+	public final void remoteExec(final String command) {
 		Session session = null;
 		try {
 			session = this.sshClient.startSession();
-			logger.log(Level.FINE, "[SSH session open.]");
+			LOGGER.log(Level.FINE, "[SSH session open.]");
 			final Command cmd = session.exec(command);
 			String commandprefix = remoteHost.getSshUser() + "@" + sshClient.getRemoteHostname() + ": ";
-			logger.log(Level.INFO, "[Command sent: " + commandprefix + command + "]");
-			logger.log(Level.INFO, IOUtils.readFully(cmd.getInputStream()).toString());
+			LOGGER.log(Level.INFO, "[Command sent: " + commandprefix + command + "]");
+			LOGGER.log(Level.INFO, IOUtils.readFully(cmd.getInputStream()).toString());
 			String execerrors = IOUtils.readFully(cmd.getErrorStream()).toString();
-			if(execerrors != null && execerrors.length()>0){
-				logger.log(Level.SEVERE, execerrors);
+			if (execerrors != null && execerrors.length() > 0) {
+				LOGGER.log(Level.SEVERE, execerrors);
 			}
 		} catch (IOException e) {
-			logger.log(Level.SEVERE, "ERROR executing command over ssh:", e);
+			LOGGER.log(Level.SEVERE, "ERROR executing command over ssh:", e);
 		} finally {
 			try {
 				session.close();
-				logger.log(Level.FINE, "[SSH session closed.]");
+				LOGGER.log(Level.FINE, "[SSH session closed.]");
 				sshClient.disconnect();
-				logger.log(Level.INFO, "SSH: Disconnected from " + sshClient.getRemoteHostname());
+				LOGGER.log(Level.INFO, "SSH: Disconnected from " + sshClient.getRemoteHostname());
 			} catch (IOException e) {
-				logger.log(Level.SEVERE, "ERROR disconnecting ssh session.", e);
+				LOGGER.log(Level.SEVERE, "ERROR disconnecting ssh session.", e);
 			}
 		}
 	}
-
 }
