@@ -6,22 +6,12 @@ Ebben a fejezetben a feladat megértéséhez szükséges technológiákat mutato
 	\item Ennél valószínűleg valami hosszabb intro kellene ide 
 \end{itemize}
 
-
-%----------------------------------------------------------------------------
-\section{Metamodellezés}
-%----------------------------------------------------------------------------
-\begin{itemize}
-  \item modellezés mire jó
-  \item	használata hogyan segíthet a feladat megoldásában
-  \item eclipse EMF-et használva ez hogyan teljesül
-\end{itemize}
-
 %----------------------------------------------------------------------------
 \section{Virtuális gépek}
 %----------------------------------------------------------------------------
 \begin{itemize}
   \item általában egy virtuális gép mire jó
-  \item	vagrant szerepe virtuális gépek létrehozásbában/konfigurálásában
+  \item	vagrant szerepe virtuális gépek létrehozásában/konfigurálásában
 \end{itemize}
 
 %----------------------------------------------------------------------------
@@ -29,9 +19,9 @@ Ebben a fejezetben a feladat megértéséhez szükséges technológiákat mutato
 %----------------------------------------------------------------------------
 A Peer-to-Peer(P2P) hálózat olyan, aminek a csomópontjai nem egy kitüntetett géppel 
 kommunikálnak, hanem közvetlenül egymással. A klasszikus kliens-szerver és a P2P hálózat felépítését
-a következő ábra szemlélteti: %~\ref{fig:networkcomparison} így kell ábráráa hivatkozni
+a~\ref{fig:networkcomparison}~ábra szemlélteti.
 
-\begin{figure}[!ht]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=50mm, keepaspectratio]{figures/P2P-network.png}\hspace{1cm}
 	\includegraphics[width=50mm, keepaspectratio]{figures/Server-based-network.png}
@@ -40,17 +30,26 @@ a következő ábra szemlélteti: %~\ref{fig:networkcomparison} így kell ábrá
 \end{figure}
 
 P2P hálózat használatának fő előnye a robusztusság és a skálázhatóság, mivel nincs központi elem,
-aminek a meghibásodása szolgáltatáskiesést okozhatna, illetve a hálózat minden tagja hozzájárul a
-szolgáltatás minőségének fenntartásához. (pl. P2P alapú fájlmegosztás esetén esetén a letöltés
-mellett fel is tölt) Hátrányai közül a két legjelentősebb a nehezebb karbantarthatóság, és az
+aminek a meghibásodása szolgáltatáskiesést okozhatna, illetve a hálózat min (például P2P alapú fájlmegosztás esetén esetén a letöltés
+mellett fel is tölt). Hátrányai közül a két legjelentősebb a nehezebb karbantarthatóság, és az
 esetlegesen fellépő sebességproblémák internetszolgáltató-oldali forgalomkorlátozások miatt.
 A P2P alapú technológiák egyik legnagyobb felhasználási területe a tartalomszolgáltatás, ezen belül
-az egyik legismertebb ilyen technológiát használó protokoll a Bittorrent. A Bittorrent protokollt
+az egyik legismertebb ilyen technológiát használó protokoll a Bittorrent. A Bittorrent~\cite{cohen2008bittorrent} protokollt
 fájlmegosztásra használjuk, a mögötte álló alapvető ötlet az, hogy a megosztandó fájlokat
 feldaraboljuk, és a letöltőknek ezeket a darabokat nem ugyanolyan sorrendben adjuk oda, így ők a
 hiányzó darabokat egymástól is tudják tölteni. 
 
 \begin{itemize}
-  \item protokoll által használt terminolódia bemutatása (seed, tracker, leecher \ldots)
-  \item a megoldáshoz használt konkrét alkalmazások rövid lerása (rTorrent, opentracker))
+  \item protokoll által használt terminológia bemutatása (seed, tracker, leecher \ldots)
+  \item a megoldáshoz használt konkrét alkalmazások rövid leírása (rTorrent, opentracker))
+\end{itemize}
+
+
+%----------------------------------------------------------------------------
+\section{Metamodellezés}
+%----------------------------------------------------------------------------
+\begin{itemize}
+  \item modellezés mire jó
+  \item	használata hogyan segíthet a feladat megoldásában
+  \item eclipse EMF-et használva ez hogyan teljesül
 \end{itemize}

@@ -122,23 +122,20 @@
   <labs name="mixed_test">
     <computerconfigs
         computer="//@computers.0"
-        virtualmachines="//@virtualmachines.0"
+        virtualmachines="//@virtualmachines.0 //@virtualmachines.1"
         name="labpc101_conf"/>
     <computerconfigs
         computer="//@computers.1"
-        virtualmachines="//@virtualmachines.1"
+        virtualmachines="//@virtualmachines.1 //@virtualmachines.0"
         name="labpc102_conf"/>
     <computerconfigs
         computer="//@computers.2"
-        virtualmachines="//@virtualmachines.0 //@virtualmachines.1"
         name="labpc103_conf"/>
     <computerconfigs
         computer="//@computers.3"
-        virtualmachines="//@virtualmachines.0 //@virtualmachines.1"
         name="labpc104_conf"/>
     <computerconfigs
         computer="//@computers.4"
-        virtualmachines="//@virtualmachines.1 //@virtualmachines.0"
         name="labpc105_conf"/>
   </labs>
   <labs name="cleanlab">

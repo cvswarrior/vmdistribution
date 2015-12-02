@@ -71,7 +71,10 @@ public class SSHUtil {
 			String commandprefix = remoteHost.getSshUser() + "@" + sshClient.getRemoteHostname() + ": ";
 			logger.log(Level.INFO, "[Command sent: " + commandprefix + command + "]");
 			logger.log(Level.INFO, IOUtils.readFully(cmd.getInputStream()).toString());
-			logger.log(Level.SEVERE, IOUtils.readFully(cmd.getErrorStream()).toString());
+			String execerrors = IOUtils.readFully(cmd.getErrorStream()).toString();
+			if(execerrors != null && execerrors.length()>0){
+				logger.log(Level.SEVERE, execerrors);
+			}
 		} catch (IOException e) {
 			logger.log(Level.SEVERE, "ERROR executing command over ssh:", e);
 		} finally {

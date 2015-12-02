@@ -10,12 +10,12 @@
 \newcommand{\vikszerzoVezeteknev}{Vincze}
 \newcommand{\vikszerzoKeresztnev}{Balázs}
 \newcommand{\vikkonzulensA}{Semeráth Oszkár} % Első konzulens neve
-\newcommand{\vikkonzulensB}{} % Második konzulens neve; hagyd üresen, ha egy konzulensed van.
+\newcommand{\vikkonzulensB}{Szombath István} % Második konzulens neve; hagyd üresen, ha egy konzulensed van.
 \newcommand{\vikcim}{Peer-to-peer alapú számítógépes infrastruktúra kialakítása oktatási környezetben} % Cím
 \newcommand{\viktanszek}{\bmemit} % Tanszék
 \newcommand{\vikdoktipus}{\bsc} % Dokumentum típusa (\bsc, \msc)
 
-\input{include/tdk-variables.tex}
+%\input{include/tdk-variables.tex}
 \newcommand{\szerzoMeta}{\vikszerzoVezeteknev{} \vikszerzoKeresztnev} % egy szerző esetén
 
 \input{include/thesis-hu}  % Beállítások magyar nyelvű dolgozathoz
@@ -35,6 +35,7 @@
 % Declaration and Abstract
 	\include{include/declaration}
 	\include{content/abstract}
+	\includepdf[pages={1}]{include/taskdescr.pdf}
 
 % The main part of the thesis
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -58,7 +59,7 @@
 
 % Bibliography
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	\bibliography{bib/mybib}
+	\bibliography{bib/references}
 	\addcontentsline{toc}{chapter}{\irodalomjegyzek}
 
 % Appendix  - not needed

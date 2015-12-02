@@ -14,6 +14,11 @@
 \setcounter{secnumdepth}{2}
 
 \sloppy % Margón túllógó sorok tiltása.
+
+\usepackage{etoolbox}%bibliography warning fixes
+\apptocmd{\sloppy}{\hbadness 10000\relax}{}{}
+\apptocmd{\thebibliography}{\raggedright}{}{}
+
 \widowpenalty=10000 \clubpenalty=10000 %A fattyú- és árvasorok elkerülése
 \def\hyph{-\penalty0\hskip0pt\relax} % Kötőjeles szavak elválasztásának engedélyezése
 
@@ -22,8 +27,8 @@
 % Setup hyperref package
 %--------------------------------------------------------------------------------------
 \hypersetup{
-    bookmarks=true,            % show bookmarks bar?
-    unicode=false,              % non-Latin characters in Acrobat's bookmarks
+    %bookmarks=true,            % show bookmarks bar?
+    unicode=true,              % wtf was this set to false\ldots
     pdftitle={\vikcim},        % title
     pdfauthor={\szerzoMeta},    % author
     pdfsubject={\vikdoktipus}, % subject of the document
@@ -35,7 +40,8 @@
     linkcolor=black,           % color of internal links
     citecolor=black,           % color of links to bibliography
     filecolor=black,           % color of file links
-    urlcolor=black             % color of external links
+    urlcolor=black,             % color of external links
+    pageanchor=false
 }
 
 

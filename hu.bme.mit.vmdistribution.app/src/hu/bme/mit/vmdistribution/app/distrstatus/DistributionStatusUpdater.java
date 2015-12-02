@@ -16,6 +16,7 @@ public class DistributionStatusUpdater implements Runnable {
 	private Map<Computer, RTorrentXmlRpcClient> xmlRpcClientsMap;
 	private static final int UPDATE_TIMEOUT_MILIS = 10000;
 	private static final Logger logger = Logger.getLogger(DistributionStatusUpdater.class.getName());
+	//private volatile boolean isComplete = false;
 
 	public DistributionStatusUpdater(final List<Transfer> transfers) {
 		this.transfers = transfers;
@@ -49,7 +50,8 @@ public class DistributionStatusUpdater implements Runnable {
 					}
 				}
 				if (allfinished) {
-					logger.log(Level.INFO, "[All transfers are finished, distribution is complete]");
+					logger.log(Level.INFO, "[All transfers are finished, distribution is complete, press ENTER to continue.]");
+					//isComplete = true;
 					break;
 				}
 
@@ -71,4 +73,8 @@ public class DistributionStatusUpdater implements Runnable {
 		}
 		return incompletetransfers;
 	}
+	
+	/*public synchronized boolean getIsComplete(){
+		return isComplete;
+	}*/
 }

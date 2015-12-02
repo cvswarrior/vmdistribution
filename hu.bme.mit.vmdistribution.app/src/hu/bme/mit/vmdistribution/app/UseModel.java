@@ -124,8 +124,8 @@ public class UseModel {
 		// start seeding
 		TorrentUtil.startSeeding(seed);
 
-		System.out.println("stop right there!");
-		System.exit(0);//TODO
+		/*System.out.println("stop right there!");
+		System.exit(0);//TODO*/
 		
 		for (Entry<Computer, List<VirtualMachine>> pc_vmlist : vms_toinstall_alsocompatible.entrySet()) {
 			List<VirtualMachine> vmstodistr = vms_toinstall_alsocompatible.get(pc_vmlist.getKey());
@@ -159,7 +159,7 @@ public class UseModel {
 		// call distr progress loop
 		try {
 			logger.log(Level.INFO, "[Giving 10s grace period before asking for progress updates...]");
-			Thread.sleep(10);// TODO
+			Thread.sleep(10000);// TODO
 		} catch (InterruptedException e) {
 			logger.log(Level.SEVERE, "Waiting interrupted.", e);
 		}
