@@ -1,19 +1,21 @@
 %----------------------------------------------------------------------------
 \chapter{Bevezető} 
 %----------------------------------------------------------------------------
-\begin{itemize}
-  \item A mese jön ide: van egy labor ahol a virtuális gépeket kell teríteni \ldots
-  \item A most használt megoldás rövid bemutatása
-\end{itemize}
 
 Egyetemi gyakorlatok során a hallgatók egy előre összeállított környezetben (például virtuális
 gépeken) dolgoznak, melyet a tárgy oktatói készítenek el. Adott tanóra kezdése előtt 
+ez azzal a feladattal jár, hogy különböző tartalmú tömörített állományokat kell a megfelelő gépeken elhelyezni és kibontani. Ezeknek a gyakran nagy méretű fájloknak a több helyre történő másolása ``kézzel'', vagyis egy adathordozóval körbejárva a termet igen időigényes és körülményes lenne, ezért használnak az oktatók egy Chaincast~\cite{kiraly2011chaincast} alapú programot a folyamat felgyorítására. Leegyszerűsítve ez a program annyit csinál, hogy a kapott adatokat lementi és ezzel párhuzamosan továbbítja, így ha ez minden gépen fut és megfelelően van beállítva, akkor elérhető, hogy adott gépről az összes többire terítsünk fájlokat. Erről a láncsszerű mőködésről kapta a nevét a használt Chaincast módszer, amelyet a [TODO: chaincast ábra] szemléltet.
 
 %----------------------------------------------------------------------------
 \section{Problémafelvetés}
 %----------------------------------------------------------------------------
+
+Az előbb ismertetett terítési megoldás használatával kapcsolatban több probléma is felmerül:
+
 \begin{itemize}
-  \item A most használt megoldás hiányosságai 
+  \item Ha adatküldés közben a lánc bárhol megszakad, akkor az egész folyamatot kezdhetjük előről, ami komoly robuszutsság és skálázhatósági problémákhoz vezet: előbbiekhez mert egy ilyen szakadást sokféle hiba okozhat, elég csak arra gondolni, hogy a laborban levő gépeken várhatóan nem egy magas rendelkezésre állású, hibatűrő operációs rendszer fut. A skálázhatóság pedig ott jön szóba, hogy minél több gépet kapcsolunk be a küldési láncba, annál valószínűbb, hogy a terítés meg fog szakadni egy hiba miatt.
+   \item A program konfigurálása körülményes: ha például egy újonnan indult tanórára készítenénk fel a termet, ahol a gépeknek valami nemtriviális részhalmazára terítenénk (értsd nem az összesre, vagy eddig beállított terítéseknél használtakra), akkor az adott küldése lánc minden elemének újrakonfigurálásával fog járni.
+   \item A terítést a tárgyak oktatói végzik, akik nem rendszergazdák: egyes fellépő problémákat nem feltétlen tudnak maguktól elhárítani. Ebbe beletartozik a használt alkalmazásnak a megfelelő beállítása, illetve a terítés során fellépő hibák kijavítása.
 \end{itemize}
 
 %----------------------------------------------------------------------------
@@ -22,6 +24,9 @@ gépeken) dolgoznak, melyet a tárgy oktatói készítenek el. Adott tanóra kez
 \begin{itemize}
   \item Milyen hiányoságok javítását, funkcionalitások módostását tűzzük ki célul
 \end{itemize}
+Célul tűzőm ki, hogy a most használt, Chaincast alapú fájlterítő megoldás kiváltására egy olyan alternatívát hozzak létre, amely a következő 
+
+
 %----------------------------------------------------------------------------
 \section{Kontribúció}
 %----------------------------------------------------------------------------
@@ -43,6 +48,6 @@ gépeken) dolgoznak, melyet a tárgy oktatói készítenek el. Adott tanóra kez
 %----------------------------------------------------------------------------
 \section{Dolgozat felépítése}
 %----------------------------------------------------------------------------
-\begin{itemize}
-  \item Köv. fejezet a megoldáshoz használt háttérismereteket, technológiákat mutatja be, a 3. fejezet \ldots
-\end{itemize}
+
+Dolgozatom a következőképpen épül fel:
+Az ezutáni fejezetben bemutatom a munkám során használt fontosabb technológiákat, és a megértéséhez szükséges háttérismereteket. A harmadik fejezet a tervezési fázis leírásáról: azon belül a labor modelljének a megalkotásáról, illetve magát a terítés folyamatás alkotó lépéseknek a bemutatásáról fog szólni. A negyedik fejezet az alkalmazás implementációját részletezi, különös figyelmet szentelve annak Java nyelvű megvalósításának. Az ötödik fejezetben a létrehozott program működését ellenőrizzük, annak teljesítménnyét elemezzük, és végül az utolsó fejezetben a dolgozat eredményeit összegezzük, annak a továbbfejlesztési lehetőségeit nézzük meg.
