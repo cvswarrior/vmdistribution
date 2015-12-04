@@ -118,6 +118,21 @@
 			<artifactId>sshj</artifactId>
 			<version>0.15.0</version>
 		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-nop</artifactId>
+			<version>1.7.13</version>
+		</dependency>
+		<dependency>
+			<groupId>net.vrallev.ecc</groupId>
+			<artifactId>ecc-25519-java</artifactId>
+			<version>1.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.13</version>
+		</dependency>
 	</dependencies>
 
 	<reporting>
@@ -153,7 +168,7 @@
 					<targetJdk>1.7</targetJdk>
 					<linkXRef>false</linkXRef>
 					<skipEmptyReport>false</skipEmptyReport>
-				</configuration>	
+				</configuration>
 				<reportSets>
 					<reportSet>
 						<reports>
@@ -164,7 +179,7 @@
 			</plugin>
 		</plugins>
 	</reporting>
-	
+
 	<repositories>
 		<repository>
 			<id>acceleo</id>

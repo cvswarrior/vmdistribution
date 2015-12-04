@@ -45,7 +45,8 @@ public final class TorrentUtil {
 		LOGGER.log(Level.INFO, "[Copying torrent file " + torrentfilename + " to " + target.getName() + ".]");
 		StringBuilder command = new StringBuilder(Properties.getPathString("script_copy_torrent") + " ");
 		command.append(target.getConnectioninfo().getHostName() + " ");
-		command.append(String.valueOf(target.getConnectioninfo().getSshPass()) + " ");
+		command.append(target.getConnectioninfo().getSshUser() + " ");
+		command.append(target.getConnectioninfo().getSshPass() + " ");
 		command.append(torrentfilename);
 		sshutil.remoteExec(command.toString());
 	}
@@ -115,7 +116,8 @@ public final class TorrentUtil {
 		SSHUtil sshutil = new SSHUtil(seed.getConnectioninfo());
 		StringBuilder command = new StringBuilder(Properties.getPathString("script_start_leeching") + " ");
 		command.append(target.getConnectioninfo().getHostName() + " ");
-		command.append(String.valueOf(target.getConnectioninfo().getSshPass()));
+		command.append(target.getConnectioninfo().getSshUser() + " ");
+		command.append(target.getConnectioninfo().getSshPass());
 		sshutil.remoteExec(command.toString());
 		LOGGER.log(Level.INFO, "[Torrent client started on " + target.getName() + ".]");
 	}

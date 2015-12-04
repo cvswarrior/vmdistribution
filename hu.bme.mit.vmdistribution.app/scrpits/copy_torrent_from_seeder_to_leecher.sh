@@ -1,8 +1,9 @@
 #!/bin/bash
 
 #param1 hostname
-#param2 host pass
-#param3 torrentfile name
+#param2 ssh user
+#param3 ssh pass
+#param4 torrentfile name
 
-sshpass -p "$2" scp -o StrictHostKeyChecking=no ~/Torrents/$3 vagrant@$1:~/Torrents
-echo "Copied $3 to $1:~/Torrents"
+sshpass -p "$3" scp -o StrictHostKeyChecking=no ~/Torrents/$4 $2@$1:~/Torrents
+echo "Copied $4 to $1:~/Torrents"

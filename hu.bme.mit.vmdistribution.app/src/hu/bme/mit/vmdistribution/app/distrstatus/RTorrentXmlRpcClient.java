@@ -4,6 +4,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -35,6 +36,8 @@ public class RTorrentXmlRpcClient extends XmlRpcClient {
 		super();
 		XmlRpcClientConfigImpl config = new XmlRpcClientConfigImpl();
 		try {
+			LOGGER.log(Level.FINE, "Setting XMLRPC client for " + target.getName() + ": " + "http://"
+					+ target.getConnectioninfo().getHostName() + "/RPC2");
 			config.setServerURL(new URL("http://" + target.getConnectioninfo().getHostName() + "/RPC2"));
 			// we need to enable extensions to support i8 type responses from
 			// rtorrent, also need to set XMLRPC dialect to apache in rtorrent's
@@ -54,11 +57,12 @@ public class RTorrentXmlRpcClient extends XmlRpcClient {
 	 */
 	public final void updateTransferStatus(final Transfer t) {
 		// get the infohash of the torrent being transferred
-		String[] params = new String[] {
-				t.getTransferItemHash()
-				};
+		String[] params = new String[] { t.getTransferItemHash() };
 		try {
 			// get relevant infos
+			LOGGER.log(Level.FINE, "Updating transfer status for Transfer: " + t.getTransferItem().getName() + "->"
+					+ t.getTargetPC().getName());
+			LOGGER.log(Level.FINE, "parameters: infohash=" + params[0]);
 			long downloaded_bytes = (long) this.execute("d.get_completed_bytes", params);
 			long iscomplete = (long) this.execute("d.get_complete", params);
 			long download_speed = (long) this.execute("d.get_down_rate", params);
@@ -84,9 +88,7 @@ public class RTorrentXmlRpcClient extends XmlRpcClient {
 	 */
 	public final Map<String, String> getTorrentInfoHashes() {
 		// get a filename/infohash pair from the "main" view
-		String[] params = new String[] {
-				"main", "d.get_base_filename=", "d.get_hash="
-				};
+		String[] params = new String[] { "main", "d.get_base_filename=", "d.get_hash=" };
 		Object[] result = null;
 		Map<String, String> infohashesmap = new HashMap<>();
 		try {
@@ -100,6 +102,10 @@ public class RTorrentXmlRpcClient extends XmlRpcClient {
 			}
 		} catch (XmlRpcException e) {
 			LOGGER.log(Level.SEVERE, "ERROR executing XMLRPC call.", e);
+		}
+		LOGGER.log(Level.FINE, "Got torrent info hashes:");
+		for(Entry<String, String> e : infohashesmap.entrySet()){
+			LOGGER.log(Level.FINE, e.getKey()+":"+e.getValue());
 		}
 		return infohashesmap;
 	}

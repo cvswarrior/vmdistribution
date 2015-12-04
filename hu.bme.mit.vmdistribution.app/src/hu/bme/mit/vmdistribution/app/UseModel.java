@@ -216,6 +216,15 @@ public final class UseModel {
 			}
 		}
 
+		try {
+			LOGGER.log(Level.INFO, "[Giving 10s grace period before getting torrent infohashes...]");
+			// Grace period for seed to load all torrent files and start seeding them
+			// Rtorrent is set to start torrents every 5 seconds, 10s should be enough. Leechers should be also ready by the end of this pause.
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			LOGGER.log(Level.SEVERE, "Waiting interrupted.", e);
+		}
+		
 		// get torrent info hashes - these are required to get progress info
 		// from the torrent clients,
 		// the seed has all torrent files so get them from it
@@ -237,17 +246,7 @@ public final class UseModel {
 			}
 		}
 
-		// call distribution progress loop
-		try {
-			LOGGER.log(Level.INFO, "[Giving 10s grace period before asking for progress updates...]");
-			// grace period for all clients to start leeching, 10s should be
-			// enough as rtorrent is set to start torrents every 5 seconds.
-			Thread.sleep(10000);
-		} catch (InterruptedException e) {
-			LOGGER.log(Level.SEVERE, "Waiting interrupted.", e);
-		}
-
-		// start the progress loop - get the progress info of all transfers and
+		// start the distribution progress loop - get the progress info of all transfers and
 		// display it to the user every few seconds
 		distributionProgressLoop(transfers);
 
