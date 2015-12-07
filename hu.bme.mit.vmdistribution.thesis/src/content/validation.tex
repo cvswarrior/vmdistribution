@@ -30,9 +30,11 @@ A programom teljesítményének elemzéséhez a következő méréseket végezte
 Továbbá, hogy legyen összehasonlítási alap  az eredeti Chaincast alapú terítést is lefuttattam 25 gépre 1,2,4 és 8 GiB méretű fájlokkal.
 A mérési eredmények az alkalmazásom futásakor keletkező logfájlból származnak, Chaincast esetében pedig a Jenkins webes felületén a terítéshez tartozó build ``build output'' részből.
 
+%
 \subsection{Chaincast és Torrent alapú terítés idejének összehasonlítása}
+%
 
-Nem a gyorsabb fájlterítés megvalósítása volt a programom egyik célja, de attól még érdemes lehet összehasonlítanunk a két módszer sebességét, hiszen mindegy mennyit nyerünk a robusztusságon , ha használhatatlanul lassabb lesz az alkalmazás a mostaninál. Az ~\ref{fig:chaincasttorrrentcomparison}-es~ábrán láthatjuk a különbőző méretű fájlok terítésének az idejét. Előtte visztont érdemes részletesebben megnézni, hogy ez az idő konkrétan mit (nem) tartalmaz:
+Nem a gyorsabb fájlterítés megvalósítása volt a programom egyik célja, de attól még érdemes lehet összehasonlítanunk a két módszer sebességét, hiszen mindegy mennyit nyerünk a robusztusságon , ha használhatatlanul lassabb lesz az alkalmazás a mostaninál. Az~\ref{fig:chaincasttorrrentcomparison}-es~ábrán láthatjuk a különbőző méretű fájlok terítésének az idejét. Előtte visztont érdemes részletesebben megnézni, hogy ez az idő konkrétan mit (nem) tartalmaz:
 
 \begin{itemize}
   \item Egyik megoldásnál sem tartalmazza a terítés ideje a terítendő fájlok létrehozását, és a központi gépre másolását (ami egyik esetben egy hálózati meghajtó, másik esetben a torrent-es terítés seed-je)
@@ -42,10 +44,10 @@ Nem a gyorsabb fájlterítés megvalósítása volt a programom egyik célja, de
 Az előbbi állítások a későbbi mérésekre is igazak lesznek.
 
 \begin{figure}[ht]
-	\centering
-	\includegraphics[width=150mm, keepaspectratio]{figures/Perf_chaincast_torrent_comparison.png}
-	\caption{Chaincast és Torrent alapú terítés idejének összehasonlítása}
-	\label{fig:chaincasttorrrentcomparison}
+\centering
+\includegraphics[width=150mm, keepaspectratio]{figures/Perf_chaincast_torrent_comparison.png}
+\caption{Chaincast és Torrent alapú terítés idejének összehasonlítása}
+\label{fig:chaincasttorrrentcomparison}
 \end{figure}
 
 
@@ -55,15 +57,63 @@ nagyobb fájloknál kb 2x lassabb terítés , ez elfogadható, főleg hogy azt t
 esetleg még a hashelés által okozott overhead a fájl méretével egyenesen arányosan nő
 
 
+%
+\subsection{Skálázódás - Torrentes terítés 10 és 25 gépere}
+%
 
-\subsection{Következő alfejezet}
+A Torrent-től, mint P2P alapú fájlmegosztó protokolltól azt várjuk, hogy letöltők számával minimum nem fordítottan arányos a terítés idje, vagyis több résztvevő esetén sem tart több ideig a fájlátvitel. Most 10 és 25 gépre történő térítés esetén hasonlítjuk össze teljesítménymutatókat a övetkező táblázat segítségével:
 
-maradék téma:
-\begin{itemize}
-  \item letöltési sebességek torrent esetén, átlag és max
-  \item különbőző seedek választása esetén a terítés sebességének összehasonlítása
-  \item 10 vs 25 gépes torrentes terítés nagy összehasonlító táblázat
-  \item torrentes terítések: leghamarabb és legkésőbb végzett gépek - annak megnézése, hogy előfordul-e hogy egy gép többször első, vagy utolsó lesz, ebből akár lehet következtetni hálózattal/gépekkel kapcsolatos szűk keresztmetszetekre
-  \item hibatűrési mérések: elején hiányzó géppel, ill. terítés közben kiesőkkel
-\end{itemize}
+\begin{center}
+	\begin{tabular}{ |c|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}| }
+		\hline
+		\multirow{2}{*}{Fájlméret}&\multicolumn{2}{|c|}{Terítés - teljes idő}&\multicolumn{2}{|c|}{Terítés - csak az adatátvitel} \\
+		& 10 gépre & 25 gépre & 10 gépre & 25 gépre \\
+		\hline
+		1 GiB & 85 s & 86 s & 80 s & 81 s \\
+		\hline
+		2 GiB & 178 s & 340 s & 167 s & 333 s \\
+		\hline
+		4 GiB & 293 s & 310 s & 270 s & 297 s \\
+		\hline
+		8 GiB & 563 s & 442 s & 516 s & 361 s \\
+		\hline
+	\end{tabular}
+\end{center}
+
+[a szegélyeket hogyan lehetne szépre megcsinálni?]\\
+
+Ennek az elemzése\ldots
+%
+\subsection{Terítés ideje különbőző seed-ek választása esetén}
+%
+
+Érdemes lehet megnézni, hogy különbőző seed gépek választása hogyan befolyásolja a terítés idejét, ezért lefuttattam a 4 GiB-es fájl terítését 25 gépre háromszor, különbőző seed-eket választva. Az eredményt az~\ref{fig:differentseedscomparison}-es~ábra szemlélteti. 
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=120mm, keepaspectratio]{figures/Perf_different_seeds.png}
+\caption{Terítés ideje különbőző seed-ek választása esetén}
+\label{fig:differentseedscomparison}
+\end{figure}
+
+Nagonyrövid tanulság levonása.
+
+%
+\subsection{P2P alapú fájlterítés - hibatűrése}
+%
+
+%
+\subsection{P2P alapú fájlterítés - szűk keresztmetszetek keresése}
+%
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=150mm, keepaspectratio]{figures/Perf_computers.png}
+\caption{Letöltést leghamarabb/legkésőbb befejező gépek}
+\label{fig:computerdownloadspeeds}
+\end{figure}
+
+%
+\subsection{P2P alapú fájlterítés - letöltési sebességek}
+%
 
