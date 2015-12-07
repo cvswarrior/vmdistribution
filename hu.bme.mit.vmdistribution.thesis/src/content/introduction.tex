@@ -13,18 +13,22 @@ ez azzal a feladattal jár, hogy különböző tartalmú tömörített állomán
 Az előbb ismertetett terítési megoldás használatával kapcsolatban több probléma is felmerül:
 
 \begin{itemize}
-  \item Ha adatküldés közben a lánc bárhol megszakad, akkor az egész folyamatot kezdhetjük elölről, ami komoly robusztusság és skálázhatósági problémákhoz vezet: előbbiekhez mert egy ilyen szakadást sokféle hiba okozhat, elég csak arra gondolni, hogy a laborban levő gépeken várhatóan nem egy magas rendelkezésre állású, hibatűrő operációs rendszer fut. A skálázhatóság pedig ott jön szóba, hogy minél több gépet kapcsolunk be a küldési láncba, annál valószínűbb, hogy a terítés meg fog szakadni egy hiba miatt.
+  \item Ha adatküldés közben a lánc bárhol megszakad, akkor az egész folyamatot kezdhetjük elölről, ami komoly skálázhatósági problémákhoz vezet,mivel minél több gépet kapcsolunk be a küldési láncba, annál valószínűbb, hogy a terítés meg fog szakadni egy hiba miatt.
    \item A program konfigurálása körülményes: ha például egy újonnan indult tanórára készítenénk fel a termet, ahol a gépeknek valami nemtriviális részhalmazára terítenénk (értsd nem az összesre, vagy eddig beállított terítéseknél használtakra), akkor az adott küldése lánc minden elemének újrakonfigurálásával fog járni.
-   \item A terítést a tárgyak oktatói végzik, akik nem rendszergazdák: egyes fellépő problémákat nem feltétlen tudnak maguktól elhárítani. Ebbe beletartozik a használt alkalmazásnak a megfelelő beállítása, illetve a terítés során fellépő hibák kijavítása.
+   \item A terítést a tárgyak oktatói végzik, akik nem rendszergazdák: egyes fellépő problémákat nem feltétlen tudnak maguktól elhárítani, akár nem is rendelkeznek megfelelő jogosultságokkal. Ebbe beletartozik a használt alkalmazásnak a megfelelő beállítása, illetve a terítés során fellépő hibák kijavítása.
 \end{itemize}
 
 %----------------------------------------------------------------------------
 \section{Célkitűzés}
 %----------------------------------------------------------------------------
+
+Célul tűzőm ki, hogy a most használt, Chaincast alapú fájlterítő megoldás kiváltására egy olyan alternatívát hozzak létre, ami a következő tulajdonságokkal rendelkezik, az előbb ismertetett problémákat kijavítva:
+
 \begin{itemize}
-  \item Milyen hiányosságok javítását, funkcionalitások módosítását tűzzük ki célul
+  \item Robusztus, skálázható fájlterítés, amit úgy érek el, hogy a fájlok szétosztásában a célgépek is aktivan részt vesznek, ún. Peer-to-Peer[p2p cite] hálózatot alkotva.
+  \item Egyszerű konfiguráció és használat egy olyan modell-alapú adatszerkezet tervezésével, ami
 \end{itemize}
-Célul tűzőm ki, hogy a most használt, Chaincast alapú fájlterítő megoldás kiváltására egy olyan alternatívát hozzak létre, amely a következő 
+
 
 
 %----------------------------------------------------------------------------
@@ -47,9 +51,14 @@ Célul tűzőm ki, hogy a most használt, Chaincast alapú fájlterítő megold�
 \begin{itemize}
   \item ugyanilyen/hasonló problémákat megoldó programok felkutatása és rövid bemutatása
 \end{itemize}
+
+  kumar:Optimal Peer-Assisted File Distribution - kiszámolja a lehető legoptimálisabb terítési időt különböző paraméterek alapján, összehasonlítja egy meglevő p2p alkalmazással (azureus), aztáb többosztályu p2p ötlete (1. osztályú fizetős ügyfelek akik jobb service-t kapnak) ~\cite{kumar2006optimal}
+  fastreplica: feladaraboljuk a fájlt, mindenki más darabot kap és azt a többieknek elküldi ~\cite{cherkasova2003fastreplica}
+  fcast: okos, gyors egyszerű multicaston alapuló megoldás ~\cite{gemmell2000fcast}
+
 %----------------------------------------------------------------------------
 \section{Dolgozat felépítése}
 %----------------------------------------------------------------------------
 
 Dolgozatom a következőképpen épül fel:
-Az ez utáni fejezetben bemutatom a munkám során használt fontosabb technológiákat, és a megértéséhez szükséges háttérismereteket. A harmadik fejezet a tervezési fázis leírásáról: azon belül a labor modelljének a megalkotásáról, illetve magát a terítés folyamatát alkotó lépéseknek a bemutatásáról fog szólni. A negyedik fejezet az alkalmazás implementációját részletezi, különös figyelmet szentelve annak Java nyelvű megvalósításának. Az ötödik fejezetben a létrehozott program működését ellenőrizzük, annak teljesítményét elemezzük, és végül az utolsó fejezetben a dolgozat eredményeit összegezzük, annak a továbbfejlesztési lehetőségeit nézzük meg.
+A \ref{chp:background}.~fejezetben bemutatom a munkám során használt fontosabb technológiákat, és a megértéséhez szükséges háttérismereteket. A \ref{chp:design}.~fejezet a tervezési fázis leírásáról: azon belül a labor modelljének a megalkotásáról, illetve magát a terítés folyamatát alkotó lépéseknek a bemutatásáról fog szólni. A \ref{chp:implementation}.~fejezet az alkalmazás implementációját részletezi, különös figyelmet szentelve annak Java nyelvű megvalósításának. Az \ref{chp:validation}.~fejezetben a létrehozott program működését ellenőrizzük, annak teljesítményét elemezzük, és végül a \ref{chp:summary}.~fejezetben a dolgozat eredményeit összegezzük, annak a továbbfejlesztési lehetőségeit nézzük meg.

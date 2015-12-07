@@ -1,0 +1,412 @@
+2015-12-05 22:33:43 INFO hu.bme.mit.vmdistribution.app.UseModel main [Starting tasks.]
+2015-12-05 22:33:43 INFO hu.bme.mit.vmdistribution.app.EMFModelUtil loadModelInstance [Model data loaded from D:\\testmodel.vmdistribution]
+2015-12-05 22:33:43 INFO hu.bme.mit.vmdistribution.app.vmutil.VMUtil copyVmsToSeed [Copying required VMs to seed.]
+2015-12-05 22:33:45 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:46 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 0MB(0%) of test_0g.zip
+2015-12-05 22:33:46 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:46 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil createTorrentFile [Creating torrent file for test_0g.zip.]
+2015-12-05 22:33:46 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/create_torrent.sh 10.40.2.135 test_0g.zip test_0g.torrent]
+2015-12-05 22:33:46 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec mktorrent 1.0 (c) 2007, 2009 Emil Renner Berthing
+
+Hashed 0 of 39 pieces.Hashed 39 of 39 pieces.
+Writing metainfo file... done.
+test_0g.torrent created.
+
+2015-12-05 22:33:46 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:46 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:46 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/start_seeding.sh]
+2015-12-05 22:33:46 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec opentracker started in tmux session named 'opentracker'
+rtorrent started in tmux session named 'rtorrent'
+Seeding started.
+
+2015-12-05 22:33:46 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:46 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startSeeding [Seeding started.]
+2015-12-05 22:33:46 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:46 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_0g.torrent to labpc40.]
+2015-12-05 22:33:46 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.188 vagrant vagrant test_0g.torrent]
+2015-12-05 22:33:47 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_0g.torrent to 10.40.2.188:~/Torrents
+
+2015-12-05 22:33:47 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Warning: Permanently added '10.40.2.188' (ECDSA) to the list of known hosts.
+
+2015-12-05 22:33:47 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:47 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:47 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/start_leeching.sh 10.40.2.188 vagrant vagrant]
+2015-12-05 22:33:47 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.188
+
+2015-12-05 22:33:47 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:47 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc40.]
+2015-12-05 22:33:47 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:47 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_0g.torrent to labpc19.]
+2015-12-05 22:33:47 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.145 vagrant vagrant test_0g.torrent]
+2015-12-05 22:33:47 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_0g.torrent to 10.40.2.145:~/Torrents
+
+2015-12-05 22:33:47 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Warning: Permanently added '10.40.2.145' (ECDSA) to the list of known hosts.
+
+2015-12-05 22:33:47 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:48 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:48 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/start_leeching.sh 10.40.2.145 vagrant vagrant]
+2015-12-05 22:33:48 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.145
+
+2015-12-05 22:33:48 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:48 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc19.]
+2015-12-05 22:33:48 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:48 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_0g.torrent to labpc39.]
+2015-12-05 22:33:48 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.151 vagrant vagrant test_0g.torrent]
+2015-12-05 22:33:48 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_0g.torrent to 10.40.2.151:~/Torrents
+
+2015-12-05 22:33:48 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Warning: Permanently added '10.40.2.151' (ECDSA) to the list of known hosts.
+
+2015-12-05 22:33:48 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:48 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:48 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/start_leeching.sh 10.40.2.151 vagrant vagrant]
+2015-12-05 22:33:48 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.151
+
+2015-12-05 22:33:48 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:48 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc39.]
+2015-12-05 22:33:49 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:49 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_0g.torrent to labpc28.]
+2015-12-05 22:33:49 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.141 vagrant vagrant test_0g.torrent]
+2015-12-05 22:33:49 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_0g.torrent to 10.40.2.141:~/Torrents
+
+2015-12-05 22:33:49 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Warning: Permanently added '10.40.2.141' (ECDSA) to the list of known hosts.
+
+2015-12-05 22:33:49 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:49 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:49 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/start_leeching.sh 10.40.2.141 vagrant vagrant]
+2015-12-05 22:33:49 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.141
+
+2015-12-05 22:33:49 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:49 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc28.]
+2015-12-05 22:33:49 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:49 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_0g.torrent to labpc09.]
+2015-12-05 22:33:49 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.176 vagrant vagrant test_0g.torrent]
+2015-12-05 22:33:49 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_0g.torrent to 10.40.2.176:~/Torrents
+
+2015-12-05 22:33:49 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Warning: Permanently added '10.40.2.176' (ECDSA) to the list of known hosts.
+
+2015-12-05 22:33:49 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:50 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:50 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/start_leeching.sh 10.40.2.176 vagrant vagrant]
+2015-12-05 22:33:50 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.176
+
+2015-12-05 22:33:50 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:50 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc09.]
+2015-12-05 22:33:50 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:50 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_0g.torrent to labpc11.]
+2015-12-05 22:33:50 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.126 vagrant vagrant test_0g.torrent]
+2015-12-05 22:33:50 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_0g.torrent to 10.40.2.126:~/Torrents
+
+2015-12-05 22:33:50 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Warning: Permanently added '10.40.2.126' (ECDSA) to the list of known hosts.
+
+2015-12-05 22:33:50 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:50 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:50 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/start_leeching.sh 10.40.2.126 vagrant vagrant]
+2015-12-05 22:33:50 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.126
+
+2015-12-05 22:33:50 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:50 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc11.]
+2015-12-05 22:33:51 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:51 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_0g.torrent to labpc15.]
+2015-12-05 22:33:51 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.10 vagrant vagrant test_0g.torrent]
+2015-12-05 22:33:51 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_0g.torrent to 10.40.2.10:~/Torrents
+
+2015-12-05 22:33:51 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Warning: Permanently added '10.40.2.10' (ECDSA) to the list of known hosts.
+
+2015-12-05 22:33:51 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:51 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:51 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/start_leeching.sh 10.40.2.10 vagrant vagrant]
+2015-12-05 22:33:51 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.10
+
+2015-12-05 22:33:51 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:51 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc15.]
+2015-12-05 22:33:51 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:51 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_0g.torrent to labpc18.]
+2015-12-05 22:33:51 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.146 vagrant vagrant test_0g.torrent]
+2015-12-05 22:33:51 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_0g.torrent to 10.40.2.146:~/Torrents
+
+2015-12-05 22:33:51 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Warning: Permanently added '10.40.2.146' (ECDSA) to the list of known hosts.
+
+2015-12-05 22:33:51 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:52 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:52 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/start_leeching.sh 10.40.2.146 vagrant vagrant]
+2015-12-05 22:33:52 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.146
+
+2015-12-05 22:33:52 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:52 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc18.]
+2015-12-05 22:33:52 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:52 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_0g.torrent to labpc05.]
+2015-12-05 22:33:52 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.142 vagrant vagrant test_0g.torrent]
+2015-12-05 22:33:52 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_0g.torrent to 10.40.2.142:~/Torrents
+
+2015-12-05 22:33:52 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Warning: Permanently added '10.40.2.142' (ECDSA) to the list of known hosts.
+
+2015-12-05 22:33:52 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:52 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:52 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/start_leeching.sh 10.40.2.142 vagrant vagrant]
+2015-12-05 22:33:53 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.142
+
+2015-12-05 22:33:53 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:53 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc05.]
+2015-12-05 22:33:53 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:53 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_0g.torrent to labpc34.]
+2015-12-05 22:33:53 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.191 vagrant vagrant test_0g.torrent]
+2015-12-05 22:33:53 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_0g.torrent to 10.40.2.191:~/Torrents
+
+2015-12-05 22:33:53 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Warning: Permanently added '10.40.2.191' (ECDSA) to the list of known hosts.
+
+2015-12-05 22:33:53 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:53 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:53 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/start_leeching.sh 10.40.2.191 vagrant vagrant]
+2015-12-05 22:33:53 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.191
+
+2015-12-05 22:33:53 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:53 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc34.]
+2015-12-05 22:33:53 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:53 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_0g.torrent to labpc37.]
+2015-12-05 22:33:53 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.190 vagrant vagrant test_0g.torrent]
+2015-12-05 22:33:54 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_0g.torrent to 10.40.2.190:~/Torrents
+
+2015-12-05 22:33:54 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Warning: Permanently added '10.40.2.190' (ECDSA) to the list of known hosts.
+
+2015-12-05 22:33:54 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:54 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:54 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/start_leeching.sh 10.40.2.190 vagrant vagrant]
+2015-12-05 22:33:54 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.190
+
+2015-12-05 22:33:54 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:54 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc37.]
+2015-12-05 22:33:54 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:54 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_0g.torrent to labpc03.]
+2015-12-05 22:33:54 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.152 vagrant vagrant test_0g.torrent]
+2015-12-05 22:33:54 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_0g.torrent to 10.40.2.152:~/Torrents
+
+2015-12-05 22:33:54 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Warning: Permanently added '10.40.2.152' (ECDSA) to the list of known hosts.
+
+2015-12-05 22:33:54 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:54 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:54 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/start_leeching.sh 10.40.2.152 vagrant vagrant]
+2015-12-05 22:33:55 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.152
+
+2015-12-05 22:33:55 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:55 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc03.]
+2015-12-05 22:33:55 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:55 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_0g.torrent to labpc17.]
+2015-12-05 22:33:55 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.144 vagrant vagrant test_0g.torrent]
+2015-12-05 22:33:55 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_0g.torrent to 10.40.2.144:~/Torrents
+
+2015-12-05 22:33:55 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Warning: Permanently added '10.40.2.144' (ECDSA) to the list of known hosts.
+
+2015-12-05 22:33:55 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:55 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:55 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/start_leeching.sh 10.40.2.144 vagrant vagrant]
+2015-12-05 22:33:55 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.144
+
+2015-12-05 22:33:55 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:55 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc17.]
+2015-12-05 22:33:55 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:55 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_0g.torrent to labpc20.]
+2015-12-05 22:33:56 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.192 vagrant vagrant test_0g.torrent]
+2015-12-05 22:33:56 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_0g.torrent to 10.40.2.192:~/Torrents
+
+2015-12-05 22:33:56 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Warning: Permanently added '10.40.2.192' (ECDSA) to the list of known hosts.
+
+2015-12-05 22:33:56 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:56 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:56 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/start_leeching.sh 10.40.2.192 vagrant vagrant]
+2015-12-05 22:33:56 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.192
+
+2015-12-05 22:33:56 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:56 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc20.]
+2015-12-05 22:33:56 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:56 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_0g.torrent to labpc23.]
+2015-12-05 22:33:56 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.159 vagrant vagrant test_0g.torrent]
+2015-12-05 22:33:56 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_0g.torrent to 10.40.2.159:~/Torrents
+
+2015-12-05 22:33:56 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Warning: Permanently added '10.40.2.159' (ECDSA) to the list of known hosts.
+
+2015-12-05 22:33:56 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:57 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:57 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/start_leeching.sh 10.40.2.159 vagrant vagrant]
+2015-12-05 22:33:57 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.159
+
+2015-12-05 22:33:57 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:57 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc23.]
+2015-12-05 22:33:57 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:57 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_0g.torrent to labpc24.]
+2015-12-05 22:33:57 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.139 vagrant vagrant test_0g.torrent]
+2015-12-05 22:33:57 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_0g.torrent to 10.40.2.139:~/Torrents
+
+2015-12-05 22:33:57 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Warning: Permanently added '10.40.2.139' (ECDSA) to the list of known hosts.
+
+2015-12-05 22:33:57 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:57 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:57 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/start_leeching.sh 10.40.2.139 vagrant vagrant]
+2015-12-05 22:33:57 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.139
+
+2015-12-05 22:33:57 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:57 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc24.]
+2015-12-05 22:33:58 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:58 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_0g.torrent to labpc21.]
+2015-12-05 22:33:58 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.138 vagrant vagrant test_0g.torrent]
+2015-12-05 22:33:58 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_0g.torrent to 10.40.2.138:~/Torrents
+
+2015-12-05 22:33:58 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Warning: Permanently added '10.40.2.138' (ECDSA) to the list of known hosts.
+
+2015-12-05 22:33:58 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:58 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:58 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/start_leeching.sh 10.40.2.138 vagrant vagrant]
+2015-12-05 22:33:58 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.138
+
+2015-12-05 22:33:58 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:58 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc21.]
+2015-12-05 22:33:58 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:58 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_0g.torrent to labpc38.]
+2015-12-05 22:33:58 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.189 vagrant vagrant test_0g.torrent]
+2015-12-05 22:33:58 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_0g.torrent to 10.40.2.189:~/Torrents
+
+2015-12-05 22:33:58 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Warning: Permanently added '10.40.2.189' (ECDSA) to the list of known hosts.
+
+2015-12-05 22:33:58 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:59 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:59 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/start_leeching.sh 10.40.2.189 vagrant vagrant]
+2015-12-05 22:33:59 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.189
+
+2015-12-05 22:33:59 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:59 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc38.]
+2015-12-05 22:33:59 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:59 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_0g.torrent to labpc13.]
+2015-12-05 22:33:59 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.194 vagrant vagrant test_0g.torrent]
+2015-12-05 22:33:59 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_0g.torrent to 10.40.2.194:~/Torrents
+
+2015-12-05 22:33:59 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Warning: Permanently added '10.40.2.194' (ECDSA) to the list of known hosts.
+
+2015-12-05 22:33:59 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:33:59 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:33:59 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/start_leeching.sh 10.40.2.194 vagrant vagrant]
+2015-12-05 22:34:00 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.194
+
+2015-12-05 22:34:00 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:34:00 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc13.]
+2015-12-05 22:34:00 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:34:00 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_0g.torrent to labpc32.]
+2015-12-05 22:34:00 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.131 vagrant vagrant test_0g.torrent]
+2015-12-05 22:34:00 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_0g.torrent to 10.40.2.131:~/Torrents
+
+2015-12-05 22:34:00 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Warning: Permanently added '10.40.2.131' (ECDSA) to the list of known hosts.
+
+2015-12-05 22:34:00 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:34:00 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:34:00 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/start_leeching.sh 10.40.2.131 vagrant vagrant]
+2015-12-05 22:34:00 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.131
+
+2015-12-05 22:34:00 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:34:00 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc32.]
+2015-12-05 22:34:00 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:34:00 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_0g.torrent to labpc30.]
+2015-12-05 22:34:00 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.147 vagrant vagrant test_0g.torrent]
+2015-12-05 22:34:01 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_0g.torrent to 10.40.2.147:~/Torrents
+
+2015-12-05 22:34:01 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Warning: Permanently added '10.40.2.147' (ECDSA) to the list of known hosts.
+
+2015-12-05 22:34:01 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:34:01 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:34:01 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/start_leeching.sh 10.40.2.147 vagrant vagrant]
+2015-12-05 22:34:01 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.147
+
+2015-12-05 22:34:01 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:34:01 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc30.]
+2015-12-05 22:34:01 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:34:01 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_0g.torrent to labpc26.]
+2015-12-05 22:34:01 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.148 vagrant vagrant test_0g.torrent]
+2015-12-05 22:34:01 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_0g.torrent to 10.40.2.148:~/Torrents
+
+2015-12-05 22:34:01 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Warning: Permanently added '10.40.2.148' (ECDSA) to the list of known hosts.
+
+2015-12-05 22:34:01 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:34:01 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:34:01 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/start_leeching.sh 10.40.2.148 vagrant vagrant]
+2015-12-05 22:34:02 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.148
+
+2015-12-05 22:34:02 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:34:02 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc26.]
+2015-12-05 22:34:02 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:34:02 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_0g.torrent to labpc07.]
+2015-12-05 22:34:02 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.136 vagrant vagrant test_0g.torrent]
+2015-12-05 22:34:02 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_0g.torrent to 10.40.2.136:~/Torrents
+
+2015-12-05 22:34:02 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Warning: Permanently added '10.40.2.136' (ECDSA) to the list of known hosts.
+
+2015-12-05 22:34:02 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:34:02 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:34:02 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/start_leeching.sh 10.40.2.136 vagrant vagrant]
+2015-12-05 22:34:02 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.136
+
+2015-12-05 22:34:02 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:34:02 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc07.]
+2015-12-05 22:34:02 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:34:02 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_0g.torrent to labpc22.]
+2015-12-05 22:34:03 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.150 vagrant vagrant test_0g.torrent]
+2015-12-05 22:34:03 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_0g.torrent to 10.40.2.150:~/Torrents
+
+2015-12-05 22:34:03 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Warning: Permanently added '10.40.2.150' (ECDSA) to the list of known hosts.
+
+2015-12-05 22:34:03 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:34:03 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.135
+2015-12-05 22:34:03 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.135: /home/vagrant/start_leeching.sh 10.40.2.150 vagrant vagrant]
+2015-12-05 22:34:03 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.150
+
+2015-12-05 22:34:03 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.135
+2015-12-05 22:34:03 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc22.]
+2015-12-05 22:34:03 INFO hu.bme.mit.vmdistribution.app.UseModel distribute [Giving 10s grace period before getting torrent infohashes...]
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc40:
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_0g: Completed: 100%, Downloaded: 10.0/10.0 MB, Speed: 0 B/s.
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc19:
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_0g: Completed: 100%, Downloaded: 10.0/10.0 MB, Speed: 0 B/s.
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc39:
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_0g: Completed: 100%, Downloaded: 10.0/10.0 MB, Speed: 0 B/s.
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc28:
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_0g: Completed: 100%, Downloaded: 10.0/10.0 MB, Speed: 0 B/s.
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_0g: Completed: 100%, Downloaded: 10.0/10.0 MB, Speed: 0 B/s.
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_0g: Completed: 100%, Downloaded: 10.0/10.0 MB, Speed: 0 B/s.
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc15:
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_0g: Completed: 100%, Downloaded: 10.0/10.0 MB, Speed: 0 B/s.
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc18:
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_0g: Completed: 100%, Downloaded: 10.0/10.0 MB, Speed: 0 B/s.
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_0g: Completed: 100%, Downloaded: 10.0/10.0 MB, Speed: 0 B/s.
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc34:
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_0g: Completed: 100%, Downloaded: 10.0/10.0 MB, Speed: 0 B/s.
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc37:
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_0g: Completed: 100%, Downloaded: 10.0/10.0 MB, Speed: 0 B/s.
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_0g: Completed: 100%, Downloaded: 10.0/10.0 MB, Speed: 0 B/s.
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc17:
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_0g: Completed: 100%, Downloaded: 10.0/10.0 MB, Speed: 0 B/s.
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc20:
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_0g: Completed: 100%, Downloaded: 10.0/10.0 MB, Speed: 0 B/s.
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc23:
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_0g: Completed: 100%, Downloaded: 10.0/10.0 MB, Speed: 0 B/s.
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc24:
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_0g: Completed: 100%, Downloaded: 10.0/10.0 MB, Speed: 0 B/s.
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc21:
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_0g: Completed: 100%, Downloaded: 10.0/10.0 MB, Speed: 0 B/s.
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc38:
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_0g: Completed: 100%, Downloaded: 10.0/10.0 MB, Speed: 0 B/s.
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc13:
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_0g: Completed: 100%, Downloaded: 10.0/10.0 MB, Speed: 0 B/s.
+2015-12-05 22:34:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc32:
+2015-12-05 22:34:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_0g: Completed: 100%, Downloaded: 10.0/10.0 MB, Speed: 0 B/s.
+2015-12-05 22:34:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc30:
+2015-12-05 22:34:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_0g: Completed: 100%, Downloaded: 10.0/10.0 MB, Speed: 0 B/s.
+2015-12-05 22:34:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc26:
+2015-12-05 22:34:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_0g: Completed: 100%, Downloaded: 10.0/10.0 MB, Speed: 0 B/s.
+2015-12-05 22:34:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 22:34:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_0g: Completed: 100%, Downloaded: 10.0/10.0 MB, Speed: 0 B/s.
+2015-12-05 22:34:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc22:
+2015-12-05 22:34:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_0g: Completed: 100%, Downloaded: 10.0/10.0 MB, Speed: 0 B/s.
+2015-12-05 22:34:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [All transfers are finished, distribution is complete, press ENTER to continue.]
+2015-12-05 22:34:20 INFO hu.bme.mit.vmdistribution.app.UseModel main [Saving changes to model instance.]
+2015-12-05 22:34:20 INFO hu.bme.mit.vmdistribution.app.UseModel main [Done.]

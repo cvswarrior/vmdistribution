@@ -1,0 +1,1335 @@
+2015-12-05 23:18:39 INFO hu.bme.mit.vmdistribution.app.UseModel main [Starting tasks.]
+2015-12-05 23:18:39 INFO hu.bme.mit.vmdistribution.app.EMFModelUtil loadModelInstance [Model data loaded from D:\\testmodel.vmdistribution]
+2015-12-05 23:18:39 INFO hu.bme.mit.vmdistribution.app.vmutil.VMUtil copyVmsToSeed [Copying required VMs to seed.]
+2015-12-05 23:18:42 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:18:42 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 0MB(0%) of test_4g.zip
+2015-12-05 23:18:43 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 100MB(2%) of test_4g.zip
+2015-12-05 23:18:45 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 200MB(5%) of test_4g.zip
+2015-12-05 23:18:47 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 300MB(7%) of test_4g.zip
+2015-12-05 23:18:48 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 400MB(10%) of test_4g.zip
+2015-12-05 23:18:50 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 500MB(12%) of test_4g.zip
+2015-12-05 23:18:52 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 600MB(15%) of test_4g.zip
+2015-12-05 23:18:53 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 700MB(17%) of test_4g.zip
+2015-12-05 23:18:55 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 800MB(20%) of test_4g.zip
+2015-12-05 23:18:57 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 900MB(22%) of test_4g.zip
+2015-12-05 23:18:58 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 1000MB(25%) of test_4g.zip
+2015-12-05 23:19:00 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 1100MB(27%) of test_4g.zip
+2015-12-05 23:19:01 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 1200MB(30%) of test_4g.zip
+2015-12-05 23:19:03 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 1300MB(32%) of test_4g.zip
+2015-12-05 23:19:05 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 1400MB(35%) of test_4g.zip
+2015-12-05 23:19:06 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 1500MB(37%) of test_4g.zip
+2015-12-05 23:19:08 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 1600MB(40%) of test_4g.zip
+2015-12-05 23:19:10 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 1700MB(42%) of test_4g.zip
+2015-12-05 23:19:12 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 1800MB(45%) of test_4g.zip
+2015-12-05 23:19:13 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 1900MB(47%) of test_4g.zip
+2015-12-05 23:19:15 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 2000MB(50%) of test_4g.zip
+2015-12-05 23:19:17 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 2100MB(52%) of test_4g.zip
+2015-12-05 23:19:18 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 2200MB(55%) of test_4g.zip
+2015-12-05 23:19:20 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 2300MB(57%) of test_4g.zip
+2015-12-05 23:19:22 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 2400MB(60%) of test_4g.zip
+2015-12-05 23:19:23 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 2500MB(62%) of test_4g.zip
+2015-12-05 23:19:25 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 2600MB(65%) of test_4g.zip
+2015-12-05 23:19:27 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 2700MB(67%) of test_4g.zip
+2015-12-05 23:19:28 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 2800MB(70%) of test_4g.zip
+2015-12-05 23:19:30 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 2900MB(72%) of test_4g.zip
+2015-12-05 23:19:32 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 3000MB(75%) of test_4g.zip
+2015-12-05 23:19:33 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 3100MB(77%) of test_4g.zip
+2015-12-05 23:19:35 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 3200MB(80%) of test_4g.zip
+2015-12-05 23:19:37 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 3300MB(82%) of test_4g.zip
+2015-12-05 23:19:38 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 3400MB(85%) of test_4g.zip
+2015-12-05 23:19:40 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 3500MB(87%) of test_4g.zip
+2015-12-05 23:19:42 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 3600MB(90%) of test_4g.zip
+2015-12-05 23:19:43 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 3700MB(92%) of test_4g.zip
+2015-12-05 23:19:45 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 3800MB(95%) of test_4g.zip
+2015-12-05 23:19:47 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 3900MB(97%) of test_4g.zip
+2015-12-05 23:19:49 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:19:49 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil createTorrentFile [Creating torrent file for test_4g.zip.]
+2015-12-05 23:19:49 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/create_torrent.sh 10.40.2.10 test_4g.zip test_4g.torrent]
+2015-12-05 23:20:02 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec mktorrent 1.0 (c) 2007, 2009 Emil Renner Berthing
+
+Hashed 0 of 15259 pieces.Hashed 223 of 15259 pieces.Hashed 451 of 15259 pieces.Hashed 680 of 15259 pieces.Hashed 890 of 15259 pieces.Hashed 1055 of 15259 pieces.Hashed 1247 of 15259 pieces.Hashed 1477 of 15259 pieces.Hashed 1708 of 15259 pieces.Hashed 1939 of 15259 pieces.Hashed 2167 of 15259 pieces.Hashed 2397 of 15259 pieces.Hashed 2628 of 15259 pieces.Hashed 2859 of 15259 pieces.Hashed 3086 of 15259 pieces.Hashed 3315 of 15259 pieces.Hashed 3544 of 15259 pieces.Hashed 3775 of 15259 pieces.Hashed 4003 of 15259 pieces.Hashed 4233 of 15259 pieces.Hashed 4454 of 15259 pieces.Hashed 4684 of 15259 pieces.Hashed 4913 of 15259 pieces.Hashed 5143 of 15259 pieces.Hashed 5373 of 15259 pieces.Hashed 5603 of 15259 pieces.Hashed 5831 of 15259 pieces.Hashed 6059 of 15259 pieces.Hashed 6289 of 15259 pieces.Hashed 6520 of 15259 pieces.Hashed 6751 of 15259 pieces.Hashed 6978 of 15259 pieces.Hashed 7208 of 15259 pieces.Hashed 7439 of 15259 pieces.Hashed 7669 of 15259 pieces.Hashed 7896 of 15259 pieces.Hashed 8124 of 15259 pieces.Hashed 8354 of 15259 pieces.Hashed 8585 of 15259 pieces.Hashed 8816 of 15259 pieces.Hashed 9044 of 15259 pieces.Hashed 9273 of 15259 pieces.Hashed 9504 of 15259 pieces.Hashed 9735 of 15259 pieces.Hashed 9963 of 15259 pieces.Hashed 10192 of 15259 pieces.Hashed 10422 of 15259 pieces.Hashed 10652 of 15259 pieces.Hashed 10880 of 15259 pieces.Hashed 11108 of 15259 pieces.Hashed 11338 of 15259 pieces.Hashed 11567 of 15259 pieces.Hashed 11796 of 15259 pieces.Hashed 12025 of 15259 pieces.Hashed 12252 of 15259 pieces.Hashed 12481 of 15259 pieces.Hashed 12711 of 15259 pieces.Hashed 12939 of 15259 pieces.Hashed 13169 of 15259 pieces.Hashed 13399 of 15259 pieces.Hashed 13628 of 15259 pieces.Hashed 13856 of 15259 pieces.Hashed 14084 of 15259 pieces.Hashed 14314 of 15259 pieces.Hashed 14544 of 15259 pieces.Hashed 14772 of 15259 pieces.Hashed 14999 of 15259 pieces.Hashed 15234 of 15259 pieces.Hashed 15259 of 15259 pieces.
+Writing metainfo file... done.
+test_4g.torrent created.
+
+2015-12-05 23:20:02 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:03 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:03 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/start_seeding.sh]
+2015-12-05 23:20:03 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec opentracker started in tmux session named 'opentracker'
+rtorrent started in tmux session named 'rtorrent'
+Seeding started.
+
+2015-12-05 23:20:03 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: opentracker
+
+2015-12-05 23:20:03 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:03 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startSeeding [Seeding started.]
+2015-12-05 23:20:03 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:03 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_4g.torrent to labpc38.]
+2015-12-05 23:20:03 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.189 vagrant vagrant test_4g.torrent]
+2015-12-05 23:20:03 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_4g.torrent to 10.40.2.189:~/Torrents
+
+2015-12-05 23:20:03 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:03 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:03 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/start_leeching.sh 10.40.2.189 vagrant vagrant]
+2015-12-05 23:20:04 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.189
+
+2015-12-05 23:20:04 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 23:20:04 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:04 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc38.]
+2015-12-05 23:20:04 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:04 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_4g.torrent to labpc40.]
+2015-12-05 23:20:04 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.188 vagrant vagrant test_4g.torrent]
+2015-12-05 23:20:04 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_4g.torrent to 10.40.2.188:~/Torrents
+
+2015-12-05 23:20:04 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:04 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:04 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/start_leeching.sh 10.40.2.188 vagrant vagrant]
+2015-12-05 23:20:05 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.188
+
+2015-12-05 23:20:05 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 23:20:05 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:05 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc40.]
+2015-12-05 23:20:05 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:05 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_4g.torrent to labpc17.]
+2015-12-05 23:20:05 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.144 vagrant vagrant test_4g.torrent]
+2015-12-05 23:20:05 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_4g.torrent to 10.40.2.144:~/Torrents
+
+2015-12-05 23:20:05 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:05 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:05 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/start_leeching.sh 10.40.2.144 vagrant vagrant]
+2015-12-05 23:20:05 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.144
+
+2015-12-05 23:20:05 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 23:20:05 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:05 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc17.]
+2015-12-05 23:20:06 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:06 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_4g.torrent to labpc37.]
+2015-12-05 23:20:06 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.190 vagrant vagrant test_4g.torrent]
+2015-12-05 23:20:06 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_4g.torrent to 10.40.2.190:~/Torrents
+
+2015-12-05 23:20:06 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:06 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:06 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/start_leeching.sh 10.40.2.190 vagrant vagrant]
+2015-12-05 23:20:06 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.190
+
+2015-12-05 23:20:06 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 23:20:06 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:06 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc37.]
+2015-12-05 23:20:06 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:06 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_4g.torrent to labpc24.]
+2015-12-05 23:20:06 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.139 vagrant vagrant test_4g.torrent]
+2015-12-05 23:20:07 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_4g.torrent to 10.40.2.139:~/Torrents
+
+2015-12-05 23:20:07 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:07 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:07 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/start_leeching.sh 10.40.2.139 vagrant vagrant]
+2015-12-05 23:20:07 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.139
+
+2015-12-05 23:20:07 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 23:20:07 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:07 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc24.]
+2015-12-05 23:20:07 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:07 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_4g.torrent to labpc05.]
+2015-12-05 23:20:07 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.142 vagrant vagrant test_4g.torrent]
+2015-12-05 23:20:08 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_4g.torrent to 10.40.2.142:~/Torrents
+
+2015-12-05 23:20:08 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:08 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:08 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/start_leeching.sh 10.40.2.142 vagrant vagrant]
+2015-12-05 23:20:08 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.142
+
+2015-12-05 23:20:08 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 23:20:08 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:08 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc05.]
+2015-12-05 23:20:08 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:08 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_4g.torrent to labpc07.]
+2015-12-05 23:20:08 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.136 vagrant vagrant test_4g.torrent]
+2015-12-05 23:20:09 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_4g.torrent to 10.40.2.136:~/Torrents
+
+2015-12-05 23:20:09 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:09 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:09 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/start_leeching.sh 10.40.2.136 vagrant vagrant]
+2015-12-05 23:20:09 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.136
+
+2015-12-05 23:20:09 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 23:20:09 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:09 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc07.]
+2015-12-05 23:20:09 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:09 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_4g.torrent to labpc11.]
+2015-12-05 23:20:09 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.126 vagrant vagrant test_4g.torrent]
+2015-12-05 23:20:10 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_4g.torrent to 10.40.2.126:~/Torrents
+
+2015-12-05 23:20:10 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:10 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:10 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/start_leeching.sh 10.40.2.126 vagrant vagrant]
+2015-12-05 23:20:10 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.126
+
+2015-12-05 23:20:10 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 23:20:10 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:10 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc11.]
+2015-12-05 23:20:10 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:10 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_4g.torrent to labpc01.]
+2015-12-05 23:20:10 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.135 vagrant vagrant test_4g.torrent]
+2015-12-05 23:20:11 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_4g.torrent to 10.40.2.135:~/Torrents
+
+2015-12-05 23:20:11 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:11 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:11 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/start_leeching.sh 10.40.2.135 vagrant vagrant]
+2015-12-05 23:20:11 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.135
+
+2015-12-05 23:20:11 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 23:20:11 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:11 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc01.]
+2015-12-05 23:20:12 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:12 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_4g.torrent to labpc30.]
+2015-12-05 23:20:12 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.147 vagrant vagrant test_4g.torrent]
+2015-12-05 23:20:12 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_4g.torrent to 10.40.2.147:~/Torrents
+
+2015-12-05 23:20:12 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:13 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:13 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/start_leeching.sh 10.40.2.147 vagrant vagrant]
+2015-12-05 23:20:13 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.147
+
+2015-12-05 23:20:13 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 23:20:13 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:13 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc30.]
+2015-12-05 23:20:13 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:13 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_4g.torrent to labpc32.]
+2015-12-05 23:20:13 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.131 vagrant vagrant test_4g.torrent]
+2015-12-05 23:20:14 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_4g.torrent to 10.40.2.131:~/Torrents
+
+2015-12-05 23:20:14 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:14 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:14 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/start_leeching.sh 10.40.2.131 vagrant vagrant]
+2015-12-05 23:20:14 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.131
+
+2015-12-05 23:20:14 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 23:20:14 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:14 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc32.]
+2015-12-05 23:20:15 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:15 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_4g.torrent to labpc13.]
+2015-12-05 23:20:15 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.194 vagrant vagrant test_4g.torrent]
+2015-12-05 23:20:15 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_4g.torrent to 10.40.2.194:~/Torrents
+
+2015-12-05 23:20:15 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:15 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:15 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/start_leeching.sh 10.40.2.194 vagrant vagrant]
+2015-12-05 23:20:16 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.194
+
+2015-12-05 23:20:16 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 23:20:16 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:16 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc13.]
+2015-12-05 23:20:16 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:16 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_4g.torrent to labpc18.]
+2015-12-05 23:20:16 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.146 vagrant vagrant test_4g.torrent]
+2015-12-05 23:20:16 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_4g.torrent to 10.40.2.146:~/Torrents
+
+2015-12-05 23:20:16 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:16 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:16 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/start_leeching.sh 10.40.2.146 vagrant vagrant]
+2015-12-05 23:20:17 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.146
+
+2015-12-05 23:20:17 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 23:20:17 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:17 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc18.]
+2015-12-05 23:20:17 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:17 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_4g.torrent to labpc21.]
+2015-12-05 23:20:17 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.138 vagrant vagrant test_4g.torrent]
+2015-12-05 23:20:18 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_4g.torrent to 10.40.2.138:~/Torrents
+
+2015-12-05 23:20:18 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:18 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:18 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/start_leeching.sh 10.40.2.138 vagrant vagrant]
+2015-12-05 23:20:18 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.138
+
+2015-12-05 23:20:18 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 23:20:18 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:18 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc21.]
+2015-12-05 23:20:19 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:19 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_4g.torrent to labpc39.]
+2015-12-05 23:20:19 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.151 vagrant vagrant test_4g.torrent]
+2015-12-05 23:20:19 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_4g.torrent to 10.40.2.151:~/Torrents
+
+2015-12-05 23:20:19 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:20 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:20 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/start_leeching.sh 10.40.2.151 vagrant vagrant]
+2015-12-05 23:20:20 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.151
+
+2015-12-05 23:20:20 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 23:20:20 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:20 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc39.]
+2015-12-05 23:20:21 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:21 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_4g.torrent to labpc22.]
+2015-12-05 23:20:21 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.150 vagrant vagrant test_4g.torrent]
+2015-12-05 23:20:22 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_4g.torrent to 10.40.2.150:~/Torrents
+
+2015-12-05 23:20:22 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:22 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:22 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/start_leeching.sh 10.40.2.150 vagrant vagrant]
+2015-12-05 23:20:23 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.150
+
+2015-12-05 23:20:23 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 23:20:23 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:23 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc22.]
+2015-12-05 23:20:23 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:23 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_4g.torrent to labpc19.]
+2015-12-05 23:20:23 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.145 vagrant vagrant test_4g.torrent]
+2015-12-05 23:20:24 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_4g.torrent to 10.40.2.145:~/Torrents
+
+2015-12-05 23:20:24 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:24 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:24 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/start_leeching.sh 10.40.2.145 vagrant vagrant]
+2015-12-05 23:20:24 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.145
+
+2015-12-05 23:20:24 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 23:20:24 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:24 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc19.]
+2015-12-05 23:20:24 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:24 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_4g.torrent to labpc34.]
+2015-12-05 23:20:24 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.191 vagrant vagrant test_4g.torrent]
+2015-12-05 23:20:25 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_4g.torrent to 10.40.2.191:~/Torrents
+
+2015-12-05 23:20:25 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:25 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:25 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/start_leeching.sh 10.40.2.191 vagrant vagrant]
+2015-12-05 23:20:26 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.191
+
+2015-12-05 23:20:26 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 23:20:26 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:26 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc34.]
+2015-12-05 23:20:26 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:26 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_4g.torrent to labpc09.]
+2015-12-05 23:20:26 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.176 vagrant vagrant test_4g.torrent]
+2015-12-05 23:20:26 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_4g.torrent to 10.40.2.176:~/Torrents
+
+2015-12-05 23:20:26 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:26 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:26 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/start_leeching.sh 10.40.2.176 vagrant vagrant]
+2015-12-05 23:20:27 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.176
+
+2015-12-05 23:20:27 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 23:20:27 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:27 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc09.]
+2015-12-05 23:20:27 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:27 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_4g.torrent to labpc28.]
+2015-12-05 23:20:27 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.141 vagrant vagrant test_4g.torrent]
+2015-12-05 23:20:27 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_4g.torrent to 10.40.2.141:~/Torrents
+
+2015-12-05 23:20:27 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:27 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:27 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/start_leeching.sh 10.40.2.141 vagrant vagrant]
+2015-12-05 23:20:28 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.141
+
+2015-12-05 23:20:28 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 23:20:28 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:28 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc28.]
+2015-12-05 23:20:28 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:28 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_4g.torrent to labpc26.]
+2015-12-05 23:20:28 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.148 vagrant vagrant test_4g.torrent]
+2015-12-05 23:20:29 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_4g.torrent to 10.40.2.148:~/Torrents
+
+2015-12-05 23:20:29 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:29 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:29 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/start_leeching.sh 10.40.2.148 vagrant vagrant]
+2015-12-05 23:20:29 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.148
+
+2015-12-05 23:20:29 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 23:20:29 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:29 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc26.]
+2015-12-05 23:20:30 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:30 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_4g.torrent to labpc23.]
+2015-12-05 23:20:30 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.159 vagrant vagrant test_4g.torrent]
+2015-12-05 23:20:30 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_4g.torrent to 10.40.2.159:~/Torrents
+
+2015-12-05 23:20:30 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:30 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:30 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/start_leeching.sh 10.40.2.159 vagrant vagrant]
+2015-12-05 23:20:31 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.159
+
+2015-12-05 23:20:31 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 23:20:31 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:31 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc23.]
+2015-12-05 23:20:31 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:31 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_4g.torrent to labpc03.]
+2015-12-05 23:20:31 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.152 vagrant vagrant test_4g.torrent]
+2015-12-05 23:20:31 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_4g.torrent to 10.40.2.152:~/Torrents
+
+2015-12-05 23:20:31 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:31 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:31 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/start_leeching.sh 10.40.2.152 vagrant vagrant]
+2015-12-05 23:20:32 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.152
+
+2015-12-05 23:20:32 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 23:20:32 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:32 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc03.]
+2015-12-05 23:20:32 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:32 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_4g.torrent to labpc20.]
+2015-12-05 23:20:32 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/copy_torrent_from_seeder_to_leecher.sh 10.40.2.192 vagrant vagrant test_4g.torrent]
+2015-12-05 23:20:33 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_4g.torrent to 10.40.2.192:~/Torrents
+
+2015-12-05 23:20:33 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:33 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.10
+2015-12-05 23:20:33 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.10: /home/vagrant/start_leeching.sh 10.40.2.192 vagrant vagrant]
+2015-12-05 23:20:33 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.192
+
+2015-12-05 23:20:33 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 23:20:33 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.10
+2015-12-05 23:20:33 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc20.]
+2015-12-05 23:20:33 INFO hu.bme.mit.vmdistribution.app.UseModel distribute [Giving 10s grace period before getting torrent infohashes...]
+2015-12-05 23:20:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 23:20:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc38:
+2015-12-05 23:20:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 1%, Downloaded: 66.32/4000.0 MB, Speed: 1.12 MB/s.
+2015-12-05 23:20:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc40:
+2015-12-05 23:20:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 0%, Downloaded: 39.85/4000.0 MB, Speed: 0.67 MB/s.
+2015-12-05 23:20:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc17:
+2015-12-05 23:20:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 1%, Downloaded: 50.86/4000.0 MB, Speed: 0.85 MB/s.
+2015-12-05 23:20:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc37:
+2015-12-05 23:20:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 1%, Downloaded: 41.94/4000.0 MB, Speed: 0.7 MB/s.
+2015-12-05 23:20:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc24:
+2015-12-05 23:20:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 2%, Downloaded: 84.67/4000.0 MB, Speed: 1.41 MB/s.
+2015-12-05 23:20:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 23:20:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 0%, Downloaded: 32.77/4000.0 MB, Speed: 0.55 MB/s.
+2015-12-05 23:20:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 23:20:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 1%, Downloaded: 44.04/4000.0 MB, Speed: 0.74 MB/s.
+2015-12-05 23:20:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 23:20:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 2%, Downloaded: 98.83/4000.0 MB, Speed: 1.66 MB/s.
+2015-12-05 23:20:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc01:
+2015-12-05 23:20:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 2%, Downloaded: 96.73/4000.0 MB, Speed: 1.78 MB/s.
+2015-12-05 23:20:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc30:
+2015-12-05 23:20:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 0%, Downloaded: 26.74/4000.0 MB, Speed: 0.45 MB/s.
+2015-12-05 23:20:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc32:
+2015-12-05 23:20:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 0%, Downloaded: 34.6/4000.0 MB, Speed: 0.58 MB/s.
+2015-12-05 23:20:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc13:
+2015-12-05 23:20:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 1%, Downloaded: 45.88/4000.0 MB, Speed: 0.77 MB/s.
+2015-12-05 23:20:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc18:
+2015-12-05 23:20:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 1%, Downloaded: 42.73/4000.0 MB, Speed: 0.72 MB/s.
+2015-12-05 23:20:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc21:
+2015-12-05 23:20:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 0%, Downloaded: 38.01/4000.0 MB, Speed: 0.64 MB/s.
+2015-12-05 23:20:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc39:
+2015-12-05 23:20:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 0%, Downloaded: 33.55/4000.0 MB, Speed: 0.57 MB/s.
+2015-12-05 23:20:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc22:
+2015-12-05 23:20:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 1%, Downloaded: 44.83/4000.0 MB, Speed: 0.75 MB/s.
+2015-12-05 23:20:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc19:
+2015-12-05 23:20:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 1%, Downloaded: 64.75/4000.0 MB, Speed: 1.09 MB/s.
+2015-12-05 23:20:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc34:
+2015-12-05 23:20:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 0%, Downloaded: 30.67/4000.0 MB, Speed: 0.51 MB/s.
+2015-12-05 23:20:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 23:20:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 1%, Downloaded: 79.17/4000.0 MB, Speed: 1.32 MB/s.
+2015-12-05 23:20:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc28:
+2015-12-05 23:20:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 0%, Downloaded: 29.62/4000.0 MB, Speed: 0.5 MB/s.
+2015-12-05 23:20:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc26:
+2015-12-05 23:20:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 0%, Downloaded: 30.15/4000.0 MB, Speed: 0.51 MB/s.
+2015-12-05 23:20:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc23:
+2015-12-05 23:20:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 1%, Downloaded: 44.04/4000.0 MB, Speed: 0.74 MB/s.
+2015-12-05 23:20:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 23:20:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 1%, Downloaded: 40.37/4000.0 MB, Speed: 0.68 MB/s.
+2015-12-05 23:20:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc20:
+2015-12-05 23:20:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 12%, Downloaded: 508.82/4000.0 MB, Speed: 8.51 MB/s.
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc38:
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 4%, Downloaded: 198.44/4000.0 MB, Speed: 3.31 MB/s.
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc40:
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 4%, Downloaded: 173.54/4000.0 MB, Speed: 2.91 MB/s.
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc17:
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 3%, Downloaded: 141.03/4000.0 MB, Speed: 2.35 MB/s.
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc37:
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 3%, Downloaded: 126.09/4000.0 MB, Speed: 2.11 MB/s.
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc24:
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 2%, Downloaded: 119.28/4000.0 MB, Speed: 1.99 MB/s.
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 3%, Downloaded: 131.6/4000.0 MB, Speed: 2.22 MB/s.
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 6%, Downloaded: 249.3/4000.0 MB, Speed: 4.16 MB/s.
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 7%, Downloaded: 294.65/4000.0 MB, Speed: 4.92 MB/s.
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc01:
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 13%, Downloaded: 536.87/4000.0 MB, Speed: 9.05 MB/s.
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc30:
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 2%, Downloaded: 109.58/4000.0 MB, Speed: 1.84 MB/s.
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc32:
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 2%, Downloaded: 81.0/4000.0 MB, Speed: 1.36 MB/s.
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc13:
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 3%, Downloaded: 147.85/4000.0 MB, Speed: 2.47 MB/s.
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc18:
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 3%, Downloaded: 138.94/4000.0 MB, Speed: 2.34 MB/s.
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc21:
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 3%, Downloaded: 149.42/4000.0 MB, Speed: 2.5 MB/s.
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc39:
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 3%, Downloaded: 152.31/4000.0 MB, Speed: 2.55 MB/s.
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc22:
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 3%, Downloaded: 120.06/4000.0 MB, Speed: 2.0 MB/s.
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc19:
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 8%, Downloaded: 340.26/4000.0 MB, Speed: 5.68 MB/s.
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc34:
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 3%, Downloaded: 121.9/4000.0 MB, Speed: 2.06 MB/s.
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 5%, Downloaded: 200.54/4000.0 MB, Speed: 3.36 MB/s.
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc28:
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 4%, Downloaded: 180.62/4000.0 MB, Speed: 3.02 MB/s.
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc26:
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 1%, Downloaded: 50.59/4000.0 MB, Speed: 0.84 MB/s.
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc23:
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 1%, Downloaded: 66.85/4000.0 MB, Speed: 1.12 MB/s.
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 5%, Downloaded: 226.49/4000.0 MB, Speed: 3.78 MB/s.
+2015-12-05 23:20:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc20:
+2015-12-05 23:20:55 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 23%, Downloaded: 920.65/4000.0 MB, Speed: 15.37 MB/s.
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc38:
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 8%, Downloaded: 350.49/4000.0 MB, Speed: 5.87 MB/s.
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc40:
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 6%, Downloaded: 252.97/4000.0 MB, Speed: 4.23 MB/s.
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc17:
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 6%, Downloaded: 246.94/4000.0 MB, Speed: 4.13 MB/s.
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc37:
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 6%, Downloaded: 272.63/4000.0 MB, Speed: 4.56 MB/s.
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc24:
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 5%, Downloaded: 200.54/4000.0 MB, Speed: 3.36 MB/s.
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 8%, Downloaded: 358.35/4000.0 MB, Speed: 5.98 MB/s.
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 14%, Downloaded: 571.74/4000.0 MB, Speed: 9.56 MB/s.
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 10%, Downloaded: 416.55/4000.0 MB, Speed: 6.96 MB/s.
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc01:
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 21%, Downloaded: 865.6/4000.0 MB, Speed: 14.58 MB/s.
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc30:
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 5%, Downloaded: 212.6/4000.0 MB, Speed: 3.56 MB/s.
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc32:
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 3%, Downloaded: 129.5/4000.0 MB, Speed: 2.17 MB/s.
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc13:
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 7%, Downloaded: 291.5/4000.0 MB, Speed: 4.88 MB/s.
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc18:
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 6%, Downloaded: 246.15/4000.0 MB, Speed: 4.11 MB/s.
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc21:
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 8%, Downloaded: 338.95/4000.0 MB, Speed: 5.66 MB/s.
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc39:
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 6%, Downloaded: 251.13/4000.0 MB, Speed: 4.2 MB/s.
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc22:
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 5%, Downloaded: 204.47/4000.0 MB, Speed: 3.44 MB/s.
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc19:
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 11%, Downloaded: 470.02/4000.0 MB, Speed: 7.89 MB/s.
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc34:
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 5%, Downloaded: 231.74/4000.0 MB, Speed: 3.87 MB/s.
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 8%, Downloaded: 324.27/4000.0 MB, Speed: 5.42 MB/s.
+2015-12-05 23:21:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc28:
+2015-12-05 23:21:06 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 8%, Downloaded: 320.86/4000.0 MB, Speed: 5.38 MB/s.
+2015-12-05 23:21:06 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc26:
+2015-12-05 23:21:06 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 2%, Downloaded: 81.0/4000.0 MB, Speed: 1.37 MB/s.
+2015-12-05 23:21:06 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc23:
+2015-12-05 23:21:06 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 3%, Downloaded: 129.76/4000.0 MB, Speed: 2.17 MB/s.
+2015-12-05 23:21:06 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 23:21:06 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 10%, Downloaded: 416.02/4000.0 MB, Speed: 6.95 MB/s.
+2015-12-05 23:21:06 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc20:
+2015-12-05 23:21:06 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 30%, Downloaded: 1224.74/4000.0 MB, Speed: 20.53 MB/s.
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc38:
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 11%, Downloaded: 479.72/4000.0 MB, Speed: 8.02 MB/s.
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc40:
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 7%, Downloaded: 319.29/4000.0 MB, Speed: 5.36 MB/s.
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc17:
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 8%, Downloaded: 343.93/4000.0 MB, Speed: 5.74 MB/s.
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc37:
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 10%, Downloaded: 400.03/4000.0 MB, Speed: 6.68 MB/s.
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc24:
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 7%, Downloaded: 280.76/4000.0 MB, Speed: 4.7 MB/s.
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 13%, Downloaded: 523.76/4000.0 MB, Speed: 8.74 MB/s.
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 23%, Downloaded: 936.9/4000.0 MB, Speed: 15.65 MB/s.
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 13%, Downloaded: 551.55/4000.0 MB, Speed: 9.21 MB/s.
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc01:
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 29%, Downloaded: 1183.06/4000.0 MB, Speed: 19.82 MB/s.
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc30:
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 8%, Downloaded: 339.74/4000.0 MB, Speed: 5.68 MB/s.
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc32:
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 4%, Downloaded: 187.7/4000.0 MB, Speed: 3.15 MB/s.
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc13:
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 10%, Downloaded: 418.91/4000.0 MB, Speed: 7.01 MB/s.
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc18:
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 8%, Downloaded: 341.57/4000.0 MB, Speed: 5.71 MB/s.
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc21:
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 11%, Downloaded: 447.22/4000.0 MB, Speed: 7.48 MB/s.
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc39:
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 8%, Downloaded: 353.89/4000.0 MB, Speed: 5.91 MB/s.
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc22:
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 7%, Downloaded: 312.94/4000.0 MB, Speed: 5.25 MB/s.
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc19:
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 15%, Downloaded: 600.83/4000.0 MB, Speed: 10.11 MB/s.
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc34:
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 8%, Downloaded: 326.11/4000.0 MB, Speed: 5.44 MB/s.
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 10%, Downloaded: 418.91/4000.0 MB, Speed: 7.0 MB/s.
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc28:
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 11%, Downloaded: 460.06/4000.0 MB, Speed: 7.69 MB/s.
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc26:
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 4%, Downloaded: 169.35/4000.0 MB, Speed: 2.83 MB/s.
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc23:
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 4%, Downloaded: 198.71/4000.0 MB, Speed: 3.32 MB/s.
+2015-12-05 23:21:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 23:21:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 14%, Downloaded: 569.9/4000.0 MB, Speed: 9.51 MB/s.
+2015-12-05 23:21:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc20:
+2015-12-05 23:21:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 38%, Downloaded: 1550.53/4000.0 MB, Speed: 25.92 MB/s.
+2015-12-05 23:21:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 23:21:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc38:
+2015-12-05 23:21:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 19%, Downloaded: 765.41/4000.0 MB, Speed: 12.91 MB/s.
+2015-12-05 23:21:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc40:
+2015-12-05 23:21:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 16%, Downloaded: 664.27/4000.0 MB, Speed: 11.26 MB/s.
+2015-12-05 23:21:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc17:
+2015-12-05 23:21:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 13%, Downloaded: 527.96/4000.0 MB, Speed: 8.98 MB/s.
+2015-12-05 23:21:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc37:
+2015-12-05 23:21:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 18%, Downloaded: 743.96/4000.0 MB, Speed: 12.64 MB/s.
+2015-12-05 23:21:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc24:
+2015-12-05 23:21:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 12%, Downloaded: 496.76/4000.0 MB, Speed: 8.48 MB/s.
+2015-12-05 23:21:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 23:21:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 22%, Downloaded: 882.38/4000.0 MB, Speed: 15.01 MB/s.
+2015-12-05 23:21:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 23:21:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 36%, Downloaded: 1455.69/4000.0 MB, Speed: 24.41 MB/s.
+2015-12-05 23:21:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 23:21:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 24%, Downloaded: 964.9/4000.0 MB, Speed: 16.36 MB/s.
+2015-12-05 23:21:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc01:
+2015-12-05 23:21:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 35%, Downloaded: 1408.44/4000.0 MB, Speed: 23.61 MB/s.
+2015-12-05 23:21:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc30:
+2015-12-05 23:21:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 17%, Downloaded: 684.46/4000.0 MB, Speed: 11.57 MB/s.
+2015-12-05 23:21:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc32:
+2015-12-05 23:21:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 10%, Downloaded: 412.09/4000.0 MB, Speed: 6.98 MB/s.
+2015-12-05 23:21:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc13:
+2015-12-05 23:21:30 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 19%, Downloaded: 767.76/4000.0 MB, Speed: 12.97 MB/s.
+2015-12-05 23:21:30 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc18:
+2015-12-05 23:21:30 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 15%, Downloaded: 611.32/4000.0 MB, Speed: 10.34 MB/s.
+2015-12-05 23:21:30 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc21:
+2015-12-05 23:21:30 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 21%, Downloaded: 843.58/4000.0 MB, Speed: 14.27 MB/s.
+2015-12-05 23:21:30 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc39:
+2015-12-05 23:21:30 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 16%, Downloaded: 649.07/4000.0 MB, Speed: 11.02 MB/s.
+2015-12-05 23:21:30 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc22:
+2015-12-05 23:21:30 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 18%, Downloaded: 738.67/4000.0 MB, Speed: 12.47 MB/s.
+2015-12-05 23:21:30 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc19:
+2015-12-05 23:21:31 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 28%, Downloaded: 1156.0/4000.0 MB, Speed: 19.51 MB/s.
+2015-12-05 23:21:31 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc34:
+2015-12-05 23:21:31 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 14%, Downloaded: 583.53/4000.0 MB, Speed: 9.87 MB/s.
+2015-12-05 23:21:31 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 23:21:31 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 14%, Downloaded: 581.7/4000.0 MB, Speed: 9.9 MB/s.
+2015-12-05 23:21:31 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc28:
+2015-12-05 23:21:31 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 25%, Downloaded: 1024.72/4000.0 MB, Speed: 17.37 MB/s.
+2015-12-05 23:21:31 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc26:
+2015-12-05 23:21:31 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 11%, Downloaded: 446.43/4000.0 MB, Speed: 7.57 MB/s.
+2015-12-05 23:21:31 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc23:
+2015-12-05 23:21:31 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 10%, Downloaded: 422.58/4000.0 MB, Speed: 7.23 MB/s.
+2015-12-05 23:21:31 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 23:21:31 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 25%, Downloaded: 1010.57/4000.0 MB, Speed: 17.04 MB/s.
+2015-12-05 23:21:31 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc20:
+2015-12-05 23:21:31 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 51%, Downloaded: 2072.46/4000.0 MB, Speed: 34.68 MB/s.
+2015-12-05 23:21:41 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 23:21:41 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc38:
+2015-12-05 23:21:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 33%, Downloaded: 1331.64/4000.0 MB, Speed: 21.49 MB/s.
+2015-12-05 23:21:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc40:
+2015-12-05 23:21:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 23%, Downloaded: 948.7/4000.0 MB, Speed: 15.56 MB/s.
+2015-12-05 23:21:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc17:
+2015-12-05 23:21:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 19%, Downloaded: 797.44/4000.0 MB, Speed: 12.73 MB/s.
+2015-12-05 23:21:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc37:
+2015-12-05 23:21:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 33%, Downloaded: 1325.92/4000.0 MB, Speed: 21.82 MB/s.
+2015-12-05 23:21:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc24:
+2015-12-05 23:21:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 19%, Downloaded: 792.46/4000.0 MB, Speed: 12.16 MB/s.
+2015-12-05 23:21:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 23:21:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 37%, Downloaded: 1493.9/4000.0 MB, Speed: 24.59 MB/s.
+2015-12-05 23:21:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 23:21:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 51%, Downloaded: 2074.35/4000.0 MB, Speed: 34.04 MB/s.
+2015-12-05 23:21:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 23:21:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 41%, Downloaded: 1653.29/4000.0 MB, Speed: 25.91 MB/s.
+2015-12-05 23:21:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc01:
+2015-12-05 23:21:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 37%, Downloaded: 1515.66/4000.0 MB, Speed: 23.32 MB/s.
+2015-12-05 23:21:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc30:
+2015-12-05 23:21:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 32%, Downloaded: 1292.58/4000.0 MB, Speed: 21.28 MB/s.
+2015-12-05 23:21:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc32:
+2015-12-05 23:21:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 18%, Downloaded: 728.76/4000.0 MB, Speed: 11.65 MB/s.
+2015-12-05 23:21:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc13:
+2015-12-05 23:21:45 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 33%, Downloaded: 1343.17/4000.0 MB, Speed: 21.8 MB/s.
+2015-12-05 23:21:45 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc18:
+2015-12-05 23:21:45 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 22%, Downloaded: 918.55/4000.0 MB, Speed: 14.59 MB/s.
+2015-12-05 23:21:45 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc21:
+2015-12-05 23:21:45 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 35%, Downloaded: 1400.9/4000.0 MB, Speed: 22.71 MB/s.
+2015-12-05 23:21:45 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc39:
+2015-12-05 23:21:46 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 23%, Downloaded: 924.32/4000.0 MB, Speed: 14.9 MB/s.
+2015-12-05 23:21:46 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc22:
+2015-12-05 23:21:46 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 34%, Downloaded: 1363.36/4000.0 MB, Speed: 21.82 MB/s.
+2015-12-05 23:21:46 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc19:
+2015-12-05 23:21:47 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 44%, Downloaded: 1798.51/4000.0 MB, Speed: 28.79 MB/s.
+2015-12-05 23:21:47 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc34:
+2015-12-05 23:21:47 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 22%, Downloaded: 894.96/4000.0 MB, Speed: 14.3 MB/s.
+2015-12-05 23:21:47 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 23:21:47 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 17%, Downloaded: 683.67/4000.0 MB, Speed: 9.92 MB/s.
+2015-12-05 23:21:47 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc28:
+2015-12-05 23:21:47 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 42%, Downloaded: 1707.87/4000.0 MB, Speed: 27.77 MB/s.
+2015-12-05 23:21:47 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc26:
+2015-12-05 23:21:47 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 18%, Downloaded: 754.71/4000.0 MB, Speed: 12.07 MB/s.
+2015-12-05 23:21:47 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc23:
+2015-12-05 23:21:47 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 18%, Downloaded: 747.11/4000.0 MB, Speed: 11.67 MB/s.
+2015-12-05 23:21:47 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 23:21:47 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 39%, Downloaded: 1593.05/4000.0 MB, Speed: 25.55 MB/s.
+2015-12-05 23:21:47 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc20:
+2015-12-05 23:21:48 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 64%, Downloaded: 2588.35/4000.0 MB, Speed: 31.49 MB/s.
+2015-12-05 23:21:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 23:21:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc38:
+2015-12-05 23:21:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 49%, Downloaded: 1982.28/4000.0 MB, Speed: 29.07 MB/s.
+2015-12-05 23:21:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc40:
+2015-12-05 23:21:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 31%, Downloaded: 1265.63/4000.0 MB, Speed: 17.76 MB/s.
+2015-12-05 23:21:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc17:
+2015-12-05 23:21:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 27%, Downloaded: 1117.52/4000.0 MB, Speed: 15.7 MB/s.
+2015-12-05 23:21:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc37:
+2015-12-05 23:21:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 49%, Downloaded: 1977.09/4000.0 MB, Speed: 30.12 MB/s.
+2015-12-05 23:21:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc24:
+2015-12-05 23:21:59 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 27%, Downloaded: 1114.9/4000.0 MB, Speed: 16.33 MB/s.
+2015-12-05 23:21:59 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 23:21:59 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 52%, Downloaded: 2106.01/4000.0 MB, Speed: 31.48 MB/s.
+2015-12-05 23:21:59 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 23:21:59 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 64%, Downloaded: 2599.42/4000.0 MB, Speed: 37.69 MB/s.
+2015-12-05 23:21:59 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 23:21:59 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 57%, Downloaded: 2301.04/4000.0 MB, Speed: 32.64 MB/s.
+2015-12-05 23:21:59 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc01:
+2015-12-05 23:21:59 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 40%, Downloaded: 1606.63/4000.0 MB, Speed: 15.4 MB/s.
+2015-12-05 23:21:59 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc30:
+2015-12-05 23:21:59 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 46%, Downloaded: 1854.09/4000.0 MB, Speed: 28.55 MB/s.
+2015-12-05 23:21:59 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc32:
+2015-12-05 23:22:00 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 26%, Downloaded: 1049.62/4000.0 MB, Speed: 15.93 MB/s.
+2015-12-05 23:22:00 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc13:
+2015-12-05 23:22:00 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 48%, Downloaded: 1954.23/4000.0 MB, Speed: 29.12 MB/s.
+2015-12-05 23:22:00 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc18:
+2015-12-05 23:22:00 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 30%, Downloaded: 1231.81/4000.0 MB, Speed: 17.4 MB/s.
+2015-12-05 23:22:00 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc21:
+2015-12-05 23:22:00 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 49%, Downloaded: 1994.86/4000.0 MB, Speed: 29.09 MB/s.
+2015-12-05 23:22:00 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc39:
+2015-12-05 23:22:01 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 29%, Downloaded: 1185.42/4000.0 MB, Speed: 16.45 MB/s.
+2015-12-05 23:22:01 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc22:
+2015-12-05 23:22:01 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 48%, Downloaded: 1945.58/4000.0 MB, Speed: 29.87 MB/s.
+2015-12-05 23:22:01 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc19:
+2015-12-05 23:22:01 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 59%, Downloaded: 2364.22/4000.0 MB, Speed: 32.51 MB/s.
+2015-12-05 23:22:01 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc34:
+2015-12-05 23:22:01 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 29%, Downloaded: 1186.73/4000.0 MB, Speed: 16.72 MB/s.
+2015-12-05 23:22:01 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 23:22:01 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 19%, Downloaded: 780.14/4000.0 MB, Speed: 8.4 MB/s.
+2015-12-05 23:22:01 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc28:
+2015-12-05 23:22:01 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 58%, Downloaded: 2322.6/4000.0 MB, Speed: 34.42 MB/s.
+2015-12-05 23:22:01 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc26:
+2015-12-05 23:22:01 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 25%, Downloaded: 1036.52/4000.0 MB, Speed: 16.39 MB/s.
+2015-12-05 23:22:01 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc23:
+2015-12-05 23:22:02 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 25%, Downloaded: 1020.26/4000.0 MB, Speed: 15.43 MB/s.
+2015-12-05 23:22:02 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 23:22:02 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 53%, Downloaded: 2154.56/4000.0 MB, Speed: 30.21 MB/s.
+2015-12-05 23:22:02 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc20:
+2015-12-05 23:22:02 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 76%, Downloaded: 3075.68/4000.0 MB, Speed: 32.79 MB/s.
+2015-12-05 23:22:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 23:22:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc38:
+2015-12-05 23:22:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 64%, Downloaded: 2561.88/4000.0 MB, Speed: 35.67 MB/s.
+2015-12-05 23:22:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc40:
+2015-12-05 23:22:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 38%, Downloaded: 1544.29/4000.0 MB, Speed: 20.88 MB/s.
+2015-12-05 23:22:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc17:
+2015-12-05 23:22:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 34%, Downloaded: 1386.48/4000.0 MB, Speed: 18.08 MB/s.
+2015-12-05 23:22:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc37:
+2015-12-05 23:22:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 62%, Downloaded: 2509.24/4000.0 MB, Speed: 36.18 MB/s.
+2015-12-05 23:22:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc24:
+2015-12-05 23:22:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 35%, Downloaded: 1401.68/4000.0 MB, Speed: 19.09 MB/s.
+2015-12-05 23:22:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 23:22:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 66%, Downloaded: 2675.91/4000.0 MB, Speed: 36.85 MB/s.
+2015-12-05 23:22:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 23:22:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 77%, Downloaded: 3111.65/4000.0 MB, Speed: 38.29 MB/s.
+2015-12-05 23:22:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 23:22:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 72%, Downloaded: 2880.65/4000.0 MB, Speed: 39.74 MB/s.
+2015-12-05 23:22:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc01:
+2015-12-05 23:22:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 42%, Downloaded: 1713.58/4000.0 MB, Speed: 10.56 MB/s.
+2015-12-05 23:22:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc30:
+2015-12-05 23:22:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 60%, Downloaded: 2402.23/4000.0 MB, Speed: 35.17 MB/s.
+2015-12-05 23:22:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc32:
+2015-12-05 23:22:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 33%, Downloaded: 1331.95/4000.0 MB, Speed: 19.52 MB/s.
+2015-12-05 23:22:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc13:
+2015-12-05 23:22:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 62%, Downloaded: 2519.93/4000.0 MB, Speed: 35.67 MB/s.
+2015-12-05 23:22:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc18:
+2015-12-05 23:22:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 37%, Downloaded: 1509.16/4000.0 MB, Speed: 19.88 MB/s.
+2015-12-05 23:22:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc21:
+2015-12-05 23:22:15 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 62%, Downloaded: 2503.68/4000.0 MB, Speed: 34.85 MB/s.
+2015-12-05 23:22:15 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc39:
+2015-12-05 23:22:15 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 35%, Downloaded: 1430.52/4000.0 MB, Speed: 18.27 MB/s.
+2015-12-05 23:22:15 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc22:
+2015-12-05 23:22:15 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 62%, Downloaded: 2503.42/4000.0 MB, Speed: 37.01 MB/s.
+2015-12-05 23:22:15 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc19:
+2015-12-05 23:22:15 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 72%, Downloaded: 2910.01/4000.0 MB, Speed: 38.91 MB/s.
+2015-12-05 23:22:15 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc34:
+2015-12-05 23:22:15 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 36%, Downloaded: 1474.04/4000.0 MB, Speed: 19.45 MB/s.
+2015-12-05 23:22:15 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 23:22:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 21%, Downloaded: 878.44/4000.0 MB, Speed: 7.94 MB/s.
+2015-12-05 23:22:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc28:
+2015-12-05 23:22:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 73%, Downloaded: 2921.28/4000.0 MB, Speed: 41.31 MB/s.
+2015-12-05 23:22:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc26:
+2015-12-05 23:22:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 32%, Downloaded: 1314.6/4000.0 MB, Speed: 19.28 MB/s.
+2015-12-05 23:22:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc23:
+2015-12-05 23:22:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 32%, Downloaded: 1290.01/4000.0 MB, Speed: 18.37 MB/s.
+2015-12-05 23:22:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 23:22:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 67%, Downloaded: 2691.43/4000.0 MB, Speed: 35.7 MB/s.
+2015-12-05 23:22:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc20:
+2015-12-05 23:22:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 89%, Downloaded: 3561.96/4000.0 MB, Speed: 33.82 MB/s.
+2015-12-05 23:22:26 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 23:22:26 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc38:
+2015-12-05 23:22:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 78%, Downloaded: 3122.08/4000.0 MB, Speed: 40.01 MB/s.
+2015-12-05 23:22:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc40:
+2015-12-05 23:22:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 45%, Downloaded: 1802.76/4000.0 MB, Speed: 19.33 MB/s.
+2015-12-05 23:22:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc17:
+2015-12-05 23:22:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 41%, Downloaded: 1664.09/4000.0 MB, Speed: 19.08 MB/s.
+2015-12-05 23:22:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc37:
+2015-12-05 23:22:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 76%, Downloaded: 3059.95/4000.0 MB, Speed: 39.08 MB/s.
+2015-12-05 23:22:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc24:
+2015-12-05 23:22:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 42%, Downloaded: 1684.8/4000.0 MB, Speed: 20.0 MB/s.
+2015-12-05 23:22:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 23:22:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 81%, Downloaded: 3248.96/4000.0 MB, Speed: 40.0 MB/s.
+2015-12-05 23:22:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 23:22:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 89%, Downloaded: 3593.15/4000.0 MB, Speed: 36.73 MB/s.
+2015-12-05 23:22:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 23:22:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 86%, Downloaded: 3468.11/4000.0 MB, Speed: 42.49 MB/s.
+2015-12-05 23:22:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc01:
+2015-12-05 23:22:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 45%, Downloaded: 1800.87/4000.0 MB, Speed: 6.56 MB/s.
+2015-12-05 23:22:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc30:
+2015-12-05 23:22:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 72%, Downloaded: 2918.92/4000.0 MB, Speed: 37.74 MB/s.
+2015-12-05 23:22:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc32:
+2015-12-05 23:22:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 40%, Downloaded: 1606.16/4000.0 MB, Speed: 20.26 MB/s.
+2015-12-05 23:22:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc13:
+2015-12-05 23:22:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 77%, Downloaded: 3091.93/4000.0 MB, Speed: 39.39 MB/s.
+2015-12-05 23:22:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc18:
+2015-12-05 23:22:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 44%, Downloaded: 1787.3/4000.0 MB, Speed: 20.27 MB/s.
+2015-12-05 23:22:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc21:
+2015-12-05 23:22:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 75%, Downloaded: 3026.92/4000.0 MB, Speed: 37.42 MB/s.
+2015-12-05 23:22:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc39:
+2015-12-05 23:22:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 42%, Downloaded: 1680.87/4000.0 MB, Speed: 17.46 MB/s.
+2015-12-05 23:22:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc22:
+2015-12-05 23:22:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 75%, Downloaded: 3023.25/4000.0 MB, Speed: 39.06 MB/s.
+2015-12-05 23:22:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc19:
+2015-12-05 23:22:30 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 86%, Downloaded: 3459.72/4000.0 MB, Speed: 39.5 MB/s.
+2015-12-05 23:22:30 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc34:
+2015-12-05 23:22:30 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 44%, Downloaded: 1762.92/4000.0 MB, Speed: 20.23 MB/s.
+2015-12-05 23:22:30 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 23:22:30 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 24%, Downloaded: 968.04/4000.0 MB, Speed: 6.52 MB/s.
+2015-12-05 23:22:30 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc28:
+2015-12-05 23:22:30 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 88%, Downloaded: 3522.37/4000.0 MB, Speed: 42.17 MB/s.
+2015-12-05 23:22:30 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc26:
+2015-12-05 23:22:30 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 40%, Downloaded: 1600.07/4000.0 MB, Speed: 19.55 MB/s.
+2015-12-05 23:22:30 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc23:
+2015-12-05 23:22:31 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 38%, Downloaded: 1555.56/4000.0 MB, Speed: 19.21 MB/s.
+2015-12-05 23:22:31 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 23:22:31 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 81%, Downloaded: 3265.73/4000.0 MB, Speed: 38.35 MB/s.
+2015-12-05 23:22:31 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc20:
+2015-12-05 23:22:31 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 13%, Downloaded: 538.97/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:22:41 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 23:22:41 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc38:
+2015-12-05 23:22:41 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 92%, Downloaded: 3715.31/4000.0 MB, Speed: 40.14 MB/s.
+2015-12-05 23:22:41 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc40:
+2015-12-05 23:22:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 53%, Downloaded: 2135.89/4000.0 MB, Speed: 20.15 MB/s.
+2015-12-05 23:22:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc17:
+2015-12-05 23:22:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 49%, Downloaded: 1971.85/4000.0 MB, Speed: 19.92 MB/s.
+2015-12-05 23:22:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc37:
+2015-12-05 23:22:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 89%, Downloaded: 3579.0/4000.0 MB, Speed: 37.94 MB/s.
+2015-12-05 23:22:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc24:
+2015-12-05 23:22:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 51%, Downloaded: 2068.0/4000.0 MB, Speed: 21.68 MB/s.
+2015-12-05 23:22:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 23:22:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 96%, Downloaded: 3850.05/4000.0 MB, Speed: 40.32 MB/s.
+2015-12-05 23:22:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 23:22:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 99%, Downloaded: 3982.96/4000.0 MB, Speed: 32.77 MB/s.
+2015-12-05 23:22:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 23:22:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 6%, Downloaded: 270.01/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:22:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc01:
+2015-12-05 23:22:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 48%, Downloaded: 1937.98/4000.0 MB, Speed: 7.14 MB/s.
+2015-12-05 23:22:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc30:
+2015-12-05 23:22:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 86%, Downloaded: 3456.84/4000.0 MB, Speed: 37.09 MB/s.
+2015-12-05 23:22:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc32:
+2015-12-05 23:22:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 50%, Downloaded: 2032.14/4000.0 MB, Speed: 22.32 MB/s.
+2015-12-05 23:22:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc13:
+2015-12-05 23:22:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 92%, Downloaded: 3702.2/4000.0 MB, Speed: 40.37 MB/s.
+2015-12-05 23:22:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc18:
+2015-12-05 23:22:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 53%, Downloaded: 2144.6/4000.0 MB, Speed: 21.12 MB/s.
+2015-12-05 23:22:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc21:
+2015-12-05 23:22:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 89%, Downloaded: 3583.72/4000.0 MB, Speed: 37.15 MB/s.
+2015-12-05 23:22:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc39:
+2015-12-05 23:22:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 50%, Downloaded: 2037.38/4000.0 MB, Speed: 19.16 MB/s.
+2015-12-05 23:22:44 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc22:
+2015-12-05 23:22:45 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 91%, Downloaded: 3648.99/4000.0 MB, Speed: 39.75 MB/s.
+2015-12-05 23:22:45 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc19:
+2015-12-05 23:22:45 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 3%, Downloaded: 135.27/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:22:45 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc34:
+2015-12-05 23:22:45 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 53%, Downloaded: 2137.26/4000.0 MB, Speed: 21.31 MB/s.
+2015-12-05 23:22:45 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 23:22:45 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 27%, Downloaded: 1113.27/4000.0 MB, Speed: 7.33 MB/s.
+2015-12-05 23:22:45 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc28:
+2015-12-05 23:22:45 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 13%, Downloaded: 531.37/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:22:45 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc26:
+2015-12-05 23:22:45 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 49%, Downloaded: 1982.54/4000.0 MB, Speed: 21.15 MB/s.
+2015-12-05 23:22:45 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc23:
+2015-12-05 23:22:46 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 48%, Downloaded: 1945.63/4000.0 MB, Speed: 20.89 MB/s.
+2015-12-05 23:22:46 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 23:22:46 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 96%, Downloaded: 3860.28/4000.0 MB, Speed: 39.47 MB/s.
+2015-12-05 23:22:46 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc20:
+2015-12-05 23:22:46 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 75%, Downloaded: 3032.22/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:22:56 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 23:22:56 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc38:
+2015-12-05 23:22:56 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 25%, Downloaded: 1039.93/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:22:56 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc40:
+2015-12-05 23:22:56 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 65%, Downloaded: 2637.9/4000.0 MB, Speed: 23.64 MB/s.
+2015-12-05 23:22:56 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc17:
+2015-12-05 23:22:57 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 60%, Downloaded: 2413.04/4000.0 MB, Speed: 22.46 MB/s.
+2015-12-05 23:22:57 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc37:
+2015-12-05 23:22:57 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 17%, Downloaded: 682.36/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:22:57 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc24:
+2015-12-05 23:22:57 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 65%, Downloaded: 2612.73/4000.0 MB, Speed: 25.61 MB/s.
+2015-12-05 23:22:57 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 23:22:57 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 37%, Downloaded: 1493.17/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:22:57 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 23:22:57 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 99%, Downloaded: 3999.21/4000.0 MB, Speed: 24.39 MB/s.
+2015-12-05 23:22:57 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 23:22:57 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 54%, Downloaded: 2166.1/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:22:57 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc01:
+2015-12-05 23:22:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 56%, Downloaded: 2277.45/4000.0 MB, Speed: 11.57 MB/s.
+2015-12-05 23:22:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc30:
+2015-12-05 23:22:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 0%, Downloaded: 0.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:22:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc32:
+2015-12-05 23:22:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 63%, Downloaded: 2533.88/4000.0 MB, Speed: 25.44 MB/s.
+2015-12-05 23:22:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc13:
+2015-12-05 23:22:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 26%, Downloaded: 1078.72/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:22:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc18:
+2015-12-05 23:22:59 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 65%, Downloaded: 2616.46/4000.0 MB, Speed: 23.93 MB/s.
+2015-12-05 23:22:59 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc21:
+2015-12-05 23:22:59 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 13%, Downloaded: 547.88/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:22:59 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc39:
+2015-12-05 23:22:59 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 62%, Downloaded: 2507.15/4000.0 MB, Speed: 22.53 MB/s.
+2015-12-05 23:22:59 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc22:
+2015-12-05 23:22:59 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 18%, Downloaded: 752.35/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:22:59 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc19:
+2015-12-05 23:22:59 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 52%, Downloaded: 2097.41/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:22:59 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc34:
+2015-12-05 23:23:00 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 67%, Downloaded: 2684.35/4000.0 MB, Speed: 25.68 MB/s.
+2015-12-05 23:23:00 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 23:23:03 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 40%, Downloaded: 1637.03/4000.0 MB, Speed: 14.11 MB/s.
+2015-12-05 23:23:03 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc28:
+2015-12-05 23:23:03 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 80%, Downloaded: 3214.15/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:03 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc26:
+2015-12-05 23:23:03 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 65%, Downloaded: 2640.0/4000.0 MB, Speed: 26.37 MB/s.
+2015-12-05 23:23:03 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc23:
+2015-12-05 23:23:03 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 63%, Downloaded: 2524.45/4000.0 MB, Speed: 24.69 MB/s.
+2015-12-05 23:23:03 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 23:23:03 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 47%, Downloaded: 1891.89/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:03 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc20:
+2015-12-05 23:23:03 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 23:23:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc38:
+2015-12-05 23:23:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 96%, Downloaded: 3840.93/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc40:
+2015-12-05 23:23:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 80%, Downloaded: 3208.59/4000.0 MB, Speed: 27.41 MB/s.
+2015-12-05 23:23:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc17:
+2015-12-05 23:23:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 74%, Downloaded: 2967.94/4000.0 MB, Speed: 25.98 MB/s.
+2015-12-05 23:23:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc37:
+2015-12-05 23:23:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 85%, Downloaded: 3433.56/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc24:
+2015-12-05 23:23:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 81%, Downloaded: 3262.06/4000.0 MB, Speed: 30.75 MB/s.
+2015-12-05 23:23:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 23:23:15 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:15 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 23:23:15 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 99%, Downloaded: 3999.21/4000.0 MB, Speed: 14.19 MB/s.
+2015-12-05 23:23:15 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 23:23:15 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:15 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc01:
+2015-12-05 23:23:15 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 69%, Downloaded: 2795.97/4000.0 MB, Speed: 18.06 MB/s.
+2015-12-05 23:23:15 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc30:
+2015-12-05 23:23:15 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 72%, Downloaded: 2889.35/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:15 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc32:
+2015-12-05 23:23:15 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 78%, Downloaded: 3124.7/4000.0 MB, Speed: 29.57 MB/s.
+2015-12-05 23:23:15 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc13:
+2015-12-05 23:23:15 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 96%, Downloaded: 3850.11/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:15 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc18:
+2015-12-05 23:23:15 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 80%, Downloaded: 3204.92/4000.0 MB, Speed: 28.17 MB/s.
+2015-12-05 23:23:15 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc21:
+2015-12-05 23:23:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 75%, Downloaded: 3039.56/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc39:
+2015-12-05 23:23:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 75%, Downloaded: 3021.47/4000.0 MB, Speed: 26.54 MB/s.
+2015-12-05 23:23:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc22:
+2015-12-05 23:23:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 89%, Downloaded: 3590.59/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc19:
+2015-12-05 23:23:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc34:
+2015-12-05 23:23:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 83%, Downloaded: 3348.89/4000.0 MB, Speed: 31.2 MB/s.
+2015-12-05 23:23:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 23:23:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 50%, Downloaded: 2023.17/4000.0 MB, Speed: 19.1 MB/s.
+2015-12-05 23:23:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc28:
+2015-12-05 23:23:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc26:
+2015-12-05 23:23:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 79%, Downloaded: 3170.31/4000.0 MB, Speed: 30.73 MB/s.
+2015-12-05 23:23:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc23:
+2015-12-05 23:23:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 73%, Downloaded: 2959.61/4000.0 MB, Speed: 27.66 MB/s.
+2015-12-05 23:23:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 23:23:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc20:
+2015-12-05 23:23:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 23:23:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc38:
+2015-12-05 23:23:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc40:
+2015-12-05 23:23:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 91%, Downloaded: 3679.4/4000.0 MB, Speed: 31.3 MB/s.
+2015-12-05 23:23:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc17:
+2015-12-05 23:23:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 85%, Downloaded: 3432.72/4000.0 MB, Speed: 29.26 MB/s.
+2015-12-05 23:23:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc37:
+2015-12-05 23:23:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc24:
+2015-12-05 23:23:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 92%, Downloaded: 3717.93/4000.0 MB, Speed: 33.77 MB/s.
+2015-12-05 23:23:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 23:23:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 23:23:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 99%, Downloaded: 3999.21/4000.0 MB, Speed: 6.43 MB/s.
+2015-12-05 23:23:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 23:23:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc01:
+2015-12-05 23:23:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 79%, Downloaded: 3184.99/4000.0 MB, Speed: 23.11 MB/s.
+2015-12-05 23:23:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc30:
+2015-12-05 23:23:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc32:
+2015-12-05 23:23:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 89%, Downloaded: 3572.97/4000.0 MB, Speed: 32.85 MB/s.
+2015-12-05 23:23:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc13:
+2015-12-05 23:23:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc18:
+2015-12-05 23:23:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 93%, Downloaded: 3722.91/4000.0 MB, Speed: 32.5 MB/s.
+2015-12-05 23:23:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc21:
+2015-12-05 23:23:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc39:
+2015-12-05 23:23:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 87%, Downloaded: 3485.99/4000.0 MB, Speed: 30.22 MB/s.
+2015-12-05 23:23:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc22:
+2015-12-05 23:23:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc19:
+2015-12-05 23:23:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc34:
+2015-12-05 23:23:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 97%, Downloaded: 3887.02/4000.0 MB, Speed: 35.76 MB/s.
+2015-12-05 23:23:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 23:23:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 58%, Downloaded: 2338.01/4000.0 MB, Speed: 22.96 MB/s.
+2015-12-05 23:23:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc28:
+2015-12-05 23:23:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc26:
+2015-12-05 23:23:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 91%, Downloaded: 3660.26/4000.0 MB, Speed: 34.95 MB/s.
+2015-12-05 23:23:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc23:
+2015-12-05 23:23:30 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 85%, Downloaded: 3414.69/4000.0 MB, Speed: 31.69 MB/s.
+2015-12-05 23:23:30 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 23:23:30 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:30 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc20:
+2015-12-05 23:23:30 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:40 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 23:23:40 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc38:
+2015-12-05 23:23:40 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:40 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc40:
+2015-12-05 23:23:40 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 8%, Downloaded: 326.89/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:40 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc17:
+2015-12-05 23:23:40 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 96%, Downloaded: 3858.97/4000.0 MB, Speed: 32.11 MB/s.
+2015-12-05 23:23:40 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc37:
+2015-12-05 23:23:40 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:40 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc24:
+2015-12-05 23:23:40 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 11%, Downloaded: 470.29/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:40 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 23:23:40 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:40 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 23:23:40 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 26%, Downloaded: 1059.85/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:40 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 23:23:40 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:40 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc01:
+2015-12-05 23:23:40 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 89%, Downloaded: 3575.06/4000.0 MB, Speed: 27.77 MB/s.
+2015-12-05 23:23:40 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc30:
+2015-12-05 23:23:40 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:40 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc32:
+2015-12-05 23:23:41 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 2%, Downloaded: 114.56/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:41 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc13:
+2015-12-05 23:23:41 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:41 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc18:
+2015-12-05 23:23:41 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 13%, Downloaded: 538.97/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:41 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc21:
+2015-12-05 23:23:41 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:41 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc39:
+2015-12-05 23:23:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 97%, Downloaded: 3903.79/4000.0 MB, Speed: 32.51 MB/s.
+2015-12-05 23:23:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc22:
+2015-12-05 23:23:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc19:
+2015-12-05 23:23:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc34:
+2015-12-05 23:23:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 31%, Downloaded: 1274.81/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 23:23:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 66%, Downloaded: 2671.72/4000.0 MB, Speed: 26.6 MB/s.
+2015-12-05 23:23:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc28:
+2015-12-05 23:23:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc26:
+2015-12-05 23:23:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 17%, Downloaded: 699.14/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc23:
+2015-12-05 23:23:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 96%, Downloaded: 3846.12/4000.0 MB, Speed: 33.6 MB/s.
+2015-12-05 23:23:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 23:23:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc20:
+2015-12-05 23:23:42 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:52 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 23:23:52 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc38:
+2015-12-05 23:23:52 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:52 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc40:
+2015-12-05 23:23:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 50%, Downloaded: 2014.31/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc17:
+2015-12-05 23:23:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 26%, Downloaded: 1046.48/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc37:
+2015-12-05 23:23:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc24:
+2015-12-05 23:23:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 56%, Downloaded: 2248.15/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 23:23:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 23:23:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 76%, Downloaded: 3074.69/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 23:23:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc01:
+2015-12-05 23:23:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 3%, Downloaded: 134.74/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc30:
+2015-12-05 23:23:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc32:
+2015-12-05 23:23:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 45%, Downloaded: 1807.48/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc13:
+2015-12-05 23:23:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc18:
+2015-12-05 23:23:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 59%, Downloaded: 2390.49/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc21:
+2015-12-05 23:23:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc39:
+2015-12-05 23:23:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 33%, Downloaded: 1352.66/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc22:
+2015-12-05 23:23:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc19:
+2015-12-05 23:23:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc34:
+2015-12-05 23:23:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 79%, Downloaded: 3196.32/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 23:23:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 80%, Downloaded: 3231.13/4000.0 MB, Speed: 31.51 MB/s.
+2015-12-05 23:23:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc28:
+2015-12-05 23:23:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc26:
+2015-12-05 23:23:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 63%, Downloaded: 2524.18/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc23:
+2015-12-05 23:23:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 20%, Downloaded: 816.05/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 23:23:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:23:54 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc20:
+2015-12-05 23:23:55 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc38:
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc40:
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 93%, Downloaded: 3743.94/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc17:
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 72%, Downloaded: 2916.88/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc37:
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc24:
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc01:
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 45%, Downloaded: 1803.81/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc30:
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc32:
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 90%, Downloaded: 3632.27/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc13:
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc18:
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc21:
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:05 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc39:
+2015-12-05 23:24:06 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 72%, Downloaded: 2910.85/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:06 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc22:
+2015-12-05 23:24:06 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:06 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc19:
+2015-12-05 23:24:06 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:06 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc34:
+2015-12-05 23:24:06 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:06 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 23:24:06 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 3%, Downloaded: 135.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:06 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc28:
+2015-12-05 23:24:06 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:06 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc26:
+2015-12-05 23:24:06 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:06 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc23:
+2015-12-05 23:24:06 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 63%, Downloaded: 2553.81/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:06 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 23:24:06 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:06 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc20:
+2015-12-05 23:24:06 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 23:24:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc38:
+2015-12-05 23:24:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc40:
+2015-12-05 23:24:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc17:
+2015-12-05 23:24:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc37:
+2015-12-05 23:24:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc24:
+2015-12-05 23:24:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:16 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc01:
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 85%, Downloaded: 3432.51/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc30:
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc32:
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc13:
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc18:
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc21:
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc39:
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc22:
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc19:
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc34:
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 42%, Downloaded: 1691.88/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc28:
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc26:
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc23:
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc20:
+2015-12-05 23:24:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc38:
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc40:
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc17:
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc37:
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc24:
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc01:
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc30:
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc32:
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc13:
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc18:
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc21:
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc39:
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc22:
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc19:
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc34:
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 23:24:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 78%, Downloaded: 3159.88/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc28:
+2015-12-05 23:24:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc26:
+2015-12-05 23:24:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc23:
+2015-12-05 23:24:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 23:24:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc20:
+2015-12-05 23:24:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc38:
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc40:
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc17:
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc37:
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc24:
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc01:
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc30:
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc32:
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc13:
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc18:
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc21:
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc39:
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc22:
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc19:
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc34:
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc28:
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc26:
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc23:
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc20:
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_4g: Completed: 100%, Downloaded: 4000.0/4000.0 MB, Speed: 0 B/s.
+2015-12-05 23:24:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [All transfers are finished, distribution is complete, press ENTER to continue.]
+2015-12-05 23:24:42 INFO hu.bme.mit.vmdistribution.app.UseModel main [Saving changes to model instance.]
+2015-12-05 23:24:42 INFO hu.bme.mit.vmdistribution.app.UseModel main [Done.]

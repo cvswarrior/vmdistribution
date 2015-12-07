@@ -11,9 +11,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.logging.ConsoleHandler;
+import java.util.logging.FileHandler;
 import java.util.logging.Handler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
+
+import javax.swing.plaf.basic.BasicFormattedTextFieldUI;
 
 import hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater;
 import hu.bme.mit.vmdistribution.app.distrstatus.RTorrentXmlRpcClient;
@@ -61,10 +65,22 @@ public final class UseModel {
 		System.setProperty("java.util.logging.SimpleFormatter.format",
 				"%1$tY-%1$tm-%1$td %1$tH:%1$tM:%1$tS %4$s %2$s %5$s%6$s%n");
 		Handler consoleHandler = new ConsoleHandler();
+		Handler fileHandler = null;
+		try {
+			fileHandler = new FileHandler("log.log");
+			fileHandler.setFormatter(new SimpleFormatter());
+		} catch (SecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		// enable logging of FINER messages
 		consoleHandler.setLevel(Level.FINER);
 		LOGGER_PARENT.removeHandler(LOGGER_PARENT.getHandlers()[0]);
 		LOGGER_PARENT.addHandler(consoleHandler);
+		LOGGER_PARENT.addHandler(fileHandler);
 		// set logging level
 		LOGGER_PARENT.setLevel(level);
 		LOGGER.log(Level.CONFIG, "Logging set to: " + level.getName());
@@ -316,6 +332,14 @@ public final class UseModel {
  * important: perf analysis in real lab, fail distr - cleanup
  * 
  * not important: create javadoc
+ * 
+ * modeltest \ and / wtf
+ * 
+ * check_hash = no a seedes rtorrent.rc-be?
+ * 
+ * elején nem sikerül torrentfájl átmásolni: transfer sem induljon!
+ * 
+ * 
  * 
  * 
  */

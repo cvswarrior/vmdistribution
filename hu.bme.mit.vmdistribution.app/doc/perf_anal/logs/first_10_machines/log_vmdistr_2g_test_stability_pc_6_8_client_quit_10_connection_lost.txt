@@ -1,0 +1,752 @@
+2015-12-05 10:49:04 INFO hu.bme.mit.vmdistribution.app.UseModel main [Starting tasks.]
+2015-12-05 10:49:05 INFO hu.bme.mit.vmdistribution.app.EMFModelUtil loadModelInstance [Model data loaded from /home/meres/Desktop/testmodel.vmdistribution]
+2015-12-05 10:49:05 INFO hu.bme.mit.vmdistribution.app.vmutil.VMUtil copyVmsToSeed [Copying required VMs to seed.]
+2015-12-05 10:49:06 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.178
+2015-12-05 10:49:06 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 0MB(0%) of test_2g.zip
+2015-12-05 10:49:08 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 100MB(4%) of test_2g.zip
+2015-12-05 10:49:09 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 200MB(9%) of test_2g.zip
+2015-12-05 10:49:10 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 300MB(14%) of test_2g.zip
+2015-12-05 10:49:12 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 400MB(19%) of test_2g.zip
+2015-12-05 10:49:13 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 500MB(24%) of test_2g.zip
+2015-12-05 10:49:15 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 600MB(29%) of test_2g.zip
+2015-12-05 10:49:16 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 700MB(34%) of test_2g.zip
+2015-12-05 10:49:18 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 800MB(39%) of test_2g.zip
+2015-12-05 10:49:19 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 900MB(43%) of test_2g.zip
+2015-12-05 10:49:20 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 1000MB(48%) of test_2g.zip
+2015-12-05 10:49:22 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 1100MB(53%) of test_2g.zip
+2015-12-05 10:49:23 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 1200MB(58%) of test_2g.zip
+2015-12-05 10:49:25 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 1300MB(63%) of test_2g.zip
+2015-12-05 10:49:27 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 1400MB(68%) of test_2g.zip
+2015-12-05 10:49:28 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 1500MB(73%) of test_2g.zip
+2015-12-05 10:49:30 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 1600MB(78%) of test_2g.zip
+2015-12-05 10:49:31 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 1700MB(83%) of test_2g.zip
+2015-12-05 10:49:33 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 1800MB(87%) of test_2g.zip
+2015-12-05 10:49:34 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 1900MB(92%) of test_2g.zip
+2015-12-05 10:49:36 INFO hu.bme.mit.vmdistribution.app.ssh.CopyProgressMonitor$1 reportProgress >> Transferred 2000MB(97%) of test_2g.zip
+2015-12-05 10:49:37 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.178
+2015-12-05 10:49:37 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil createTorrentFile [Creating torrent file for test_2g.zip.]
+2015-12-05 10:49:37 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.178: ~/Downloads/create_torrent.sh 10.40.2.178 test_2g.zip test_2g.torrent]
+2015-12-05 10:49:48 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec mktorrent 1.0 (c) 2007, 2009 Emil Renner Berthing
+
+Hashed 1 of 7813 pieces.Hashed 133 of 7813 pieces.Hashed 267 of 7813 pieces.Hashed 399 of 7813 pieces.Hashed 527 of 7813 pieces.Hashed 663 of 7813 pieces.Hashed 799 of 7813 pieces.Hashed 934 of 7813 pieces.Hashed 1070 of 7813 pieces.Hashed 1208 of 7813 pieces.Hashed 1343 of 7813 pieces.Hashed 1480 of 7813 pieces.Hashed 1616 of 7813 pieces.Hashed 1751 of 7813 pieces.Hashed 1888 of 7813 pieces.Hashed 2023 of 7813 pieces.Hashed 2155 of 7813 pieces.Hashed 2287 of 7813 pieces.Hashed 2422 of 7813 pieces.Hashed 2558 of 7813 pieces.Hashed 2677 of 7813 pieces.Hashed 2814 of 7813 pieces.Hashed 2950 of 7813 pieces.Hashed 3084 of 7813 pieces.Hashed 3221 of 7813 pieces.Hashed 3359 of 7813 pieces.Hashed 3496 of 7813 pieces.Hashed 3632 of 7813 pieces.Hashed 3771 of 7813 pieces.Hashed 3909 of 7813 pieces.Hashed 4045 of 7813 pieces.Hashed 4183 of 7813 pieces.Hashed 4317 of 7813 pieces.Hashed 4453 of 7813 pieces.Hashed 4589 of 7813 pieces.Hashed 4726 of 7813 pieces.Hashed 4863 of 7813 pieces.Hashed 5001 of 7813 pieces.Hashed 5138 of 7813 pieces.Hashed 5276 of 7813 pieces.Hashed 5414 of 7813 pieces.Hashed 5552 of 7813 pieces.Hashed 5690 of 7813 pieces.Hashed 5826 of 7813 pieces.Hashed 5963 of 7813 pieces.Hashed 6101 of 7813 pieces.Hashed 6240 of 7813 pieces.Hashed 6375 of 7813 pieces.Hashed 6510 of 7813 pieces.Hashed 6647 of 7813 pieces.Hashed 6784 of 7813 pieces.Hashed 6922 of 7813 pieces.Hashed 7059 of 7813 pieces.Hashed 7196 of 7813 pieces.Hashed 7334 of 7813 pieces.Hashed 7471 of 7813 pieces.Hashed 7609 of 7813 pieces.Hashed 7747 of 7813 pieces.Hashed 7813 of 7813 pieces.
+Writing metainfo file... done.
+test_2g.torrent created.
+
+2015-12-05 10:49:48 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.178
+2015-12-05 10:49:49 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.178
+2015-12-05 10:49:49 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.178: ~/Downloads/start_seeding.sh]
+2015-12-05 10:49:49 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec opentracker started in tmux session named 'opentracker'
+rtorrent started in tmux session named 'rtorrent'
+Seeding started.
+
+2015-12-05 10:49:49 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: opentracker
+
+2015-12-05 10:49:49 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.178
+2015-12-05 10:49:49 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startSeeding [Seeding started.]
+2015-12-05 10:49:49 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.178
+2015-12-05 10:49:49 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_2g.torrent to labpc07.]
+2015-12-05 10:49:49 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.178: ~/Downloads/copy_torrent_from_seeder_to_leecher.sh 10.40.2.179 vagrant vagrant test_2g.torrent]
+2015-12-05 10:49:49 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_2g.torrent to 10.40.2.179:~/Torrents
+
+2015-12-05 10:49:49 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.178
+2015-12-05 10:49:50 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.178
+2015-12-05 10:49:50 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.178: ~/Downloads/start_leeching.sh 10.40.2.179 vagrant vagrant]
+2015-12-05 10:49:50 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.179
+
+2015-12-05 10:49:50 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 10:49:50 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.178
+2015-12-05 10:49:50 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc07.]
+2015-12-05 10:49:50 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.178
+2015-12-05 10:49:50 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_2g.torrent to labpc05.]
+2015-12-05 10:49:50 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.178: ~/Downloads/copy_torrent_from_seeder_to_leecher.sh 10.40.2.160 vagrant vagrant test_2g.torrent]
+2015-12-05 10:49:50 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_2g.torrent to 10.40.2.160:~/Torrents
+
+2015-12-05 10:49:50 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.178
+2015-12-05 10:49:51 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.178
+2015-12-05 10:49:51 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.178: ~/Downloads/start_leeching.sh 10.40.2.160 vagrant vagrant]
+2015-12-05 10:49:51 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.160
+
+2015-12-05 10:49:51 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 10:49:51 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.178
+2015-12-05 10:49:51 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc05.]
+2015-12-05 10:49:51 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.178
+2015-12-05 10:49:51 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_2g.torrent to labpc12.]
+2015-12-05 10:49:51 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.178: ~/Downloads/copy_torrent_from_seeder_to_leecher.sh 10.40.2.133 vagrant vagrant test_2g.torrent]
+2015-12-05 10:49:51 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_2g.torrent to 10.40.2.133:~/Torrents
+
+2015-12-05 10:49:51 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.178
+2015-12-05 10:49:52 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.178
+2015-12-05 10:49:52 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.178: ~/Downloads/start_leeching.sh 10.40.2.133 vagrant vagrant]
+2015-12-05 10:49:52 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.133
+
+2015-12-05 10:49:52 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 10:49:52 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.178
+2015-12-05 10:49:52 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc12.]
+2015-12-05 10:49:52 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.178
+2015-12-05 10:49:52 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_2g.torrent to labpc08.]
+2015-12-05 10:49:52 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.178: ~/Downloads/copy_torrent_from_seeder_to_leecher.sh 10.40.2.140 vagrant vagrant test_2g.torrent]
+2015-12-05 10:49:52 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_2g.torrent to 10.40.2.140:~/Torrents
+
+2015-12-05 10:49:52 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.178
+2015-12-05 10:49:53 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.178
+2015-12-05 10:49:53 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.178: ~/Downloads/start_leeching.sh 10.40.2.140 vagrant vagrant]
+2015-12-05 10:49:53 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.140
+
+2015-12-05 10:49:53 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 10:49:53 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.178
+2015-12-05 10:49:53 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc08.]
+2015-12-05 10:49:53 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.178
+2015-12-05 10:49:53 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_2g.torrent to labpc03.]
+2015-12-05 10:49:53 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.178: ~/Downloads/copy_torrent_from_seeder_to_leecher.sh 10.40.2.31 vagrant vagrant test_2g.torrent]
+2015-12-05 10:49:53 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_2g.torrent to 10.40.2.31:~/Torrents
+
+2015-12-05 10:49:53 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.178
+2015-12-05 10:49:54 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.178
+2015-12-05 10:49:54 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.178: ~/Downloads/start_leeching.sh 10.40.2.31 vagrant vagrant]
+2015-12-05 10:49:54 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.31
+
+2015-12-05 10:49:54 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.178
+2015-12-05 10:49:54 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc03.]
+2015-12-05 10:49:54 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.178
+2015-12-05 10:49:54 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_2g.torrent to labpc10.]
+2015-12-05 10:49:54 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.178: ~/Downloads/copy_torrent_from_seeder_to_leecher.sh 10.40.2.182 vagrant vagrant test_2g.torrent]
+2015-12-05 10:49:55 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_2g.torrent to 10.40.2.182:~/Torrents
+
+2015-12-05 10:49:55 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.178
+2015-12-05 10:49:55 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.178
+2015-12-05 10:49:55 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.178: ~/Downloads/start_leeching.sh 10.40.2.182 vagrant vagrant]
+2015-12-05 10:49:55 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.182
+
+2015-12-05 10:49:55 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 10:49:55 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.178
+2015-12-05 10:49:55 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc10.]
+2015-12-05 10:49:56 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.178
+2015-12-05 10:49:56 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_2g.torrent to labpc09.]
+2015-12-05 10:49:56 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.178: ~/Downloads/copy_torrent_from_seeder_to_leecher.sh 10.40.2.181 vagrant vagrant test_2g.torrent]
+2015-12-05 10:49:56 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_2g.torrent to 10.40.2.181:~/Torrents
+
+2015-12-05 10:49:56 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.178
+2015-12-05 10:49:56 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.178
+2015-12-05 10:49:56 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.178: ~/Downloads/start_leeching.sh 10.40.2.181 vagrant vagrant]
+2015-12-05 10:49:57 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.181
+
+2015-12-05 10:49:57 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 10:49:57 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.178
+2015-12-05 10:49:57 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc09.]
+2015-12-05 10:49:57 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.178
+2015-12-05 10:49:57 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_2g.torrent to labpc06.]
+2015-12-05 10:49:57 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.178: ~/Downloads/copy_torrent_from_seeder_to_leecher.sh 10.40.2.180 vagrant vagrant test_2g.torrent]
+2015-12-05 10:49:57 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_2g.torrent to 10.40.2.180:~/Torrents
+
+2015-12-05 10:49:57 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.178
+2015-12-05 10:49:58 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.178
+2015-12-05 10:49:58 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.178: ~/Downloads/start_leeching.sh 10.40.2.180 vagrant vagrant]
+2015-12-05 10:49:58 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.180
+
+2015-12-05 10:49:58 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 10:49:58 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.178
+2015-12-05 10:49:58 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc06.]
+2015-12-05 10:49:59 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.178
+2015-12-05 10:49:59 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_2g.torrent to labpc11.]
+2015-12-05 10:49:59 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.178: ~/Downloads/copy_torrent_from_seeder_to_leecher.sh 10.40.2.183 vagrant vagrant test_2g.torrent]
+2015-12-05 10:50:00 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_2g.torrent to 10.40.2.183:~/Torrents
+
+2015-12-05 10:50:00 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.178
+2015-12-05 10:50:00 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.178
+2015-12-05 10:50:00 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.178: ~/Downloads/start_leeching.sh 10.40.2.183 vagrant vagrant]
+2015-12-05 10:50:00 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.183
+
+2015-12-05 10:50:00 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 10:50:00 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.178
+2015-12-05 10:50:00 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc11.]
+2015-12-05 10:50:01 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.178
+2015-12-05 10:50:01 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test_2g.torrent to labpc04.]
+2015-12-05 10:50:01 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.178: ~/Downloads/copy_torrent_from_seeder_to_leecher.sh 10.40.2.83 vagrant vagrant test_2g.torrent]
+2015-12-05 10:50:01 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test_2g.torrent to 10.40.2.83:~/Torrents
+
+2015-12-05 10:50:01 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.178
+2015-12-05 10:50:01 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil <init> SSH: Connected to 10.40.2.178
+2015-12-05 10:50:01 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec [Command sent: vagrant@10.40.2.178: ~/Downloads/start_leeching.sh 10.40.2.83 vagrant vagrant]
+2015-12-05 10:50:02 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec rtorrent started on 10.40.2.83
+
+2015-12-05 10:50:02 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec duplicate session: rtorrent
+
+2015-12-05 10:50:02 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec SSH: Disconnected from 10.40.2.178
+2015-12-05 10:50:02 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil startLeeching [Torrent client started on labpc04.]
+2015-12-05 10:50:02 INFO hu.bme.mit.vmdistribution.app.UseModel distribute [Giving 10s grace period before getting torrent infohashes...]
+2015-12-05 10:50:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 10:50:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 10:50:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 0%, Downloaded: 4.46/2048.0 MB, Speed: 74 KB/s.
+2015-12-05 10:50:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 10:50:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 0%, Downloaded: 14.16/2048.0 MB, Speed: 0.24 MB/s.
+2015-12-05 10:50:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc12:
+2015-12-05 10:50:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 0%, Downloaded: 14.16/2048.0 MB, Speed: 0.24 MB/s.
+2015-12-05 10:50:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc08:
+2015-12-05 10:50:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 0%, Downloaded: 18.09/2048.0 MB, Speed: 0.3 MB/s.
+2015-12-05 10:50:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 10:50:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 0%, Downloaded: 18.09/2048.0 MB, Speed: 0.3 MB/s.
+2015-12-05 10:50:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc10:
+2015-12-05 10:50:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 0%, Downloaded: 4.46/2048.0 MB, Speed: 78 KB/s.
+2015-12-05 10:50:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 10:50:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 0%, Downloaded: 12.58/2048.0 MB, Speed: 0.21 MB/s.
+2015-12-05 10:50:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc06:
+2015-12-05 10:50:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 0%, Downloaded: 13.63/2048.0 MB, Speed: 0.23 MB/s.
+2015-12-05 10:50:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 10:50:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 0%, Downloaded: 9.57/2048.0 MB, Speed: 0.16 MB/s.
+2015-12-05 10:50:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc04:
+2015-12-05 10:50:12 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 0%, Downloaded: 7.34/2048.0 MB, Speed: 0.13 MB/s.
+2015-12-05 10:50:22 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 10:50:22 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 10:50:22 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 2%, Downloaded: 49.55/2048.0 MB, Speed: 0.83 MB/s.
+2015-12-05 10:50:22 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 10:50:22 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 13%, Downloaded: 285.47/2048.0 MB, Speed: 4.77 MB/s.
+2015-12-05 10:50:22 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc12:
+2015-12-05 10:50:22 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 4%, Downloaded: 82.58/2048.0 MB, Speed: 1.38 MB/s.
+2015-12-05 10:50:22 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc08:
+2015-12-05 10:50:22 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 4%, Downloaded: 98.3/2048.0 MB, Speed: 1.64 MB/s.
+2015-12-05 10:50:22 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 10:50:22 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 5%, Downloaded: 116.92/2048.0 MB, Speed: 1.95 MB/s.
+2015-12-05 10:50:22 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc10:
+2015-12-05 10:50:22 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 1%, Downloaded: 34.34/2048.0 MB, Speed: 0.58 MB/s.
+2015-12-05 10:50:22 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 10:50:22 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 5%, Downloaded: 103.81/2048.0 MB, Speed: 1.73 MB/s.
+2015-12-05 10:50:22 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc06:
+2015-12-05 10:50:22 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 4%, Downloaded: 85.46/2048.0 MB, Speed: 1.43 MB/s.
+2015-12-05 10:50:22 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 10:50:22 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 3%, Downloaded: 76.41/2048.0 MB, Speed: 1.28 MB/s.
+2015-12-05 10:50:22 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc04:
+2015-12-05 10:50:22 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 3%, Downloaded: 67.63/2048.0 MB, Speed: 1.13 MB/s.
+2015-12-05 10:50:32 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 10:50:32 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 10:50:32 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 4%, Downloaded: 98.3/2048.0 MB, Speed: 1.65 MB/s.
+2015-12-05 10:50:32 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 10:50:32 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 35%, Downloaded: 727.32/2048.0 MB, Speed: 12.13 MB/s.
+2015-12-05 10:50:32 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc12:
+2015-12-05 10:50:32 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 6%, Downloaded: 132.38/2048.0 MB, Speed: 2.21 MB/s.
+2015-12-05 10:50:32 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc08:
+2015-12-05 10:50:32 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 7%, Downloaded: 146.8/2048.0 MB, Speed: 2.45 MB/s.
+2015-12-05 10:50:32 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 10:50:32 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 8%, Downloaded: 176.42/2048.0 MB, Speed: 2.94 MB/s.
+2015-12-05 10:50:32 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc10:
+2015-12-05 10:50:32 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 2%, Downloaded: 59.77/2048.0 MB, Speed: 1.0 MB/s.
+2015-12-05 10:50:32 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 10:50:32 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 7%, Downloaded: 162.27/2048.0 MB, Speed: 2.7 MB/s.
+2015-12-05 10:50:32 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc06:
+2015-12-05 10:50:48 SEVERE hu.bme.mit.vmdistribution.app.distrstatus.RTorrentXmlRpcClient updateTransferStatus ERROR executing XMLRPC call.
+org.apache.xmlrpc.client.XmlRpcHttpTransportException: HTTP server returned unexpected status: Internal Server Error
+	at org.apache.xmlrpc.client.XmlRpcSunHttpTransport.getInputStream(XmlRpcSunHttpTransport.java:94)
+	at org.apache.xmlrpc.client.XmlRpcStreamTransport.sendRequest(XmlRpcStreamTransport.java:152)
+	at org.apache.xmlrpc.client.XmlRpcHttpTransport.sendRequest(XmlRpcHttpTransport.java:143)
+	at org.apache.xmlrpc.client.XmlRpcSunHttpTransport.sendRequest(XmlRpcSunHttpTransport.java:69)
+	at org.apache.xmlrpc.client.XmlRpcClientWorker.execute(XmlRpcClientWorker.java:56)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:167)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:137)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:126)
+	at hu.bme.mit.vmdistribution.app.distrstatus.RTorrentXmlRpcClient.updateTransferStatus(RTorrentXmlRpcClient.java:66)
+	at hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater.run(DistributionStatusUpdater.java:69)
+	at java.lang.Thread.run(Thread.java:745)
+
+2015-12-05 10:50:48 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 4%, Downloaded: 85.46/2048.0 MB, Speed: 1.43 MB/s.
+2015-12-05 10:50:48 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 10:50:48 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 13%, Downloaded: 269.35/2048.0 MB, Speed: 4.49 MB/s.
+2015-12-05 10:50:48 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc04:
+2015-12-05 10:50:48 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 9%, Downloaded: 189.4/2048.0 MB, Speed: 3.16 MB/s.
+2015-12-05 10:50:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 10:50:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 10:50:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 10%, Downloaded: 222.69/2048.0 MB, Speed: 3.71 MB/s.
+2015-12-05 10:50:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 10:50:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 72%, Downloaded: 1484.65/2048.0 MB, Speed: 24.75 MB/s.
+2015-12-05 10:50:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc12:
+2015-12-05 10:50:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 13%, Downloaded: 267.78/2048.0 MB, Speed: 4.47 MB/s.
+2015-12-05 10:50:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc08:
+2015-12-05 10:51:13 SEVERE hu.bme.mit.vmdistribution.app.distrstatus.RTorrentXmlRpcClient updateTransferStatus ERROR executing XMLRPC call.
+org.apache.xmlrpc.client.XmlRpcHttpTransportException: HTTP server returned unexpected status: Internal Server Error
+	at org.apache.xmlrpc.client.XmlRpcSunHttpTransport.getInputStream(XmlRpcSunHttpTransport.java:94)
+	at org.apache.xmlrpc.client.XmlRpcStreamTransport.sendRequest(XmlRpcStreamTransport.java:152)
+	at org.apache.xmlrpc.client.XmlRpcHttpTransport.sendRequest(XmlRpcHttpTransport.java:143)
+	at org.apache.xmlrpc.client.XmlRpcSunHttpTransport.sendRequest(XmlRpcSunHttpTransport.java:69)
+	at org.apache.xmlrpc.client.XmlRpcClientWorker.execute(XmlRpcClientWorker.java:56)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:167)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:137)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:126)
+	at hu.bme.mit.vmdistribution.app.distrstatus.RTorrentXmlRpcClient.updateTransferStatus(RTorrentXmlRpcClient.java:66)
+	at hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater.run(DistributionStatusUpdater.java:69)
+	at java.lang.Thread.run(Thread.java:745)
+
+2015-12-05 10:51:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 7%, Downloaded: 146.8/2048.0 MB, Speed: 2.45 MB/s.
+2015-12-05 10:51:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 10:51:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 17%, Downloaded: 368.57/2048.0 MB, Speed: 5.68 MB/s.
+2015-12-05 10:51:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc10:
+2015-12-05 10:51:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 10%, Downloaded: 219.41/2048.0 MB, Speed: 3.55 MB/s.
+2015-12-05 10:51:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 10:51:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 31%, Downloaded: 650.25/2048.0 MB, Speed: 10.52 MB/s.
+2015-12-05 10:51:13 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc06:
+2015-12-05 10:51:28 SEVERE hu.bme.mit.vmdistribution.app.distrstatus.RTorrentXmlRpcClient updateTransferStatus ERROR executing XMLRPC call.
+org.apache.xmlrpc.client.XmlRpcHttpTransportException: HTTP server returned unexpected status: Internal Server Error
+	at org.apache.xmlrpc.client.XmlRpcSunHttpTransport.getInputStream(XmlRpcSunHttpTransport.java:94)
+	at org.apache.xmlrpc.client.XmlRpcStreamTransport.sendRequest(XmlRpcStreamTransport.java:152)
+	at org.apache.xmlrpc.client.XmlRpcHttpTransport.sendRequest(XmlRpcHttpTransport.java:143)
+	at org.apache.xmlrpc.client.XmlRpcSunHttpTransport.sendRequest(XmlRpcSunHttpTransport.java:69)
+	at org.apache.xmlrpc.client.XmlRpcClientWorker.execute(XmlRpcClientWorker.java:56)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:167)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:137)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:126)
+	at hu.bme.mit.vmdistribution.app.distrstatus.RTorrentXmlRpcClient.updateTransferStatus(RTorrentXmlRpcClient.java:66)
+	at hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater.run(DistributionStatusUpdater.java:69)
+	at java.lang.Thread.run(Thread.java:745)
+
+2015-12-05 10:51:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 4%, Downloaded: 85.46/2048.0 MB, Speed: 1.43 MB/s.
+2015-12-05 10:51:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 10:51:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 41%, Downloaded: 842.92/2048.0 MB, Speed: 12.39 MB/s.
+2015-12-05 10:51:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc04:
+2015-12-05 10:51:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 22%, Downloaded: 469.63/2048.0 MB, Speed: 6.28 MB/s.
+2015-12-05 10:51:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 10:51:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 10:51:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 40%, Downloaded: 833.75/2048.0 MB, Speed: 11.8 MB/s.
+2015-12-05 10:51:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 10:51:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:51:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc12:
+2015-12-05 10:51:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 37%, Downloaded: 764.81/2048.0 MB, Speed: 10.07 MB/s.
+2015-12-05 10:51:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc08:
+2015-12-05 10:51:53 SEVERE hu.bme.mit.vmdistribution.app.distrstatus.RTorrentXmlRpcClient updateTransferStatus ERROR executing XMLRPC call.
+org.apache.xmlrpc.client.XmlRpcHttpTransportException: HTTP server returned unexpected status: Internal Server Error
+	at org.apache.xmlrpc.client.XmlRpcSunHttpTransport.getInputStream(XmlRpcSunHttpTransport.java:94)
+	at org.apache.xmlrpc.client.XmlRpcStreamTransport.sendRequest(XmlRpcStreamTransport.java:152)
+	at org.apache.xmlrpc.client.XmlRpcHttpTransport.sendRequest(XmlRpcHttpTransport.java:143)
+	at org.apache.xmlrpc.client.XmlRpcSunHttpTransport.sendRequest(XmlRpcSunHttpTransport.java:69)
+	at org.apache.xmlrpc.client.XmlRpcClientWorker.execute(XmlRpcClientWorker.java:56)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:167)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:137)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:126)
+	at hu.bme.mit.vmdistribution.app.distrstatus.RTorrentXmlRpcClient.updateTransferStatus(RTorrentXmlRpcClient.java:66)
+	at hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater.run(DistributionStatusUpdater.java:69)
+	at java.lang.Thread.run(Thread.java:745)
+
+2015-12-05 10:51:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 7%, Downloaded: 146.8/2048.0 MB, Speed: 2.45 MB/s.
+2015-12-05 10:51:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 10:51:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 65%, Downloaded: 1346.63/2048.0 MB, Speed: 17.76 MB/s.
+2015-12-05 10:51:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc10:
+2015-12-05 10:52:27 SEVERE hu.bme.mit.vmdistribution.app.distrstatus.RTorrentXmlRpcClient updateTransferStatus ERROR executing XMLRPC call.
+org.apache.xmlrpc.XmlRpcException: Failed to read server's response: No route to host
+	at org.apache.xmlrpc.client.XmlRpcStreamTransport.sendRequest(XmlRpcStreamTransport.java:161)
+	at org.apache.xmlrpc.client.XmlRpcHttpTransport.sendRequest(XmlRpcHttpTransport.java:143)
+	at org.apache.xmlrpc.client.XmlRpcSunHttpTransport.sendRequest(XmlRpcSunHttpTransport.java:69)
+	at org.apache.xmlrpc.client.XmlRpcClientWorker.execute(XmlRpcClientWorker.java:56)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:167)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:137)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:126)
+	at hu.bme.mit.vmdistribution.app.distrstatus.RTorrentXmlRpcClient.updateTransferStatus(RTorrentXmlRpcClient.java:66)
+	at hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater.run(DistributionStatusUpdater.java:69)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.NoRouteToHostException: No route to host
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1168)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1104)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:998)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:932)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1282)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1257)
+	at org.apache.xmlrpc.client.XmlRpcSunHttpTransport.writeRequest(XmlRpcSunHttpTransport.java:104)
+	at org.apache.xmlrpc.client.XmlRpcStreamTransport.sendRequest(XmlRpcStreamTransport.java:151)
+	... 9 more
+Caused by:
+java.net.NoRouteToHostException: No route to host
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1168)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1104)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:998)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:932)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1282)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1257)
+	at org.apache.xmlrpc.client.XmlRpcSunHttpTransport.writeRequest(XmlRpcSunHttpTransport.java:104)
+	at org.apache.xmlrpc.client.XmlRpcStreamTransport.sendRequest(XmlRpcStreamTransport.java:151)
+	at org.apache.xmlrpc.client.XmlRpcHttpTransport.sendRequest(XmlRpcHttpTransport.java:143)
+	at org.apache.xmlrpc.client.XmlRpcSunHttpTransport.sendRequest(XmlRpcSunHttpTransport.java:69)
+	at org.apache.xmlrpc.client.XmlRpcClientWorker.execute(XmlRpcClientWorker.java:56)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:167)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:137)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:126)
+	at hu.bme.mit.vmdistribution.app.distrstatus.RTorrentXmlRpcClient.updateTransferStatus(RTorrentXmlRpcClient.java:66)
+	at hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater.run(DistributionStatusUpdater.java:69)
+	at java.lang.Thread.run(Thread.java:745)
+
+2015-12-05 10:52:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 10%, Downloaded: 219.41/2048.0 MB, Speed: 3.55 MB/s.
+2015-12-05 10:52:27 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 10:52:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:52:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc06:
+2015-12-05 10:52:43 SEVERE hu.bme.mit.vmdistribution.app.distrstatus.RTorrentXmlRpcClient updateTransferStatus ERROR executing XMLRPC call.
+org.apache.xmlrpc.client.XmlRpcHttpTransportException: HTTP server returned unexpected status: Internal Server Error
+	at org.apache.xmlrpc.client.XmlRpcSunHttpTransport.getInputStream(XmlRpcSunHttpTransport.java:94)
+	at org.apache.xmlrpc.client.XmlRpcStreamTransport.sendRequest(XmlRpcStreamTransport.java:152)
+	at org.apache.xmlrpc.client.XmlRpcHttpTransport.sendRequest(XmlRpcHttpTransport.java:143)
+	at org.apache.xmlrpc.client.XmlRpcSunHttpTransport.sendRequest(XmlRpcSunHttpTransport.java:69)
+	at org.apache.xmlrpc.client.XmlRpcClientWorker.execute(XmlRpcClientWorker.java:56)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:167)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:137)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:126)
+	at hu.bme.mit.vmdistribution.app.distrstatus.RTorrentXmlRpcClient.updateTransferStatus(RTorrentXmlRpcClient.java:66)
+	at hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater.run(DistributionStatusUpdater.java:69)
+	at java.lang.Thread.run(Thread.java:745)
+
+2015-12-05 10:52:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 4%, Downloaded: 85.46/2048.0 MB, Speed: 1.43 MB/s.
+2015-12-05 10:52:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 10:52:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:52:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc04:
+2015-12-05 10:52:43 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 97%, Downloaded: 1997.54/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:52:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 10:52:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 10:52:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:52:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 10:52:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:52:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc12:
+2015-12-05 10:52:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:52:53 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc08:
+2015-12-05 10:53:08 SEVERE hu.bme.mit.vmdistribution.app.distrstatus.RTorrentXmlRpcClient updateTransferStatus ERROR executing XMLRPC call.
+org.apache.xmlrpc.client.XmlRpcHttpTransportException: HTTP server returned unexpected status: Internal Server Error
+	at org.apache.xmlrpc.client.XmlRpcSunHttpTransport.getInputStream(XmlRpcSunHttpTransport.java:94)
+	at org.apache.xmlrpc.client.XmlRpcStreamTransport.sendRequest(XmlRpcStreamTransport.java:152)
+	at org.apache.xmlrpc.client.XmlRpcHttpTransport.sendRequest(XmlRpcHttpTransport.java:143)
+	at org.apache.xmlrpc.client.XmlRpcSunHttpTransport.sendRequest(XmlRpcSunHttpTransport.java:69)
+	at org.apache.xmlrpc.client.XmlRpcClientWorker.execute(XmlRpcClientWorker.java:56)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:167)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:137)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:126)
+	at hu.bme.mit.vmdistribution.app.distrstatus.RTorrentXmlRpcClient.updateTransferStatus(RTorrentXmlRpcClient.java:66)
+	at hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater.run(DistributionStatusUpdater.java:69)
+	at java.lang.Thread.run(Thread.java:745)
+
+2015-12-05 10:53:08 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 7%, Downloaded: 146.8/2048.0 MB, Speed: 2.45 MB/s.
+2015-12-05 10:53:08 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 10:53:08 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 99%, Downloaded: 2046.16/2048.0 MB, Speed: 4.06 MB/s.
+2015-12-05 10:53:08 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc10:
+2015-12-05 10:53:08 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 68%, Downloaded: 1402.86/2048.0 MB, Speed: 19.59 MB/s.
+2015-12-05 10:53:08 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 10:53:08 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:53:08 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc06:
+2015-12-05 10:53:23 SEVERE hu.bme.mit.vmdistribution.app.distrstatus.RTorrentXmlRpcClient updateTransferStatus ERROR executing XMLRPC call.
+org.apache.xmlrpc.client.XmlRpcHttpTransportException: HTTP server returned unexpected status: Internal Server Error
+	at org.apache.xmlrpc.client.XmlRpcSunHttpTransport.getInputStream(XmlRpcSunHttpTransport.java:94)
+	at org.apache.xmlrpc.client.XmlRpcStreamTransport.sendRequest(XmlRpcStreamTransport.java:152)
+	at org.apache.xmlrpc.client.XmlRpcHttpTransport.sendRequest(XmlRpcHttpTransport.java:143)
+	at org.apache.xmlrpc.client.XmlRpcSunHttpTransport.sendRequest(XmlRpcSunHttpTransport.java:69)
+	at org.apache.xmlrpc.client.XmlRpcClientWorker.execute(XmlRpcClientWorker.java:56)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:167)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:137)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:126)
+	at hu.bme.mit.vmdistribution.app.distrstatus.RTorrentXmlRpcClient.updateTransferStatus(RTorrentXmlRpcClient.java:66)
+	at hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater.run(DistributionStatusUpdater.java:69)
+	at java.lang.Thread.run(Thread.java:745)
+
+2015-12-05 10:53:23 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 4%, Downloaded: 85.46/2048.0 MB, Speed: 1.43 MB/s.
+2015-12-05 10:53:23 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 10:53:23 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:53:23 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc04:
+2015-12-05 10:53:23 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:53:33 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 10:53:33 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 10:53:33 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:53:33 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 10:53:33 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:53:33 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc12:
+2015-12-05 10:53:33 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:53:33 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc08:
+2015-12-05 10:53:49 SEVERE hu.bme.mit.vmdistribution.app.distrstatus.RTorrentXmlRpcClient updateTransferStatus ERROR executing XMLRPC call.
+org.apache.xmlrpc.client.XmlRpcHttpTransportException: HTTP server returned unexpected status: Internal Server Error
+	at org.apache.xmlrpc.client.XmlRpcSunHttpTransport.getInputStream(XmlRpcSunHttpTransport.java:94)
+	at org.apache.xmlrpc.client.XmlRpcStreamTransport.sendRequest(XmlRpcStreamTransport.java:152)
+	at org.apache.xmlrpc.client.XmlRpcHttpTransport.sendRequest(XmlRpcHttpTransport.java:143)
+	at org.apache.xmlrpc.client.XmlRpcSunHttpTransport.sendRequest(XmlRpcSunHttpTransport.java:69)
+	at org.apache.xmlrpc.client.XmlRpcClientWorker.execute(XmlRpcClientWorker.java:56)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:167)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:137)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:126)
+	at hu.bme.mit.vmdistribution.app.distrstatus.RTorrentXmlRpcClient.updateTransferStatus(RTorrentXmlRpcClient.java:66)
+	at hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater.run(DistributionStatusUpdater.java:69)
+	at java.lang.Thread.run(Thread.java:745)
+
+2015-12-05 10:53:49 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 7%, Downloaded: 146.8/2048.0 MB, Speed: 2.45 MB/s.
+2015-12-05 10:53:49 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 10:53:49 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:53:49 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc10:
+2015-12-05 10:53:49 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:53:49 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 10:53:49 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:53:49 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc06:
+2015-12-05 10:54:04 SEVERE hu.bme.mit.vmdistribution.app.distrstatus.RTorrentXmlRpcClient updateTransferStatus ERROR executing XMLRPC call.
+org.apache.xmlrpc.client.XmlRpcHttpTransportException: HTTP server returned unexpected status: Internal Server Error
+	at org.apache.xmlrpc.client.XmlRpcSunHttpTransport.getInputStream(XmlRpcSunHttpTransport.java:94)
+	at org.apache.xmlrpc.client.XmlRpcStreamTransport.sendRequest(XmlRpcStreamTransport.java:152)
+	at org.apache.xmlrpc.client.XmlRpcHttpTransport.sendRequest(XmlRpcHttpTransport.java:143)
+	at org.apache.xmlrpc.client.XmlRpcSunHttpTransport.sendRequest(XmlRpcSunHttpTransport.java:69)
+	at org.apache.xmlrpc.client.XmlRpcClientWorker.execute(XmlRpcClientWorker.java:56)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:167)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:137)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:126)
+	at hu.bme.mit.vmdistribution.app.distrstatus.RTorrentXmlRpcClient.updateTransferStatus(RTorrentXmlRpcClient.java:66)
+	at hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater.run(DistributionStatusUpdater.java:69)
+	at java.lang.Thread.run(Thread.java:745)
+
+2015-12-05 10:54:04 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 4%, Downloaded: 85.46/2048.0 MB, Speed: 1.43 MB/s.
+2015-12-05 10:54:04 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 10:54:04 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:54:04 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc04:
+2015-12-05 10:54:04 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:54:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 10:54:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 10:54:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:54:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 10:54:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:54:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc12:
+2015-12-05 10:54:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:54:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc08:
+2015-12-05 10:54:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 0%, Downloaded: 0.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:54:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 10:54:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:54:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc10:
+2015-12-05 10:54:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:54:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 10:54:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:54:14 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc06:
+2015-12-05 10:54:29 SEVERE hu.bme.mit.vmdistribution.app.distrstatus.RTorrentXmlRpcClient updateTransferStatus ERROR executing XMLRPC call.
+org.apache.xmlrpc.client.XmlRpcHttpTransportException: HTTP server returned unexpected status: Internal Server Error
+	at org.apache.xmlrpc.client.XmlRpcSunHttpTransport.getInputStream(XmlRpcSunHttpTransport.java:94)
+	at org.apache.xmlrpc.client.XmlRpcStreamTransport.sendRequest(XmlRpcStreamTransport.java:152)
+	at org.apache.xmlrpc.client.XmlRpcHttpTransport.sendRequest(XmlRpcHttpTransport.java:143)
+	at org.apache.xmlrpc.client.XmlRpcSunHttpTransport.sendRequest(XmlRpcSunHttpTransport.java:69)
+	at org.apache.xmlrpc.client.XmlRpcClientWorker.execute(XmlRpcClientWorker.java:56)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:167)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:137)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:126)
+	at hu.bme.mit.vmdistribution.app.distrstatus.RTorrentXmlRpcClient.updateTransferStatus(RTorrentXmlRpcClient.java:66)
+	at hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater.run(DistributionStatusUpdater.java:69)
+	at java.lang.Thread.run(Thread.java:745)
+
+2015-12-05 10:54:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 4%, Downloaded: 85.46/2048.0 MB, Speed: 1.43 MB/s.
+2015-12-05 10:54:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 10:54:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:54:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc04:
+2015-12-05 10:54:29 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:54:39 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 10:54:39 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 10:54:39 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:54:39 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 10:54:39 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:54:39 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc12:
+2015-12-05 10:54:39 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:54:39 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc08:
+2015-12-05 10:54:39 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 38%, Downloaded: 782.11/2048.0 MB, Speed: 9.41 MB/s.
+2015-12-05 10:54:39 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 10:54:39 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:54:39 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc10:
+2015-12-05 10:54:39 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:54:39 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 10:54:39 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:54:39 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc06:
+2015-12-05 10:54:46 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 0%, Downloaded: 0.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:54:46 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 10:54:46 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:54:46 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc04:
+2015-12-05 10:54:46 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:54:56 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 10:54:56 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 10:54:56 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:54:56 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 10:54:56 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:54:56 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc12:
+2015-12-05 10:54:56 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:54:56 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc08:
+2015-12-05 10:54:57 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 67%, Downloaded: 1384.78/2048.0 MB, Speed: 20.3 MB/s.
+2015-12-05 10:54:57 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 10:54:57 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:54:57 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc10:
+2015-12-05 10:54:57 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:54:57 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 10:54:57 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:54:57 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc06:
+2015-12-05 10:54:57 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 16%, Downloaded: 332.14/2048.0 MB, Speed: 3.45 MB/s.
+2015-12-05 10:54:57 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 10:54:57 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:54:57 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc04:
+2015-12-05 10:54:57 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:07 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 10:55:07 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 10:55:07 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:07 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 10:55:07 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:07 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc12:
+2015-12-05 10:55:07 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:07 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc08:
+2015-12-05 10:55:07 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 89%, Downloaded: 1840.38/2048.0 MB, Speed: 27.05 MB/s.
+2015-12-05 10:55:07 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 10:55:07 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:07 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc10:
+2015-12-05 10:55:07 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:07 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 10:55:07 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:07 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc06:
+2015-12-05 10:55:07 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 33%, Downloaded: 687.6/2048.0 MB, Speed: 9.37 MB/s.
+2015-12-05 10:55:07 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 10:55:07 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:07 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc04:
+2015-12-05 10:55:07 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 10:55:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 10:55:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 10:55:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc12:
+2015-12-05 10:55:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc08:
+2015-12-05 10:55:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 26%, Downloaded: 548.14/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 10:55:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:17 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc10:
+2015-12-05 10:55:18 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:18 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 10:55:18 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:18 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc06:
+2015-12-05 10:55:18 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 51%, Downloaded: 1062.73/2048.0 MB, Speed: 15.65 MB/s.
+2015-12-05 10:55:18 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 10:55:18 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:18 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc04:
+2015-12-05 10:55:18 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 10:55:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 10:55:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 10:55:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc12:
+2015-12-05 10:55:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc08:
+2015-12-05 10:55:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2045.25/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 10:55:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc10:
+2015-12-05 10:55:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 10:55:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc06:
+2015-12-05 10:55:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 67%, Downloaded: 1386.74/2048.0 MB, Speed: 21.05 MB/s.
+2015-12-05 10:55:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 10:55:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc04:
+2015-12-05 10:55:28 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 10:55:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 10:55:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 10:55:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc12:
+2015-12-05 10:55:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc08:
+2015-12-05 10:55:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 10:55:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc10:
+2015-12-05 10:55:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 10:55:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc06:
+2015-12-05 10:55:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 85%, Downloaded: 1758.59/2048.0 MB, Speed: 27.24 MB/s.
+2015-12-05 10:55:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 10:55:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc04:
+2015-12-05 10:55:38 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:48 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 10:55:48 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 10:55:48 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:48 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 10:55:48 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:48 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc12:
+2015-12-05 10:55:48 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:48 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc08:
+2015-12-05 10:55:48 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:48 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 10:55:48 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:48 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc10:
+2015-12-05 10:55:48 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:48 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 10:55:48 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:48 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc06:
+2015-12-05 10:55:48 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 8%, Downloaded: 166.46/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:48 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 10:55:48 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:48 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc04:
+2015-12-05 10:55:48 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 10:55:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 10:55:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 10:55:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc12:
+2015-12-05 10:55:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc08:
+2015-12-05 10:55:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 10:55:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc10:
+2015-12-05 10:55:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 10:55:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc06:
+2015-12-05 10:55:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 74%, Downloaded: 1515.72/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 10:55:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:55:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc04:
+2015-12-05 10:55:58 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:56:08 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [Current status of transfers:
+2015-12-05 10:56:08 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc07:
+2015-12-05 10:56:08 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:56:08 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc05:
+2015-12-05 10:56:08 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:56:08 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc12:
+2015-12-05 10:56:08 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:56:08 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc08:
+2015-12-05 10:56:09 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:56:09 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc03:
+2015-12-05 10:56:09 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:56:09 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc10:
+2015-12-05 10:56:09 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:56:09 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc09:
+2015-12-05 10:56:09 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:56:09 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc06:
+2015-12-05 10:56:09 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:56:09 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc11:
+2015-12-05 10:56:09 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:56:09 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc04:
+2015-12-05 10:56:09 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test_2g: Completed: 100%, Downloaded: 2048.0/2048.0 MB, Speed: 0 B/s.
+2015-12-05 10:56:09 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [All transfers are finished, distribution is complete, press ENTER to continue.]
+2015-12-05 10:56:11 INFO hu.bme.mit.vmdistribution.app.UseModel main [Saving changes to model instance.]
+2015-12-05 10:56:11 INFO hu.bme.mit.vmdistribution.app.UseModel main [Done.]

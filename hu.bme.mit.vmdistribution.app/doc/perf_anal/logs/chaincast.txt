@@ -1,0 +1,4 @@
+1g: 1min 43s
+2g: 1min 48s
+4g: 2min 26s
+8g: 3min 42s
