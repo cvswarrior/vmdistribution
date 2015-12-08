@@ -4,7 +4,14 @@
 
 Egyetemi gyakorlatok során a hallgatók egy előre összeállított környezetben (például virtuális
 gépeken) dolgoznak, melyet a tárgy oktatói készítenek el. Adott tanóra kezdése előtt 
-ez azzal a feladattal jár, hogy különböző tartalmú tömörített állományokat kell a megfelelő gépeken elhelyezni és kibontani. Ezeknek a gyakran nagy méretű fájloknak a több helyre történő másolása ``kézzel'', vagyis egy adathordozóval körbejárva a termet igen időigényes és körülményes lenne, ezért használnak az oktatók egy Chaincast~\cite{kiraly2011chaincast} alapú programot a folyamat felgyorsítására. Leegyszerűsítve ez a program annyit csinál, hogy a kapott adatokat lementi és ezzel párhuzamosan továbbítja, így ha ez minden gépen fut és megfelelően van beállítva, akkor elérhető, hogy adott gépről az összes többire terítsünk fájlokat. Erről a láncszerű működésről kapta a nevét a használt Chaincast módszer, amelyet a [TODO: chaincast ábra] szemléltet.
+ez azzal a feladattal jár, hogy különböző tartalmú tömörített állományokat kell a megfelelő gépeken elhelyezni és kibontani. Ezeknek a gyakran nagy méretű fájloknak a több helyre történő másolása ``kézzel'', vagyis egy adathordozóval körbejárva a termet igen időigényes és körülményes lenne, ezért használnak az oktatók egy Chaincast\cite{kiraly2011chaincast} alapú programot a folyamat felgyorsítására. Leegyszerűsítve ez a program annyit csinál, hogy a kapott adatokat lementi és ezzel párhuzamosan továbbítja, így ha ez minden gépen fut és megfelelően van beállítva, akkor elérhető, hogy adott gépről az összes többire terítsünk fájlokat. Erről a láncszerű működésről kapta a nevét a használt Chaincast módszer, amelyet az \figref{fig:chaincast}-es ábra szemléltet.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=140mm, keepaspectratio]{figures/chaincast.png}
+\caption{Chaincast-os terítés működése - a legutóbb megkapott fájldarabot továbbküldjük a láncban következő gépnek}
+\label{fig:chaincast}
+\end{figure}
 
 %----------------------------------------------------------------------------
 \section{Problémafelvetés}
@@ -25,36 +32,37 @@ Az előbb ismertetett terítési megoldás használatával kapcsolatban több pr
 Célul tűzőm ki, hogy a most használt, Chaincast alapú fájlterítő megoldás kiváltására egy olyan alternatívát hozzak létre, ami a következő tulajdonságokkal rendelkezik, az előbb ismertetett problémákat kijavítva:
 
 \begin{itemize}
-  \item Robusztus, skálázható fájlterítés, amit úgy érek el, hogy a fájlok szétosztásában a célgépek is aktivan részt vesznek, ún. Peer-to-Peer[p2p cite] hálózatot alkotva.
-  \item Egyszerű konfiguráció és használat egy olyan modell-alapú adatszerkezet tervezésével, ami
+  \item Robusztus, skálázódó fájlterítés, amit úgy érek el, hogy a fájlok szétosztásában a célgépek is aktívan részt vesznek, ún. Peer-to-Peer\cite{p2pdef} hálózatot alkotva.
+  \item Egyszerű konfiguráció és használat egy olyan modell-alapú adatszerkezet tervezésével, ami tetszőleges felépítésű oktatási laborokat tud reprezentálni és ennek, valamint egy konkrét célállapotnak a megadásával a szükséges terítési műveleteket automatikusan végrehajtja
+  \item Virtuális gépek létrehozásának támogatása Vagrant\cite{vagrant} segítségével
 \end{itemize}
-
-
 
 %----------------------------------------------------------------------------
 \section{Kontribúció}
 %----------------------------------------------------------------------------
-\begin{itemize}
-  \item dolgozatomban bemutatok egy módszert, implementációt, mérést\ldots
-\end{itemize}
+Dolgozatomban bemutatok egy módszert modellvezérelt fájlterítésre, majd erre adok egy P2P alapú, Torrent protokollt használó implementációt. A kész szoftver specifikációnak megfelelő működését elenőrzöm, és mérésekkel elemzem annak különbőző teljesítménymutatóit a most használt megoldáséival összehasonlítva. Végül felvázolok pár lehetőséget a készített alkalmazás funkcióniak lehetséges bővítésére.
 
 %----------------------------------------------------------------------------
 \section{Hozzáadott érték}
 %----------------------------------------------------------------------------
+A programom az alábbiakkal fog többet nyújtani az előző megoldással szemben:
+
 \begin{itemize}
-  \item Az aktuális fájlterítő megoldáshoz képest ez mennyivel nyújt többet, milyen hasznos dolgokat tartalmaz
+  \item A fájlterítés olyan esetekben is sikerrel fog járni ahol régen nem, gondolok itt például arra az esetre, ha a letöltés közben kiesik az egyik célgép: itt régen a teljes folyamat megszakadt volna, most viszont sikerülni fog, sőt a kieső gép helyreállításakor arra is fel fognak végül kerülni a terítendő fájlok.
+  \item Jól dokumentált API-val rendelkező Java nyelven írodott alkalmazás a mostani Bash szkripthez képest, ami jelentősen könnyít a karbantarthatóságon, ill. továbbfejleszthetőségen.
+  \item Kevésbe kötött alkalmazási lehetőségek: a modellalapú vezérlésnek köszönhetően nem csak abban az egy laborban vehető igénybe, ahol most a Chaincast van használva, hanem a modell keretein belül nagyon sokféle környezetben.
 \end{itemize}
 
 %----------------------------------------------------------------------------
 \section{Korábbi munkák}
 %----------------------------------------------------------------------------
-\begin{itemize}
-  \item ugyanilyen/hasonló problémákat megoldó programok felkutatása és rövid bemutatása
-\end{itemize}
+Mielőtt nekiállunk a feladatot megoldani, érdemes lehet utánajárni, hogy milyen megoldások léteznek már fájlterítésre, ezek közül mutatok be itt röviden hármat:
 
-  kumar:Optimal Peer-Assisted File Distribution - kiszámolja a lehető legoptimálisabb terítési időt különböző paraméterek alapján, összehasonlítja egy meglevő p2p alkalmazással (azureus), aztáb többosztályu p2p ötlete (1. osztályú fizetős ügyfelek akik jobb service-t kapnak) ~\cite{kumar2006optimal}
-  fastreplica: feladaraboljuk a fájlt, mindenki más darabot kap és azt a többieknek elküldi ~\cite{cherkasova2003fastreplica}
-  fcast: okos, gyors egyszerű multicaston alapuló megoldás ~\cite{gemmell2000fcast}
+\begin{itemize}
+  \item Fcast\cite{gemmell2000fcast}: A sima IP Multicast üzenetküldés hiányosságait kijavítva ér el gyors és robusztus multiplexált adatátvitelt. Maga az IP Multicast protokoll nem biztosít semmilyen garanciát, hogy a küldött csomagok célba érnek, ezért az erre épülő adatátviteli módszerek gyakran úgy működnek, a végpontok ACK/NACK-ot (pozitív/negatív visszajelzést) küldenek a forrásnak az üzenetek érkezéséről, viszont ez könnyen túlterhelheti azt, vagy valamelyik előtte levő hálózati eszközt. Erre az ismert problémára ad megoldást az Fcast, úgy hogy a küldendő adatokat feldarabolja, és az utolsó darab küldése után újrakezdi a küldést, így ha valamelyik végpont nem kapott meg egyet, így azt pótolhatja.
+  \item FastReplica\cite{cherkasova2003fastreplica}:  Egy olyan fájlterítésre használt algoritmus, amit főleg tartalomszolgáltató hálózatokban(CDN) használnak, működésének alapja, hogy a küldendő fájlnak különböző darabjait küldjük el a célcsomópontoknak, akik a kapott darabot tovább kell hogy küldjék az összes másik csomópontnak.
+  \item BitTorrent Sync\cite{farina2014bittorrent}: Az ismert központosított felhő-alapú fájlszinkronizációs szolgáltatásokra(Dropbox, Google Drive \ldots) nyújt elosztott, Bittorrent alapú alternatívát. Tetszőleges számú gép között tud fájlokat szinkronizálni, az adatátvitel titkosított csatornán folyik és a lokális fájlok is opcionálisan titkosíthatóak. Új fájl hozzáadásánál az eredeti példányt tartalmazó gép seed, a szinkronizáció célgépei leecher szerepet fognak betölteni (a Bittorrent protokoll terminológiájával kapcsolatban lásd a \ref{sect:p2p}-es fejezetet).
+\end{itemize}
 
 %----------------------------------------------------------------------------
 \section{Dolgozat felépítése}
