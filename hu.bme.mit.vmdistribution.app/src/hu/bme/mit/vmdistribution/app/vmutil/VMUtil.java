@@ -77,7 +77,7 @@ public final class VMUtil {
 				// Vagrant-based VMs need to be initialized first
 				if ("VagrantVM".equals(vm.eClass().getName())) {
 					VagrantVM vagrantvm = (VagrantVM) vm;
-					// prepareVagrantVM(vagrantvm);TODO
+					prepareVagrantVM(vagrantvm);
 					vmzipfile = vagrantvm.getVmZipArchive();
 					vmtorrentname = vagrantvm.getVmZipArchive().getName().replaceFirst("\u002ezip$", ".torrent");
 					copyVM(seed, vagrantvm.getVmZipArchive(), Properties.getPathString("vm_distr_target_location"));
@@ -113,8 +113,8 @@ public final class VMUtil {
 		File outputzip = new File(
 				Properties.getPath("created_vagrant_vm_archives").getAbsolutePath() + vm.getName() + ".zip");
 		File foldertozip = new File(Properties.getPath("created_vagrant_vms").getAbsolutePath() + "\\" + vm.getName());
-		// Archiver.createZipArchive(foldertozip.getAbsolutePath(),
-		// outputzip.getAbsolutePath());TODO use createzip return value
+		Archiver.createZipArchive(foldertozip.getAbsolutePath(), outputzip.getAbsolutePath());
+		//;TODO use createzip return value
 		vm.setVmZipArchive(outputzip);
 		vm.setReadyToDistribute(true);
 	}
