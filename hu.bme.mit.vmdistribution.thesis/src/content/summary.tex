@@ -6,16 +6,11 @@
 %----------------------------------------------------------------------------
 \section{Eredmények}
 %----------------------------------------------------------------------------
-Összegezve az eddigieket, létrehoztunk egy új, P2P alapú fájlterítő programot, ami a most használt Chaincast-ost hivatott leváltani, igazoltuk, hogy a program a specifikációnak megfelelően működik és mérésekkel 
-
+Dolgozatomban bemutattam egy modellvezérelt P2P alapú fájlterítő alkalmazás tervezését és implementációját, az ezek megértéséhez szükséges háttérismeretek ismertetését sem mellőzve. A kész program specifikációnak megfelelő működését igazoltam, annak teljesítményének ellenőrzésére méréseket végeztem. Összegezve az írottakat kijelenthető, hogy a dolgozatom választ ad a feladatkiírásban felvetett összes kérdésre.
 
 %----------------------------------------------------------------------------
 \section{Jövőbeli munka}
 %----------------------------------------------------------------------------
-Az alkalmazás későbbi továbbfejlesztésére az alábbi o
-
-\begin{itemize}
-  \item Milyen javításokat, extra funkciókat látunk elképzelhetőnek:
-  \item grafikus felhasználói felület
-  \item labor modelljének automatikus generálása (gépek információinak összegyűjtése és feldolgozása)
-\end{itemize}
+Az elkészített program a kitűzött feladatokat megoldja, viszont ez nem jelenti azt, hogy ne lehessen továbbfejlesztésére lehetőségeket felvetni.
+Használatát felhasználóbarátabbá tenné, ha készítenénk hozzá egy grafikus felületet. Erre több lehetőség is adott: Swing\cite{zukowski2005definitive} alapú natív Java megoldás, az Eclipse fejlesztőkörnyezetbe integrálás beépülő modulként, illetve a most használt Jenkins CI rendszerből futtatás lehetőségének hozzáadása.
+A Vmdistribution konfigurálásának legnagyobb része a laborunk modelljének adatainak a kitöltésével jár, ezen belül is az összes számítógép releváns információinak felvitelével. Ennek az automatizálására is felkészíthetnénk a programot, vagyis arra, hogy fel tudja deríteni a környezetet, amiben fut és ez alapján inicializálja a modellt.
