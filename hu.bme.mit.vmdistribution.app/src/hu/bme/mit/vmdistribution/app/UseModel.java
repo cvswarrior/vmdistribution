@@ -329,15 +329,27 @@ public final class UseModel {
 /*
  * TODO list
  * 
- * important: perf analysis in real lab, fail distr - cleanup
- * 
- * not important: create javadoc
- * 
+ *  
  * modeltest \ and / wtf
  * 
  * check_hash = no a seedes rtorrent.rc-be?
  * 
  * elején nem sikerül torrentfájl átmásolni: transfer sem induljon!
+ * 
+ * 
+ * 
+ * új vmek teszteléshez: minden szkript a lapből fel rá
+ * + szkript rtorrent/opentracker shutdown-hoz, fájlok törléséhez
+ * 
+ * multicast transfer update
+ * elapsed time logba
+ * frissítési gyakoriság konfigba
+ * debug progress wtf, tracker wtf
+ * watch dir check freq. up
+ * debug mode - torrent fájlok felmásolása után indulnmak párhuzamosan a kliensek
+ * elején kieső gép - ne legyen transfer
+ * közben kiesőről no exception?
+ * vm - linux autologin + ip cím kiírása
  * 
  * 
  * 
