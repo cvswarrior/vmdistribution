@@ -8,19 +8,17 @@
 %----------------------------------------------------------------------------
 \chapter*{Kivonat}\addcontentsline{toc}{chapter}{Kivonat}
 
-Ide jön a magyar nyelvű kivonat.
-
+Egy 40 gépből álló laborban az oktatási környezet kialakítása és karbantartása problémás. Minden itt tartott tanórához tartozik egy virtuális gép, amit kezdés előtt fel kell másolni a teremben levő számítógépekre.\\
+Dolgozatomban bemutatok egy új módszert ezen fájlok terítésére, ami a most használt ún. Chaincast alapú terítés problémáit oldja meg, többek között a robusztusságával kapcsolatosakat. Az elkészített program egy modellvezérelt Java alkalmazás, ami P2P-alapon, ezen belül Bittorrent protokollt használva valósít meg fájlterítést. Ismertetem a felhasznált technológiákat, a megértéshez szükséges háttérismereteket, majd bemutatom a tervezési fázist, ahol definiálom az elvégzendő terítési műveleteket, létrehozok egy, a labor reprezentálására alkalmas EMF metamodellt és felvázolom az alkalmazásnak a struktúráját. Dokumentálom a program implementálását és letesztelem az elkészült szoftvert, aminek a teljesítményét mérésekkel vetem össze a most használt megoldáséval. Végül javaslatokat teszek a program későbbi továbbfejlesztésének lehetőségeire.
 \vfill
 \selectenglish
-
-
 %----------------------------------------------------------------------------
 % Abstract in English
 %----------------------------------------------------------------------------
 \chapter*{Abstract}\addcontentsline{toc}{chapter}{Abstract}
 
-The english abstract goes here.
-
+In a lab consisting of 40 computers, the setup and monitoring of the environments used for education are problematic. There is a virtual machine for each class that we need to copy beforehand to the computers.\\
+In this paper we present a new method for distributing these files, replacing the current method used due to its problems, specifically with its robustness. This new program is a model-driven Java application, that uses P2P technologies, namely the Bittorrent protocol to distribute files to multiple target machines in a fault-tolerant way. We also provide the information required to understand the applied technologies, then discuss the design process of an EMF metamodel capable of representing our current lab, define the required operations for file distribution and the app's structure itself. Then we present the implementation and the testing of our software and analyze its performance, comparing it to the currently used Chaincast based method. Finally, we suggest some possible improvements for our application.
 \vfill
 \selectthesislanguage
 
