@@ -3,7 +3,7 @@
 \label{chp:validation}
 %----------------------------------------------------------------------------
 
-Ebben a fejezetben az alkalmazás működését teszteljük, majd több mérést végzünk különböző teljesítményparamétereket vizsgálva, az előbbit erre kialakított tesztkörnyezetben, az utóbbit már annak a labornak a gépein, ahol várhatóan éles használatban lesz.
+Ebben a fejezetben az alkalmazás tesztelését mutatom be, majd több mérést végzünk különböző teljesítményparamétereket vizsgálva, az előbbit erre kialakított tesztkörnyezetben, az utóbbit már éles környezetben, laborgépeken.
 
 %----------------------------------------------------------------------------
 \section{Tesztelés}
@@ -13,26 +13,23 @@ Ebben a fejezetben az alkalmazás működését teszteljük, majd több mérést
 \subsection{Tesztkörnyezet és a program bemenete}
 %
 
-A tesztelést a program fejlesztésére használt gépen végeztem el, a terítésben résztvevő gépek Vagrant-tal létrehozott, VirtualBox által futtatott virtuális gépek, amelyeken az operációs rendszer 32-bites 12.04 verziójú Ubuntu\cite{ubuntu}. A virtuális gépekre csak a legszükségesebb szoftverek lettek telepítve, egymással és a gazdagéppel egy közös privát hálózaton voltak. A program futtatásához megadott labormodell fontosabb paraméterei:
+A tesztelést a program fejlesztésére használt gépen végeztem el, a terítésben résztvevő gépek Vagrant-tal létrehozott, VirtualBox\cite{virtualbox} által futtatott virtuális gépek, amelyeken az operációs rendszer 32-bites 12.04 verziójú Ubuntu\cite{ubuntu}. A virtuális gépekre csak a legszükségesebb szoftverek lettek telepítve, egymással és a gazdagéppel egy közös privát hálózaton voltak. A program futtatásához megadott labormodell fontosabb paraméterei:
 
 \begin{itemize}
-  \item Két különböző virtuális gép van benne: egy ``sima'' VirtualMachine típusú ``customvm\_test'' nevű és egy Vagrant\_VM típusú ``vagrantvm\_test'' nevű
-  \item 6 db. Computer, amik közül az egyik dedikált seed (labpc101-105, seed)
-  \item A terítés célállapotát reprezentáló ``mixed\_test'' nevű Lab, ami mindegyik gépre mindkét virtuális gép terítését írja elő
-  \item Labpc105-re nem fér el egyik VM sem, 104-nek nincs elég memóriája szintén egyikhez sem, 103 architektúrája nem kompatibilis a Vagrant\_VM típusú virtuális géppel, 102-re már telepítve van ``customvm\_test''. Labpc101-re mindkettő terülhet
+  \item Két különböző virtuális gép van benne: egy mi általunk és egy Vagrant által készített
+  \item 6 számítógép, amik közül az egyik dedikált seed (labpc101-105, seed nevűek)
+  \item Olyan célállapot, amivel minden lehetséges hiba meg fog jelenni a futás során
 \end{itemize}
-
-A futtatáshoz a ``mixed\_test'' nevű célállapotot adtam meg, mint értelemszerűen az egyetlen felvett ilyet.
 
 %
 \subsection{Program futásának végigkövetése}
 %
 
-Mielőtt végigkövetnénk a futtatást érdemes végiggondolni, hogy mi lenne az elvárt eredmény a fent ismertetett bemenet függvényében, milyen fontosabb lépéseket és milyen sorrendben fog a program végrehajtani:
+Mielőtt végigkövetnénk a futtatást érdemes végiggondolni, hogy mi lenne az elvárt eredmény, milyen fontosabb lépéseket és milyen sorrendben fog a program végrehajtani:
 
 \begin{enumerate}
-  \item Figyelmeztetés, hogy 105 és 104-re semelyik, 103 és 102-re pedig egyik VM nem fog terülni.
-  \item ``vagrantvm\_test'' inicializálása Vagrant-tal, majd becsomagolása egy .zip archívumba
+  \item Figyelmeztetés, hogy 105 és 104-re semelyik, 103 és 102-re pedig egyik virtuális gép nem fog terülni bizonyos problémák miatt
+  \item Vagrant-os VM inicializálása, majd becsomagolása egy .zip archívumba
   \item Mindkét VM felmásolása a seed gépre, mindkettőhöz torrent fájl létrehozása
   \item Torrentkliens futtatása a seed gépen
   \item Torrent fájlok átmásolása a labpc101-103 gépekre
@@ -45,7 +42,7 @@ A program indítása után rögtön a várt figyelmeztetések jelennek meg a kon
 \code{2015-12-08 00:21:48 WARNING hu.bme.mit.vmdistribution.app.EMFModelUtil isCompatible WARNING:\_Computer:labpc104 is not compatible with Virtual Machine:customvm\_test, Not enough RAM!}\\
 \code{2015-12-08 00:21:48 WARNING hu.bme.mit.vmdistribution.app.EMFModelUtil isCompatible WARNING:\_Computer:labpc103 is not compatible with Virtual Machine:vagrantvm\_test, Architecture mismatch!}\\
 \code{2015-12-08 00:21:48 WARNING hu.bme.mit.vmdistribution.app.EMFModelUtil hasEnoughSpace WARNING:\_Computer:labpc105 does not have enough free space for the new VMs! Available: 2000.0 MB, Required: 15500.0 MB}\\\\
-Majd meghívódik a Vagrant, hogy létrehozza a ``vagrantvm\_test''-et, az~\ref{fig:vboxcap}-es~ábrán látható, hogy a VirtualBox VM-eket tartalmazó mappájába már bele is került az új virtuális gép és meg is jelenik annak a felületén.
+Majd meghívódik a Vagrant és létrehozza, valamint beállítja a hozzá tartozó VM-et. Az~\ref{fig:vboxcap}-es~ábrán látható, hogy a VirtualBox VM-eket tartalmazó mappájába már bele is került az új virtuális gép és meg is jelenik annak a felületén.
 
 \begin{figure}[ht]
 \centering
@@ -73,7 +70,7 @@ Ezután az alkalmazás a torrent fájlokat átmásolja a megfelelő célgépekre
 \label{fig:seed_torrent}
 \end{figure}
 
-A két futó fájlátvitel részleteit megnézve ellenőrizhetjük, hogy a megfelelő gépek töltenek-e le. Például a ``customvm\_test''-et tartalmazó testvm.zip-et a labpc101 és 103-nak kellene töltenie, lásd \ref{fig:seed_peers}-es~ábra (a két gép IP címe .111 ill. .113-ra végződik).
+A két futó fájlátvitel részleteit megnézve ellenőrizhetjük, hogy a megfelelő gépek töltenek-e le. Például a mi általunk készített VM-et tartalmazó testvm.zip-et a labpc101 és 103-nak kellene töltenie, lásd \ref{fig:seed_peers}-es~ábra (a két gép IP címe .111 ill. .113-ra végződik).
 
 \begin{figure}[ht]
 \centering
@@ -133,12 +130,12 @@ Az eredményekből látszik, hogy sebesség terén elfogadható, amit kaptunk: n
 \subsection{Skálázódás - Torrent alapú terítés 10 és 25 gépere}
 %
 
-A Torrent-től, mint P2P alapú fájlmegosztó protokolltól azt várjuk, hogy letöltők számával minimum nem fordítottan arányos a terítés ideje, vagyis több résztvevő esetén sem tart több ideig a fájlátvitel. Most 10 és 25 gépre történő térítés esetén hasonlítjuk össze teljesítménymutatókat a következő táblázat segítségével:
+A Torrent-től, mint P2P alapú fájlmegosztó protokolltól azt várjuk, hogy letöltők számának növelése esetén sem tart több ideig a fájlátvitel. Most 10 és 25 gépre történő térítés esetén hasonlítjuk össze teljesítménymutatókat a következő táblázat segítségével:
 
 \begin{center}
 	\begin{tabular}{ |c|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}| }
 		\hline
-		\multirow{2}{*}{Fájlméret}&\multicolumn{2}{|c|}{Terítés - teljes idő}&\multicolumn{2}{|c|}{Terítés - csak az adatátvitel} \\
+		\multirow{2}{*}{Fájlméret}&\multicolumn{2}{c|}{Terítés - teljes idő}&\multicolumn{2}{c|}{Terítés - csak az adatátvitel} \\
 		& 10 gépre & 25 gépre & 10 gépre & 25 gépre \\
 		\hline
 		1 GB & 85 s & 86 s & 80 s & 81 s \\
@@ -152,30 +149,29 @@ A Torrent-től, mint P2P alapú fájlmegosztó protokolltól azt várjuk, hogy l
 	\end{tabular}
 \end{center}
 
-[a szegélyeket hogyan lehetne szépre megcsinálni?]\\%TODO
-
 Számunkra kedvező eredményt kaptunk, hiszen nagyobb fájlok terítésénél nemhogy lassabb lett 15 célgép hozzáadásával a terítés, hanem érezhetően gyorsabb. A Torrent protokoll működését ismerve lassulással nem is kellett volna számolnunk, hiszen ideális esetben a letöltés idejét kizárólag a seed feltöltési sebessége határozza meg. [ezt bővebben kifejteni a háttérismeretek Torrentes részében, vagy a tervezésnél és innen visszahivatkozni talán.]%TODO
 
-%
-\subsection{Terítés ideje különbőző seed-ek választása esetén}
-%
-
-Érdemes lehet megnézni, hogy más-más seed gép választása hogyan befolyásolja a terítés idejét, ezért lefuttattam a 4 GB-os fájl terítését 25 gépre háromszor, különböző seed-et választva. Az eredményt az~\ref{fig:differentseedscomparison}-es~ábra szemlélteti. 
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=120mm, keepaspectratio]{figures/Perf_different_seeds.png}
-\caption{Terítés ideje különbőző seed-ek választása esetén}
-\label{fig:differentseedscomparison}
-\end{figure}
-
-Látható, hogy különösebben nincs jelentősége, hogy melyik gépet választjuk seed-nek, persze ha egy nem ennyire homogén gépparkkal felszerelt laborban végeztük volna a tesztelést, akkor feltétlen a leggyorsabb gépet kellett volna e feladatra választanunk.
+% %
+% \subsection{Terítés ideje különbőző seed-ek választása esetén}
+% %
+% 
+% Érdemes lehet megnézni, hogy más-más seed gép választása hogyan befolyásolja a terítés idejét, ezért lefuttattam a 4 GB-os fájl terítését 25 gépre háromszor, különböző seed-et választva. Az eredményt az~\ref{fig:differentseedscomparison}-es~ábra szemlélteti. 
+% 
+% \begin{figure}[ht]
+% \centering
+% \includegraphics[width=120mm, keepaspectratio]{figures/Perf_different_seeds.png}
+% \caption{Terítés ideje különbőző seed-ek választása esetén}
+% \label{fig:differentseedscomparison}
+% \end{figure}
+% 
+% Látható, hogy különösebben nincs jelentősége, hogy melyik gépet választjuk seed-nek, persze ha egy nem ennyire homogén gépparkkal felszerelt laborban végeztük volna a tesztelést, akkor feltétlen a leggyorsabb gépet kellett volna e feladatra választanunk.
+%TODO kihagyható?
 
 %
 \subsection{P2P alapú fájlterítés - hibatűrés}
 %
 
-A hibatűrési tesztet két részben végeztem el, az első részben azt néztem meg, hogy az én megoldásom hogyan reagál, ha a terítés indításakor van nem elérhető célgép. Ez Chaincast esetében automatikus bukást okoz, mivel ott küldés előtt ellenőrződik a teljes lánc létrejötte, és hiányzó gép esetében el sem kezdődik a fájlátvitel (pedig elvileg a lánc utolsó n db. gépének hiányával toleráns lehetne).\\
+A hibatűrési tesztet két részben végeztem el, az első részben azt néztem meg, hogy az én megoldásom hogyan reagál, ha a terítés indításakor van nem elérhető célgép. Ez Chaincast esetében automatikus bukást okoz, mivel ott küldés előtt ellenőrződik a teljes lánc létrejötte, és hiányzó gép esetében el sem kezdődik a fájlátvitel.\\
 Az első teszthez 10 gépes terítést kíséreltem meg, úgy hogy a ``labpc03'' nevezetű kikapcsolt állapotban volt, a futást kövessük nyomon a program kimenetében:\\\\
 Minden rendben történik egészen addig a lépésig, amíg a terítendő fájlhoz tartozó torrentfájlt nem próbáljuk labpc03-ra másolni:\\\\
 \code{2015-12-05 10:37:57 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test\_1g.torrent to labpc03.]}\\
