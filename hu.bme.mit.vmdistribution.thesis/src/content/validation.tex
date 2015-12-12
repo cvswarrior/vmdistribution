@@ -25,6 +25,10 @@ A tesztelést a program fejlesztésére használt gépen végeztem el, a terít�
 \subsection{Program futásának végigkövetése}
 %
 
+nem ez hanem, annak leírása, hogy funkci + intergrációs teszteket végeztem és az éles környezetbem.
+
+
+
 Mielőtt végigkövetnénk a futtatást érdemes végiggondolni, hogy mi lenne az elvárt eredmény, milyen fontosabb lépéseket és milyen sorrendben fog a program végrehajtani:
 
 \begin{enumerate}
@@ -42,7 +46,7 @@ A program indítása után rögtön a várt figyelmeztetések jelennek meg a kon
 \code{2015-12-08 00:21:48 WARNING hu.bme.mit.vmdistribution.app.EMFModelUtil isCompatible WARNING:\_Computer:labpc104 is not compatible with Virtual Machine:customvm\_test, Not enough RAM!}\\
 \code{2015-12-08 00:21:48 WARNING hu.bme.mit.vmdistribution.app.EMFModelUtil isCompatible WARNING:\_Computer:labpc103 is not compatible with Virtual Machine:vagrantvm\_test, Architecture mismatch!}\\
 \code{2015-12-08 00:21:48 WARNING hu.bme.mit.vmdistribution.app.EMFModelUtil hasEnoughSpace WARNING:\_Computer:labpc105 does not have enough free space for the new VMs! Available: 2000.0 MB, Required: 15500.0 MB}\\\\
-Majd meghívódik a Vagrant és létrehozza, valamint beállítja a hozzá tartozó VM-et. Az~\ref{fig:vboxcap}-es~ábrán látható, hogy a VirtualBox VM-eket tartalmazó mappájába már bele is került az új virtuális gép és meg is jelenik annak a felületén.
+Majd meghívódik a Vagrant és létrehozza, valamint beállítja a hozzá tartozó VM-et. \Aref{fig:vboxcap}-es~ábrán látható, hogy a VirtualBox VM-eket tartalmazó mappájába már bele is került az új virtuális gép és meg is jelenik annak a felületén.
 
 \begin{figure}[ht]
 \centering
@@ -52,7 +56,7 @@ Majd meghívódik a Vagrant és létrehozza, valamint beállítja a hozzá tarto
 \end{figure}
 A kész virtuális gépből a program létrehoz egy tömörített .zip állományt\ldots\\\\
 \code{2015-12-08 00:37:03 INFO hu.bme.mit.vmdistribution.app.vmutil.Archiver createZipArchive Creating Archive: E:\textbackslash{}vagrantvm\_test.zip}\\\\
-\ldots majd a két VM felkerül a seed-re, ahogy az~\ref{fig:seed_files}-es~ábrán ez látszik is:  a seed-del SSH kapcsolat létesítése után kilistázzuk azoknak a mappáknak a tartalmát ahová a VM-eket tartalmazó zip fájlok, illetve az azok alapján készített torrent fájlok kerültek.
+\ldots majd a két VM felkerül a seed-re, ahogy \aref{fig:seed_files}-es~ábrán ez látszik is:  a seed-del SSH kapcsolat létesítése után kilistázzuk azoknak a mappáknak a tartalmát ahová a VM-eket tartalmazó zip fájlok, illetve az azok alapján készített torrent fájlok kerültek.
 
 \begin{figure}[ht]
 \centering
@@ -108,7 +112,7 @@ A mérési eredmények az alkalmazásom futásakor keletkező logfájlból szár
 \subsection{Chaincast és Torrent alapú terítés idejének összehasonlítása}
 %
 
-Nem a gyorsabb fájlterítés megvalósítása volt a programom egyik célja, de attól még érdemes lehet összehasonlítanunk a két módszer sebességét, hiszen mindegy mennyit nyerünk a robusztusságon , ha használhatatlanul lassabb lesz az alkalmazás a mostaninál. Az~\ref{fig:chaincasttorrrentcomparison}-es~ábrán láthatjuk a különböző méretű fájlok terítésének az idejét. Előtte viszont érdemes részletesebben megnézni, hogy ez az idő konkrétan mit (nem) tartalmaz:
+Nem a gyorsabb fájlterítés megvalósítása volt a programom egyik célja, de attól még érdemes lehet összehasonlítanunk a két módszer sebességét, hiszen mindegy mennyit nyerünk a robusztusságon , ha használhatatlanul lassabb lesz az alkalmazás a mostaninál. \Aref{fig:chaincasttorrrentcomparison}-es~ábrán láthatjuk a különböző méretű fájlok terítésének az idejét. Előtte viszont érdemes részletesebben megnézni, hogy ez az idő konkrétan mit (nem) tartalmaz:
 
 \begin{itemize}
   \item Egyik megoldásnál sem tartalmazza a terítés ideje a terítendő fájlok létrehozását, és a központi gépre másolását (ami egyik esetben egy hálózati meghajtó, másik esetben a torrent-es terítés seed-je)
@@ -195,7 +199,7 @@ A második teszt folyamán a fájlátvitel közben tettem gépeket elérhetetlen
 \subsection{P2P alapú fájlterítés - szűk keresztmetszetek}
 %
 
-A többi mérés elvégzése közben feltűnt, hogy sokszor ugyanazok a gépek fejezték be utoljára a letöltést, úgyhogy összegyűjtöttem a~\ref{fig:computerdownloadspeeds}-es ábrán látható diagramokon, hogy adott gép hányszor szerepelt a terítések végén a 3 leglassabb, illetve leggyorsabb gép között:
+A többi mérés elvégzése közben feltűnt, hogy sokszor ugyanazok a gépek fejezték be utoljára a letöltést, úgyhogy összegyűjtöttem \aref{fig:computerdownloadspeeds}-es ábrán látható diagramokon, hogy adott gép hányszor szerepelt a terítések végén a 3 leglassabb, illetve leggyorsabb gép között:
 
 
 \begin{figure}[ht]

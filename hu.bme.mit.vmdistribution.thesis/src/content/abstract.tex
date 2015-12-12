@@ -1,27 +1,35 @@
 \pagenumbering{roman}
 \setcounter{page}{1}
 
-\selecthungarian
-
 %----------------------------------------------------------------------------
 % Abstract in Hungarian
 %----------------------------------------------------------------------------
+\selecthungarian
 \chapter*{Kivonat}\addcontentsline{toc}{chapter}{Kivonat}
 
-Egy 40 gépből álló laborban az oktatási környezet kialakítása és karbantartása problémás. Minden itt tartott tanórához tartozik egy virtuális gép, amit kezdés előtt fel kell másolni a teremben levő számítógépekre.\\
-Dolgozatomban bemutatok egy új módszert ezen fájlok terítésére, ami a most használt úgynevezett Chaincast alapú terítés problémáit oldja meg, többek között a robusztusságával kapcsolatosakat. Az elkészített program egy modellvezérelt Java alkalmazás, ami P2P-alapon, ezen belül Bittorrent protokollt használva valósít meg fájlterítést. Ismertetem a felhasznált technológiákat, a megértéshez szükséges háttérismereteket, majd bemutatom a tervezési fázist, ahol definiálom az elvégzendő terítési műveleteket, létrehozok egy, a labor ábrázolására alkalmas EMF metamodellt és felvázolom az alkalmazásnak a struktúráját. Dokumentálom a program implementálását és letesztelem az elkészült szoftvert, aminek a teljesítményét mérésekkel vetem össze a most használt megoldáséval. Végül javaslatokat teszek a program későbbi továbbfejlesztésének lehetőségeire.
+Egy 40 gépből álló labor karbantartása komoly kihívást jelent, mivel minden tanórához különböző mérési környezet létrehozása szükséges.
+Ezeket a környezeteket tipikusan virtuális gépekkel valósítjuk meg, amiknek szétosztását a laborban terítésnek nevezzük. A terítésére most egy Chaincast nevű megoldást használunk, ami abból áll, hogy a gépeket láncba kötjük és a láncon mennek végig a küldendő adatok. Ezáltal, ha bármelyik gépen hiba lép fel, akkor az adatátviel meghiúsul és a terítést előlről kell kezdenünk. Továbbá, mivel minden tárgyhoz különbőző gépek kellenek (például csak az első három sor gépei), ezekhez a láncoknak különböző konfigurációja szükséges.
+
+Dolgozatomnak célja, hogy egy olyan fájlterítési módszert dolgozzak ki, amellyel a terítés hibák esetén is sikeresen végrehajtható marad. Így a folyamat olyankor is sikeres lehet, amikor a korábbi módszer kudarcot vallott. Továbbá tetszőleges gépek kijelölhetőek legyenek minden laborhoz.
+
+Dolgozatomban bemutatok egy új módszert a fájlok terítésére, ami a most használtnak a problémáit oldja meg, amellyel javítható az eljárás robusztussága és konfigurálhatósága. Bemutatok egy általam fejlesztett alkalmazást, ami Peer-to-Peer-alapon, ezen belül Bittorrent protokollt használva valósít meg fájlterítést, ahol a terítési feladatok egy könnyen használható modellen specifikálhatóak. Ismertetem a felhasznált technológiákat, a megértéshez szükséges háttérismereteket, majd bemutatom a tervezési fázist, ahol definiálom az elvégzendő terítési műveleteket, létrehozok egy, a labor ábrázolására alkalmas modellező nyelvet és felvázolom az alkalmazásnak a struktúráját. Dokumentálom a program fontosabb implementálációs lépéseit, tesztelését, valamint a teljesítményét mérésekkel vetem össze a most használt megoldáséval. Végül javaslatokat teszek a program későbbi továbbfejlesztésének lehetőségeire.
 \vfill
-\selectenglish
+
 %----------------------------------------------------------------------------
 % Abstract in English
 %----------------------------------------------------------------------------
+\selectenglish
 \chapter*{Abstract}\addcontentsline{toc}{chapter}{Abstract}
 
-In a lab consisting of 40 computers, the setup and monitoring of the environments used for education are problematic. There is a virtual machine for each class that we need to copy beforehand to the computers.\\
-In this paper we present a new method for distributing these files, replacing the current method used due to its problems, specifically with its robustness. This new program is a model-driven Java application, that uses P2P technologies, namely the Bittorrent protocol to distribute files to multiple target machines in a fault-tolerant way. We also provide the information required to understand the applied technologies, then discuss the design process of an EMF metamodel capable of representing our current lab, define the required operations for file distribution and the app's structure itself. Then we present the implementation and the testing of our software and analyze its performance, comparing it to the currently used Chaincast based method. Finally, we suggest some possible improvements for our application.
-\vfill
-\selectthesislanguage
+The maintenance of a lab consisting of 40 computers presents a considerebla challenge, because we need to create a different environment for each different class. These environments are typically made up of virtual machines. For the distribution of these virtual machines a method called Chaincast is used currently, that connects the computers in a chain, so we can send data from one computer to another. Thus, if any machine malfunctions the transfer of data is interrupted and the distribution must be restarted. Also, because we need different computers for different classes (such as only the computers of the first 3 rows), these chains need to be configured differently.
 
+Our goal is to create a method of file distribution, that can can finish successfully, even with errors occuring during the distribution, so the whole process can succeed at times when the other failed. Furthermore, we'll be able to choose an arbitrary set of computers as the target of the distribution without the need to change the application's configuration significantly.
+
+In this paper we present a new method for distribution files, replacing the one currently used, fixing its problems and improving its robustness and configurability. 
+This new program is a model-driven application, that uses P2P technologies, namely the Bittorrent protocol to distribute files to multiple target machines. The distribution tasks can be specified readily. We also provide the information required to understand the applied technologies, then discuss the design phase, when we define the operations for file distribution, create a modeling languange capable of representing our lab and depict the application's structure. Then we document the more important steps of the program's implementation and its testing. We also analyze its performance, comparing it to the currently used Chaincast method. Finally, we suggest some possible improvements in the future for our application.
+\vfill
+
+\selectthesislanguage
 \newcounter{romanPage}
 \setcounter{romanPage}{\value{page}}
 \stepcounter{romanPage}
