@@ -7,13 +7,33 @@ Ebben a fejezetben a feladat megértéséhez szükséges technológiákat mutato
 %----------------------------------------------------------------------------
 \section{Virtuális gépek}
 %----------------------------------------------------------------------------
+Érdemes pár szót ejteni a virtuális gépekről, hiszen ezek terítése a programunk célja. Virtuális gépet használva egy számítógépes környezetet szimulálhatunk, létrehozva egy ``teljes számítógépet egy másik számítógépen belül''. A virtualizációs megoldások közül a rendszervirtualizációs megoldások érdekelnek minket, ahol egy egész rendszert emulálhatunk, ezen belül is az olyan megoldások amik alkalmazásként futnak az operációs rendszerünk felett. Virtuális  gépek használatának rengeteg célja lehet, a mi esetünkben ez egységes oktatási környezet kialakítása mindegyik laborban tartott órához, például egy Java fejlesztéssel kapcsolatos tanórához olyan VM-et használunk, ami előre beállított fejlesztői környezetet tartalmaz.
+Virtuális gépek futtatására használt programok közül talán a két legismertebb a VMWare Workstation\cite{vmware} és az Oracle VM Virtualbox\cite{virtualbox}. Ilyen gépek létrehozása alapvetően hosszadalmas folyamat, melynek lépései a következőek:
+
+\begin{enumerate}
+  \item Megadjuk a létrehozandó VM paramétereit: milyen OS-t szeretnénk rá telepíteni, mennyi erőforrást(például processzorok száma, RAM mennyisé) bocsájtunk a rendelkezésére.
+  \item	Csatoljuk a telepítendő OS lemezképfájlját és elvégezzük a telepítését.
+  \item A kész gépet konfiguráljuk, feltelepítjük a szükséges alkalmazásokat.
+\end{enumerate}
+
+Ezt a folyamatot tudjuk gyorsítani és leegyszerűsíteni a Vagrant nevű alkalmazás használatával, ami virtuális gépeket tartalmazó munkakörnyezetek kialakítására és használatára ad lehetőséget. Két legfontosabb funkciója a VM-ek automatikus létrehozása és beállítása a felhasználó által kitöltött Vagrantfile alapján, illetve ezeknek a gépeknek a futtatásának a menedzselése. A Vagrantfile tartalmazza a virtuális gép létrehozásához szükséges legfontosabb információkat: azokat a beállításokat és parancsokat, amiket egy úgynevezett ``box''-on futtatva a várt virtuális gépet eredményezi. A box az egy előre elkészített VM, amit kiindulási alapnak használhatunk. A Vagrant-ot fejlesztő cég adatbázisából\cite{atlas} szerezhetőek be a box-ok, vagy természetesen saját magunk is készíthetünk. \Aref{fig:vagrantfile}-es ábrán egy részletet láthatunk az alkalmazásunkhoz tartozó tesztkörnyezet létrehozásához szükséges Vagrantfile-ból: megfigyelhetjük, hogy lehetőségünk van tetszőleges szkript futtatására a virtuális gép készítése közben, így gyakorlatilag tetszőleges VM létrehozására használható a Vagrant.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=140mm, keepaspectratio]{figures/vagrantfile.png}
+	\caption{Egy Vagrantfile tartalma (részlet)}
+	\label{fig:vagrantfile}
+\end{figure}
+
+Egy virtuális gép reprezentálásához a gazdagépen alapvetően háromféle fájl szükséges legalább:
+
 \begin{itemize}
-  \item általában egy virtuális gép mire jó
-  \item	vagrant szerepe virtuális gépek létrehozásában/konfigurálásában
+	\item Egyik a futtatásához szükséges konfigurációs beállításokat írja le (VM metaadatai, szükséges erőforrások stb.)
+	\item Másik a VM által használt virtuális lemezeken található adatokat tartalmazza
+	\item Opcionálisan lehetnek úgynevezett snapshot-ok is, amelyek egy konkrét állapotát írják a virtuális gépnek, ahova bármikor visszaállítható
 \end{itemize}
 
-Érdemes pár szót ejteni a virtuális gépekről, hiszen ezek terítése a programunk célja. Virtuális gépet használva egy számítógépes környezetet szimulálhatunk, ezen belül is \ldots platform virt \ldots Virtuális   
-
+Ezeket a fájlokat terítjük a laborban.
 %----------------------------------------------------------------------------
 \section{Peer-to-peer fájlátvitel} 
 \label{sect:p2p}
@@ -39,12 +59,13 @@ fájlmegosztásra használjuk, a mögötte álló alapvető ötlet az, hogy a me
 feldaraboljuk, és a letöltőknek ezeket a darabokat nem ugyanolyan sorrendben adjuk oda, így ők a
 hiányzó darabokat egymástól is tudják tölteni. Ahhoz, hogy a letöltők megtalálják egymást, illetve a kész fájlt feltöltőket az ún. tracker segít, ami adott átvitel résztvevőinek (a ``swarm'') adatainak tárolásáért felel. A Bittorrent terminológiájában a teljes fájlal rendelkező, már csak feltöltést végzőket seed-nek, a letöltőket, akik persze fel is töltenek leecher-nek vagy peer-nek nevezik. A tracker kiesése esetén léteznek más módszerek is a többi swarm-tag megtalálására, többek között a DHT\cite{rescorla2006introduction}(distributed hash table - elosztott hashtábla) használata, viszont esetünkben ez nem opció, mert az egyetem szabályzata tiltja a Bittorrent protokoll használatát (legalábbis a ``nagyvilág'' felé), a DHT bekapcsolása esetén pedig nem tudjuk a laborgépeinken futó torrentkliensek közti forgalmat a helyi hálóra izolálni.
 
-Látszik, hogy torrent-alapú fájlátvitel megvalósításához minimum mikre lesz szükségünk:
+Látszik, hogy torrent alapú fájlátvitel megvalósításához minimum mikre lesz szükségünk:
 \begin{itemize}
 	\item Minden laborgépen egy torrentkliensre
 	\item Saját torrent tracker-re
 	\item Egy olyan programra, ami ezek működését vezérli
 \end{itemize}
+
 Gépeinkre telepítendő torrentkliens esetében az rtorrent-re\cite{sundell2012libtorrent} esett a választás, mivel szükségünk van arra, hogy olyan klienst használjunk, amit a háttérben is tudunk futtatni, illetve az állapota valami módon távolról is lekérhető legyen. Az rtorrent rendelkezik egy XMLRPC\cite{merrick2006xml} alapú interfésszel, aminek segítségével távolról is vezérelhetővé válik. Ilyen interfészt használ a számos rtorrent-hez írt webes felület is, például a legismertebb ruTorrent\cite{rutorrent}. Természetesen minden rtorrent-et futtató gépre telepítenünk kell egy webszervert is, ami az XMLRPC kéréseinket eljuttatja magának a torrentkliensnek, itt a választás az apache-ra\cite{fielding1997apache} esett főleg könnyű telepítése és konfigurálása miatt.
 
 Tracker-ből az opentracker nevű került fel egy gépre (az egyszerűség kedvéért arra, amelyiket a terítések során seed-nek fogunk használni), választásunk rá azért esett, mert különösebb funkcionális különbség nincs a lehetséges jelöltek között, ezt viszont könnyen lehet telepíteni a laborgépeken futó operációs rendszer csomagkezelőjéből. Amiről még eddig nem esett szó, az a protokoll működéséhez szükséges, metaadatokat tartalmazó fájl, a torrentfájl. Ez tárolja az adott letöltéshez tartozó fájlok hash-eit, amik adott fájl tartalmából előállított egyedi hexadecimális számok, tulajdonságuk, hogy ugyanarra a fájlra mindig ugyanaz a szám áll elő, másikra pedig (szinte) biztosan különböző, ezek alapján tudjuk ellenőrizni a letöltött adatok hibamentességét. A torrent fájl tartalmazza még ezen kívül a küldendő fájlok mappastruktúráját, metaadatait (pl. fájlnév, fájlméret) és a tracker címét. A torrentkliens és a tracker egy torrentfájlra az infohash alapján hivatkozik, ami a torrentfájl hash-ének kódolásával kapható meg, erre nekünk később akkor éesz szükségünk, amikor majd a terítés közben annak állapotának lekérésekor hivatkozni akarunk egy átvitelre.
