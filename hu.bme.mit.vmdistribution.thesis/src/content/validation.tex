@@ -3,41 +3,39 @@
 \label{chp:validation}
 %----------------------------------------------------------------------------
 
-Ebben a fejezetben az alkalmazás tesztelését mutatom be, majd több mérést végzünk különböző teljesítményparamétereket vizsgálva, az előbbit erre kialakított tesztkörnyezetben, az utóbbit már éles környezetben, laborgépeken.
+Ebben a fejezetben az alkalmazás tesztelési módját írom le, majd az éles környezetben elvégzett méréseket, amelyekkel különbőző teljesítményparamétereit elemzem, illetve hasonlítom össze a most használt terítési megoldásival.
 
 %----------------------------------------------------------------------------
 \section{Tesztelés}
 %----------------------------------------------------------------------------
 
-nannak leírása jön ide, hogy funkci + intergrációs teszteket végeztem és az éles környezetbem.
+Az alkalmazás helyes működésének ellenőrzéséhez először funkcionális teszteket futtattam annak kisebb egységein a JUnit\cite{massol2003junit} keretrendszert használva. Mivel a program build-elése Maven-nel\cite{smart2005introduction} történik, minden új programverzió tesztelését automatizáltan el tudtam végezni, ráadásul a következő Maven-plugin-eket használva egyéb fontos tulajdonságait vizsgáltam meg a programnak:
 
+\begin{itemize}
+  \item PMD, Findbugs\cite{rutar2004comparison}: Mindkettő forráskód analízisét végzi, alapvető, de nehezen észrevehető hibák megtalálásában nyújtanak nagy segítséget (például fel nem szabadított erőforrások)
+  \item Checkstyle\cite{checkstyle}: Kódminőség ellenőrzésére való, segítségével a kész termék forráskódját jó minőségűvé, más programozók által könnyen megérthetővé tehetjük.
+\end{itemize}
+
+A program integrációs tesztelését az éles laborkörnyezetben végeztem, ennek során születtek meg \aref{performanceanal}-es fejezet mérési eredményei is.
 
 %----------------------------------------------------------------------------
 \section{Teljesítményelemzés}
 %----------------------------------------------------------------------------
-A programom teljesítményének elemzéséhez a következő méréseket végeztem el:
+\label{performanceanal}
 
-\begin{itemize}
-  \item 1,2,4 és 8 GB méretű fájlok terítése 10 ill. 25 gépre
-  \item 4 GB méretű fájl terítése 25 gépre háromszor, különböző seed választásával
-  \item Hibatűrési tesztek a terítés elején hiányzó, ill. aközben kieső gépekkel.
-\end{itemize}
-
-Továbbá, hogy legyen összehasonlítási alap  az eredeti Chaincast alapú terítést is lefuttattam 25 gépre 1,2,4 és 8 GB méretű fájlokkal.
-A mérési eredmények az alkalmazásom futásakor keletkező logfájlból származnak, Chaincast esetében pedig a Jenkins webes felületén a terítéshez tartozó build ``build output'' részből.
+A programom teljesítményének elemzése során különböző, az alkalmazás teljesítményével kapcsolatos, általam felvetett kérdésre próbálok választ adni. A mérések során különböző méretű (1, 2, 4, 8 GB) fájlok terítését fogom töbször elvégezni.
 
 %
 \subsection{Chaincast és Torrent alapú terítés idejének összehasonlítása}
 %
+\textbf{Kérdés:} Gyorsabb-e a Torrent alapú terítés a Chaincast-osnál?
 
-Nem a gyorsabb fájlterítés megvalósítása volt a programom egyik célja, de attól még érdemes lehet összehasonlítanunk a két módszer sebességét, hiszen mindegy mennyit nyerünk a robusztusságon , ha használhatatlanul lassabb lesz az alkalmazás a mostaninál. \Aref{fig:chaincasttorrrentcomparison}-es~ábrán láthatjuk a különböző méretű fájlok terítésének az idejét. Előtte viszont érdemes részletesebben megnézni, hogy ez az idő konkrétan mit (nem) tartalmaz:
+\textbf{Mérés:} A kérdés megválaszolásához 1, 2, 4 és 8 GB méretű fájlokat terítettem az eredeti és az általam készített új terítési módszerrel, a mérés eredményeit  \aref{fig:chaincasttorrrentcomparison}-es~ábrán látható grafikon mutatja be.
 
-\begin{itemize}
-  \item Egyik megoldásnál sem tartalmazza a terítés ideje a terítendő fájlok létrehozását, és a központi gépre másolását (ami egyik esetben egy hálózati meghajtó, másik esetben a torrent-es terítés seed-je)
-  \item Torrent-es terítésnél az időt a fájl hash-elése előtt, illetve után kezdjük mérni, Chaincast-nál a webes felületen a terítés indításától
-\end{itemize}
 
-Az előbbi állítások a későbbi mérésekre is igazak lesznek.
+\textit{Érdemes megjegyezni, hogy a grafikonon két időérték szerepel a Torrent-es terítéshez: egyik tartalmaza a torrent fájl elkészítésének és betöltésekor ennek hash-ellenőrzésének az idejét, míg a másik csak a konkrét adatátvitelét. Ez az időveszteség a bemenet méretétől függően nő, viszont nem lineárisan, ezért nagyon indokolt lenne a torrentklienset rákényszeríteni ennek a hash-ellenőrzésnek a kihagyására, főleg mivel ennek gyakorlati haszna nincs is.}
+
+\textbf{Válasz:} Nem gyorsabb a Torrent alapú terítési megoldás, körülbelül kétszer lassabb. Kijelenthető, hogy ez egy elfogadható kompromisszum a robusztusság javítása érdekében, főleg úgy, hogy az ábra nem tartalmazza, hogy adott Chaincast-os terítéshez hány sikertelen próbálkozás tartozik és ez mennyi időveszteséggel jár. 
 
 \begin{figure}[ht]
 \centering
@@ -46,13 +44,14 @@ Az előbbi állítások a későbbi mérésekre is igazak lesznek.
 \label{fig:chaincasttorrrentcomparison}
 \end{figure}
 
-Az eredményekből látszik, hogy sebesség terén elfogadható, amit kaptunk: nagyobb fájloknál körülbelül kétszer lassabb a terítés a Chaincast-hoz képest, és az a tapasztalat, hogy hogy átlagosan 2 próbálkozás kell egy sikeres Chaincast-os terítéshez, ami ha a vége felé szakadna meg a sikertelen próba során, akkor összességében hasonló időt venne igénybe. Kis fájloknál sokkal kevésbé jelentős a két módszer sebessége közti különbség, viszont az nem derült ki, hogy milyen anomália lépett fel a 2 GB-os fájl terítése során, hiszen az tovább tartott, mint a 4 GB-osé. Az is megjegyzendő, hogy a seed gépen a feltöltés indítása előtti hash-ellenőrzés okozta időveszteség (lásd a Torrent alapú terítéshez kapcsolódó oszloppárok közti különbség) nem lineárisan nő a feltöltendő fájl méretéhez képest, ezért nagyon javasolt lenne a torrentklienset rákényszeríteni ennek az ellenőrzésnek a kihagyására.
-
 %
 \subsection{Skálázódás - Torrent alapú terítés 10 és 25 gépere}
 %
 
-A Torrent-től, mint P2P alapú fájlmegosztó protokolltól azt várjuk, hogy letöltők számának növelése esetén sem tart több ideig a fájlátvitel. Most 10 és 25 gépre történő térítés esetén hasonlítjuk össze teljesítménymutatókat a következő táblázat segítségével:
+\textbf{Kérdés:} Hogyan skálázódik a Torrent alapú terítés, mennyit változik a terítés ideje, ha több gépre terítünk?
+
+
+\textbf{Mérés:} A fájlok terítését 10 és 25 gépre végeztem el, a kapott terítési idpknek az összehasonlítását a következő táblázat tartalmazza:
 
 \begin{center}
 	\begin{tabular}{ |c|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}| }
@@ -71,54 +70,25 @@ A Torrent-től, mint P2P alapú fájlmegosztó protokolltól azt várjuk, hogy l
 	\end{tabular}
 \end{center}
 
-Számunkra kedvező eredményt kaptunk, hiszen nagyobb fájlok terítésénél nemhogy lassabb lett 15 célgép hozzáadásával a terítés, hanem érezhetően gyorsabb. A Torrent protokoll működését ismerve lassulással nem is kellett volna számolnunk, hiszen ideális esetben a letöltés idejét kizárólag a seed feltöltési sebessége határozza meg. [ezt bővebben kifejteni a háttérismeretek Torrentes részében, vagy a tervezésnél és innen visszahivatkozni talán.]%TODO
-
-% %
-% \subsection{Terítés ideje különbőző seed-ek választása esetén}
-% %
-% 
-% Érdemes lehet megnézni, hogy más-más seed gép választása hogyan befolyásolja a terítés idejét, ezért lefuttattam a 4 GB-os fájl terítését 25 gépre háromszor, különböző seed-et választva. Az eredményt az~\ref{fig:differentseedscomparison}-es~ábra szemlélteti. 
-% 
-% \begin{figure}[ht]
-% \centering
-% \includegraphics[width=120mm, keepaspectratio]{figures/Perf_different_seeds.png}
-% \caption{Terítés ideje különbőző seed-ek választása esetén}
-% \label{fig:differentseedscomparison}
-% \end{figure}
-% 
-% Látható, hogy különösebben nincs jelentősége, hogy melyik gépet választjuk seed-nek, persze ha egy nem ennyire homogén gépparkkal felszerelt laborban végeztük volna a tesztelést, akkor feltétlen a leggyorsabb gépet kellett volna e feladatra választanunk.
-%TODO kihagyható?
+\textbf{Válasz:} Kisebb fájlok esetén kedvezőbb eredményt kaptunk a 10 gépes terítésre, viszont a terítendő fájl(ok) méretének növelésével a 25 gépes terítés jobban skálázódik. Összegezve, a kevesebb gépre végzett terítéshez képest legrosszabb esetben 1.9-szer rosszabb, a legjobb esetben 1.3-szor jobb eredményt kaptunk.
 
 %
 \subsection{P2P alapú fájlterítés - hibatűrés}
 %
+\textbf{Kérdés:} Hibatűrő-e a Torrent alapú fájterítési megoldás?
 
-A hibatűrési tesztet két részben végeztem el, az első részben azt néztem meg, hogy az én megoldásom hogyan reagál, ha a terítés indításakor van nem elérhető célgép. Ez Chaincast esetében automatikus bukást okoz, mivel ott küldés előtt ellenőrződik a teljes lánc létrejötte, és hiányzó gép esetében el sem kezdődik a fájlátvitel.\\
-Az első teszthez 10 gépes terítést kíséreltem meg, úgy hogy a ``labpc03'' nevezetű kikapcsolt állapotban volt, a futást kövessük nyomon a program kimenetében:\\\\
-Minden rendben történik egészen addig a lépésig, amíg a terítendő fájlhoz tartozó torrentfájlt nem próbáljuk labpc03-ra másolni:\\\\
-\code{2015-12-05 10:37:57 INFO hu.bme.mit.vmdistribution.app.vmutil.TorrentUtil copyTorrentFile [Copying torrent file test\_1g.torrent to labpc03.]}\\
-\code{2015-12-05 10:38:01 SEVERE hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec ssh: connect to host 10.40.2.31 port 22: No route to host}\\\\
-Azt a nem meglepő eredmény kaptuk, hogy nem sikerült a másolás, de ettől független a többi gépre igen, például a labpc08-ra(akinek az IP címe 10.40.2.140):\\\\
-\code{2015-12-05 10:37:57 INFO hu.bme.mit.vmdistribution.app.ssh.SSHUtil remoteExec Copied test\_1g.torrent to 10.40.2.140:\textasciitilde/Torrents}\\\\
-A torrent fájlok sikeres felmásolásával és a torrent kliensek elindításával elkezdődnek a letöltések, amelyeknek állapotáról 10 másodpercenként kapunk információkat. Ehhez hasonló üzeneteket fogunk látni:\\\\
-\code{2015-12-05 10:43:51 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 	labpc08:}\\
-\code{2015-12-05 10:43:51 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run 		[ test\_1g: Completed: 13\%, Downloaded: 141.03/1024.0 MB, Speed: 2.35 MB/s.}\\\\
-Persze csak a hiányzó gép okozta hibaüzenetek mellett:\\\\
-\code{2015-12-05 10:43:54 SEVERE hu.bme.mit.vmdistribution.app.distrstatus.RTorrentXmlRpcClient updateTransferStatus ERROR executing XMLRPC call.
-org.apache.xmlrpc.XmlRpcException: Failed to read server's response: No route to host}\\\\
-A bekapcsolva hagyott gépekre végül eljut a terítendő fájl és a program futását manuálisan megszakítjuk:\\\\
-\code{2015-12-05 10:45:59 INFO hu.bme.mit.vmdistribution.app.UseModel distributionProgressLoop Quit due to user command}\\
-\code{2015-12-05 10:45:59 WARNING hu.bme.mit.vmdistribution.app.UseModel distributionProgressLoop [There were unfinished transfers:]}\\
-\code{2015-12-05 10:45:59 WARNING hu.bme.mit.vmdistribution.app.UseModel distributionProgressLoop test\_1g->labpc03 }\\\\
-A második teszt folyamán a fájlátvitel közben tettem gépeket elérhetetlenné, ennél a mérésnél a ``labpc06'' és ``labpc08'' nevű gépeken adatátvitel közben bezártam a torrentklienseket, illetve a ``labpc10''-nek szűntettem meg a hálózati csatlakozását. Miután a többi gépre sikeresen eljutott a terítendő fájl a három kieső gépet ``helyreállítottam'', ezek után behozták a lemaradást és befejezték a letöltést, így végül sikerrel zárult folyamat:\\\\
-\code{2015-12-05 10:56:09 INFO hu.bme.mit.vmdistribution.app.distrstatus.DistributionStatusUpdater run [All transfers are finished, distribution is complete, press ENTER to continue.]}
+\textbf{Mérések:} A hibatűrési tesztet két részben végeztem el, az első részben azt néztem meg, hogy az én megoldásom hogyan reagál, ha a terítés indításakor van nem elérhető célgép. Ez Chaincast esetében automatikus bukást okoz, mivel ott küldés előtt ellenőrződik a teljes lánc létrejötte, és hiányzó gép esetében el sem kezdődik a fájlátvitel. Indítottam tehát egy terítést, ahol az egyik célgép nem volt bekapcsolva. A második teszt folyamán a fájlátvitel közben tettem gépeket elérhetetlenné, egyet kikapcsoltam, egynek megszűntettem a hálózati kapcsolatát, egyen pedig a torrentklienset zártam be manuálisan.
+
+\textbf{Válasz:} Az új terítési megoldás hibatűrő, mivel az első teszt során a bekapcsolva hagyott összes gépre sikeresen terültek a fájlok, illetve a második teszt során az érintetlenül hagyott gépekre szintén. Továbbá a három kiesett gép a letöltést később folytatni tudta és azt be is fejezte.
+
 
 %
 \subsection{P2P alapú fájlterítés - szűk keresztmetszetek}
 %
 
-A többi mérés elvégzése közben feltűnt, hogy sokszor ugyanazok a gépek fejezték be utoljára a letöltést, úgyhogy összegyűjtöttem \aref{fig:computerdownloadspeeds}-es ábrán látható diagramokon, hogy adott gép hányszor szerepelt a terítések végén a 3 leglassabb, illetve leggyorsabb gép között:
+\textbf{Kérdés:} Vannak-e a laborban olyan gépek, amelyekre az átlagnál jelentősen lassabban megy a Torrent alapú terítés?
 
+\textbf{Mérés:} Az előző mérések elvégzése közben feljegyeztem, hogy melyik gépek fejezték be a letöltést leghamarabb és legkésőbb, \aref{fig:computerdownloadspeeds}-es ábra mutatja, hogy adott gép hányszor szerepelt a terítések végén a 3 leglassabb, illetve leggyorsabb gép között.
 
 \begin{figure}[ht]
 \centering
@@ -127,11 +97,6 @@ A többi mérés elvégzése közben feltűnt, hogy sokszor ugyanazok a gépek f
 \label{fig:computerdownloadspeeds}
 \end{figure}
 
-Mindkét esetben azt kellene látnunk, hogy a gépek alacsony gyakorisággal és véletlenül szerepelnek a toplistáinkon, viszont a leglassabb gépek között 23 és 9 sorszámúak kirívóan nagy gyakoriságot értek el, feltehetőleg a gépek hálózati kapcsolatával, vagy magukkal a gépekkel kapcsolatban vannak kijavítandó problémák, őket ezek megoldásáig nem érdemes seed-nek választani.
+\textbf{Válasz:} Igen, vannak olyan gépeink, amelyekre lassabban megy a terítés, konkrétan a 23 és a 9-es sorszámúak. Mivel a másik véglet mérésénel nem voltak kiugró gyakoriságok, feltehetjük, hogy ezekkel a gépekkel kapcsolatos kijavítandó problémát állnak fenn (például merevlemez cseréje vagy a géphez kapcsolódó hálózati eszköz cseréje).
 
-%
-%\subsection{P2P alapú fájlterítés - letöltési sebességek}
-%
-%ha nagyon kell még oldalszám miatt extra, akkor jöhet, de amúgy elég szegényes ez a mérés 
-%TODO
 
