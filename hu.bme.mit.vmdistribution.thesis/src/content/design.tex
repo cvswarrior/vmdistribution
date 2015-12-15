@@ -2,14 +2,12 @@
 \chapter{Tervezés}
 \label{chp:design}
 %----------------------------------------------------------------------------
-Ebben a fejezetben 
-
-
+Ebben a fejezetben bemutatok egy olyan modellt, ami oktatási laborokat tud ábrázolni, illetve definiálok rajta végezhető terítési műveleteket, ezáltal magyarázva a terítési folyamat működését. Végül a fájlterítő alkalmazás felépítését részletezem.
 
 \section{A labor modelljének tervezése}
 \label{design_model}
 
-\Aref{fig:designmodelparts}-es ábra mutatja meg, hogy milyen 3 részere vághatjuk a terítéshez szükséges modellt.
+Egy modell megalkotásakor érdemes először a feladatot könnyebben kezelhető részekre bontani, a mi esetünkben ez a modell három részre szedését eredményezi, ami \aref{fig:designmodelparts}-es ábra illusztrál. A három rész a laborban levő számítógépek (Computer), virtuális gépek (VirtualMachine) és a lehetséges terítési célállapotok (Lab).
 
 \begin{figure}[ht]
 	\centering
@@ -18,16 +16,7 @@ Ebben a fejezetben
 	\label{fig:designmodelparts}
 \end{figure}
 
-\Aref{fig:designcomputers}-s ábrán a számítógépeket tartalmazó darab részletesebb leírása van.
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=110mm, keepaspectratio]{figures/design_computer.png}
-	\caption{Labormodell - számítógépek}
-	\label{fig:designcomputers}
-\end{figure}
-
-\Aref{fig:designvm}-s ábrán a virtuális gépeket tartalmazó darab részletesebb leírása van.
+Vegyük először a virtuális gépek modelljét(\ref{fig:designvm}-es ábra)! A terítendő VM-ek azon tulajdonságainak kell a modellben megjelennie, amelyekre a fájlterítés során szükségünk lesz, ezek pedig a VM neve, őt tartalmazó fájl elérési útvonala és használatának követelményei. Utóbbinál a rendelkezésre álló memória mennyiségét, rendelkezésre álló szabad tárterület méretét és a rendszer architektúráját kell feltüntetnünk, mert csak ezek befolyásolják a gépekkel való kompatibilitást. Érdemes megkülönböztetni a Vagrant által készíttetendő VM-eket, mert róluk extra információkat kell eltárolnunk (VagrantVM a VirtualMachine leszármazottja lesz). Jobban átlátható modellt kapunk, ha a követelmények tárolását ``kiszervezzük'', és a Requirements osztályban tároljuk ahelyett, hogy minden VirtualMachine-nél attribútumként vennénk fel. Érdemes azt is eltárolnunk, hogy egy VM melyik számítógépen van, sok, a modellen értelmezhető művelet futási idejét tudjuk felgyorsítani vele, például ha egy adott VM-et szeretnénk majd törölni a gépekről, akkor nem kell az összesen végigmennünk, hanem közvetlen törölhetjük azokról, amelyiken rajta van.
 
 \begin{figure}[ht]
 	\centering
@@ -36,7 +25,16 @@ Ebben a fejezetben
 	\label{fig:designvm}
 \end{figure}
 
-\Aref{fig:designlab}-s ábrán a terítés végállapotát (pc->vm összerendelések) tartalmazó darab részletesebb leírása van.
+Hasonló megfontolásokkal készíthetjük el a számítógépek modelljét (\ref{fig:designcomputers}-es ábra), a számunkra fontos adatok itt a számítógép neve, elérhetősége és azon tulajdonságai, amik egy VM-el való kompatibilitást meghatároznak. Azt is el kell tárolnunk értelemszerűen, hogy adott számítógépen melyik virtuális gépek vannak már rajta. A számítógép elérhetőségeihez kapcsolódó attribútumokat nem csak azért tettük ConnectionInfo objektumokba, mint az előbbieknél a Requirements-be, hanem mert érzékeny adatokat is tárol (felhasználónév + jelszó).
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=110mm, keepaspectratio]{figures/design_computer.png}
+	\caption{Labormodell - számítógépek}
+	\label{fig:designcomputers}
+\end{figure}
+
+Az utolsó modellezendő dolog a terítés végállapota (\ref{fig:designlab}-es ábra), ami egy tanórához tartozó labor felépítését tartalmazza, vagyis az összes szükséges számítógép -> virtuális gép hozzárendelést. Ezt modell szinten úgy tudjuk leírni, hogy a végállapot tartalmaz minden számítógéphez egy ComputerConfig-ot, ami adott számítógépekre terítendő virtuális gépek listáját tartalmazza, és persze hivatkozik a konkrét számítógépre is.
 
 \begin{figure}[h!]
 	\centering
@@ -45,13 +43,13 @@ Ebben a fejezetben
 	\label{fig:designlab}
 \end{figure}
 
-\Aref{fig:designlab}-s ábrán a 3 darabot összefogó elem, az EMF model gyökere van.
+Az előbb leírt modellrészletek összefogásához még szükségünk egy olyan elemre, ami mindhárom részt összefogja (\ref{fig:designmodelroot}-ös ábra). A LabSystem lesz a modell gyökéreleme, ez fogja tárolni a laborunkban található össze számítógépet, virtuális gépet és az összes felvett terítési végállapotot. Azt is itt tároljuk, hogy melyik számítógépet választjuk a Torrent alapú terítés során sedd-nek.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=130mm, keepaspectratio]{figures/design_modelroot.png}
 	\caption{Labormodell - gyökérelem}
-	\label{fig:designoverview}
+	\label{fig:designmodelroot}
 \end{figure}
 
 \section{Terítési műveletek a modellen}
