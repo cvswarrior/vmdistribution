@@ -2,9 +2,11 @@
 \chapter{Tervezés}
 \label{chp:design}
 %----------------------------------------------------------------------------
-Ebben a fejezetben bemutatok egy olyan modellt, ami oktatási laborokat tud ábrázolni, illetve definiálok rajta végezhető terítési műveleteket, ezáltal magyarázva a terítési folyamat működését. Végül a fájlterítő alkalmazás felépítését részletezem.
+Ebben a fejezetben bemutatok egy olyan modellt, ami oktatási laborokat tud ábrázolni, illetve definiálok rajta végezhető terítési műveleteket, ezáltal magyarázva a terítési folyamat működését. Végül a megvalósítandó Torrent alapú fájlterítési megoldás felépítését részletezem.
 
+%----------------------------------------------------------------------------
 \section{A labor modelljének tervezése}
+%----------------------------------------------------------------------------
 \label{design_model}
 
 Egy modell megalkotásakor érdemes először a feladatot könnyebben kezelhető részekre bontani, a mi esetünkben ez a modell három részre szedését eredményezi, ami \aref{fig:designmodelparts}-es ábra illusztrál. A három rész a laborban levő számítógépek (Computer), virtuális gépek (VirtualMachine) és a lehetséges terítési célállapotok (Lab).
@@ -52,13 +54,16 @@ Az előbb leírt modellrészletek összefogásához még szükségünk egy olyan
 	\label{fig:designmodelroot}
 \end{figure}
 
+%----------------------------------------------------------------------------
 \section{Terítési műveletek a modellen}
+%----------------------------------------------------------------------------
+\label{distrops}
 
 Annak a megtervezésére, hogy egy fájlterítési folyamat hogyan zajlik érdemes azt kisebb darabokba vágni, azt definiálni egyszerű műveletekkel.
 Az előbbi fejezetben ismertetett modellre definiálok itt terítési műveleteket, és megkísérlem leírni segítségükkel az egész fájlterítési folyamatot.
 Az egyszerű műveleteket a következő formátumban fogom definiálni: MŰVELET\_NEVE(paraméter1\_neve: paraméter1\_típusa, paraméter2\_neve\ldots).
 
-A modellen értelmezett terítési műveletek: [a többi modellen értelmezhető művelet, amitől teljes rendszerré válik a dolog, de a terítésnél nem relevánsak kellenek-e? Gondolok itt azokra, amik üres modellt hoznak létre, hozzáadnak pc-t/vm-et/lab-et az erőforrásokhoz.]
+A modellen értelmezett terítési műveletek: [a többi modellen értelmezhető művelet, amitől teljes rendszerré válik a dolog, de a terítésnél nem relevánsak kellenek-e? Gondolok itt azokra, amik üres modellt hoznak létre, hozzáadnak pc-t/vm-et/lab-et az erőforrásokhoz.]%TODO
 
 \begin{itemize}
   \item KÜLÖNBSÉG(cél: Lab, erőforrások: LabSystem): Ez a művelet a paraméterei között különbséget képez, vagyis a Lab-ből kiszedi azokat a (Computer, VirtualMachine) párokat, amik a LabSystem-ben már szerepelnek. Ennek az a célja, hogy a terítendő VM-ek közül kiszűrje azokat, amelyek már ott vannak, ahova terítenénk őket. Visszatérési érték: Lab, ami a duplikátumokat nem tartalmazza.
@@ -67,7 +72,7 @@ A modellen értelmezett terítési műveletek: [a többi modellen értelmezhető
   \item FELTÖLT(vm: VirtualMachine, pc: Computer): Feltölti a VM-et a Computer-re, vagyis hozzáadja annak a \code{virtualmachines} listájához. Visszatérési érték: nincs, amennyiben már ott található a feltöltendő VM a PC-n, akkor a művelet nem csinál semmit.
 \end{itemize}
 
-Az előbbiek segítségével már felírható a TERÍTÉS(cél: Lab, erőforrások: LabSystem) művelet: [talán ábrával és nem pszeudokóddal?]
+Az előbbiek segítségével már felírható a TERÍTÉS(cél: Lab, erőforrások: LabSystem) művelet: [talán ábrával és nem pszeudokóddal?]%TODO
 
 \code{TERÍTÉS(cél: Lab, erőforrások: LabSystem):}\\
 \indent \code{duplikátumok\_nélküli\_cél = KÜLÖNBSÉG(cél, LabSystem)}\\
@@ -77,10 +82,19 @@ Az előbbiek segítségével már felírható a TERÍTÉS(cél: Lab, erőforrás
 \indent \indent \indent \indent	\code{AKKOR FELTÖLT(VirtualMachine, ComputerConfig.Computer)}
 
 
-\section{Fájlterítő alkalmazás architektúrája}
+%----------------------------------------------------------------------------
+\section{P2P-alapú fájlterítés működése}
+%----------------------------------------------------------------------------
 \label{design_apparchi}
 
-\Aref{fig:designoverview}-os ábra fogja elmagyarázni az új terítési megoldás alapvető működési elvét: beolvassuk a modellt, ami alapján az egyik gépet seed-nek kiválasztva megcsináljuk a torrentes terítés. Az alkalmazás a terítésben szereplő gépektől (a torrent swarm-ja) futás közben a terítés állapotáról kér le információkat.
+Az általam készített fájlterítési megoldás a következőképpen működik:
+
+\begin{enumerate}
+  \item Beolvassa a labor \ref{design_model}-es fejezetben ismertetett felépítésű modelljét
+  \item Lefuttatja a modellen a \ref{distrops}-es fejezetből a TERÍTÉS nevű műveletet
+\end{enumerate}
+
+A TERÍTÉS művelet megvalósítása a gyakorlatban úgy fog kinézni, hogy az összes terítendő VM-et felmásoljuk a seed-nek kijelölt gépre, ott torrent fájlokat hozunk létre hozzájuk, és ezeket küldjük a célgépeknek (és persze távolról elindítjuk a torrentklienseiket is). A terítési folyamat státuszát bizonyos időközönként lekérjük az összes swarm-beli gépről. Ezt az egész folyamatot ábrázolja \aref{fig:designoverview}-os ábra.
 
 \begin{figure}[ht]
 	\centering
@@ -89,7 +103,16 @@ Az előbbiek segítségével már felírható a TERÍTÉS(cél: Lab, erőforrás
 	\label{fig:designoverview}
 \end{figure}
 
-\Aref{fig:designprotocols}-es ábrán látjuk, hogy a terítés egyes szereplői hogyan és milyen protokollokat használva kommunikálnak egymással. [kell-e vajon ehhez, ill. az előzőhöz a tárhely, ahol a virtuális gépeket tároljuk?]
+\Aref{fig:designprotocols}-es ábra pedig azt mutatja be, hogy a terítés egyes szereplői milyen protokollokat használnak az egymással való kommunikációra.
+
+Az egyes használt protokollok rövid leírása:
+
+\begin{itemize}
+  \item \textbf{SSH}\cite{ylonen2006secure}\textbf{:} Lehetővé teszi távoli gépekre a bejelentkezést és parancsok futtatását.
+  \item \textbf{SCP}\cite{pechanec2007scp}\textbf{:} SSH-n keresztüli fájlátvitelt  valósít meg.
+  \item \textbf{XMLRPC:} Bizonyos alkalmazásokkal való távoli kommunikációra használhatjuk, jelen esetben a torrentkliensektől ezzel kérjük le a letöltések aktuális állapotát. Bővebb leírásért lásd \aref{sect:p2p}-es fejezetet.
+  \item \textbf{Bittorrent:} P2P fájlátviteli protokoll, részletesebb leírásáért lásd \aref{sect:p2p}-es fejezetet.
+\end{itemize}
 
 \begin{figure}[ht]
 	\centering
