@@ -15,7 +15,7 @@ A \textit{\textbf{Vmdistribution-t futtató}} gépen telepítve kell lennie a k�
   \item Vagrant 1.7.4, vagy frissebb
   \item Virtuális gépek kezelésére alkalmas szoftver - bármelyik Vagrant által támogatott\cite{vagrantproviders} (javasolt VirtualBox vagy VMWare Workstation használata)
 \end{itemize}
-Értelemszerűen azért van szükségünk JVM-re, hogy Java nyelven íródott alkalmazásokat tudjunk futtatni, Vagrantra és mondjuk VirtualBoxra pedig azért, hogy lehetőség legyen Vagrant által létrehozandó VM-ek terítésére.
+Értelemszerűen azért van szükségünk JVM-re, hogy Java nyelven íródott alkalmazásokat tudjunk futtatni. Vagrantra és mondjuk VirtualBoxra pedig azért, hogy lehetőség legyen Vagrant által létrehozandó VM-ek terítésére.
 
 A \textit{\textbf{labor}} gépeire vonatkozó követelmények:
 \begin{itemize}
@@ -101,7 +101,7 @@ A fájlterítés futását a STOP vagy S parancsokkal lehet megszakítani. Amenn
 %----------------------------------------------------------------------------
 
 Érdemes a Vmdistribution egy futását végigkövetni, így még részletesebben megismerhető a Torrent alapú terítés folyamata:
-A futtatást a program fejlesztésére használt gépen végeztem el, a terítésben résztvevő gépek Vagrant-tal létrehozott, VirtualBox által futtatott virtuális gépek, amelyeken az operációs rendszer 32-bites 12.04 verziójú Ubuntu\cite{ubuntu}. A virtuális gépekre csak a legszükségesebb szoftverek lettek telepítve, egymással és a gazdagéppel egy közös privát hálózaton voltak. A program futtatásához megadott labormodell fontosabb paraméterei:
+A futtatást a program fejlesztésére használt gépen végeztem el. A terítésben résztvevő gépek Vagrant-tal létrehozott, VirtualBox által futtatott virtuális gépek, amelyeken az operációs rendszer 32-bites 12.04 verziójú Ubuntu\cite{ubuntu}. A virtuális gépekre csak a legszükségesebb szoftverek lettek telepítve, egymással és a gazdagéppel egy közös privát hálózaton voltak. A program futtatásához megadott labormodell fontosabb paraméterei:
 
 \begin{itemize}
   \item Két különböző virtuális gép van benne: egy mi általunk és egy Vagrant által készített
