@@ -3,7 +3,7 @@
 \label{chp:implementation}
 %----------------------------------------------------------------------------
 Ebben a fejezetben a fájlterítő alkalmazás implementációjának részleteit mutatom be, mint annak követelményeit, konfigurálását, használatát, illetve kódjának felépítését.
-Az alkalmazást Vmdistribution-nek neveztem el, forráskódja elérhető GitHub-on a cvswarrior/vmdistribution repository alatt\cite{vmdistribution}.
+Az alkalmazást Vmdistribution-nek neveztem el, forráskódja elérhető GitHub-on a cvswarrior/vmdistribution repository alatt\cite{vmdistribution}. Az alkalmazás elkészült és terítést is sikeresen lehet vele végrehajtani.
 
 %----------------------------------------------------------------------------
 \section{Követelmények és konfiguráció}
@@ -28,11 +28,16 @@ A \textit{\textbf{labor}} gépeire a mellékelt telepítőszkriptek futtatásáv
 \begin{itemize}
   \item tmux
   \item rtorrent 0.9.6 vagy frissebb
-  \item	sshpass\footnote{Csak azokon a gépeken szükséges, amiket terítéskor seed-nek akarunk használni}
-  \item opentracker\footnotemark[1]
-  \item mktorrent\footnotemark[1]
   \item apache (vagy egyéb XMLRPC protokollt kezelni tudó webszerver)
 \end{itemize}
+
+Továbbá azokra a gépekre (minimum 1), amelyeket \textit{\textbf{seed}}-nek használnánk a tertés során ezeket kell még az előbbieken felül feltelepíteni:
+\begin{itemize}
+  \item	sshpass
+  \item opentracker
+  \item mktorrent
+\end{itemize}
+
 Az rtorrent tölti be a torrentkliens szerepét, az opentracker a tracker-ét, az apache segítségével tudja a gép a beérkező XMLRPC hívásokat fogadni és az rtorrent-nek továbbítani. Tmux segítségével tudunk távolról, szkriptből indított programot a ``háttérben'' futtatni, jelen esetben az rtorrent-et és az opentracker-t. Az sshpass lehetővé teszi, hogy a seed gép jelszavas bejelentkezést használva automatizáltan tudjon SSH kapcsolatot létesíteni a többi laborgéppel. Torrent fájlokat az mktorrent programmal fogunk létrehozni a seed-en.
 
 %----------------------------------------------------------------------------
@@ -60,41 +65,39 @@ A fájlterítés futását a STOP vagy S parancsokkal lehet megszakítani. Amenn
 \label{fig:packagediag}
 \end{figure}
 
-\definecolor{orange}{RGB}{255,127,0}
-\definecolor{lightred}{RGB}{255,99,71}
-\definecolor{seagreen}{RGB}{46,139,87}
-\definecolor{skyblue}{RGB}{135,206,250}
-
 \begin{center}
 	\begin{tabular}{|>{\centering\arraybackslash}m{45mm}|>{\centering\arraybackslash}m{95mm}|}
 		\hline
 		\textbf{Osztály neve}&\textbf{Funkciójának rövid leírása}\\
 		\hline
-		\cellcolor{skyblue}UseModel & \cellcolor{skyblue}Az alkalmazás fő osztálya, ez tartalmazza main függvényt és vezérli a terítési folyamatot.\\ 
+		UseModel & Az alkalmazás fő osztálya, ez tartalmazza main függvényt és vezérli a terítési folyamatot.\\ 
 		\hline
-		\cellcolor{skyblue}EMFModelUtil & \cellcolor{skyblue}A labor modelljét kezeli: betölti, futtatás után elmenti, illetve műveleteket tud végezni rajta (pl. kezdeti és végállapot közti különbség meghatározása\\
+		EMFModelUtil & A labor modelljét kezeli: betölti, futtatás után elmenti, illetve műveleteket tud végezni rajta (pl. kezdeti és végállapot közti különbség meghatározása\\
 		\hline
-		\cellcolor{seagreen}SSHUtil & \cellcolor{seagreen}SSH kapcsolatot tud létrehozni és azon keresztül távoli gépekre parancsokat küldeni és SCP protokollt használva fájlokat küldeni.\\
 		\hline
-		\cellcolor{orange}VMUtil & \cellcolor{orange} Virtuális gépek seed-re történő másolásáért felel\\
+		SSHUtil & SSH kapcsolatot tud létrehozni és azon keresztül távoli gépekre parancsokat küldeni és SCP protokollt használva fájlokat küldeni.\\
 		\hline
-		\cellcolor{orange}TorrentUtil &\cellcolor{orange}Torrentfájlok létrehozását, seed-elés leech-elés indítását vezérli a laborgépeken az SSHUtil osztályt használva. \\
 		\hline
-		\cellcolor{orange}VagrantUtil &\cellcolor{orange} Vagrant alapú virtuális gépek inicializálását végzi el a lokális gépen futó Vagrant segítségével.\\
+		VMUtil &  Virtuális gépek seed-re történő másolásáért felel\\
 		\hline
-		\cellcolor{orange}Archiver &\cellcolor{orange} ZIP formátumú tömörített fájlokat hoz létre(új Vagrant-os VM-ekből).\\
+		TorrentUtil &Torrentfájlok létrehozását, seed-elés leech-elés indítását vezérli a laborgépeken az SSHUtil osztályt használva. \\
 		\hline
-		\cellcolor{lightred}Transfer &\cellcolor{lightred} Egy VM->laborgép adatátvitelt reprezentál, tárolja a letöltés aktuális állapotát (mennyi van még hátra, sebesség stb.)\\
+		VagrantUtil & Vagrant alapú virtuális gépek inicializálását végzi el a lokális gépen futó Vagrant segítségével.\\
 		\hline
-		\cellcolor{lightred}RTorrentXmlRpcClient &\cellcolor{lightred} Kapcsolatot létesít XMLRPC protokollon keresztül a laborgépek torrentklienseivel.\\
+		Archiver & ZIP formátumú tömörített fájlokat hoz létre(új Vagrant-os VM-ekből).\\
 		\hline
-		\cellcolor{lightred}DistributionStatusUpdater &\cellcolor{lightred} Torrentkliensektől kéri le valós időben a terítés aktuális állapotát és frissíti az összes Transfer objektumot.\\
+		\hline
+		Transfer & Egy VM->laborgép adatátvitelt reprezentál, tárolja a letöltés aktuális állapotát (mennyi van még hátra, sebesség stb.)\\
+		\hline
+		RTorrentXmlRpcClient & Kapcsolatot létesít XMLRPC protokollon keresztül a laborgépek torrentklienseivel.\\
+		\hline
+		DistributionStatusUpdater & Torrentkliensektől kéri le valós időben a terítés aktuális állapotát és frissíti az összes Transfer objektumot.\\
 		\hline
 	\end{tabular}
 \end{center}
 
 %----------------------------------------------------------------------------
-\section{Egy konkrét terítés végigkövetése}
+\section{P2P alapú terítés kipróbálása}
 %----------------------------------------------------------------------------
 
 Érdemes a Vmdistribution egy futását végigkövetni, így még részletesebben megismerhető a Torrent alapú terítés folyamata:
