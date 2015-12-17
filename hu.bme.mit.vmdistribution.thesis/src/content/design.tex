@@ -11,6 +11,8 @@ Ebben a fejezetben bemutatok egy olyan modellt, ami oktatási laborokat tud ábr
 
 Egy modell megalkotásakor érdemes először a feladatot könnyebben kezelhető részekre bontani, a mi esetünkben ez a modell három részre szedését eredményezi, ami \aref{fig:designmodelparts}-es ábra illusztrál. A három rész a laborban levő számítógépek (Computer), virtuális gépek (VirtualMachine) és a lehetséges terítési célállapotok (Lab).
 
+\vspace{0.5cm}
+
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=100mm, keepaspectratio]{figures/design_modelparts.png}
@@ -18,7 +20,11 @@ Egy modell megalkotásakor érdemes először a feladatot könnyebben kezelhető
 	\label{fig:designmodelparts}
 \end{figure}
 
+\vspace{0.5cm}
+
 Vegyük először a virtuális gépek modelljét(\ref{fig:designvm}-es ábra)! A terítendő VM-ek azon tulajdonságainak kell a modellben megjelennie, amelyekre a fájlterítés során szükségünk lesz, ezek pedig a VM neve, az őt tartalmazó fájl elérési útvonala és használatának követelményei. Utóbbinál a rendelkezésre álló memória mennyiségét, rendelkezésre álló szabad tárterület méretét és a rendszer architektúráját kell feltüntetnünk, mert csak ezek befolyásolják a gépekkel való kompatibilitást. Érdemes megkülönböztetni a Vagrant által készíttetendő VM-eket, mert róluk extra információkat kell eltárolnunk (VagrantVM a VirtualMachine leszármazottja lesz). Jobban átlátható modellt kapunk, ha a követelmények tárolását ``kiszervezzük'', és a Requirements osztályban tároljuk ahelyett, hogy minden VirtualMachine-nél attribútumként vennénk fel. Érdemes azt is eltárolnunk, hogy egy VM melyik számítógépen van, sok, a modellen értelmezhető művelet futási idejét tudjuk felgyorsítani vele, például ha egy adott VM-et szeretnénk majd törölni a gépekről, akkor nem kell az összesen végigmennünk, hanem közvetlen törölhetjük azokról, amelyiken rajta van.
+
+\vspace{0.5cm}
 
 \begin{figure}[ht]
 	\centering
@@ -27,7 +33,11 @@ Vegyük először a virtuális gépek modelljét(\ref{fig:designvm}-es ábra)! A
 	\label{fig:designvm}
 \end{figure}
 
+\vspace{0.5cm}
+
 Hasonló megfontolásokkal készíthetjük el a számítógépek modelljét (\ref{fig:designcomputers}-as ábra), a számunkra fontos adatok itt a számítógép neve, elérhetősége és azon tulajdonságai, amik egy VM-el való kompatibilitást meghatároznak. Azt is el kell tárolnunk értelemszerűen, hogy adott számítógépen melyik virtuális gépek vannak már rajta. A számítógép elérhetőségeihez kapcsolódó attribútumokat nem csak azért tettük ConnectionInfo objektumokba, mint az előbbieknél a Requirements-be, hanem mert érzékeny adatokat is tárol (felhasználónév + jelszó).
+
+\vspace{0.5cm}
 
 \begin{figure}[ht]
 	\centering
@@ -36,7 +46,11 @@ Hasonló megfontolásokkal készíthetjük el a számítógépek modelljét (\re
 	\label{fig:designcomputers}
 \end{figure}
 
+\vspace{0.5cm}
+
 Az utolsó modellezendő dolog a terítés végállapota (\ref{fig:designlab}-es ábra), ami egy tanórához tartozó labor felépítését tartalmazza, vagyis az összes szükséges számítógép $\rightarrow$ virtuális gép hozzárendelést. Ezt modell szinten úgy tudjuk leírni, hogy a végállapot tartalmaz minden számítógéphez egy ComputerConfig-ot, ami adott számítógépekre terítendő virtuális gépek listáját tartalmazza, és persze hivatkozik a konkrét számítógépre is.
+
+\vspace{0.5cm}
 
 \begin{figure}[h!]
 	\centering
@@ -44,8 +58,9 @@ Az utolsó modellezendő dolog a terítés végállapota (\ref{fig:designlab}-es
 	\caption{Labormodell - laborok(célállapotok)}
 	\label{fig:designlab}
 \end{figure}
+\FloatBarrier
 
-Az előbb leírt modellrészletek összefogásához még szükségünk egy olyan elemre, ami mindhárom részt összefogja (\ref{fig:designmodelroot}-ös ábra). A LabSystem lesz a modell gyökéreleme, ez fogja tárolni a laborunkban található össze számítógépet, virtuális gépet és az összes felvett terítési végállapotot. Azt is itt tároljuk, hogy melyik számítógépet választjuk a Torrent alapú terítés során sedd-nek.
+Az előbb leírt modellrészletek összefogásához még szükségünk egy olyan elemre, ami mindhárom részt összefogja (\ref{fig:designmodelroot}-ös ábra). A LabSystem lesz a modell gyökéreleme, ez fogja tárolni a laborunkban található össze számítógépet, virtuális gépet és az összes felvett terítési végállapotot. Azt is itt tároljuk, hogy melyik számítógépet választjuk a Torrent alapú terítés során seed-nek.
 
 \begin{figure}[h!]
 	\centering
@@ -63,13 +78,14 @@ Annak a megtervezésére, hogy egy fájlterítési folyamat hogyan zajlik érdem
 Az előbbi fejezetben ismertetett modellre definiálok itt terítési műveleteket, és megkísérlem leírni segítségükkel az egész fájlterítési folyamatot.
 Az egyszerű műveleteket a következő formátumban fogom definiálni: \code{\large \textbf{METHOD\_NAME}(\textit{parameter1\_name}: parameter1\_type, \textit{parameter2\_name}\ldots)}.
 
+
 A modellen értelmezett terítési műveletek:
 
 \begin{itemize}
   \item \code{\large \textbf{REMOVE\_DUPLICATES}(\textit{goal}: Lab, \textit{resources}: LabSystem)}: Ez a művelet a paraméterei között különbséget képez, vagyis a Lab-ből kiszedi azokat a (Computer, VirtualMachine) párokat, amik a LabSystem-ben már szerepelnek. Ennek az a célja, hogy a terítendő VM-ek közül kiszűrje azokat, amelyek már ott vannak, ahova terítenénk őket.
   \item \code{\large \textbf{DELETE}(\textit{to\_be\_deleted\_vm} : VirtualMachine, \textit{from\_pcs}: List<Computer>)}: Ezzel a művelettel törölhetjük a második paraméter Computer-eket tartalmazó lista összes eleméről az adott virtuális gépet.
   \item \code{\large \textbf{ISCOMPATIBLE}(\textit{pc}: Computer, \textit{vm}: VirtualMachine)}: Arra a kérdésre válaszol, hogy adot VM kompatibilis-e a Computer-rel. Ellenőrzi az architektúrák megfelelését, a memória és a szabad lemezterület méretét.
-  \item \code{\large \textbf{UPLOAD}(\textit{vm}: VirtualMachine, \textit{pc}: Computer)}: Feltölti a VM-et a Computer-re, vagyis hozzáadja annak a \code{virtualmachines} listájához.
+  \item \code{\large \textbf{UPLOAD}(\textit{vm}: VirtualMachine, \textit{pc}: Computer)}: Feltölti a VM-et a Computer-re, vagyis hozzáadja annak a virtualmachines listájához.
 \end{itemize}
 
 Az előbbiek segítségével már felírható a terítést elvégző \code{\large \textbf{DISTRIBUTION}(\textit{goal}: Lab, \textit{resources}: LabSystem)} művelet:\vspace{0.5cm}
@@ -98,10 +114,12 @@ A TERÍTÉS művelet megvalósítása a gyakorlatban úgy fog kinézni, hogy az 
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=115mm, keepaspectratio]{figures/design_overview.png}
+	\includegraphics[width=110mm, keepaspectratio]{figures/design_overview.png}
 	\caption{Új terítési megoldás működésének folyamata}
 	\label{fig:designoverview}
 \end{figure}
+
+\FloatBarrier
 
 \Aref{fig:designprotocols}-es ábra pedig azt mutatja be, hogy a terítés egyes szereplői milyen protokollokat használnak az egymással való kommunikációra.
 
@@ -116,8 +134,16 @@ Az egyes használt protokollok rövid leírása:
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=90mm, keepaspectratio]{figures/design_protocols.png}
+	\includegraphics[width=85mm, keepaspectratio]{figures/design_protocols.png}
 	\caption{Terítési folyamat egyes szereplői között használt kommunikációs protokollok}
 	\label{fig:designprotocols}
 \end{figure}
 
+%----------------------------------------------------------------------------
+\section{Tervezés eredményei}
+%----------------------------------------------------------------------------
+Megalkottam egy olyan modellt, amiben ábrázolhatóak oktatói laborok. A Computer osztály a laborban levő számítógépeket, a Virtualmachines a virtuális gépeket, a Lab a terítési célállapotokat tartalmazza. Utóbbi azt tárolja, hogy egyes gépekre melyik VM-nek kell rajta lennie.
+
+Formálisan definiáltam a terítési műveleteket, amiknek segítségével meg tudtam adni, hogy milyen lépéseket takar egy terítés.
+
+\Aref{sect:p2p}-es fejezetben leírt torrent-es fájlátvitel működésének segítségével felvázoltam az új terítési megoldás felépítését és elhelyeztem benne az általam írt Vmdistribution Java alkalmazást, ami az egész folyamat vezérléséért felel.

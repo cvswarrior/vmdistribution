@@ -96,6 +96,8 @@ Torrentfájlok létrehozására az mktorrent-et\cite{mktorrent} fogjuk használn
 
 \Aref{fig:torrentflow}-es ábrán egy fájl torrent alapú terítésének a folyamatát illusztrálja, onnan kezdve, hogy a fájl már a seed gépre van másolva odáig, hogy elkezdődik a célgépek által a fájl letöltése.
 
+\vspace{0.5cm}
+
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=150mm, keepaspectratio]{figures/torrentflow.png}
@@ -110,6 +112,8 @@ Torrentfájlok létrehozására az mktorrent-et\cite{mktorrent} fogjuk használn
 Egy fájlterítés indításához két dologra van szükségünk, hogy mit és hova szeretnénk teríteni. Előző kérdésre \aref{sect:p2p}-es fejezet választ adott, az utóbbira ez fog. A ``hovának'' megadását sokféleképpen elképzelhetjük,  felhasználói szemszögből az lenne a legjobb, ha egyszerűen azt mondhatnánk, hogy ``az IB413-as laborban a Mérés Labor 4. tárgyhoz tartozó környezet terüljön.'' Fontos, hogy képes legyen az alkalmazás egy ilyen kérést végrehajtani, ha a kérést számára értelmezhetőbb formában adjuk át. 
 A virtuális gép terítési feladatokat érdemes egy saját, úgynevezett szakterület-specifikus nyelven modellezni (angolul Domain-Specific Language, DSE). Egy szakterület-specifikus nyelv legfőbb koncepcióit, kapcsolatait és alapvető struktúráját határozza meg a metamodell. Például egy labor metamodellje alatt egy olyan nyelvet kell elképzelni, amiben leírható tetszőleges oktatási labor. \Aref{fig:emfobj}-ös ábra egy ilyen metamodell egyik osztályát ábrázolja.
 
+\vspace{0.5cm}
+
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=50mm, keepaspectratio]{figures/binf_emf_1.png}
@@ -119,12 +123,16 @@ A virtuális gép terítési feladatokat érdemes egy saját, úgynevezett szakt
 
 Metamodell osztályok között lehetnek kapcsolatok is, amelyek közül a két legfontosabb a tartalmazás(kompozíció) és a referencia. \Aref{fig:emfcomp}-os ábrán egy kompozícióra, \ref{fig:emfref}-esen egy referenciára láthatunk példát.
 
+\vspace{0.5cm}
+
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=115mm, keepaspectratio]{figures/binf_emf_2.png}
 	\caption{Kompozíció - \textit{Azt írja le, hogy a laborunk tetszőleges számú (minimum 1 darab) számítógépből áll.}}
 	\label{fig:emfcomp}
 \end{figure}
+
+\vspace{0.5cm}
 
 \begin{figure}[ht!]
 	\centering
