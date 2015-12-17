@@ -26,6 +26,15 @@ Ezt a folyamatot tudjuk gyorsítani és leegyszerűsíteni a Vagrant\cite{vagran
 	\label{fig:vagrantfile}
 \end{figure}
 
+\Aref{fig:vmcreate}-es ábra egy virtuális gép létrehozásának folyamatát ábrázolja mind a Vagrant által létrehozott, mind a mi általunk manuálisan készített VM esetére.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[height=140mm, keepaspectratio]{figures/vmcreate.png}
+	\caption{Virtuális gép létrehozásának a folyamata}
+	\label{fig:vmcreate}
+\end{figure}
+
 Egy virtuális gép reprezentálásához a gazdagépen alapvetően háromféle fájl szükséges legalább:
 
 \begin{itemize}
@@ -41,7 +50,7 @@ Ezeket a fájlokat terítjük a laborban.
 %----------------------------------------------------------------------------
 A Peer-to-Peer(P2P) hálózat olyan, aminek a csomópontjai nem egy kitüntetett géppel 
 kommunikálnak, hanem közvetlenül egymással. A klasszikus kliens-szerver és a P2P hálózat felépítését
-\aref{fig:networkcomparison}~ábra szemlélteti.
+\aref{fig:networkcomparison}-as ábra szemlélteti.
 
 \begin{figure}[ht]
 	\centering
@@ -71,16 +80,25 @@ Az itt felsorolt elemekből felépülő terítési megoldás leírásához lásd
 
 Gépeinkre telepítendő torrentkliens esetében az rtorrent-re\cite{sundell2012libtorrent} esett a választás, mivel szükségünk van arra, hogy olyan klienst használjunk, amit a háttérben is tudunk futtatni, illetve az állapota valami módon távolról is lekérhető legyen. Az rtorrent rendelkezik egy XMLRPC\cite{merrick2006xml} alapú interfésszel, aminek segítségével távolról is vezérelhetővé válik. Ilyen interfészt használ a számos rtorrent-hez írt webes felület is, például a legismertebb ruTorrent\cite{rutorrent}. Természetesen minden rtorrent-et futtató gépre telepítenünk kell egy webszervert is, ami az XMLRPC kéréseinket eljuttatja magának a torrentkliensnek, itt a választás az apache-ra\cite{fielding1997apache} esett főleg könnyű telepítése és konfigurálása miatt.
 
-Tracker-ből az opentracker nevű került fel egy gépre (az egyszerűség kedvéért arra, amelyiket a terítések során seed-nek fogunk használni). Választásunk rá azért esett, mert különösebb funkcionális különbség nincs a lehetséges jelöltek között, ezt viszont könnyen lehet telepíteni a laborgépeken futó operációs rendszer csomagkezelőjéből. Amiről még eddig nem esett szó, az a protokoll működéséhez szükséges, metaadatokat tartalmazó fájl, a torrentfájl. Ez tárolja az adott letöltéshez tartozó fájlok hash-eit, amik adott fájl tartalmából előállított egyedi hexadecimális számok, tulajdonságuk, hogy ugyanarra a fájlra mindig ugyanaz a szám áll elő, másikra pedig (szinte) biztosan különböző, ezek alapján tudjuk ellenőrizni a letöltött adatok hibamentességét. A torrent fájl tartalmazza még ezen kívül a küldendő fájlok mappastruktúráját, metaadatait (pl. fájlnév, fájlméret) és a tracker címét. A torrentkliens és a tracker egy torrentfájlra az infohash alapján hivatkozik, ami a torrentfájl hash-ének kódolásával kapható meg, erre nekünk később akkor lesz szükségünk, amikor majd a terítés közben annak állapotának lekérésekor hivatkozni akarunk egy átvitelre.
+Tracker-ből az opentracker nevű került fel egy gépre (az egyszerűség kedvéért arra, amelyiket a terítések során seed-nek fogunk használni). Választásunk rá azért esett, mert különösebb funkcionális különbség nincs a lehetséges jelöltek között, ezt viszont könnyen lehet telepíteni a laborgépeken futó operációs rendszer csomagkezelőjéből. Amiről még eddig nem esett szó, az a protokoll működéséhez szükséges, metaadatokat tartalmazó fájl, a torrentfájl. Ez tárolja az adott letöltéshez tartozó fájlok hash-eit, amik adott fájl tartalmából előállított egyedi hexadecimális számok, tulajdonságuk, hogy ugyanarra a fájlra mindig ugyanaz a szám áll elő, másikra pedig szinte biztosan különböző, ezek alapján tudjuk ellenőrizni a letöltött adatok hibamentességét. A torrent fájl tartalmazza még ezen kívül a küldendő fájlok mappastruktúráját, metaadatait (pl. fájlnév, fájlméret) és a tracker címét. A torrentkliens és a tracker egy torrentfájlra az infohash alapján hivatkozik, ami a torrentfájl hash-ének kódolásával kapható meg, erre nekünk később akkor lesz szükségünk, amikor majd a terítés közben annak állapotának lekérésekor hivatkozni akarunk egy átvitelre.
 
 Torrentfájlok létrehozására az mktorrent-et\cite{mktorrent} fogjuk használni.
+
+\Aref{fig:torrentflow}-es ábrán egy fájl torrent alapú terítésének a folyamatát illusztrálja, onnan kezdve, hogy a fájl már a seed gépre van másolva odáig, hogy elkezdődik a célgépek által a fájl letöltése.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=150mm, keepaspectratio]{figures/torrentflow.png}
+	\caption{Egy fájl torrent alapú terítésének folyamata.}
+	\label{fig:torrentflow}
+\end{figure}
 
 
 %----------------------------------------------------------------------------
 \section{Metamodellezés}
 %----------------------------------------------------------------------------
 Egy fájlterítés indításához két dologra van szükségünk, hogy mit és hova szeretnénk teríteni. Előző kérdésre \aref{sect:p2p}-es fejezet választ adott, az utóbbira ez fog. A ``hovának'' megadását sokféleképpen elképzelhetjük,  felhasználói szemszögből az lenne a legjobb, ha egyszerűen azt mondhatnánk, hogy ``az IB413-as laborban a Mérés Labor 4. tárgyhoz tartozó környezet terüljön.'' Fontos, hogy képes legyen az alkalmazás egy ilyen kérést végrehajtani, ha a kérést számára értelmezhetőbb formában adjuk át. 
-A virtuális gép terítési feladatokat érdemes egy saját, úgynevezett szakterület-specifikus nyelven modellezni (angolul Domain-Specific Language, DSE). Egy szakterület-specifikus nyelv legfőbb koncepcióit, kapcsolatait és alapvető struktúráját határozza meg a metamodell. Például egy labor metamodellje alatt egy olyan nyelvet kell elképzelni, amiben leírható tetszőleges oktatási labor. \Aref{fig:emfobj}-as ábra egy ilyen metamodell egyik osztályát ábrázolja.
+A virtuális gép terítési feladatokat érdemes egy saját, úgynevezett szakterület-specifikus nyelven modellezni (angolul Domain-Specific Language, DSE). Egy szakterület-specifikus nyelv legfőbb koncepcióit, kapcsolatait és alapvető struktúráját határozza meg a metamodell. Például egy labor metamodellje alatt egy olyan nyelvet kell elképzelni, amiben leírható tetszőleges oktatási labor. \Aref{fig:emfobj}-ös ábra egy ilyen metamodell egyik osztályát ábrázolja.
 
 \begin{figure}[ht]
 	\centering
@@ -89,7 +107,7 @@ A virtuális gép terítési feladatokat érdemes egy saját, úgynevezett szakt
 	\label{fig:emfobj}
 \end{figure}
 
-Metamodell osztályok között lehetnek kapcsolatok is, amelyek közül a két legfontosabb a tartalmazás(kompozíció) és a referencia. \Aref{fig:emfcomp}-es ábrán egy kompozícióra, \ref{fig:emfref}-ösön egy referenciára láthatunk példát.
+Metamodell osztályok között lehetnek kapcsolatok is, amelyek közül a két legfontosabb a tartalmazás(kompozíció) és a referencia. \Aref{fig:emfcomp}-os ábrán egy kompozícióra, \ref{fig:emfref}-esen egy referenciára láthatunk példát.
 
 \begin{figure}[ht!]
 	\centering
