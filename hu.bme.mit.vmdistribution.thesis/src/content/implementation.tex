@@ -44,7 +44,17 @@ Az rtorrent tölti be a torrentkliens szerepét, az opentracker a tracker-ét, a
 \section{Használat}
 %----------------------------------------------------------------------------
 
-Az alkalmazás használatához először is szükségünk van a labor modelljét leíró fájlra, ami tartalmazza annak felépítését és a lehetséges célállapotokat. Ezt legegyszerűbben az EMF által generált szerkesztővel lehet létrehozni. A program egy parancssori Java alkalmazás, ezért onnan a következőképpen indíthatjuk el:
+Az alkalmazás használatához először is szükségünk van a labor modelljét leíró fájlra, ami tartalmazza annak felépítését és a lehetséges célállapotokat. Ezt legegyszerűbben az EMF által generált szerkesztővel lehet létrehozni. \Aref{fig:emfeditor}-es ábra a szerkesztő felületének egy részletét ábrázolja, a felvett Computer, Virtualmachine és Lab objektumokat, illetve az éppen kiválasztott Computer-nek az attribútumait.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=150mm, keepaspectratio]{figures/emfeditor.png}
+\caption{Az EMF által generált modellszerkesztő felülete (részlet)}
+\label{fig:emfeditor}
+\end{figure}
+
+
+A program egy parancssori Java alkalmazás, ezért onnan a következőképpen indíthatjuk el:
 
 \code{java -jar vmdistribution.jar modelfile goal\_lab logging\_level}
 
@@ -87,7 +97,7 @@ A fájlterítés futását a STOP vagy S parancsokkal lehet megszakítani. Amenn
 		Archiver & ZIP formátumú tömörített fájlokat hoz létre(új Vagrant-os VM-ekből).\\
 		\hline
 		\hline
-		Transfer & Egy VM->laborgép adatátvitelt reprezentál, tárolja a letöltés aktuális állapotát (mennyi van még hátra, sebesség stb.)\\
+		Transfer & Egy VM$\rightarrow$laborgép adatátvitelt reprezentál, tárolja a letöltés aktuális állapotát (mennyi van még hátra, sebesség stb.)\\
 		\hline
 		RTorrentXmlRpcClient & Kapcsolatot létesít XMLRPC protokollon keresztül a laborgépek torrentklienseivel.\\
 		\hline
@@ -125,7 +135,7 @@ A program indítása után rögtön a várt figyelmeztetések jelennek meg a kon
 
 \code{2015-12-08 00:21:48 WARNING hu.bme.mit.vmdistribution.app.EMFModelUtil isCompatible WARNING:\_Computer:labpc104 is not compatible with Virtual Machine:vagrantvm\_test, Not enough RAM!}
 
-Majd meghívódik a Vagrant és létrehozza, valamint beállítja a hozzá tartozó VM-et. \Aref{fig:vboxcap}-es~ábrán látható, hogy a VirtualBox VM-eket tartalmazó mappájába már bele is került az új virtuális gép és meg is jelenik annak a felületén.
+Majd meghívódik a Vagrant és létrehozza, valamint beállítja a hozzá tartozó VM-et. \Aref{fig:vboxcap}-as~ábrán látható, hogy a VirtualBox VM-eket tartalmazó mappájába már bele is került az új virtuális gép és meg is jelenik annak a felületén.
 
 \begin{figure}[ht]
 \centering
@@ -137,7 +147,7 @@ A kész virtuális gépből a program létrehoz egy tömörített .zip állomán
 
 \code{2015-12-08 00:37:03 INFO hu.bme.mit.vmdistribution.app.vmutil.Archiver createZipArchive Creating Archive: E:\textbackslash{}vagrantvm\_test.zip}
 
-\ldots majd a két VM felkerül a seed-re, ahogy \aref{fig:seed_files}-as~ábrán ez látszik is:  a seed-del SSH kapcsolat létesítése után kilistázzuk azoknak a mappáknak a tartalmát ahová a VM-eket tartalmazó zip fájlok, illetve az azok alapján készített torrent fájlok kerültek.
+\ldots majd a két VM felkerül a seed-re, ahogy \aref{fig:seed_files}-es~ábrán ez látszik is:  a seed-del SSH kapcsolat létesítése után kilistázzuk azoknak a mappáknak a tartalmát ahová a VM-eket tartalmazó zip fájlok, illetve az azok alapján készített torrent fájlok kerültek.
 
 \begin{figure}[ht]
 \centering
@@ -146,7 +156,7 @@ A kész virtuális gépből a program létrehoz egy tömörített .zip állomán
 \label{fig:seed_files}
 \end{figure}
 
-Ezután az alkalmazás a torrent fájlokat átmásolja a megfelelő célgépekre, és elindítja rajtuk a torrentklienst. A seed-en futó torrentklienst megnyitva ellenőrizhetjük, hogy elkezdődött-e az adatátvitel (\ref{fig:seed_torrent}-es ábra). A feltöltési limit kézzel alacsonyra lett állítva, hogy a folyamatok megfigyelhetőek legyenek.
+Ezután az alkalmazás a torrent fájlokat átmásolja a megfelelő célgépekre, és elindítja rajtuk a torrentklienst. A seed-en futó torrentklienst megnyitva ellenőrizhetjük, hogy elkezdődött-e az adatátvitel (\ref{fig:seed_torrent}-ös ábra). A feltöltési limit kézzel alacsonyra lett állítva, hogy a folyamatok megfigyelhetőek legyenek.
 
 \begin{figure}[ht]
 \centering
@@ -155,7 +165,7 @@ Ezután az alkalmazás a torrent fájlokat átmásolja a megfelelő célgépekre
 \label{fig:seed_torrent}
 \end{figure}
 
-A két futó fájlátvitel részleteit megnézve ellenőrizhetjük, hogy a megfelelő gépek töltenek-e le. Például a mi általunk készített VM-et tartalmazó testvm.zip-et a labpc101 és 103-nak kellene töltenie, lásd \ref{fig:seed_peers}-ös~ábra (a két gép IP címe .111 ill. .113-ra végződik).
+A két futó fájlátvitel részleteit megnézve ellenőrizhetjük, hogy a megfelelő gépek töltenek-e le. Például a mi általunk készített VM-et tartalmazó testvm.zip-et a labpc101 és 103-nak kellene töltenie, lásd \ref{fig:seed_peers}-os~ábra (a két gép IP címe .111 ill. .113-ra végződik).
 
 \begin{figure}[ht]
 \centering

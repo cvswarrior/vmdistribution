@@ -64,8 +64,10 @@ Látszik, hogy torrent alapú fájlátvitel megvalósításához legkevesebb eze
 \begin{itemize}
 	\item Minden laborgépen egy torrentkliensre
 	\item Saját torrent tracker-re
+	\item Seed gép kijelölésére
 	\item Egy olyan programra, ami ezek működését vezérli
 \end{itemize}
+Az itt felsorolt elemekből felépülő terítési megoldás leírásához lásd majd \aref{design_apparchi}-as fejezetet. 
 
 Gépeinkre telepítendő torrentkliens esetében az rtorrent-re\cite{sundell2012libtorrent} esett a választás, mivel szükségünk van arra, hogy olyan klienst használjunk, amit a háttérben is tudunk futtatni, illetve az állapota valami módon távolról is lekérhető legyen. Az rtorrent rendelkezik egy XMLRPC\cite{merrick2006xml} alapú interfésszel, aminek segítségével távolról is vezérelhetővé válik. Ilyen interfészt használ a számos rtorrent-hez írt webes felület is, például a legismertebb ruTorrent\cite{rutorrent}. Természetesen minden rtorrent-et futtató gépre telepítenünk kell egy webszervert is, ami az XMLRPC kéréseinket eljuttatja magának a torrentkliensnek, itt a választás az apache-ra\cite{fielding1997apache} esett főleg könnyű telepítése és konfigurálása miatt.
 
@@ -78,7 +80,7 @@ Torrentfájlok létrehozására az mktorrent-et\cite{mktorrent} fogjuk használn
 \section{Metamodellezés}
 %----------------------------------------------------------------------------
 Egy fájlterítés indításához két dologra van szükségünk, hogy mit és hova szeretnénk teríteni. Előző kérdésre \aref{sect:p2p}-es fejezet választ adott, az utóbbira ez fog. A ``hovának'' megadását sokféleképpen elképzelhetjük,  felhasználói szemszögből az lenne a legjobb, ha egyszerűen azt mondhatnánk, hogy ``az IB413-as laborban a Mérés Labor 4. tárgyhoz tartozó környezet terüljön.'' Fontos, hogy képes legyen az alkalmazás egy ilyen kérést végrehajtani, ha a kérést számára értelmezhetőbb formában adjuk át. 
-Metamodellnek nevezünk, amiben egy adott dolgot tudunk modellezni, vagyis leegyszerűsítve ábrázolni. Például egy labor metamodellje alatt egy olyan nyelvet kell elképzelni, amiben leírható tetszőleges oktatási labor. \Aref{fig:emfobj}-as ábra egy ilyen metamodell egyik osztályát ábrázolja.
+A virtuális gép terítési feladatokat érdemes egy saját, úgynevezett szakterület-specifikus nyelven modellezni (angolul Domain-Specific Language, DSE). Egy szakterület-specifikus nyelv legfőbb koncepcióit, kapcsolatait és alapvető struktúráját határozza meg a metamodell. Például egy labor metamodellje alatt egy olyan nyelvet kell elképzelni, amiben leírható tetszőleges oktatási labor. \Aref{fig:emfobj}-as ábra egy ilyen metamodell egyik osztályát ábrázolja.
 
 \begin{figure}[ht]
 	\centering
