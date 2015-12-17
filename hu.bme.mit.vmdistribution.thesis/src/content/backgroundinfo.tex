@@ -17,7 +17,17 @@ Virtuális gépek futtatására használt programok közül talán a két legism
   \item Feltelepítjük a szükséges alkalmazásokat.
 \end{enumerate}
 
-Ezt a folyamatot tudjuk gyorsítani és leegyszerűsíteni a Vagrant\cite{vagrant} nevű alkalmazás használatával, ami virtuális gépeket tartalmazó munkakörnyezetek kialakítására és használatára ad lehetőséget. Két legfontosabb funkciója a VM-ek automatikus létrehozása és beállítása a felhasználó által kitöltött Vagrantfile alapján, illetve ezeknek a gépeknek a futtatásának a menedzselése. A Vagrantfile tartalmazza a virtuális gép létrehozásához szükséges legfontosabb információkat: azokat a beállításokat és parancsokat, amiket egy úgynevezett ``box''-on futtatva a várt virtuális gépet eredményezi. A box az egy előre elkészített VM, amit kiindulási alapnak használhatunk. A Vagrant-ot fejlesztő cég adatbázisából\cite{atlas} szerezhetőek be a box-ok, vagy természetesen saját magunk is készíthetünk. \Aref{fig:vagrantfile}-es ábrán egy részletet láthatunk az alkalmazásunkhoz tartozó tesztkörnyezet létrehozásához szükséges Vagrantfile-ból: megfigyelhetjük, hogy lehetőségünk van tetszőleges szkript futtatására a virtuális gép készítése közben, így gyakorlatilag tetszőleges VM létrehozására használható a Vagrant.
+Ezt a folyamatot tudjuk gyorsítani és leegyszerűsíteni a Vagrant\cite{vagrant} nevű alkalmazás használatával, ami virtuális gépeket tartalmazó munkakörnyezetek kialakítására és használatára ad lehetőséget. Két legfontosabb funkciója a VM-ek automatikus létrehozása és beállítása a felhasználó által kitöltött Vagrantfile alapján, illetve ezeknek a gépeknek a futtatásának a menedzselése. A Vagrantfile tartalmazza a virtuális gép létrehozásához szükséges legfontosabb információkat: azokat a beállításokat és parancsokat, amiket egy úgynevezett ``box''-on futtatva a várt virtuális gépet eredményezi. A box az egy előre elkészített VM, amit kiindulási alapnak használhatunk. A Vagrant-ot fejlesztő cég adatbázisából\cite{atlas} szerezhetőek be a box-ok, vagy természetesen saját magunk is készíthetünk. \Aref{fig:vagrantfile}-es ábrán egy részletet láthatunk az alkalmazásunkhoz tartozó tesztkörnyezet létrehozásához szükséges Vagrantfile-ból, a fontosabb beállítások az ábrán a következők:
+
+\begin{enumerate}
+  \item \textbf{config.vm.box} -- A kiindulási box beaállítása, a ``precise'' az Ubuntu 12.04.5 LTS (Precise Pangolin)\cite{ubuntu} verzióját takarja.
+  \item	\textbf{config.vm.provision} -- Ez határozza meg, hogy a virtuális gép létrehozása után azon milyen parancsokat futtasson le. A clean\_vm.sh pár mappát ürít ki a VM-en, ennek azért lehet értelme, mert beállítottuk, hogy minden indításkor fusson le ez a szkript a ``run: 'always' ''-el. Ez egy globális beállítás, mivel ``config.''-al kezdődik, így minden ezzel a Vagrantfile-al létrehozott VM-re vonatkozni fog.
+  \item \textbf{config.vm.define} -- Ezzel a paranccsal definiálhatunk egy létrehozandó VM-et.
+  \item \textbf{seed.vm.hostname} \& \textbf{seed.vm.network} - Virtuális gép neve és hálózati beállításai.
+  \item \textbf{seed.vm.provision} -- Ugyanaz, mint a config.vm.provision, viszont kizárólag erre a VM-re vonatkozik, itt adjuk meg a seed nevű gép telepítőszkriptjét.
+\end{enumerate}
+ 
+Megfigyelhettük, hogy lehetőségünk van tetszőleges szkript futtatására a virtuális gép készítése közben, így gyakorlatilag tetszőleges VM létrehozására használható a Vagrant.
 
 \begin{figure}[ht]
 	\centering
