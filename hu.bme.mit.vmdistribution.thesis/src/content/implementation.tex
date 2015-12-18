@@ -24,7 +24,7 @@ A \textit{\textbf{labor}} gépeire vonatkozó követelmények:
 \end{itemize}
 Az SSH szerverre azért van szükség, hogy tudjunk az összes laborgéppel kommunikálni, azokat távolról vezérelni, Debian-alapú disztribúcióra pedig, mert annak a csomagkezelezője segítségével van az alkalmazásunk függőségeinek nagy része telepítve.
 
-A \textit{\textbf{labor}} gépeire a mellékelt telepítőszkriptek futtatásával, vagy manuálisan a következő alkalmazásokat kell telepíteni:
+A \textit{\textbf{labor}} gépeire a mellékelt telepítőszkriptek futtatásával, vagy manuálisan kell a következő alkalmazásokat telepíteni:
 \begin{itemize}
   \item tmux
   \item rtorrent 0.9.6 vagy frissebb
@@ -58,8 +58,8 @@ A program egy parancssori Java alkalmazás, ezért onnan a következőképpen in
 
 \code{java -jar vmdistribution.jar modelfile goal\_lab logging\_level}
 
-A 'modelfile' helyére értelemszerűen a modellt tartalmazó fájl elérési útvonala, a ``goal\_lab''-hoz a célállapotnak a neve, a ``logging\_level''-hez pedig a naplózási szint kerül. A naplózási szint alatt azt kell érteni, hogy mennyire részletes lesz a program futásának a kimenete, a lehetséges értékek részletesség szerinti növekvő sorrendben: WARNING, INFO, FINE, FINER.
-A fájlterítés futását a STOP vagy S parancsokkal lehet megszakítani. Amennyiben véget ért a terítés a modellfájlban frissülni fognak a megfelelő Computer és VirtualMachine objektumok a terítés eredménye alapján.
+A 'modelfile' helyére értelemszerűen a modellt tartalmazó fájl elérési útvonala, a ``goal\_lab''-hoz a célállapotnak a neve, a ``logging\_level''-hez pedig a naplózási szint kerül. Naplózási szinten azt kell érteni, hogy mennyire részletes lesz a program futásának a kimenete, a lehetséges értékek részletesség szerinti növekvő sorrendben: WARNING, INFO, FINE, FINER.
+A fájlterítés futását a STOP vagy S parancsokkal lehet megszakítani. Amennyiben véget ért a terítés, a modellfájlban frissülni fognak a megfelelő Computer és VirtualMachine objektumok a terítés eredménye alapján.
 
 %----------------------------------------------------------------------------
 \section{Az alkalmazás felépítése}
@@ -111,7 +111,7 @@ A fájlterítés futását a STOP vagy S parancsokkal lehet megszakítani. Amenn
 %----------------------------------------------------------------------------
 
 Érdemes a Vmdistribution egy futását végigkövetni, így még részletesebben megismerhető a Torrent alapú terítés folyamata:
-A futtatást a program fejlesztésére használt gépen végeztem el. A terítésben résztvevő gépek Vagrant-tal létrehozott, VirtualBox által futtatott virtuális gépek, amelyeken az operációs rendszer 32-bites 12.04 verziójú Ubuntu. A virtuális gépekre csak a legszükségesebb szoftverek lettek telepítve, egymással és a gazdagéppel egy közös privát hálózaton voltak. A program futtatásához megadott labormodell fontosabb paraméterei:
+a futtatást a program fejlesztésére használt gépen végeztem el. A terítésben résztvevő gépek Vagrant-tal létrehozott, VirtualBox által futtatott virtuális gépek, amelyeken az operációs rendszer 32-bites 12.04 verziójú Ubuntu. A virtuális gépekre csak a legszükségesebb szoftverek lettek telepítve, egymással és a gazdagéppel egy közös privát hálózaton voltak. A program futtatásához megadott labormodell fontosabb paraméterei:
 
 \begin{itemize}
   \item Két különböző virtuális gép van benne: egy mi általunk és egy Vagrant által készített
@@ -133,7 +133,7 @@ A futtatást a program fejlesztésére használt gépen végeztem el. A teríté
 Mielőtt végigkövetnénk a futtatást érdemes végiggondolni, hogy mi lenne az elvárt eredmény, milyen fontosabb lépéseket és milyen sorrendben fog a program végrehajtani:
 
 \begin{enumerate}
-  \item Figyelmeztetés, hogy 105 és 104-re semelyik, 103 és 102-re pedig egyik virtuális gép nem fog terülni bizonyos problémák miatt
+  \item Figyelmeztetés, hogy 105 és 104-re semelyik, 103 és 102-re pedig az egyik virtuális gép nem fog terülni bizonyos problémák miatt
   \item Vagrant-os VM inicializálása, majd becsomagolása egy zip archívumba
   \item Mindkét VM felmásolása a seed gépre, mindkettőhöz torrent fájl létrehozása
   \item Torrentkliens futtatása a seed gépen

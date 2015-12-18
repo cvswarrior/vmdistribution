@@ -3,7 +3,7 @@
 \label{chp:validation}
 %----------------------------------------------------------------------------
 
-Ebben a fejezetben az alkalmazás tesztelési módját írom le, majd az éles környezetben elvégzett méréseket, amelyekkel különbőző teljesítményparamétereit elemzem, illetve hasonlítom össze a most használt terítési megoldásival.
+Ebben a fejezetben az alkalmazás tesztelési módját írom le, majd az éles környezetben elvégzett méréseket, amelyekkel különbőző teljesítményparamétereit elemzem, illetve hasonlítom össze a most használt terítési megoldáséival.
 
 %----------------------------------------------------------------------------
 \section{Tesztelés}
@@ -33,7 +33,7 @@ A programom teljesítményének elemzése során különböző, az alkalmazás t
 \textbf{Mérés:} A kérdés megválaszolásához 1, 2, 4 és 8 GB méretű fájlokat terítettem az eredeti és az általam készített új terítési módszerrel, a mérés eredményeit  \aref{fig:chaincasttorrrentcomparison}-es~ábrán látható grafikon mutatja be.
 
 
-\textit{Érdemes megjegyezni, hogy a grafikonon két időérték szerepel a Torrent-es terítéshez: egyik tartalmaza a torrent fájl elkészítésének és betöltésekor ennek hash-ellenőrzésének az idejét, míg a másik csak a konkrét adatátvitelét. Ez az időveszteség a bemenet méretétől függően nő, viszont nem lineárisan, ezért nagyon indokolt lenne a torrentklienset rákényszeríteni ennek a hash-ellenőrzésnek a kihagyására, főleg mivel ennek gyakorlati haszna nincs is.}
+\textit{Érdemes megjegyezni, hogy a grafikonon két időérték szerepel a Torrent-es terítéshez: egyik tartalmaza a torrent fájl elkészítésének és betöltésekor ennek hash-ellenőrzésének az idejét, míg a másik csak a konkrét adatátvitelét. Ez az időveszteség a bemenet méretétől függően nő, viszont nem lineárisan, ezért nagyon indokolt lenne a torrentklienset rákényszeríteni ennek a hash-ellenőrzésnek a kihagyására, főleg azért, mert ennek gyakorlati haszna nincs is.}
 
 \textbf{Válasz:} Nem gyorsabb a Torrent alapú terítési megoldás, körülbelül kétszer lassúbb. Kijelenthető, hogy ez egy elfogadható kompromisszum a robusztusság javítása érdekében, főleg úgy, hogy az ábra nem tartalmazza, hogy adott Chaincast-os terítéshez hány sikertelen próbálkozás tartozik és ez mennyi időveszteséggel jár. 
 
@@ -70,14 +70,14 @@ A programom teljesítményének elemzése során különböző, az alkalmazás t
 	\end{tabular}
 \end{center}
 
-\textbf{Válasz:} Kisebb fájlok esetén kedvezőbb eredményt kaptunk a 10 gépes terítésre, viszont a terítendő fájl(ok) méretének növelésével a 25 gépes terítés jobban skálázódik. Összegezve, a kevesebb gépre végzett terítéshez képest legrosszabb esetben 1.9-szer rosszabb, a legjobb esetben 1.3-szor jobb eredményt kaptunk.
+\textbf{Válasz:} Kisebb fájlok esetén kedvezőbb eredményt kaptunk a 10 gépes terítésre, viszont a terítendő fájl(ok) méretének növelésével a 25 gépes terítés jobban skálázódik. Összegezve, a kevesebb gépre végzett terítéshez képest legrosszabb esetben 1,9-szer rosszabb, a legjobb esetben 1,3-szor jobb eredményt kaptunk.
 
 %
 \subsection{P2P alapú fájlterítés - hibatűrés}
 %
 \textbf{Kérdés:} Hibatűrő-e a Torrent alapú fájterítési megoldás?
 
-\textbf{Mérések:} A hibatűrési tesztet két részben végeztem el, az első részben azt néztem meg, hogy az én megoldásom hogyan reagál, ha a terítés indításakor van nem elérhető célgép. Ez Chaincast esetében automatikus bukást okoz, mivel ott küldés előtt ellenőrződik a teljes lánc létrejötte, és hiányzó gép esetében el sem kezdődik a fájlátvitel. Indítottam tehát egy terítést, ahol az egyik célgép nem volt bekapcsolva. A második teszt folyamán a fájlátvitel közben tettem gépeket elérhetetlenné, egyet kikapcsoltam, egynek megszűntettem a hálózati kapcsolatát, egyen pedig a torrentklienset zártam be manuálisan.
+\textbf{Mérések:} A hibatűrési tesztet két részben végeztem el, az első részben azt néztem meg, hogy az én megoldásom hogyan reagál, ha a terítés indításakor van nem elérhető célgép. Ez Chaincast esetében automatikus bukást okoz, mivel ott küldés előtt ellenőrződik a teljes lánc létrejötte, és hiányzó gép esetében el sem kezdődik a fájlátvitel. Indítottam tehát egy terítést, ahol az egyik célgép nem volt bekapcsolva. A második teszt folyamán a fájlátvitel közben gépeket tettem elérhetetlenné: egyet kikapcsoltam, egynek megszűntettem a hálózati kapcsolatát, egyen pedig a torrentklienst zártam be manuálisan.
 
 \textbf{Válasz:} Az új terítési megoldás hibatűrő, mivel az első teszt során a bekapcsolva hagyott összes gépre sikeresen terültek a fájlok, illetve a második teszt során az érintetlenül hagyott gépekre szintén. Továbbá a három kiesett gép a letöltést később folytatni tudta és azt be is fejezte.
 

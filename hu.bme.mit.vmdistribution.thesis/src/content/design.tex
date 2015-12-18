@@ -2,7 +2,7 @@
 \chapter{Tervezés}
 \label{chp:design}
 %----------------------------------------------------------------------------
-Ebben a fejezetben bemutatok egy olyan modellt, ami oktatási laborokat tud ábrázolni, illetve definiálok rajta végezhető terítési műveleteket, ezáltal magyarázva a terítési folyamat működését. Végül a megvalósítandó Torrent alapú fájlterítési megoldás felépítését részletezem.
+Ebben a fejezetben bemutatok egy olyan modellt, amely oktatási laborokat tud ábrázolni, illetve definiálok rajta végezhető terítési műveleteket, ezáltal magyarázva a terítési folyamat működését. Végül a megvalósítandó Torrent alapú fájlterítési megoldás felépítését részletezem.
 
 %----------------------------------------------------------------------------
 \section{Terítési feladat modellezése}
@@ -22,7 +22,7 @@ Egy modell megalkotásakor érdemes először a feladatot könnyebben kezelhető
 
 \vspace{0.5cm}
 
-Vegyük először a virtuális gépek modelljét(\ref{fig:designvm}-es ábra)! A terítendő VM-ek azon tulajdonságainak kell a modellben megjelennie, amelyekre a fájlterítés során szükségünk lesz, ezek pedig a VM neve, az őt tartalmazó fájl elérési útvonala és használatának követelményei. Utóbbinál a rendelkezésre álló memória mennyiségét, rendelkezésre álló szabad tárterület méretét és a rendszer architektúráját kell feltüntetnünk, mert csak ezek befolyásolják a gépekkel való kompatibilitást. Érdemes megkülönböztetni a Vagrant által készíttetendő VM-eket, mert róluk extra információkat kell eltárolnunk (VagrantVM a VirtualMachine leszármazottja lesz). Jobban átlátható modellt kapunk, ha a követelmények tárolását ``kiszervezzük'', és a Requirements osztályban tároljuk ahelyett, hogy minden VirtualMachine-nél attribútumként vennénk fel. Érdemes azt is eltárolnunk, hogy egy VM melyik számítógépen van, sok, a modellen értelmezhető művelet futási idejét tudjuk felgyorsítani vele, például ha egy adott VM-et szeretnénk majd törölni a gépekről, akkor nem kell az összesen végigmennünk, hanem közvetlen törölhetjük azokról, amelyiken rajta van.
+Vegyük először a virtuális gépek modelljét(\ref{fig:designvm}-es ábra)! A terítendő VM-ek azon tulajdonságainak kell a modellben megjelennie, amelyekre a fájlterítés során szükségünk lesz, ezek pedig a VM neve, az őt tartalmazó fájl elérési útvonala és használatának követelményei. Utóbbinál a rendelkezésre álló memória mennyiségét, rendelkezésre álló szabad tárterület méretét és a rendszer architektúráját kell feltüntetnünk, mert csak ezek befolyásolják a gépekkel való kompatibilitást. Érdemes megkülönböztetni a Vagrant által készíttetendő VM-eket, mert róluk extra információkat kell eltárolnunk (VagrantVM a VirtualMachine leszármazottja lesz). Jobban átlátható modellt kapunk, ha a követelmények tárolását ``kiszervezzük'', és a Requirements osztályban tároljuk ahelyett, hogy minden VirtualMachine-nél attribútumként vennénk fel. Érdemes azt is eltárolnunk, hogy egy VM melyik számítógépen van. Sok, a modellen értelmezhető művelet futási idejét tudjuk felgyorsítani vele, például ha egy adott VM-et szeretnénk majd törölni a gépekről, akkor nem kell az összesen végigmennünk, hanem közvetlen törölhetjük azokról, amiken rajta van.
 
 \vspace{0.5cm}
 
@@ -35,7 +35,7 @@ Vegyük először a virtuális gépek modelljét(\ref{fig:designvm}-es ábra)! A
 
 \vspace{0.5cm}
 
-Hasonló megfontolásokkal készíthetjük el a számítógépek modelljét (\ref{fig:designcomputers}-as ábra), a számunkra fontos adatok itt a számítógép neve, elérhetősége és azon tulajdonságai, amik egy VM-el való kompatibilitást meghatároznak. Azt is el kell tárolnunk értelemszerűen, hogy adott számítógépen melyik virtuális gépek vannak már rajta. A számítógép elérhetőségeihez kapcsolódó attribútumokat nem csak azért tettük ConnectionInfo objektumokba, mint az előbbieknél a Requirements-be, hanem mert érzékeny adatokat is tárol (felhasználónév + jelszó).
+Hasonló megfontolásokkal készíthetjük el a számítógépek modelljét (\ref{fig:designcomputers}-as ábra); a számunkra fontos adatok itt a számítógép neve, elérhetősége és azon tulajdonságai, amelyek egy VM-el való kompatibilitást meghatároznak. Azt is el kell tárolnunk értelemszerűen, hogy adott számítógépen mely virtuális gépek vannak már rajta. A számítógép elérhetőségeihez kapcsolódó attribútumokat nem csak azért tettük ConnectionInfo objektumokba, mert az előbbieknél a Requirements-be, hanem mert érzékeny adatokat is tárol (felhasználónév + jelszó).
 
 \vspace{0.5cm}
 
@@ -60,7 +60,7 @@ Az utolsó modellezendő dolog a terítés végállapota (\ref{fig:designlab}-es
 \end{figure}
 \FloatBarrier
 
-Az előbb leírt modellrészletek összefogásához még szükségünk egy olyan elemre, ami mindhárom részt összefogja (\ref{fig:designmodelroot}-ös ábra). A LabSystem lesz a modell gyökéreleme, ez fogja tárolni a laborunkban található össze számítógépet, virtuális gépet és az összes felvett terítési végállapotot. Azt is itt tároljuk, hogy melyik számítógépet választjuk a Torrent alapú terítés során seed-nek.
+Az előbb leírt modellrészletek összefogásához még szükségünk van egy olyan elemre, ami mindhárom részt összefogja (\ref{fig:designmodelroot}-ös ábra). A LabSystem lesz a modell gyökéreleme, ez fogja tárolni a laborunkban található össze számítógépet, virtuális gépet és az összes felvett terítési végállapotot. Azt is itt tároljuk, hogy melyik számítógépet választjuk a Torrent alapú terítés során seed-nek.
 
 \begin{figure}[h!]
 	\centering
@@ -74,7 +74,7 @@ Az előbb leírt modellrészletek összefogásához még szükségünk egy olyan
 %----------------------------------------------------------------------------
 \label{distrops}
 
-Annak a megtervezésére, hogy egy fájlterítési folyamat hogyan zajlik érdemes azt kisebb darabokba vágni, azt definiálni egyszerű műveletekkel.
+Annak a megtervezésére, hogy egy fájlterítési folyamat hogyan zajlik, érdemes azt kisebb darabokba vágni, definiálni egyszerű műveletekkel.
 Az előbbi fejezetben ismertetett modellre definiálok itt terítési műveleteket, és megkísérlem leírni segítségükkel az egész fájlterítési folyamatot.
 Az egyszerű műveleteket a következő formátumban fogom definiálni: \code{\large \textbf{METHOD\_NAME}(\textit{parameter1\_name}: parameter1\_type, \textit{parameter2\_name}\ldots)}.
 
@@ -142,8 +142,8 @@ Az egyes használt protokollok rövid leírása:
 %----------------------------------------------------------------------------
 \section{Tervezés eredményei}
 %----------------------------------------------------------------------------
-Megalkottam egy olyan modellt, amiben ábrázolhatóak oktatói laborok. A Computer osztály a laborban levő számítógépeket, a Virtualmachines a virtuális gépeket, a Lab a terítési célállapotokat tartalmazza. Utóbbi azt tárolja, hogy egyes gépekre melyik VM-nek kell rajta lennie.
+Megalkottam egy olyan modellt, amiben ábrázolhatóak oktatói laborok. A Computer osztály a laborban levő számítógépeket, a Virtualmachines a virtuális gépeket, a Lab a terítési célállapotokat tartalmazza. Utóbbi azt tárolja, hogy egyes gépeken melyik VM-nek kell rajta lennie.
 
-Formálisan definiáltam a terítési műveleteket, amiknek segítségével meg tudtam adni, hogy milyen lépéseket takar egy terítés.
+Formálisan definiáltam a terítési műveleteket, amelyek segítségével meg tudtam adni, hogy milyen lépéseket takar egy terítés.
 
 \Aref{sect:p2p}-es fejezetben leírt torrent-es fájlátvitel működésének segítségével felvázoltam az új terítési megoldás felépítését és elhelyeztem benne az általam írt Vmdistribution Java alkalmazást, ami az egész folyamat vezérléséért felel.
