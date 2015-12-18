@@ -66,23 +66,23 @@ A fájlterítés futását a STOP vagy S parancsokkal lehet megszakítani. Amenn
 %----------------------------------------------------------------------------
 \label{impl_app}
 
-\Aref{fig:packagediag}-es ábrán az alkalmazást felépítő fontosabb Java osztályokat láthatjuk a csomagjaik szerint, azok egymástól való függéseit jelölve. Az ábra után következő táblázat tartalmazza a felrajzolt osztályok rövid leírását.
+\Aref{fig:packagediag}-es ábrán az alkalmazást felépítő fontosabb komponenseket láthatjuk, azok egymástól való függéseit jelölve. Az ábra után következő táblázat tartalmazza a rövid leírásukat.
 
 \begin{figure}[ht]
 \centering
 \includegraphics[width=150mm, keepaspectratio]{figures/packagediag.png}
-\caption{Vmdistribution osztályai és package-ei}
+\caption{Vmdistribution komponensei}
 \label{fig:packagediag}
 \end{figure}
 
 \begin{center}
 	\begin{tabular}{|>{\centering\arraybackslash}m{45mm}|>{\centering\arraybackslash}m{95mm}|}
 		\hline
-		\textbf{Osztály neve}&\textbf{Funkciójának rövid leírása}\\
+		\textbf{Komponens neve}&\textbf{Funkciójának rövid leírása}\\
 		\hline
-		UseModel & Az alkalmazás fő osztálya, ez tartalmazza main függvényt és vezérli a terítési folyamatot.\\ 
+		Controller & Az alkalmazás fő komponense, ez tartalmazza main függvényt és vezérli a terítési folyamatot.\\ 
 		\hline
-		EMFModelUtil & A labor modelljét kezeli: betölti, futtatás után elmenti, illetve műveleteket tud végezni rajta (pl. kezdeti és végállapot közti különbség meghatározása\\
+		DistributionModelManager & A labor modelljét kezeli: betölti, futtatás után elmenti, illetve műveleteket tud végezni rajta (pl. kezdeti és végállapot közti különbség meghatározása\\
 		\hline
 		\hline
 		SSHUtil & SSH kapcsolatot tud létrehozni és azon keresztül távoli gépekre parancsokat küldeni és SCP protokollt használva fájlokat küldeni.\\
